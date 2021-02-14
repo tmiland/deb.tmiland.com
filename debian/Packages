@@ -1,0 +1,19 @@
+Package: github-desktop
+Version: 2.6.3-linux1
+Architecture: amd64
+Maintainer: Brendan Forster <github@brendanforster.com>
+Installed-Size: 242295
+Depends: libgtk-3-0, libnotify4, libnss3, libxtst6, xdg-utils, libatspi2.0-0, libdrm2, libgbm1, libxcb-dri3-0, libxss1, kde-cli-tools | kde-runtime | trash-cli | libglib2.0-bin | gvfs-bin, libcurl3 | libcurl4, libsecret-1-0, gnome-keyring
+Recommends: pulseaudio | libasound2
+Suggests: gir1.2-gnomekeyring-1.0, libgnome-keyring0, lsb-release
+Filename: ./GitHubDesktop-linux-2.6.3-linux1.deb
+Size: 67612168
+MD5sum: f60d4e742ce65dbb8d7af08d65dc0b71
+SHA1: 79a5498d4f9b01f88068305abae7d525c6b3398d
+SHA256: 56e4f876ab0aaa5fb1490afc707ea01d7d5319f72b7a8597ea3f5dcbc89a3ce5
+Section: GNOME;GTK;Development
+Priority: extra
+Homepage: https://github.com/shiftkey/desktop
+Description: Simple collaboration from your desktop
+ This is the unofficial port of GitHub Desktop for Linux distributions
+
