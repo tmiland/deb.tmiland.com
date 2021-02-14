@@ -16,3 +16,19 @@
  
 - [assafmo/ppa](https://github.com/assafmo/ppa)
 - [Hosting your own PPA repository on GitHub](https://assafmo.github.io/2019/05/02/ppa-repo-hosted-on-github.html)
+
+## Donations 
+- [PayPal me](https://paypal.me/milanddata)
+- [BTC] : 33mjmoPxqfXnWNsvy8gvMZrrcG3gEa3YDM
+
+## Web Hosting
+
+Sign up for web hosting using this link, and receive $100 in credit over 60 days.
+
+[DigitalOcean](https://m.do.co/c/f1f2b475fca0)
+
+### License
+
+[![MIT License Image](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/MIT_logo.svg/220px-MIT_logo.svg.png)](https://github.com/tmiland/deb/blob/master/LICENSE)
+
+[MIT License](https://github.com/tmiland/deb/blob/master/LICENSE)
