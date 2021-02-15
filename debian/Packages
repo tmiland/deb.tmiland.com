@@ -36,3 +36,51 @@ Homepage: https://github.com/shiftkey/desktop
 Description: Simple collaboration from your desktop
  This is the unofficial port of GitHub Desktop for Linux distributions
 
+Package: teamspeak3-client
+Version: 3.5.3
+Architecture: amd64
+Maintainer: Tommy Miland (tmiland) <kontakt@tmiland.com>
+Filename: ./teamspeak3-client_amd64-3.5.3.deb
+Size: 1632
+MD5sum: f3f3e504023e5dc9f1557277f2d7d8fd
+SHA1: fbebeec1eb7b2934554a44c4995fc767e994333a
+SHA256: f77266c3f0156e1338c6d7387dd67ae8a029fffb189f743f44bae5aee66519b2
+Section: non-free/net
+Priority: optional
+Homepage: https://github.com/tmiland/TeamSpeak3-Client
+Description: VoIP chat for online gaming
+ TeamSpeak is a quality, scalable application which enables people to speak
+ with one another over the Internet. TeamSpeak consists of both client and
+ server software. The server acts as a host to multiple client connections,
+ capable of handling literally thousands of simultaneous users. This results
+ in an Internet based teleconferencing solution that works in a variety of
+ applications such as team mates speaking with one another while playing
+ their favorite online game, small businesses cutting costs on long distance
+ charges, or for personal communication with friends and family.
+ .
+ This package contains the graphical TeamSpeak3 client.
+
+Package: teamspeak3-client
+Version: 3.5.6
+Architecture: amd64
+Maintainer: Tommy Miland (tmiland) <kontakt@tmiland.com>
+Filename: ./teamspeak3-client_amd64-3.5.6.deb
+Size: 1636
+MD5sum: 3950db0310bd0a716b82586e4f9df131
+SHA1: 21748e677471d59a458645dbe7a50937666c1ab4
+SHA256: 4aaf91b3cd12e975fb8eb7254725fe3d474a4e98c5ce7dfb660a2c7cc52d6809
+Section: non-free/net
+Priority: optional
+Homepage: https://github.com/tmiland/TeamSpeak3-Client
+Description: VoIP chat for online gaming
+ TeamSpeak is a quality, scalable application which enables people to speak
+ with one another over the Internet. TeamSpeak consists of both client and
+ server software. The server acts as a host to multiple client connections,
+ capable of handling literally thousands of simultaneous users. This results
+ in an Internet based teleconferencing solution that works in a variety of
+ applications such as team mates speaking with one another while playing
+ their favorite online game, small businesses cutting costs on long distance
+ charges, or for personal communication with friends and family.
+ .
+ This package contains the graphical TeamSpeak3 client.
+
