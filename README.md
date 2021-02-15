@@ -2,15 +2,30 @@
  A PPA repository for deb packages:
  
  - [GitHub Desktop - The Linux Fork](https://github.com/shiftkey/desktop)
+ - [TeamSpeak3 Client](https://github.com/tmiland/TeamSpeak3-Client.git)
+ - [GNU-IceCat](https://www.gnu.org/software/gnuzilla/)
 
  # Usage
 
- ```bash
- curl -SsL https://deb.tmiland.com/debian/KEY.gpg | sudo apt-key add -
- sudo curl -SsL -o /etc/apt/sources.list.d/tmiland.list https://deb.tmiland.com/debian/tmiland.list
- sudo apt update
- sudo apt install github-desktop
+ ### Repository
+
+ ```shell
+ $ sudo curl -SsL -o /etc/apt/sources.list.d/tmiland.list https://deb.tmiland.com/debian/tmiland.list
  ```
+
+ ```shell
+ $ curl -SsL https://deb.tmiland.com/debian/KEY.gpg | sudo apt-key add -
+ ```
+
+ ```shell
+ $ sudo apt update
+ ```
+ 
+ ```shell
+ sudo apt install {package-name}
+ ```
+
+Package names: github-desktop gnu-icecat teamspeak3-client
 
  # Credits
  
