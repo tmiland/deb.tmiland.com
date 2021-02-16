@@ -2,8 +2,9 @@
  A PPA repository for deb packages:
  
  - [GitHub Desktop - The Linux Fork](https://github.com/shiftkey/desktop)
- - [TeamSpeak3 Client](https://github.com/tmiland/TeamSpeak3-Client.git)
+ - [TeamSpeak3 Client](https://github.com/tmiland/TeamSpeak3-Client)
  - [GNU-IceCat](https://www.gnu.org/software/gnuzilla/)
+ - [Invidious-Updater (And Installer)](https://github.com/tmiland/Invidious-Updater)
 
  # Usage
 
@@ -25,7 +26,7 @@
  $ sudo apt install {package-name}
  ```
 
-Package names: github-desktop gnu-icecat teamspeak3-client
+Package names: ```github-desktop``` ```gnu-icecat``` ```teamspeak3-client``` ```invidious-updater```
 
  # Credits
  
