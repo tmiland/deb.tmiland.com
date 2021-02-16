@@ -22,7 +22,7 @@
  ```
  
  ```shell
- sudo apt install {package-name}
+ $ sudo apt install {package-name}
  ```
 
 Package names: github-desktop gnu-icecat teamspeak3-client
