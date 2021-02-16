@@ -15,6 +15,29 @@ Description: GNU IceCat is the GNU version of the Firefox browser
  .
  This package contains the GNU IceCat browser.
 
+Package: Invidious-Updater
+Version: 1.5.6
+Architecture: amd64
+Maintainer: Tommy Miland (tmiland) <kontakt@tmiland.com>
+Filename: ./invidious-updater_amd64-1.5.6.deb
+Size: 1204
+MD5sum: ff3c0dd8f9c871910118c93632b29b1f
+SHA1: ffca0323a982f23f23af1e1ef770b24c71a3dcc4
+SHA256: 538d874abe7f6fe6a5b363f215e47f8e10f4900aa09c7164bf84f8ef5a92df07
+Section: non-free/net
+Priority: optional
+Homepage: https://github.com/tmiland/Invidious-Updater
+Description: Script to install and update Invidious
+    Install invidious
+    Update git repo, rebuild and restart service
+    Update the Script
+    Install Invidious service
+    Run database maintenance
+    Run database migration
+    Uninstall Invidious
+ .
+ This package contains the graphical Invidious-Updater client.
+
 Package: github-desktop
 Version: 2.6.2-linux1
 Architecture: amd64
