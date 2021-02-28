@@ -9,6 +9,7 @@ cd - > /dev/null || exit
 
 GitHubDesktop() {
   github_dektop_repo=shiftkey/desktop
+  cd "${CURRDIR}" || exit
   github_desktop_CUR_VERSION="$(find ./debian/ -name "GitHubDesktop-linux-*.deb" | sed 's/.*-\([0-9\.][0-9\.]*\).*/\1/' | sort -rnk3 | head -n 1)"
   github_desktop_NEW_VERSION="$(curl -s https://api.github.com/repos/$github_dektop_repo/releases | grep '"tag_name":' | sed -n 's/[^0-9.]*\([0-9.]*\).*/\1/p' | head -n 1)"
   echo "Current GitHub Desktop Version: $github_desktop_CUR_VERSION => New Version: $github_desktop_NEW_VERSION"
