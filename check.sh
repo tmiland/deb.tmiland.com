@@ -2,6 +2,11 @@
 
 email=root
 
+# Detect absolute and full path as well as filename of this script
+cd "$(dirname "$0")" || exit
+CURRDIR=$(pwd)
+cd - > /dev/null || exit
+
 GitHubDesktop() {
   github_dektop_repo=shiftkey/desktop
   github_desktop_CUR_VERSION="$(find ./debian/ -name "GitHubDesktop-linux-*.deb" | sed 's/.*-\([0-9\.][0-9\.]*\).*/\1/' | sort -rnk3 | head -n 1)"
@@ -11,7 +16,7 @@ GitHubDesktop() {
   if [[ "$github_desktop_CUR_VERSION" < "$github_desktop_NEW_VERSION" ]]; then
 
     echo "Downloading new github-desktop version $github_desktop_NEW_VERSION" | mail -s "Downloading new github-desktop version $github_desktop_NEW_VERSION" $email
-
+    cd "${CURRDIR}" || exit
     curl -s https://api.github.com/repos/$github_dektop_repo/releases \
       | grep "browser_download_url.*deb" \
       | cut -d : -f 2,3 \
