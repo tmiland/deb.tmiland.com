@@ -61,6 +61,29 @@ Description: Script to install and update Invidious
  .
  This package contains the graphical Invidious-Updater client.
 
+Package: Invidious-Updater
+Version: 1.5.8
+Architecture: amd64
+Maintainer: Tommy Miland (tmiland) <kontakt@tmiland.com>
+Filename: ./invidious-updater_amd64-1.5.8.deb
+Size: 1204
+MD5sum: 098f64c6f6bcbfea47b537eb9ac4e261
+SHA1: 373b1c86f6629d4d8636ef9df212dcb636f5fb84
+SHA256: 275b6765bbc6868e0dbafea20e88c07e7b2a218e8021a7889711ba582cc00469
+Section: non-free/net
+Priority: optional
+Homepage: https://github.com/tmiland/Invidious-Updater
+Description: Script to install and update Invidious
+    Install invidious
+    Update git repo, rebuild and restart service
+    Update the Script
+    Install Invidious service
+    Run database maintenance
+    Run database migration
+    Uninstall Invidious
+ .
+ This package contains the graphical Invidious-Updater client.
+
 Package: github-desktop
 Version: 2.6.2-linux1
 Architecture: amd64
