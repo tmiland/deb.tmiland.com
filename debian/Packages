@@ -183,6 +183,25 @@ Homepage: https://github.com/shiftkey/desktop
 Description: Simple collaboration from your desktop
  This is the unofficial port of GitHub Desktop for Linux distributions
 
+Package: github-desktop
+Version: 2.7.2-linux1
+Architecture: amd64
+Maintainer: Brendan Forster <github@brendanforster.com>
+Installed-Size: 242146
+Depends: libgtk-3-0, libnotify4, libnss3, libxtst6, xdg-utils, libatspi2.0-0, libdrm2, libgbm1, libxcb-dri3-0, kde-cli-tools | kde-runtime | trash-cli | libglib2.0-bin | gvfs-bin, libcurl3 | libcurl4, libsecret-1-0, gnome-keyring
+Recommends: pulseaudio | libasound2
+Suggests: gir1.2-gnomekeyring-1.0, libgnome-keyring0, lsb-release
+Filename: ./GitHubDesktop-linux-2.7.2-linux1.deb
+Size: 70451388
+MD5sum: fe3ee5e1e69e35bf7d31476a70cc2968
+SHA1: 584bb9c5a0b3f00148b4aa274196d1aa71507dc2
+SHA256: 24ab3159956388b5c548de8bb787244a4e0c59c2ba32bfbaad1a07acd7f5b3f1
+Section: GNOME;GTK;Development
+Priority: extra
+Homepage: https://github.com/shiftkey/desktop
+Description: Simple collaboration from your desktop
+ This is the unofficial port of GitHub Desktop for Linux distributions
+
 Package: teamspeak3-client
 Version: 3.5.3
 Architecture: amd64
