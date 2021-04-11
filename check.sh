@@ -41,16 +41,16 @@ GitHubDesktop() {
 }
 
 gnuzilla() {
-  ICECATE_URL=https://download.opensuse.org/repositories/home:/losuler:/icecat/Debian_10/amd64/
+  ICECATE_URL=https://download.opensuse.org/repositories/home:/losuler:/icecat/Debian_10/amd64
   cd "${CURRDIR}" || exit
   ICECAT_CUR_VERSION="$(find ./debian/ -name "icecat_*.deb" | cut -d _ -f 2 | sort -rnk3 | head -n 1)"
-  ICECAT_NEW_VERSION="$(curl -s $ICECATE_URL | grep -oP 'href="icecat_\K[0-9]+\.[0-9]+\.[0-9](-[0-9])?' | cut -d _ -f 2 | head -n 1)"
+  ICECAT_NEW_VERSION="$(curl -s $ICECATE_URL | grep -oP 'href="icecat_\K[0-9]+\.[0-9]+\.[0-9](-[0-9])?' | sort -rnk3 | head -n 1)"
   echo "Current Icecat Version: $ICECAT_CUR_VERSION => New Version: $ICECAT_NEW_VERSION"
   
   if [[ "$ICECAT_CUR_VERSION" < "$ICECAT_NEW_VERSION" ]]; then
     echo "Downloading new Icecat version $ICECAT_NEW_VERSION" | mail -s "Downloading new Icecat version $ICECAT_NEW_VERSION" $email
     cd "${CURRDIR}" || exit
-    wget https://download.opensuse.org/repositories/home:/losuler:/icecat/Debian_10/amd64/icecat_"$ICECAT_NEW_VERSION"_amd64.deb
+    wget $ICECATE_URL/icecat_"$ICECAT_NEW_VERSION"_amd64.deb
     
     deb_file="$(find . -name "icecat_"$ICECAT_NEW_VERSION"_amd64.deb" 2>/dev/null)"
     mv $deb_file ./debian/
