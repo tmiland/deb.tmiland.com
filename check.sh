@@ -42,8 +42,8 @@ GitHubDesktop() {
 
 gnuzilla() {
   cd "${CURRDIR}" || exit
-  ICECAT_CUR_VERSION="$(find ./debian/ -name "icecat_*.deb" | cut -d _ -f 2)"
-  ICECAT_NEW_VERSION="$(curl -s https://download.opensuse.org/repositories/home:/losuler:/icecat/Debian_10/amd64/icecat_78.9.0-1_amd64.deb.mirrorlist | grep 'Filename:' | cut -d _ -f 2 | sort -rnk3 | head -n 1)"
+  ICECAT_CUR_VERSION="$(find ./debian/ -name "icecat_*.deb" | cut -d _ -f 2 | sort -rnk3 | head -n 1)"
+  ICECAT_NEW_VERSION="$(curl -s https://download.opensuse.org/repositories/home:/losuler:/icecat/Debian_10/amd64/icecat_78.9.0-1_amd64.deb.mirrorlist | grep 'Filename:' | cut -d _ -f 2)"
   echo "Current Icecat Version: $ICECAT_CUR_VERSION => New Version: $ICECAT_NEW_VERSION"
   
   if [[ "$ICECAT_CUR_VERSION" < "$ICECAT_NEW_VERSION" ]]; then
