@@ -26,7 +26,14 @@
  $ sudo apt install {package-name}
  ```
 
-Package names: ```github-desktop``` ```gnu-icecat``` ```teamspeak3-client``` ```invidious-updater```
+Package names: ```github-desktop``` ```icecat``` ```teamspeak3-client``` ```invidious-updater```
+
+**Note**
+Package ```gnu-icecat``` has changed to ```icecat```
+
+To reinstall:
+
+sudo apt remove ```gnu-icecat``` && sudo apt install ```icecat```
 
  # Credits
  
