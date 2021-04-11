@@ -1,20 +1,3 @@
-Package: GNU-IceCat
-Version: 60.7.0
-Architecture: amd64
-Maintainer: Tommy Miland (tmiland) <kontakt@tmiland.com>
-Filename: ./gnu-icecat_amd64.deb
-Size: 2584
-MD5sum: 1a39d1d1165191de5b270d2552dbb273
-SHA1: bf4b8dc7b707d7474563b3843360d951990c75a6
-SHA256: 70a9b6ed69045f93e1c48615cfab2988b0f63e7527fb4139e9008068712cdf60
-Section: non-free/net
-Priority: optional
-Homepage: https://github.com/tmiland/GNU-IceCat
-Description: GNU IceCat is the GNU version of the Firefox browser
- GNUzilla is the GNU version of the Mozilla suite, and GNU IceCat is the GNU version of the Firefox browser. Its main advantage is an ethical one: it is entirely free software. While the Firefox source code from the Mozilla project is free software, they distribute and recommend nonfree software as plug-ins and addons. Also their trademark license imposes requirements for the distribution of modified versions that make it inconvenient to exercise freedom 3.
- .
- This package contains the GNU IceCat browser.
-
 Package: Invidious-Updater
 Version: 1.5.6
 Architecture: amd64
@@ -201,6 +184,52 @@ Priority: extra
 Homepage: https://github.com/shiftkey/desktop
 Description: Simple collaboration from your desktop
  This is the unofficial port of GitHub Desktop for Linux distributions
+
+Package: icecat
+Version: 78.9.0-1
+Architecture: amd64
+Maintainer: losuler <losuler@posteo.net>
+Installed-Size: 214575
+Depends: libatk1.0-0 (>= 1.12.4), libc6 (>= 2.28), libcairo-gobject2 (>= 1.10.0), libcairo2 (>= 1.10.0), libdbus-1-3 (>= 1.9.14), libdbus-glib-1-2 (>= 0.78), libfontconfig1 (>= 2.12.6), libfreetype6 (>= 2.3.5), libgcc1 (>= 1:4.0), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.31.8), libgtk-3-0 (>= 3.0.0), libgtk2.0-0 (>= 2.8.0), libpango-1.0-0 (>= 1.14.0), libstdc++6 (>= 6), libx11-6, libx11-xcb1, libxcb-shm0, libxcb1, libxcomposite1 (>= 1:0.3-1), libxdamage1 (>= 1:1.1), libxext6, libxfixes3, libxrender1
+Filename: ./icecat_60.7.0_amd64.deb
+Size: 57665168
+MD5sum: ac543d77d10186aef79277e421d803d0
+SHA1: 35cca09a4bdeff6a0b60476a0139e7322bc0c280
+SHA256: 047ea828321af8eec6e394a146cba1fc78c77bd37706ab1268779cad7be407f0
+Section: web
+Priority: optional
+Homepage: https://www.gnu.org/software/gnuzilla
+Description: IceCat is the GNU version of the Firefox
+ browser. Its main advantage is an ethical one: it is
+ entirely free software. While the Firefox source code from
+ the Mozilla project is free software, they distribute and
+ recommend nonfree software as plug-ins and addons. Also
+ their trademark license imposes requirements for the
+ distribution of modified versions that make it
+ inconvenient to exercise freedom 3.
+
+Package: icecat
+Version: 78.9.0-1
+Architecture: amd64
+Maintainer: losuler <losuler@posteo.net>
+Installed-Size: 214575
+Depends: libatk1.0-0 (>= 1.12.4), libc6 (>= 2.28), libcairo-gobject2 (>= 1.10.0), libcairo2 (>= 1.10.0), libdbus-1-3 (>= 1.9.14), libdbus-glib-1-2 (>= 0.78), libfontconfig1 (>= 2.12.6), libfreetype6 (>= 2.3.5), libgcc1 (>= 1:4.0), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.31.8), libgtk-3-0 (>= 3.0.0), libgtk2.0-0 (>= 2.8.0), libpango-1.0-0 (>= 1.14.0), libstdc++6 (>= 6), libx11-6, libx11-xcb1, libxcb-shm0, libxcb1, libxcomposite1 (>= 1:0.3-1), libxdamage1 (>= 1:1.1), libxext6, libxfixes3, libxrender1
+Filename: ./icecat_78.9.0-1_amd64.deb
+Size: 57665168
+MD5sum: ac543d77d10186aef79277e421d803d0
+SHA1: 35cca09a4bdeff6a0b60476a0139e7322bc0c280
+SHA256: 047ea828321af8eec6e394a146cba1fc78c77bd37706ab1268779cad7be407f0
+Section: web
+Priority: optional
+Homepage: https://www.gnu.org/software/gnuzilla
+Description: IceCat is the GNU version of the Firefox
+ browser. Its main advantage is an ethical one: it is
+ entirely free software. While the Firefox source code from
+ the Mozilla project is free software, they distribute and
+ recommend nonfree software as plug-ins and addons. Also
+ their trademark license imposes requirements for the
+ distribution of modified versions that make it
+ inconvenient to exercise freedom 3.
 
 Package: teamspeak3-client
 Version: 3.5.3

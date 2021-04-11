@@ -40,4 +40,30 @@ GitHubDesktop() {
   fi
 }
 
+gnuzilla() {
+  cd "${CURRDIR}" || exit
+  ICECAT_CUR_VERSION="$(find ./debian/ -name "icecat_*.deb" | cut -d _ -f 2)"
+  ICECAT_NEW_VERSION="$(curl -s https://download.opensuse.org/repositories/home:/losuler:/icecat/Debian_10/amd64/icecat_78.9.0-1_amd64.deb.mirrorlist | grep 'Filename:' | cut -d _ -f 2)"
+  echo "Current Icecat Version: $ICECAT_CUR_VERSION => New Version: $ICECAT_NEW_VERSION"
+  
+  if [[ "$ICECAT_CUR_VERSION" < "$ICECAT_NEW_VERSION" ]]; then
+    echo "Downloading new Icecat version $ICECAT_NEW_VERSION" | mail -s "Downloading new Icecat version $ICECAT_NEW_VERSION" $email
+    cd "${CURRDIR}" || exit
+    wget https://download.opensuse.org/repositories/home:/losuler:/icecat/Debian_10/amd64/icecat_"$ICECAT_NEW_VERSION"_amd64.deb
+    
+    deb_file="$(find . -name "icecat_"$ICECAT_NEW_VERSION"_amd64.deb" 2>/dev/null)"
+    mv $deb_file ./debian/
+    . ./update.sh
+    git add -A
+    git commit -m "Update Icecat version to $ICECAT_NEW_VERSION"
+    git push -u origin master
+    git tag -a "$ICECAT_NEW_VERSION" -m "Update Icecat version from $ICECAT_CUR_VERSION to $ICECAT_NEW_VERSION"
+    git push --tags origin master
+    exit
+  else
+    echo "Latest Icecat version already installed"
+  fi
+}
+
 GitHubDesktop
+gnuzilla
