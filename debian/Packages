@@ -278,6 +278,25 @@ Homepage: https://github.com/shiftkey/desktop
 Description: Simple collaboration from your desktop
  This is the unofficial port of GitHub Desktop for Linux distributions
 
+Package: github-desktop
+Version: 2.9.0-linux1
+Architecture: amd64
+Maintainer: Brendan Forster <github@brendanforster.com>
+Installed-Size: 243827
+Depends: libgtk-3-0, libnotify4, libnss3, libxtst6, xdg-utils, libatspi2.0-0, libdrm2, libgbm1, libxcb-dri3-0, kde-cli-tools | kde-runtime | trash-cli | libglib2.0-bin | gvfs-bin, libcurl3 | libcurl4, libsecret-1-0, gnome-keyring
+Recommends: pulseaudio | libasound2
+Suggests: gir1.2-gnomekeyring-1.0, libgnome-keyring0, lsb-release
+Filename: ./GitHubDesktop-linux-2.9.0-linux1.deb
+Size: 70693936
+MD5sum: d60946cd10b23ade8f3c1a34785b2a6c
+SHA1: 2693d957439b307c731cc149700c30014aac777f
+SHA256: dbfce1a5eae8fcbfd0929edd5a4b075adad209bc96e1c7f471278b546686ee84
+Section: GNOME;GTK;Development
+Priority: extra
+Homepage: https://github.com/shiftkey/desktop
+Description: Simple collaboration from your desktop
+ This is the unofficial port of GitHub Desktop for Linux distributions
+
 Package: icecat
 Version: 78.9.0-1
 Architecture: amd64
