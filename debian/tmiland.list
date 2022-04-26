@@ -1,1 +1,1 @@
-deb https://deb.tmiland.com/debian ./
+deb [arch=amd64 signed-by=/usr/share/keyrings/tmiland-archive-keyring.gpg] https://deb.tmiland.com/debian ./
