@@ -90,9 +90,9 @@ Architecture: amd64
 Maintainer: Tommy Miland (tmiland) <kontakt@tmiland.com>
 Filename: ./invidious-updater_amd64-1.6.3.deb
 Size: 1196
-MD5sum: 83353fec7f07443b86b5002848e0dc4a
-SHA1: 8adf5e014e1f2b3866bebe2d0f4b802a798457af
-SHA256: a136a01f011d1297ed79985e4aa82bb84a913750c7dfffc53d251b87b39f92ff
+MD5sum: 69e7a24e94a5e61d2685655c9b3b8e5a
+SHA1: 8ea5c0c46277fb45b6259517d4279f59c3bf9f4c
+SHA256: f8786917932d0d2d9ddd3d7534ab94ff3d8d73fcafac0bbe5570396e14438f2e
 Section: non-free/net
 Priority: optional
 Homepage: https://github.com/tmiland/Invidious-Updater
@@ -209,6 +209,40 @@ Description: IceCat is the GNU version of the Firefox
  their trademark license imposes requirements for the
  distribution of modified versions that make it
  inconvenient to exercise freedom 3.
+
+Package: libterm-spinner-color-perl
+Version: 0.05-1
+Architecture: all
+Maintainer: Joe Cooper <joe@virtualmin.com>
+Installed-Size: 115
+Depends: perl, perl-modules
+Filename: ./libterm-spinner-color-perl_0.05-1_all.deb
+Size: 18150
+MD5sum: a4e8025bc7ab63260e55456e915ef06b
+SHA1: 0a64dbff7eca71adfe866f8903eb1407dd4144e7
+SHA256: b46eacf479626c0ec88933893975310d953ad5a83e909e9b86f5cfa8cabbb9a8
+Section: perl
+Priority: optional
+Homepage: http://search.cpan.org/dist/Term-Spinner-Color/
+Description: A terminal spinner/progress bar with Unicode, color, and no non-core dependencies.
+ This is a simple spinner, useful when you want to show some kind of activity
+ during a long-running process of indeterminant length. It's loosely based on
+ the API from Term::Spinner and Term::Spinner::Lite. Unlike Term::Spinner
+ though, this module doesn't have any dependencies outside of modules shipped
+ with Perl itself. And, unlike Term::Spinner::Lite, this module has color
+ support and support for wide progress bars.
+ .
+ Term::Spinner::Color also provides an asynchronous mode, which does not
+ require your program to manually call the next method.
+ .
+ Some features and some (Unicode) frame sets do not work in Windows PowerShell
+ or cmd.exe. If you must work across a wide variety of platforms, choosing
+ ASCII frame sets is wise. run_ok method currently only provides Unicode
+ output, so it is not suitable for use on Windows (bash, of many types, on
+ Windows works fine, however). There's probably a way to fix this by switching
+ to another code page in Windows shells.
+ .
+ This description was automagically extracted from the module by dh-make-perl.
 
 Package: teamspeak3-client
 Version: 3.5.3
