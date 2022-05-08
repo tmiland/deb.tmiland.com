@@ -40,7 +40,8 @@ sudo apt remove ```gnu-icecat``` && sudo apt install ```icecat```
 - [assafmo/ppa](https://github.com/assafmo/ppa)
 - [Hosting your own PPA repository on GitHub](https://assafmo.github.io/2019/05/02/ppa-repo-hosted-on-github.html)
 
-## Donations 
+## Donations
+<a href="https://www.buymeacoffee.com/tmiland" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 - [PayPal me](https://paypal.me/milanddata)
 - [BTC] : 33mjmoPxqfXnWNsvy8gvMZrrcG3gEa3YDM
 
