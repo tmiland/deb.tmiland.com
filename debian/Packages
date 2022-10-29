@@ -1,89 +1,3 @@
-Package: GNU-IceCat
-Version: 60.7.0
-Architecture: amd64
-Maintainer: Tommy Miland (tmiland) <kontakt@tmiland.com>
-Filename: ./icecat_60.7.0_amd64.deb
-Size: 2584
-MD5sum: 1a39d1d1165191de5b270d2552dbb273
-SHA1: bf4b8dc7b707d7474563b3843360d951990c75a6
-SHA256: 70a9b6ed69045f93e1c48615cfab2988b0f63e7527fb4139e9008068712cdf60
-Section: non-free/net
-Priority: optional
-Homepage: https://github.com/tmiland/GNU-IceCat
-Description: GNU IceCat is the GNU version of the Firefox browser
- GNUzilla is the GNU version of the Mozilla suite, and GNU IceCat is the GNU version of the Firefox browser. Its main advantage is an ethical one: it is entirely free software. While the Firefox source code from the Mozilla project is free software, they distribute and recommend nonfree software as plug-ins and addons. Also their trademark license imposes requirements for the distribution of modified versions that make it inconvenient to exercise freedom 3.
- .
- This package contains the GNU IceCat browser.
-
-Package: Invidious-Updater
-Version: 1.5.9
-Architecture: amd64
-Maintainer: Tommy Miland (tmiland) <kontakt@tmiland.com>
-Filename: ./invidious-updater_amd64-1.5.9.deb
-Size: 1204
-MD5sum: 591af5592519b7195813649351bb3990
-SHA1: 035e260d917919f742eaf7e917fcea8f436a5670
-SHA256: 8e5e77d97271610f8f3b9675a983dab221dcdba8dfef5554083663ac39a67de3
-Section: non-free/net
-Priority: optional
-Homepage: https://github.com/tmiland/Invidious-Updater
-Description: Script to install and update Invidious
-    Install invidious
-    Update git repo, rebuild and restart service
-    Update the Script
-    Install Invidious service
-    Run database maintenance
-    Run database migration
-    Uninstall Invidious
- .
- This package contains the graphical Invidious-Updater client.
-
-Package: Invidious-Updater
-Version: 1.6.1
-Architecture: amd64
-Maintainer: Tommy Miland (tmiland) <kontakt@tmiland.com>
-Filename: ./invidious-updater_amd64-1.6.1.deb
-Size: 1204
-MD5sum: f29cdb9dbb3a92de450d5d9e0c516df3
-SHA1: e27f14b13703c34a1a2025b5cdb66faad922c426
-SHA256: c6dec7a80307d1c842ca081637bee676ac9fc3d1c64a1b49fdcf5d30f21bf5db
-Section: non-free/net
-Priority: optional
-Homepage: https://github.com/tmiland/Invidious-Updater
-Description: Script to install and update Invidious
-    Install invidious
-    Update git repo, rebuild and restart service
-    Update the Script
-    Install Invidious service
-    Run database maintenance
-    Run database migration
-    Uninstall Invidious
- .
- This package contains the graphical Invidious-Updater client.
-
-Package: Invidious-Updater
-Version: 1.6.2
-Architecture: amd64
-Maintainer: Tommy Miland (tmiland) <kontakt@tmiland.com>
-Filename: ./invidious-updater_amd64-1.6.2.deb
-Size: 1192
-MD5sum: c884ed9b9bd752c346dda7bc87190ee6
-SHA1: 6ebeb8aefbcdc2cd8a6b5efe2421fa0a0e8d13b1
-SHA256: 2d1252990d3aad59fa298d903ad11cdbcd2bac2da1ffe536021dc44cdf01b505
-Section: non-free/net
-Priority: optional
-Homepage: https://github.com/tmiland/Invidious-Updater
-Description: Script to install and update Invidious
-    Install invidious
-    Update git repo, rebuild and restart service
-    Update the Script
-    Install Invidious service
-    Run database maintenance
-    Run database migration
-    Uninstall Invidious
- .
- This package contains the graphical Invidious-Updater client.
-
 Package: Invidious-Updater
 Version: 1.6.3
 Architecture: amd64
@@ -107,195 +21,57 @@ Description: Script to install and update Invidious
  .
  This package contains the graphical Invidious-Updater client.
 
-Package: github-desktop
-Version: 2.9.6-linux1
+Package: dpkg
+Version: 1.20.12
 Architecture: amd64
-Maintainer: Brendan Forster <github@brendanforster.com>
-Installed-Size: 246602
-Depends: libgtk-3-0, libnotify4, libnss3, libxtst6, xdg-utils, libatspi2.0-0, libdrm2, libgbm1, libxcb-dri3-0, kde-cli-tools | kde-runtime | trash-cli | libglib2.0-bin | gvfs-bin, libcurl3 | libcurl4, libsecret-1-0, gnome-keyring
-Recommends: pulseaudio | libasound2
-Suggests: gir1.2-gnomekeyring-1.0, libgnome-keyring0, lsb-release
-Filename: ./GitHubDesktop-linux-2.9.6-linux1.deb
-Size: 71563580
-MD5sum: 89140ed140aa62636c74b1eba77cc1aa
-SHA1: d4d231245acee4c24d0031933d834523f684e8ff
-SHA256: 60bdc673bea359f42f63dea90254b9241ec1c1239492536f191d2d3817501ee1
-Section: GNOME;GTK;Development
-Priority: extra
-Homepage: https://github.com/shiftkey/desktop
-Description: Simple collaboration from your desktop
- This is the unofficial port of GitHub Desktop for Linux distributions
+Essential: yes
+Maintainer: Dpkg Developers <debian-dpkg@lists.debian.org>
+Installed-Size: 5974
+Pre-Depends: libbz2-1.0, libc6 (>= 2.34), liblzma5 (>= 5.2.2), libselinux1 (>= 3.1~), libzstd1 (>= 1.5.2), zlib1g (>= 1:1.1.4)
+Depends: tar (>= 1.28-1)
+Suggests: apt, debsig-verify
+Breaks: libapt-pkg5.0 (<< 1.7~b), lsb-base (<< 10.2019031300)
+Filename: ./dpkg_1.20.12_amd64.deb
+Size: 1494076
+MD5sum: ee99dd0d44c941b739a5c2945b376e63
+SHA1: d3ff2d18b8ffc243405622e4cd5a51b2fe3db2ee
+SHA256: 03f566d2376d3a9e71cf66c44547b218bc7659b5deb49050a42ca9c2a71aa496
+Section: admin
+Priority: required
+Multi-Arch: foreign
+Homepage: https://wiki.debian.org/Teams/Dpkg
+Description: Debian package management system
+ This package provides the low-level infrastructure for handling the
+ installation and removal of Debian software packages.
+ .
+ For Debian package development tools, install dpkg-dev.
 
-Package: github-desktop
-Version: 2.9.9-linux1
-Architecture: amd64
-Maintainer: Brendan Forster <github@brendanforster.com>
-Installed-Size: 326608
-Depends: libgtk-3-0, libnotify4, libnss3, libxtst6, xdg-utils, libatspi2.0-0, libdrm2, libgbm1, libxcb-dri3-0, kde-cli-tools | kde-runtime | trash-cli | libglib2.0-bin | gvfs-bin, libcurl3 | libcurl4, libsecret-1-0, gnome-keyring
-Recommends: pulseaudio | libasound2
-Suggests: gir1.2-gnomekeyring-1.0, libgnome-keyring0, lsb-release
-Filename: ./GitHubDesktop-linux-2.9.9-linux1.deb
-Size: 87172208
-MD5sum: 2995dd79970274bdb77634fb6cd6fbe0
-SHA1: dfa575b1cb92b61a0a4810b657d0d8c04efc300f
-SHA256: 2cc28ec50477060c34d0b9caa807b686af9e0128300bbcb47313524adfec8d60
-Section: GNOME;GTK;Development
-Priority: extra
-Homepage: https://github.com/shiftkey/desktop
-Description: Simple collaboration from your desktop
- This is the unofficial port of GitHub Desktop for Linux distributions
-
-Package: github-desktop
-Version: 3.0.0-linux1
-Architecture: amd64
-Maintainer: Brendan Forster <github@brendanforster.com>
-Installed-Size: 262254
-Depends: libgtk-3-0, libnotify4, libnss3, libxtst6, xdg-utils, libatspi2.0-0, libdrm2, libgbm1, libxcb-dri3-0, kde-cli-tools | kde-runtime | trash-cli | libglib2.0-bin | gvfs-bin, libcurl3 | libcurl4, libsecret-1-0, gnome-keyring
-Recommends: pulseaudio | libasound2
-Suggests: gir1.2-gnomekeyring-1.0, libgnome-keyring0, lsb-release
-Filename: ./GitHubDesktop-linux-3.0.0-linux1.deb
-Size: 77933228
-MD5sum: 0bd3085daea2d036b83f751d7e3dfd29
-SHA1: eb922d6067ab17881e341c13857eb36cbc866c38
-SHA256: 15c29a4c48f771f3589e64483b9b44678be9c9e3a0cfa83f596788dd0ae73e67
-Section: GNOME;GTK;Development
-Priority: extra
-Homepage: https://github.com/shiftkey/desktop
-Description: Simple collaboration from your desktop
- This is the unofficial port of GitHub Desktop for Linux distributions
-
-Package: github-desktop
-Version: 3.0.1-linux1
-Architecture: amd64
-Maintainer: Brendan Forster <github@brendanforster.com>
-Installed-Size: 262292
-Depends: libgtk-3-0, libnotify4, libnss3, libxtst6, xdg-utils, libatspi2.0-0, libdrm2, libgbm1, libxcb-dri3-0, kde-cli-tools | kde-runtime | trash-cli | libglib2.0-bin | gvfs-bin, libcurl3 | libcurl4, libsecret-1-0, gnome-keyring
-Recommends: pulseaudio | libasound2
-Suggests: gir1.2-gnomekeyring-1.0, libgnome-keyring0, lsb-release
-Filename: ./GitHubDesktop-linux-3.0.1-linux1.deb
-Size: 77932204
-MD5sum: babd5b579b2a7a5d9c1503daf9e32ad2
-SHA1: 7e5aba70e4115ee75460ab8323430069f6c8e23a
-SHA256: 8d8edbcc542b6617dac8087475a8bf0807f3e6c83df503616435f4d5b59a6457
-Section: GNOME;GTK;Development
-Priority: extra
-Homepage: https://github.com/shiftkey/desktop
-Description: Simple collaboration from your desktop
- This is the unofficial port of GitHub Desktop for Linux distributions
-
-Package: github-desktop
-Version: 3.0.2-linux1
-Architecture: amd64
-Maintainer: Brendan Forster <github@brendanforster.com>
-Installed-Size: 262550
-Depends: libgtk-3-0, libnotify4, libnss3, libxtst6, xdg-utils, libatspi2.0-0, libdrm2, libgbm1, libxcb-dri3-0, kde-cli-tools | kde-runtime | trash-cli | libglib2.0-bin | gvfs-bin, libcurl3 | libcurl4, libsecret-1-0, gnome-keyring
-Recommends: pulseaudio | libasound2
-Suggests: gir1.2-gnomekeyring-1.0, libgnome-keyring0, lsb-release
-Filename: ./GitHubDesktop-linux-3.0.2-linux1.deb
-Size: 77833268
-MD5sum: e4ec8e711790214ab6d6a2f19e98ef4b
-SHA1: 322bd06007af6a334ddb330a2af3098b3ba0c748
-SHA256: ea7af3624f7b1dce5f17b1ef80d22b515257154e3bb5737a3f125a72015bdd9b
-Section: GNOME;GTK;Development
-Priority: extra
-Homepage: https://github.com/shiftkey/desktop
-Description: Simple collaboration from your desktop
- This is the unofficial port of GitHub Desktop for Linux distributions
-
-Package: github-desktop
-Version: 3.0.3-linux1
-Architecture: amd64
-Maintainer: Brendan Forster <github@brendanforster.com>
-Installed-Size: 262956
-Depends: libgtk-3-0, libnotify4, libnss3, libxtst6, xdg-utils, libatspi2.0-0, libdrm2, libgbm1, libxcb-dri3-0, kde-cli-tools | kde-runtime | trash-cli | libglib2.0-bin | gvfs-bin, libcurl3 | libcurl4, libsecret-1-0, gnome-keyring
-Recommends: pulseaudio | libasound2
-Suggests: gir1.2-gnomekeyring-1.0, libgnome-keyring0, lsb-release
-Filename: ./GitHubDesktop-linux-3.0.3-linux1.deb
-Size: 77884308
-MD5sum: 7717aec179b0a7e52359f04bbda01e94
-SHA1: 277cd3e2b0621921b031b09c2c6b57d8d85bbd5c
-SHA256: 282f83e1ea6312164f20de8bbad451a365625fa615ca8977514100e7aca6c9f3
-Section: GNOME;GTK;Development
-Priority: extra
-Homepage: https://github.com/shiftkey/desktop
-Description: Simple collaboration from your desktop
- This is the unofficial port of GitHub Desktop for Linux distributions
-
-Package: github-desktop
-Version: 3.0.4-linux1
-Architecture: amd64
-Maintainer: Brendan Forster <github@brendanforster.com>
-Installed-Size: 329079
-Depends: libgtk-3-0, libnotify4, libnss3, libxtst6, xdg-utils, libatspi2.0-0, libdrm2, libgbm1, libxcb-dri3-0, kde-cli-tools | kde-runtime | trash-cli | libglib2.0-bin | gvfs-bin, libcurl3 | libcurl4, libsecret-1-0, gnome-keyring
-Recommends: pulseaudio | libasound2
-Suggests: gir1.2-gnomekeyring-1.0, libgnome-keyring0, lsb-release
-Filename: ./GitHubDesktop-linux-3.0.4-linux1.deb
-Size: 87686268
-MD5sum: 51a5268e8a11101461c4a65d73c5b1df
-SHA1: c92da53e97453206afd06093bad2c041a7cf642d
-SHA256: 3ad2946c944cc98ab4ff9e95f7922a319dd46e3cca776d41fb4181fdbf9834a4
-Section: GNOME;GTK;Development
-Priority: extra
-Homepage: https://github.com/shiftkey/desktop
-Description: Simple collaboration from your desktop
- This is the unofficial port of GitHub Desktop for Linux distributions
-
-Package: github-desktop
-Version: 3.0.5-linux1
-Architecture: amd64
-Maintainer: Brendan Forster <github@brendanforster.com>
-Installed-Size: 329079
-Depends: libgtk-3-0, libnotify4, libnss3, libxtst6, xdg-utils, libatspi2.0-0, libdrm2, libgbm1, libxcb-dri3-0, kde-cli-tools | kde-runtime | trash-cli | libglib2.0-bin | gvfs-bin, libcurl3 | libcurl4, libsecret-1-0, gnome-keyring
-Recommends: pulseaudio | libasound2
-Suggests: gir1.2-gnomekeyring-1.0, libgnome-keyring0, lsb-release
-Filename: ./GitHubDesktop-linux-3.0.5-linux1.deb
-Size: 87685464
-MD5sum: 3cfba8b894352d1ea122e7afa5341b8a
-SHA1: 954a7661b7bb9bcf9e86e11d70dfb62146b740a8
-SHA256: ed29368c3359b4e034e21925fc9f94a76c8c193f3e15c5c63e250c70785bee26
-Section: GNOME;GTK;Development
-Priority: extra
-Homepage: https://github.com/shiftkey/desktop
-Description: Simple collaboration from your desktop
- This is the unofficial port of GitHub Desktop for Linux distributions
-
-Package: github-desktop
-Version: 3.0.6-linux1
-Architecture: amd64
-Maintainer: Brendan Forster <github@brendanforster.com>
-Installed-Size: 329210
-Depends: libgtk-3-0, libnotify4, libnss3, libxtst6, xdg-utils, libatspi2.0-0, libdrm2, libgbm1, libxcb-dri3-0, kde-cli-tools | kde-runtime | trash-cli | libglib2.0-bin | gvfs-bin, libcurl3 | libcurl4, libsecret-1-0, gnome-keyring
-Recommends: pulseaudio | libasound2
-Suggests: gir1.2-gnomekeyring-1.0, libgnome-keyring0, lsb-release
-Filename: ./GitHubDesktop-linux-3.0.6-linux1.deb
-Size: 87728716
-MD5sum: 8aeac559477926104ac0d6f1e10c6382
-SHA1: 7be67bb41a820423d4259a1f612659486e93c80c
-SHA256: 510b0c4f8fc3e7bd7182b53c0b81c1a113bea9fd3c18219eac0e18e601dc8d17
-Section: GNOME;GTK;Development
-Priority: extra
-Homepage: https://github.com/shiftkey/desktop
-Description: Simple collaboration from your desktop
- This is the unofficial port of GitHub Desktop for Linux distributions
-
-Package: github-desktop
-Version: 3.0.7-linux1
-Architecture: amd64
-Maintainer: Brendan Forster <github@brendanforster.com>
-Installed-Size: 329211
-Depends: libgtk-3-0, libnotify4, libnss3, libxtst6, xdg-utils, libatspi2.0-0, libdrm2, libgbm1, libxcb-dri3-0, kde-cli-tools | kde-runtime | trash-cli | libglib2.0-bin | gvfs-bin, libcurl3 | libcurl4, libsecret-1-0, gnome-keyring
-Recommends: pulseaudio | libasound2
-Suggests: gir1.2-gnomekeyring-1.0, libgnome-keyring0, lsb-release
-Filename: ./GitHubDesktop-linux-3.0.7-linux1.deb
-Size: 87728360
-MD5sum: d2db616089f0dfff2bedf9740479d461
-SHA1: 634112698a5738ac65a5378c3767737e6bf73e7c
-SHA256: fda95c4cf0da75e781978e4805060c52086fd5de6e4280d64e06d711ec704b94
-Section: GNOME;GTK;Development
-Priority: extra
-Homepage: https://github.com/shiftkey/desktop
-Description: Simple collaboration from your desktop
- This is the unofficial port of GitHub Desktop for Linux distributions
+Package: dpkg-repack
+Version: 1.47
+Architecture: all
+Maintainer: Dpkg Developers <debian-dpkg@lists.debian.org>
+Installed-Size: 39
+Depends: perl:any, libdpkg-perl
+Suggests: fakeroot
+Filename: ./dpkg-repack_1.47_all.deb
+Size: 17784
+MD5sum: 58c828450f508625ba3a345a37cba18e
+SHA1: 7879295bca2f9c5de4c53f8303bf92c228a17a9d
+SHA256: 45f1184ac50f40a42ad37f8cb6962a0699328f33881f5e478c04c1a30bb781e6
+Section: admin
+Priority: optional
+Multi-Arch: foreign
+Homepage: https://wiki.debian.org/Teams/Dpkg
+Description: Debian package archiving tool
+ dpkg-repack creates a .deb file out of a package that has already been
+ installed. If any changes have been made to the package while it was
+ unpacked (i.e. files in /etc were modified), the new package will inherit
+ the changes.
+ .
+ This utility can make it easy to copy packages from one computer to another,
+ or to recreate packages that are installed on your system, but no longer
+ available elsewhere, or to store the current state of a package before you
+ upgrade it.
 
 Package: github-desktop
 Version: 3.1.1-linux1
@@ -315,52 +91,6 @@ Priority: extra
 Homepage: https://github.com/shiftkey/desktop
 Description: Simple collaboration from your desktop
  This is the unofficial port of GitHub Desktop for Linux distributions
-
-Package: icecat
-Version: 78.9.0-1
-Architecture: amd64
-Maintainer: losuler <losuler@posteo.net>
-Installed-Size: 214575
-Depends: libatk1.0-0 (>= 1.12.4), libc6 (>= 2.28), libcairo-gobject2 (>= 1.10.0), libcairo2 (>= 1.10.0), libdbus-1-3 (>= 1.9.14), libdbus-glib-1-2 (>= 0.78), libfontconfig1 (>= 2.12.6), libfreetype6 (>= 2.3.5), libgcc1 (>= 1:4.0), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.31.8), libgtk-3-0 (>= 3.0.0), libgtk2.0-0 (>= 2.8.0), libpango-1.0-0 (>= 1.14.0), libstdc++6 (>= 6), libx11-6, libx11-xcb1, libxcb-shm0, libxcb1, libxcomposite1 (>= 1:0.3-1), libxdamage1 (>= 1:1.1), libxext6, libxfixes3, libxrender1
-Filename: ./icecat_78.9.0-1_amd64.deb
-Size: 57665168
-MD5sum: ac543d77d10186aef79277e421d803d0
-SHA1: 35cca09a4bdeff6a0b60476a0139e7322bc0c280
-SHA256: 047ea828321af8eec6e394a146cba1fc78c77bd37706ab1268779cad7be407f0
-Section: web
-Priority: optional
-Homepage: https://www.gnu.org/software/gnuzilla
-Description: IceCat is the GNU version of the Firefox
- browser. Its main advantage is an ethical one: it is
- entirely free software. While the Firefox source code from
- the Mozilla project is free software, they distribute and
- recommend nonfree software as plug-ins and addons. Also
- their trademark license imposes requirements for the
- distribution of modified versions that make it
- inconvenient to exercise freedom 3.
-
-Package: icecat
-Version: 91.8.0-1
-Architecture: amd64
-Maintainer: losuler <losuler@posteo.net>
-Installed-Size: 268567
-Depends: libatk1.0-0 (>= 1.12.4), libc6 (>= 2.30), libcairo-gobject2 (>= 1.10.0), libcairo2 (>= 1.10.0), libdbus-1-3 (>= 1.9.14), libdbus-glib-1-2 (>= 0.78), libfontconfig1 (>= 2.12.6), libfreetype6 (>= 2.10.1), libgcc-s1 (>= 4.0), libgdk-pixbuf-2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.37.3), libgtk-3-0 (>= 3.9.14), libpango-1.0-0 (>= 1.14.0), libstdc++6 (>= 9), libx11-6, libx11-xcb1 (>= 2:1.7.2), libxcb-shm0, libxcb1, libxcomposite1 (>= 1:0.4.5), libxdamage1 (>= 1:1.1), libxext6, libxfixes3, libxrender1
-Filename: ./icecat_91.8.0-1_amd64.deb
-Size: 100086204
-MD5sum: 9d5956e885ec3a24502d4bdf2e09f654
-SHA1: ebfb137463c2aa0f7c1c60b00d2cda9d6083f6a8
-SHA256: 86524b8a3587d6e0ff1cae6b72c36be7d87762986e6e96c6708061097528625e
-Section: web
-Priority: optional
-Homepage: https://www.gnu.org/software/gnuzilla
-Description: IceCat is the GNU version of the Firefox
- browser. Its main advantage is an ethical one: it is
- entirely free software. While the Firefox source code from
- the Mozilla project is free software, they distribute and
- recommend nonfree software as plug-ins and addons. Also
- their trademark license imposes requirements for the
- distribution of modified versions that make it
- inconvenient to exercise freedom 3.
 
 Package: icecat
 Version: 91.9.0-1
@@ -418,30 +148,6 @@ Description: A terminal spinner/progress bar with Unicode, color, and no non-cor
  to another code page in Windows shells.
  .
  This description was automagically extracted from the module by dh-make-perl.
-
-Package: teamspeak3-client
-Version: 3.5.3
-Architecture: amd64
-Maintainer: Tommy Miland (tmiland) <kontakt@tmiland.com>
-Filename: ./teamspeak3-client_amd64-3.5.3.deb
-Size: 1632
-MD5sum: f3f3e504023e5dc9f1557277f2d7d8fd
-SHA1: fbebeec1eb7b2934554a44c4995fc767e994333a
-SHA256: f77266c3f0156e1338c6d7387dd67ae8a029fffb189f743f44bae5aee66519b2
-Section: non-free/net
-Priority: optional
-Homepage: https://github.com/tmiland/TeamSpeak3-Client
-Description: VoIP chat for online gaming
- TeamSpeak is a quality, scalable application which enables people to speak
- with one another over the Internet. TeamSpeak consists of both client and
- server software. The server acts as a host to multiple client connections,
- capable of handling literally thousands of simultaneous users. This results
- in an Internet based teleconferencing solution that works in a variety of
- applications such as team mates speaking with one another while playing
- their favorite online game, small businesses cutting costs on long distance
- charges, or for personal communication with friends and family.
- .
- This package contains the graphical TeamSpeak3 client.
 
 Package: teamspeak3-client
 Version: 3.5.6
