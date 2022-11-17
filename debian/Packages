@@ -2,11 +2,11 @@ Package: Invidious-Updater
 Version: 1.6.3
 Architecture: amd64
 Maintainer: Tommy Miland (tmiland) <kontakt@tmiland.com>
-Filename: ./invidious-updater_amd64-2.1.0.deb
-Size: 998
-MD5sum: 24dc7c7c0b4fbc29144abbf302883c99
-SHA1: ccf89a6f851ce9f8b73c96e173f7f65d54e0e7e5
-SHA256: 72f588ab8d851558835becdcbff0933f7765bbeb375d360e21399c89ae114386
+Filename: ./invidious-updater_amd64-1.6.3.deb
+Size: 1196
+MD5sum: 69e7a24e94a5e61d2685655c9b3b8e5a
+SHA1: 8ea5c0c46277fb45b6259517d4279f59c3bf9f4c
+SHA256: f8786917932d0d2d9ddd3d7534ab94ff3d8d73fcafac0bbe5570396e14438f2e
 Section: non-free/net
 Priority: optional
 Homepage: https://github.com/tmiland/Invidious-Updater
@@ -22,14 +22,14 @@ Description: Script to install and update Invidious
  This package contains the graphical Invidious-Updater client.
 
 Package: Invidious-Updater
-Version: 1.6.3
+Version: 2.1.0
 Architecture: amd64
 Maintainer: Tommy Miland (tmiland) <kontakt@tmiland.com>
-Filename: ./invidious-updater_amd64-1.6.3.deb
-Size: 1196
-MD5sum: 69e7a24e94a5e61d2685655c9b3b8e5a
-SHA1: 8ea5c0c46277fb45b6259517d4279f59c3bf9f4c
-SHA256: f8786917932d0d2d9ddd3d7534ab94ff3d8d73fcafac0bbe5570396e14438f2e
+Filename: ./invidious-updater_amd64-2.1.0.deb
+Size: 992
+MD5sum: e72ab02eec8fb0782897bb2ed6f3d2a2
+SHA1: e5a098b9f11ddb0f201d2cc8da9c52ff451f7bb0
+SHA256: 31728cb3566bd8d96c7239792cd6ea569960393217197b2d3ba429c4b89d649e
 Section: non-free/net
 Priority: optional
 Homepage: https://github.com/tmiland/Invidious-Updater
