@@ -25,7 +25,7 @@ GitHubDesktop() {
       | head -n 1 \
       | wget -qi -
 
-    deb_file="$(find . -name "GitHubDesktop-linux-$github_desktop_NEW_VERSION-linux1.deb" 2>/dev/null)"
+    deb_file="$(find . -name "GitHubDesktop-linux*-$github_desktop_NEW_VERSION-linux*.deb" 2>/dev/null)"
     mv "$deb_file" ./debian/
     . ./update.sh
     git add -A
