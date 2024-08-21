@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-email=root
+email=debian-desktop@tmiland.com
 
 # Detect absolute and full path as well as filename of this script
 cd "$(dirname "$0")" || exit
@@ -66,5 +66,5 @@ gnuzilla() {
   fi
 }
 
-GitHubDesktop
+#GitHubDesktop
 gnuzilla
