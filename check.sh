@@ -69,7 +69,7 @@ gnuzilla() {
 snapserver() {
   snapserver_repo=badaix/snapcast
   cd "${CURRDIR}" || exit
-  snapserver_CUR_VERSION="$(find  -name "snapserver_*.deb" | sed 's/.*_\([0-9\.][0-9\.]*\).*/\1/' | sort -rnk3 | head -n 1)"
+  snapserver_CUR_VERSION="$(find . -name "snapserver_*.deb" | sed 's/.*_\([0-9\.][0-9\.]*\).*/\1/' | sort -rnk3 | head -n 1)"
   snapserver_NEW_VERSION="$(curl -sSL https://api.github.com/repos/$snapserver_repo/releases | grep '"tag_name":' | sed -n 's/[^0-9.]*\([0-9.]*\).*/\1/p' | head -n 1)"
   echo "Current snapserver Version: $snapserver_CUR_VERSION => New Version: $snapserver_NEW_VERSION"
 
@@ -100,6 +100,40 @@ snapserver() {
   fi
 }
 
+snapclient() {
+  snapclient_repo=badaix/snapcast
+  cd "${CURRDIR}" || exit
+  snapclient_CUR_VERSION="$(find . -name "snapclient_*.deb" | sed 's/.*_\([0-9\.][0-9\.]*\).*/\1/' | sort -rnk3 | head -n 1)"
+  snapclient_NEW_VERSION="$(curl -sSL https://api.github.com/repos/$snapclient_repo/releases | grep '"tag_name":' | sed -n 's/[^0-9.]*\([0-9.]*\).*/\1/p' | head -n 1)"
+  echo "Current snapclient Version: $snapclient_CUR_VERSION => New Version: $snapclient_NEW_VERSION"
+
+  if [[ "$snapclient_CUR_VERSION" < "$snapclient_NEW_VERSION" ]]; then
+
+    echo "Downloading new snapclient version $snapclient_NEW_VERSION" | mail -s "Downloading new snapclient version $snapclient_NEW_VERSION" $email
+    cd "${CURRDIR}" || exit
+    curl -sSL https://api.github.com/repos/$snapclient_repo/releases \
+      | grep "browser_download_url.*snapclient.*deb" \
+      | cut -d : -f 2,3 \
+      | tr -d \" \
+      | head -n 1 \
+      | wget -qi -
+
+    deb_file="$(find . -name "snapclient_$snapclient_NEW_VERSION-1_amd64_$(lsb_release -sc).deb" 2>/dev/null)"
+    mv "$deb_file" ./debian/
+    . ./update.sh
+    git add -A
+    git commit -m "Update snapclient version to $snapclient_NEW_VERSION"
+    git push -u origin master
+    git tag -a "$snapclient_NEW_VERSION" -m "Update snapclient version from $snapclient_CUR_VERSION to $snapclient_NEW_VERSION"
+    git push --tags origin master
+    exit
+
+  else
+    echo "Latest snapclient version already downloaded..."
+  fi
+}
+
 #GitHubDesktop
 gnuzilla
 snapserver
+snapclient
