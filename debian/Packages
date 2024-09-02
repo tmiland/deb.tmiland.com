@@ -176,6 +176,85 @@ Description: A terminal spinner/progress bar with Unicode, color, and no non-cor
  .
  This description was automagically extracted from the module by dh-make-perl.
 
+Package: snapclient
+Source: snapcast
+Version: 0.28.0-1
+Architecture: amd64
+Maintainer: Johannes Pohl <snapcast@badaix.de>
+Installed-Size: 1157
+Depends: libasound2 (>= 1.0.18), libavahi-client3 (>= 0.6.16), libavahi-common3 (>= 0.6.16), libc6 (>= 2.34), libflac12 (>= 1.3.0), libgcc-s1 (>= 3.0), libogg0 (>= 1.0rc3), libopus0 (>= 1.1), libpulse0 (>= 0.99.1), libsoxr0 (>= 0.1.0), libstdc++6 (>= 12), libvorbisidec1 (>= 1.2.1+git20180316), adduser
+Recommends: avahi-daemon
+Filename: ./snapclient_0.28.0-1_amd64-bookworm.deb
+Size: 367100
+MD5sum: f9cf87cbcfec0c1ea0bb2a1c56f193ed
+SHA1: 93a19745963bc9b355fca6e9d89d46aa8fb722fa
+SHA256: adad90a16df25a7d70c4146d78c3280154097d06b8bccf5895475fae160c432b
+Section: sound
+Priority: optional
+Homepage: https://github.com/badaix/snapcast
+Description: Snapcast client
+ Snapcast is a multiroom client-server audio player, where all clients are
+ time synchronized with the server to play perfectly synced audio. It's not a
+ standalone player, but an extension that turns your existing audio player into
+ a Sonos-like multiroom solution.
+ .
+ This package contains the client which connects to the server and plays the
+ audio.
+
+Package: snapserver
+Source: snapcast
+Version: 0.28.0-1
+Architecture: amd64
+Maintainer: Johannes Pohl <snapcast@badaix.de>
+Installed-Size: 5064
+Depends: libasound2 (>= 1.0.18), libavahi-client3 (>= 0.6.16), libavahi-common3 (>= 0.6.16), libc6 (>= 2.34), libexpat1 (>= 2.0.1), libflac12 (>= 1.3.0), libgcc-s1 (>= 3.0), libogg0 (>= 1.0rc3), libopus0 (>= 1.1), libsoxr0 (>= 0.1.0), libstdc++6 (>= 11), libvorbis0a (>= 1.1.2), libvorbisenc2 (>= 1.1.2), adduser
+Recommends: avahi-daemon
+Filename: ./snapserver_0.28.0-1_amd64-bookworm.deb
+Size: 1357644
+MD5sum: b18378b310b2df8fcdaa00532317f7f8
+SHA1: 0f13a49576e4d2bd7c9be3dcf4564584111b983d
+SHA256: 1f3e2686867b0921c92614e434d64437d0ca4b60a24450257da975eff747cf46
+Section: sound
+Priority: optional
+Homepage: https://github.com/badaix/snapcast
+Description: Snapcast server
+ Snapcast is a multiroom client-server audio player, where all clients are
+ time synchronized with the server to play perfectly synced audio. It's not a
+ standalone player, but an extension that turns your existing audio player into
+ a Sonos-like multiroom solution.
+ .
+ The server's audio input is a named pipe `/tmp/snapfifo`. All data that is fed
+ into this file will be send to the connected clients. One of the most generic
+ ways to use Snapcast is in conjunction with the music player daemon or Mopidy,
+ which can be configured to use a named pipe as audio output.
+
+Package: snapserver
+Source: snapcast
+Version: 0.29.0-1
+Architecture: amd64
+Maintainer: Johannes Pohl <snapcast@badaix.de>
+Installed-Size: 5093
+Depends: libasound2 (>= 1.0.18), libavahi-client3 (>= 0.6.16), libavahi-common3 (>= 0.6.16), libc6 (>= 2.34), libexpat1 (>= 2.0.1), libflac12 (>= 1.3.0), libgcc-s1 (>= 3.0), libogg0 (>= 1.0rc3), libopus0 (>= 1.1), libsoxr0 (>= 0.1.0), libstdc++6 (>= 11), libvorbis0a (>= 1.1.2), libvorbisenc2 (>= 1.1.2), adduser
+Recommends: avahi-daemon
+Filename: ./snapserver_0.29.0-1_amd64_bookworm.deb
+Size: 1358788
+MD5sum: 862e5dc6d94f67a10e8184a32b268dd5
+SHA1: 3e7f16a06543a9c9e749f6cf43e5109d715a94e2
+SHA256: 5796d341eaed6909472a09f249e94dfaa62aa5f3905a5196fbbbc7ea0aa1f3fe
+Section: sound
+Priority: optional
+Homepage: https://github.com/badaix/snapcast
+Description: Snapcast server
+ Snapcast is a multiroom client-server audio player, where all clients are
+ time synchronized with the server to play perfectly synced audio. It's not a
+ standalone player, but an extension that turns your existing audio player into
+ a Sonos-like multiroom solution.
+ .
+ The server's audio input is a named pipe `/tmp/snapfifo`. All data that is fed
+ into this file will be send to the connected clients. One of the most generic
+ ways to use Snapcast is in conjunction with the music player daemon or Mopidy,
+ which can be configured to use a named pipe as audio output.
+
 Package: teamspeak3-client
 Version: 3.5.6
 Architecture: amd64

@@ -66,5 +66,40 @@ gnuzilla() {
   fi
 }
 
+snapserver() {
+  snapserver_repo=badaix/snapcast
+  cd "${CURRDIR}" || exit
+  snapserver_CUR_VERSION="$(find  -name "snapserver_*.deb" | sed 's/.*_\([0-9\.][0-9\.]*\).*/\1/' | sort -rnk3 | head -n 1)"
+  snapserver_NEW_VERSION="$(curl -sSL https://api.github.com/repos/$snapserver_repo/releases | grep '"tag_name":' | sed -n 's/[^0-9.]*\([0-9.]*\).*/\1/p' | head -n 1)"
+  echo "Current snapserver Version: $snapserver_CUR_VERSION => New Version: $snapserver_NEW_VERSION"
+
+  if [[ "$snapserver_CUR_VERSION" < "$snapserver_NEW_VERSION" ]]; then
+
+    echo "Downloading new snapserver version $snapserver_NEW_VERSION" | mail -s "Downloading new snapserver version $snapserver_NEW_VERSION" $email
+    cd "${CURRDIR}" || exit
+    curl -sSL https://api.github.com/repos/$snapserver_repo/releases \
+      | grep "browser_download_url.*snapserver.*deb" \
+      | cut -d : -f 2,3 \
+      | tr -d \" \
+      | head -n 1 \
+      | wget -qi -
+
+    deb_file="$(find . -name "snapserver_$snapserver_NEW_VERSION-1_amd64_$(lsb_release -sc).deb" 2>/dev/null)"
+    #deb_file="$(find . -name "snapserver_\"$snapserver_NEW_VERSION\"_amd64_\"$(lsb_release -sc)\".deb" 2>/dev/null)"
+    mv "$deb_file" ./debian/
+    . ./update.sh
+    git add -A
+    git commit -m "Update snapserver version to $snapserver_NEW_VERSION"
+    git push -u origin master
+    git tag -a "$snapserver_NEW_VERSION" -m "Update snapserver version from $snapserver_CUR_VERSION to $snapserver_NEW_VERSION"
+    git push --tags origin master
+    exit
+
+  else
+    echo "Latest snapserver version already downloaded..."
+  fi
+}
+
 #GitHubDesktop
 gnuzilla
+snapserver
