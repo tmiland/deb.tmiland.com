@@ -4,6 +4,7 @@
   - [TeamSpeak3 Client](https://github.com/tmiland/TeamSpeak3-Client)
  - [GNU-IceCat](https://www.gnu.org/software/gnuzilla/)
  - [Invidious-Updater (And Installer)](https://github.com/tmiland/Invidious-Updater)
+ - [Snapcast](https://github.com/badaix/snapcast)
 
  # Usage
 
@@ -25,7 +26,7 @@
  $ sudo apt install {package-name}
  ```
 
-Package names: ```icecat``` ```teamspeak3-client``` ```invidious-updater```
+Package names: ```icecat``` ```teamspeak3-client``` ```invidious-updater``` ```snapserver``` ```snapclient```
 
 **Note**
 Package ```gnu-icecat``` has changed to ```icecat```
