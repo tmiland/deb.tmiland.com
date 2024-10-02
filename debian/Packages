@@ -350,3 +350,27 @@ Description: VoIP chat for online gaming
  .
  This package contains the graphical TeamSpeak3 client.
 
+Package: teamspeak3-client
+Version: 3.6.2
+Architecture: amd64
+Maintainer: Tommy Miland (tmiland) <kontakt@tmiland.com>
+Filename: ./teamspeak3-client_amd64-3.6.2.deb
+Size: 1388
+MD5sum: 6e073efd2f65017122f10bdd81529b00
+SHA1: c157ed36b11276a554d0abae8b1d69110cba1c31
+SHA256: faec9a09a87bfc6d352585f815c12b705245accfe784a0f5341a0c4c373c5810
+Section: non-free/net
+Priority: optional
+Homepage: https://github.com/tmiland/TeamSpeak3-Client
+Description: VoIP chat for online gaming
+ TeamSpeak is a quality, scalable application which enables people to speak
+ with one another over the Internet. TeamSpeak consists of both client and
+ server software. The server acts as a host to multiple client connections,
+ capable of handling literally thousands of simultaneous users. This results
+ in an Internet based teleconferencing solution that works in a variety of
+ applications such as team mates speaking with one another while playing
+ their favorite online game, small businesses cutting costs on long distance
+ charges, or for personal communication with friends and family.
+ .
+ This package contains the graphical TeamSpeak3 client.
+
