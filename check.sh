@@ -41,16 +41,37 @@ GitHubDesktop() {
 }
 
 gnuzilla() {
-  ICECATE_URL=https://download.opensuse.org/repositories/home:/losuler:/icecat/Debian_11/amd64
+  ICECAT_LATEST_VERSION=$(curl -s https://icecatbrowser.org/all_downloads.html |
+    grep -Po 'h2>\K.*(?=</h2)' |
+    head -n 1 |
+  sed "s|Icecat Version:||g")
+
+  ICECATE_URL=https://icecatbrowser.org/all_downloads.html
   cd "${CURRDIR}" || exit
-  ICECAT_CUR_VERSION="$(find ./debian/ -name "icecat_*.deb" | cut -d _ -f 2 | sort -rnk3 | head -n 1)"
-  ICECAT_NEW_VERSION="$(curl -sSL $ICECATE_URL | grep -oP 'href="icecat_\K[0-9]+\.[0-9]+\.[0-9](-[0-9])?' | sort -rnk3 | head -n 1)"
+  ICECAT_CUR_VERSION="$(find ./debian/ -name "icecat_*.deb" |
+  cut -d _ -f 2 |
+  sort -rnk3 |
+  head -n 1)"
+  ICECAT_NEW_VERSION="$(curl -s https://icecatbrowser.org/all_downloads.html |
+    grep -Po 'b>\K.*(?=</b)' |
+    head -n 1 |
+    sed -n 's/[^0-9.]*\([0-9.]*\).*/\1/p' |
+    # Stript trailing .
+  sed 's/.$//')"
+  ICECAT_CUR_VERSION=$(echo "$ICECAT_CUR_VERSION" | sed -n 's/[^0-9.]*\([0-9.]*\).*/\1/p')
   echo "Current Icecat Version: $ICECAT_CUR_VERSION => New Version: $ICECAT_NEW_VERSION"
   
-  if [[ "$ICECAT_CUR_VERSION" < ${ICECAT_NEW_VERSION} ]]; then
+  #if [[ "$ICECAT_CUR_VERSION" < ${ICECAT_NEW_VERSION} ]]; then
+    if dpkg --compare-versions "$ICECAT_CUR_VERSION" lt "$ICECAT_NEW_VERSION"
+    then
+
     echo "Downloading new Icecat version $ICECAT_NEW_VERSION" | mail -s "Downloading new Icecat version $ICECAT_NEW_VERSION" $email
     cd "${CURRDIR}" || exit
-    wget $ICECATE_URL/icecat_"${ICECAT_NEW_VERSION}"_amd64.deb
+    ICECAT_NEW_VERSION_DEB=$(curl -s "$ICECATE_URL" |
+    awk -F'href=' 'NF>1 && $2~/\.(deb)/ {split($2,a,"\"");print a[2]}' |
+    sort -rnk3 |
+    head -n 1)
+    wget https://icecatbrowser.org"$ICECAT_NEW_VERSION_DEB"
     
     deb_file="$(find . -name "icecat_${ICECAT_NEW_VERSION}_amd64.deb" 2>/dev/null)"
     mv "$deb_file" ./debian/
