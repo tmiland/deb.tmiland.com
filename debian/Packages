@@ -1,4 +1,21 @@
 Package: GNU-IceCat
+Version: 128.12.0
+Architecture: amd64
+Maintainer: Tommy Miland (tmiland) <kontakt@tmiland.com>
+Filename: ./icecat_128.12.0_amd64.deb
+Size: 2674
+MD5sum: 4d1b068d5df3d7252a31566d1ed5f00f
+SHA1: 73ba8b7cfdd8b2903f2f09c38b7372181283d2e1
+SHA256: 48447400a964f01b99f599e053dfdec91ce8dd5e74ebeb544ba5ef2c7c86f7ef
+Section: non-free/net
+Priority: optional
+Homepage: https://github.com/tmiland/GNU-IceCat
+Description: GNU IceCat is the GNU version of the Firefox browser
+ GNUzilla is the GNU version of the Mozilla suite, and GNU IceCat is the GNU version of the Firefox browser. Its main advantage is an ethical one: it is entirely free software. While the Firefox source code from the Mozilla project is free software, they distribute and recommend nonfree software as plug-ins and addons. Also their trademark license imposes requirements for the distribution of modified versions that make it inconvenient to exercise freedom 3.
+ .
+ This package contains the GNU IceCat browser.
+
+Package: GNU-IceCat
 Version: 128.9.0
 Architecture: amd64
 Maintainer: Tommy Miland (tmiland) <kontakt@tmiland.com>
