@@ -3,10 +3,10 @@ Version: 128.12.0
 Architecture: amd64
 Maintainer: Tommy Miland (tmiland) <kontakt@tmiland.com>
 Filename: ./icecat_128.12.0_amd64.deb
-Size: 2674
-MD5sum: 4d1b068d5df3d7252a31566d1ed5f00f
-SHA1: 73ba8b7cfdd8b2903f2f09c38b7372181283d2e1
-SHA256: 48447400a964f01b99f599e053dfdec91ce8dd5e74ebeb544ba5ef2c7c86f7ef
+Size: 2672
+MD5sum: bf4d2ae3960e10d3ce93679f44c49bfc
+SHA1: 49887013f56895f006383c55f0cd025804deb927
+SHA256: 7252a593d75b118ef4db7980c3d0d494031b18aa6bf200ee00672c1404681f4e
 Section: non-free/net
 Priority: optional
 Homepage: https://github.com/tmiland/GNU-IceCat
