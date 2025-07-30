@@ -149,7 +149,52 @@ snapclient() {
   fi
 }
 
+snapclient_with_pulse() {
+  snapclient_with_pulse_repo=badaix/snapcast
+  cd "${CURRDIR}" || exit
+  snapclient_with_pulse_CUR_VERSION="$(find . -name "snapclient_*with-pulse.deb" | sed 's/.*_\([0-9\.][0-9\.]*\).*/\1/' | sort -rnk3 | head -n 1)"
+  snapclient_with_pulse_NEW_VERSION="$(curl -sSL https://api.github.com/repos/$snapclient_with_pulse_repo/releases | grep '"tag_name":' | sed -n 's/[^0-9.]*\([0-9.]*\).*/\1/p' | head -n 1)"
+  echo "Current snapclient with pulse Version: $snapclient_with_pulse_CUR_VERSION => New Version: $snapclient_with_pulse_NEW_VERSION"
+
+  if [[ "$snapclient_with_pulse_CUR_VERSION" < "$snapclient_with_pulse_NEW_VERSION" ]]; then
+
+    echo "Downloading new snapclient version $snapclient_with_pulse_NEW_VERSION" | mail -s "Downloading new snapclient version $snapclient_with_pulse_NEW_VERSION" $email
+    cd "${CURRDIR}" || exit
+    curl -sSL https://api.github.com/repos/$snapclient_with_pulse_repo/releases \
+      | grep "browser_download_url.*snapclient.*_with-pulse.deb" \
+      | cut -d : -f 2,3 \
+      | tr -d \" \
+      | head -n 1 \
+      | wget -qi -
+
+    deb_file="$(find . -name "snapclient_$snapclient_with_pulse_NEW_VERSION-1_amd64_$(lsb_release -sc)_with-pulse.deb" 2>/dev/null)"
+    # https://www.baeldung.com/linux/package-deb-change-repack
+    # Change package name to "snapclient-with-pulse"
+    mkdir ./debtmp
+    dpkg-deb -R "$deb_file" ./debtmp
+    sed -i "s|Package: snapclient|Package: snapclient-with-pulse|g" ./debtmp/DEBIAN/control 
+    cd ./debtmp/
+    find . -type f -not -path "./DEBIAN/*" -exec md5sum {} + | sort -k 2 | sed 's/\.\/\(.*\)/\1/' > DEBIAN/md5sums
+    cd .. || exit 0
+    dpkg-deb -b ./debtmp "$deb_file"
+    rm -rf ./debtmp
+    ###############
+    mv "$deb_file" ./debian/
+    . ./update.sh
+    git add -A
+    git commit -m "Update snapclient with pulse version to $snapclient_with_pulse_NEW_VERSION"
+    git push -u origin master
+    #git tag -a "$snapclient_NEW_VERSION" -m "Update snapclient version from $snapclient_CUR_VERSION to $snapclient_NEW_VERSION"
+    git push --tags origin master
+    exit
+
+  else
+    echo "Latest snapclient version already downloaded..."
+  fi
+}
+
 #GitHubDesktop
 gnuzilla
 snapserver
 snapclient
+snapclient_with_pulse
