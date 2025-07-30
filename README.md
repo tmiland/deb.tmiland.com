@@ -26,7 +26,7 @@
  $ sudo apt install {package-name}
  ```
 
-Package names: ```icecat``` ```teamspeak3-client``` ```invidious-updater``` ```snapserver``` ```snapclient```
+Package names: ```icecat``` ```teamspeak3-client``` ```invidious-updater``` ```snapserver``` ```snapclient``` ```snapclient-with-pulse```
 
 **Note**
 Package ```gnu-icecat``` has changed to ```icecat```
