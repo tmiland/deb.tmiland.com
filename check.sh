@@ -2,6 +2,9 @@
 
 email=debian-desktop@tmiland.com
 
+GH_TOKEN=$(cat "${HOME}"/.github/.ghtoken)
+GH_USER=tmiland
+
 # Detect absolute and full path as well as filename of this script
 cd "$(dirname "$0")" || exit
 CURRDIR=$(pwd)
@@ -13,18 +16,18 @@ cd - > /dev/null || exit
 #   github_desktop_CUR_VERSION="$(find ./debian/ -name "GitHubDesktop-linux-*.deb" | sed 's/.*-\([0-9\.][0-9\.]*\).*/\1/' | sort -rnk3 | head -n 1)"
 #   github_desktop_NEW_VERSION="$(curl -sSL https://api.github.com/repos/$github_dektop_repo/releases | grep '"tag_name":' | sed -n 's/[^0-9.]*\([0-9.]*\).*/\1/p' | head -n 1)"
 #   echo "Current GitHub Desktop Version: $github_desktop_CUR_VERSION => New Version: $github_desktop_NEW_VERSION"
-# 
+#
 #   if [[ "$github_desktop_CUR_VERSION" < "$github_desktop_NEW_VERSION" ]]; then
-# 
+#
 #     echo "Downloading new github-desktop version $github_desktop_NEW_VERSION" | mail -s "Downloading new github-desktop version $github_desktop_NEW_VERSION" $email
 #     cd "${CURRDIR}" || exit
 #     curl -sSL https://api.github.com/repos/$github_dektop_repo/releases \
-#       | grep "browser_download_url.*deb" \
-#       | cut -d : -f 2,3 \
-#       | tr -d \" \
-#       | head -n 1 \
-#       | wget -qi -
-# 
+  #       | grep "browser_download_url.*deb" \
+  #       | cut -d : -f 2,3 \
+  #       | tr -d \" \
+  #       | head -n 1 \
+  #       | wget -qi -
+#
 #     deb_file="$(find . -name "GitHubDesktop-linux*-$github_desktop_NEW_VERSION-linux*.deb" 2>/dev/null)"
 #     mv "$deb_file" ./debian/
 #     . ./update.sh
@@ -34,7 +37,7 @@ cd - > /dev/null || exit
 #     #git tag -a "$github_desktop_NEW_VERSION" -m "Update github-desktop version from $github_desktop_CUR_VERSION to $github_desktop_NEW_VERSION"
 #     git push --tags origin master
 #     exit
-# 
+#
 #   else
 #     echo "Latest GitHub Desktop version already installed"
 #   fi
@@ -57,17 +60,17 @@ gnuzilla() {
   sed 's/.$//')
 
   echo "Current Icecat Version: $ICECAT_CUR_VERSION => New Version: $ICECAT_NEW_VERSION"
-  
-  #if [[ "$ICECAT_CUR_VERSION" < ${ICECAT_NEW_VERSION} ]]; then
-    if dpkg --compare-versions "$ICECAT_CUR_VERSION" lt "$ICECAT_NEW_VERSION"
-    then
 
-    echo "Downloading new Icecat version $ICECAT_NEW_VERSION" | mail -s "Downloading new Icecat version $ICECAT_NEW_VERSION" $email
-    
+  #if [[ "$ICECAT_CUR_VERSION" < ${ICECAT_NEW_VERSION} ]]; then
+  if dpkg --compare-versions "$ICECAT_CUR_VERSION" lt "$ICECAT_NEW_VERSION"
+  then
+
+    echo "Downloading new Icecat version $ICECAT_NEW_VERSION" #| mail -s "Downloading new Icecat version $ICECAT_NEW_VERSION" $email
+
     cd "${ICECAT_REPO_DIR}" || exit
     ./package.sh
     cd - || exit 1
-    
+
     deb_file="$(find "${ICECAT_REPO_DIR}" -name "icecat_${ICECAT_NEW_VERSION}_amd64.deb" 2>/dev/null)"
     mv "$deb_file" ./debian/
     . ./update.sh
@@ -86,14 +89,14 @@ snapserver() {
   snapserver_repo=badaix/snapcast
   cd "${CURRDIR}" || exit
   snapserver_CUR_VERSION="$(find . -name "snapserver_*.deb" | sed 's/.*_\([0-9\.][0-9\.]*\).*/\1/' | sort -rnk3 | head -n 1)"
-  snapserver_NEW_VERSION="$(curl -sSL https://api.github.com/repos/$snapserver_repo/releases | grep '"tag_name":' | sed -n 's/[^0-9.]*\([0-9.]*\).*/\1/p' | head -n 1)"
+  snapserver_NEW_VERSION="$(curl --user "$GH_USER:$GH_TOKEN" -sSL https://api.github.com/repos/$snapserver_repo/releases | grep '"tag_name":' | sed -n 's/[^0-9.]*\([0-9.]*\).*/\1/p' | head -n 1)"
   echo "Current snapserver Version: $snapserver_CUR_VERSION => New Version: $snapserver_NEW_VERSION"
 
   if [[ "$snapserver_CUR_VERSION" < "$snapserver_NEW_VERSION" ]]; then
 
-    echo "Downloading new snapserver version $snapserver_NEW_VERSION" | mail -s "Downloading new snapserver version $snapserver_NEW_VERSION" $email
+    echo "Downloading new snapserver version $snapserver_NEW_VERSION" #| mail -s "Downloading new snapserver version $snapserver_NEW_VERSION" $email
     cd "${CURRDIR}" || exit
-    curl -sSL https://api.github.com/repos/$snapserver_repo/releases \
+    curl --user "$GH_USER:$GH_TOKEN" -sSL https://api.github.com/repos/$snapserver_repo/releases \
       | grep "browser_download_url.*snapserver.*deb" \
       | cut -d : -f 2,3 \
       | tr -d \" \
@@ -120,14 +123,14 @@ snapclient() {
   snapclient_repo=badaix/snapcast
   cd "${CURRDIR}" || exit
   snapclient_CUR_VERSION="$(find . -name "snapclient_*.deb" | sed 's/.*_\([0-9\.][0-9\.]*\).*/\1/' | sort -rnk3 | head -n 1)"
-  snapclient_NEW_VERSION="$(curl -sSL https://api.github.com/repos/$snapclient_repo/releases | grep '"tag_name":' | sed -n 's/[^0-9.]*\([0-9.]*\).*/\1/p' | head -n 1)"
+  snapclient_NEW_VERSION="$(curl --user "$GH_USER:$GH_TOKEN" -sSL https://api.github.com/repos/$snapclient_repo/releases | grep '"tag_name":' | sed -n 's/[^0-9.]*\([0-9.]*\).*/\1/p' | head -n 1)"
   echo "Current snapclient Version: $snapclient_CUR_VERSION => New Version: $snapclient_NEW_VERSION"
 
   if [[ "$snapclient_CUR_VERSION" < "$snapclient_NEW_VERSION" ]]; then
 
-    echo "Downloading new snapclient version $snapclient_NEW_VERSION" | mail -s "Downloading new snapclient version $snapclient_NEW_VERSION" $email
+    echo "Downloading new snapclient version $snapclient_NEW_VERSION" #| mail -s "Downloading new snapclient version $snapclient_NEW_VERSION" $email
     cd "${CURRDIR}" || exit
-    curl -sSL https://api.github.com/repos/$snapclient_repo/releases \
+    curl --user "$GH_USER:$GH_TOKEN" -sSL https://api.github.com/repos/$snapclient_repo/releases \
       | grep "browser_download_url.*snapclient.*deb" \
       | cut -d : -f 2,3 \
       | tr -d \" \
@@ -153,14 +156,14 @@ snapclient_with_pulse() {
   snapclient_with_pulse_repo=badaix/snapcast
   cd "${CURRDIR}" || exit
   snapclient_with_pulse_CUR_VERSION="$(find . -name "snapclient_*with-pulse.deb" | sed 's/.*_\([0-9\.][0-9\.]*\).*/\1/' | sort -rnk3 | head -n 1)"
-  snapclient_with_pulse_NEW_VERSION="$(curl -sSL https://api.github.com/repos/$snapclient_with_pulse_repo/releases | grep '"tag_name":' | sed -n 's/[^0-9.]*\([0-9.]*\).*/\1/p' | head -n 1)"
+  snapclient_with_pulse_NEW_VERSION="$(curl --user "$GH_USER:$GH_TOKEN" -sSL https://api.github.com/repos/$snapclient_with_pulse_repo/releases | grep '"tag_name":' | sed -n 's/[^0-9.]*\([0-9.]*\).*/\1/p' | head -n 1)"
   echo "Current snapclient with pulse Version: $snapclient_with_pulse_CUR_VERSION => New Version: $snapclient_with_pulse_NEW_VERSION"
 
   if [[ "$snapclient_with_pulse_CUR_VERSION" < "$snapclient_with_pulse_NEW_VERSION" ]]; then
 
-    echo "Downloading new snapclient version $snapclient_with_pulse_NEW_VERSION" | mail -s "Downloading new snapclient version $snapclient_with_pulse_NEW_VERSION" $email
+    echo "Downloading new snapclient version $snapclient_with_pulse_NEW_VERSION" #| mail -s "Downloading new snapclient version $snapclient_with_pulse_NEW_VERSION" $email
     cd "${CURRDIR}" || exit
-    curl -sSL https://api.github.com/repos/$snapclient_with_pulse_repo/releases \
+    curl --user "$GH_USER:$GH_TOKEN" -sSL https://api.github.com/repos/$snapclient_with_pulse_repo/releases \
       | grep "browser_download_url.*snapclient.*_with-pulse.deb" \
       | cut -d : -f 2,3 \
       | tr -d \" \
@@ -172,7 +175,7 @@ snapclient_with_pulse() {
     # Change package name to "snapclient-with-pulse"
     mkdir ./debtmp
     dpkg-deb -R "$deb_file" ./debtmp
-    sed -i "s|Package: snapclient|Package: snapclient-with-pulse|g" ./debtmp/DEBIAN/control 
+    sed -i "s|Package: snapclient|Package: snapclient-with-pulse|g" ./debtmp/DEBIAN/control
     cd ./debtmp/
     find . -type f -not -path "./DEBIAN/*" -exec md5sum {} + | sort -k 2 | sed 's/\.\/\(.*\)/\1/' > DEBIAN/md5sums
     cd .. || exit 0
@@ -193,8 +196,75 @@ snapclient_with_pulse() {
   fi
 }
 
+# download_file() {
+#   echo "Downloading $APP_NAME version $NEW_VERSION"
+#   cd "${CURRDIR}" || exit
+#   curl --user "$GH_USER:$GH_TOKEN" -sSL https://api.github.com/repos/"$REPO"/releases \
+#     | grep "browser_download_url.*$FILE_NAME" \
+#     | cut -d : -f 2,3 \
+#     | tr -d \" \
+#     | head -n 1 \
+#     | wget -qi -
+# }
+
+publish_release() {
+  . ./update.sh
+  git add -A
+  git commit -m "Update $APP_NAME version to $NEW_VERSION"
+  git push -u origin master
+  #git tag -a "$NEW_VERSION" -m "Update $APP_NAME version from $CUR_VERSION to $NEW_VERSION"
+  git push --tags origin master
+}
+
+timeshift() {
+  APP_NAME=timeshift
+  FILE_NAME=packages.tar.gz
+  REPO=linuxmint/$APP_NAME
+  cd "${CURRDIR}" || exit
+
+  CUR_VERSION="$(find . -type f -name "$APP_NAME*.deb" | sed 's/.*_\([0-9\.][0-9\.]*\).*/\1/' | sort -rnk3 | head -n 1)"
+  NEW_VERSION="$(curl --user "$GH_USER:$GH_TOKEN" -sSL https://api.github.com/repos/"$REPO"/releases |
+  grep -oP '"browser_download_url":.*amd64.changes' |
+  head -n 1 |
+  sed 's/.*_\([0-9\.][0-9\.]*\).*/\1/')"
+  
+  if [ -z "$CUR_VERSION"  ]; then
+    echo "Downloading Latest $APP_NAME version..."
+    curl --user "$GH_USER:$GH_TOKEN" -sSL https://api.github.com/repos/"$REPO"/releases |
+    jq -r '.[] | select(.tag_name == "master.lmde6") | .assets[] | .browser_download_url' |
+    head -n 1 |
+    wget -qi -
+    tar -xzvf packages.tar.gz
+    DEB_FILE="$(find ./packages -type f -name ""$APP_NAME"_"$NEW_VERSION"_amd64.deb" 2>/dev/null)"
+    mv "$DEB_FILE" ./debian/
+    rm -rf ./packages
+    publish_release
+    exit
+  else
+  echo "Current $APP_NAME Version: $CUR_VERSION => New Version: $NEW_VERSION"
+  if [[ "$CUR_VERSION" < "$NEW_VERSION" ]]
+  then
+    echo "Downloading $APP_NAME version $NEW_VERSION"
+    cd "${CURRDIR}" || exit
+    curl --user "$GH_USER:$GH_TOKEN" -sSL https://api.github.com/repos/"$REPO"/releases |
+    jq -r '.[] | select(.tag_name == "master.lmde6") | .assets[] | .browser_download_url' |
+    head -n 1 |
+    wget -qi -
+    tar -xzvf packages.tar.gz
+    DEB_FILE="$(find ./packages -type f -name ""$APP_NAME"_"$NEW_VERSION"_amd64.deb" 2>/dev/null)"
+    mv "$DEB_FILE" ./debian/
+    rm -rf ./packages
+    publish_release
+    exit
+  else
+    echo "Latest $APP_NAME version already downloaded..."
+  fi
+fi
+}
+
 #GitHubDesktop
 gnuzilla
 snapserver
 snapclient
 snapclient_with_pulse
+timeshift
