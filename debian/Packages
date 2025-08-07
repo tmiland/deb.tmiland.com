@@ -477,6 +477,33 @@ Description: Snapcast server
  ways to use Snapcast is in conjunction with the music player daemon or Mopidy,
  which can be configured to use a named pipe as audio output.
 
+Package: snapserver
+Source: snapcast
+Version: 0.32.2-1
+Architecture: amd64
+Maintainer: Johannes Pohl <snapcast@badaix.de>
+Installed-Size: 6836
+Depends: libasound2 (>= 1.0.18), libavahi-client3 (>= 0.6.16), libavahi-common3 (>= 0.6.16), libc6 (>= 2.34), libexpat1 (>= 2.0.1), libflac12 (>= 1.3.0), libgcc-s1 (>= 3.0), libogg0 (>= 1.0rc3), libopus0 (>= 1.1), libsoxr0 (>= 0.1.0), libssl3 (>= 3.0.0), libstdc++6 (>= 11), libvorbis0a (>= 1.1.2), libvorbisenc2 (>= 1.1.2), adduser
+Recommends: avahi-daemon
+Filename: ./snapserver_0.32.2-1_amd64_bookworm.deb
+Size: 1651164
+MD5sum: 4bb0dcce3f44b9b09b81fdfe15d2b647
+SHA1: b506710991a071bb83016ec64c358781d6ae0b5b
+SHA256: debc3422dc047375ff277b6af301b2fd9f6d8ab1a679a02b3888d43f3fee6158
+Section: sound
+Priority: optional
+Homepage: https://github.com/badaix/snapcast
+Description: Snapcast server
+ Snapcast is a multiroom client-server audio player, where all clients are
+ time synchronized with the server to play perfectly synced audio. It's not a
+ standalone player, but an extension that turns your existing audio player into
+ a Sonos-like multiroom solution.
+ .
+ The server's audio input is a named pipe `/tmp/snapfifo`. All data that is fed
+ into this file will be send to the connected clients. One of the most generic
+ ways to use Snapcast is in conjunction with the music player daemon or Mopidy,
+ which can be configured to use a named pipe as audio output.
+
 Package: teamspeak3-client
 Version: 3.5.6
 Architecture: amd64
