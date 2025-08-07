@@ -254,6 +254,7 @@ timeshift() {
     DEB_FILE="$(find ./packages -type f -name ""$APP_NAME"_"$NEW_VERSION"_amd64.deb" 2>/dev/null)"
     mv "$DEB_FILE" ./debian/
     rm -rf ./packages
+    rm ./packages.tar.gz
     publish_release
     exit
   else
