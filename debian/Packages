@@ -346,6 +346,31 @@ Description: Snapcast client
  This package contains the client which connects to the server and plays the
  audio.
 
+Package: snapclient
+Source: snapcast
+Version: 0.32.2-1
+Architecture: amd64
+Maintainer: Johannes Pohl <snapcast@badaix.de>
+Installed-Size: 1895
+Depends: libasound2 (>= 1.0.18), libavahi-client3 (>= 0.6.16), libavahi-common3 (>= 0.6.16), libc6 (>= 2.34), libflac12 (>= 1.3.0), libgcc-s1 (>= 3.0), libogg0 (>= 1.0rc3), libopus0 (>= 1.1), libsoxr0 (>= 0.1.0), libssl3 (>= 3.0.0), libstdc++6 (>= 12), libvorbis0a (>= 1.1.2), adduser
+Recommends: avahi-daemon
+Filename: ./snapclient_0.32.2-1_amd64_bookworm.deb
+Size: 590560
+MD5sum: 9d5f218c637a5cf8510ae7a292713bcb
+SHA1: 2118712618fd73404f1887b83f1c6bb08433a4db
+SHA256: c190bef400c946b6b0baa19e5b4e701018b6d1e3fddacd1f27a1bb1d9893fa3a
+Section: sound
+Priority: optional
+Homepage: https://github.com/badaix/snapcast
+Description: Snapcast client
+ Snapcast is a multiroom client-server audio player, where all clients are
+ time synchronized with the server to play perfectly synced audio. It's not a
+ standalone player, but an extension that turns your existing audio player into
+ a Sonos-like multiroom solution.
+ .
+ This package contains the client which connects to the server and plays the
+ audio.
+
 Package: snapclient-with-pulse
 Source: snapcast
 Version: 0.31.0-1
