@@ -157,7 +157,7 @@ snapclient_with_pulse() {
   APP_NAME=snapclient-with-pulse
   REPO=badaix/snapcast
   cd "${CURRDIR}" || exit
-  CUR_VERSION="$(find . -name ""$APP_NAME"_*with-pulse.deb" | sed 's/.*_\([0-9\.][0-9\.]*\).*/\1/' | sort -rnk3 | head -n 1)"
+  CUR_VERSION="$(find . -name "snapclient_*with-pulse.deb" | sed 's/.*_\([0-9\.][0-9\.]*\).*/\1/' | sort -rnk3 | head -n 1)"
   NEW_VERSION="$(curl --user "$GH_USER:$GH_TOKEN" -sSL https://api.github.com/repos/$REPO/releases | grep '"tag_name":' | sed -n 's/[^0-9.]*\([0-9.]*\).*/\1/p' | head -n 1)"
   echo "Current snapclient with pulse Version: $CUR_VERSION => New Version: $NEW_VERSION"
   if [[ "$CUR_VERSION" < "$NEW_VERSION" ]]; then
@@ -169,7 +169,7 @@ snapclient_with_pulse() {
       | tr -d \" \
       | head -n 1 \
       | wget -qi -
-    DEB_FILE="$(find . -name "\"$APP_NAME\"_$NEW_VERSION-1_amd64_$(lsb_release -sc)_with-pulse.deb" 2>/dev/null)"
+    DEB_FILE="$(find . -name "snapclient_"$NEW_VERSION"-1_amd64_*_with-pulse.deb" 2>/dev/null)"
     # https://www.baeldung.com/linux/package-deb-change-repack
     # Change package name to "snapclient-with-pulse"
     mkdir ./debtmp
