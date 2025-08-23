@@ -159,9 +159,9 @@ snapclient_with_pulse() {
   cd "${CURRDIR}" || exit
   CUR_VERSION="$(find . -name "snapclient_*with-pulse.deb" | sed 's/.*_\([0-9\.][0-9\.]*\).*/\1/' | sort -rnk3 | head -n 1)"
   NEW_VERSION="$(curl --user "$GH_USER:$GH_TOKEN" -sSL https://api.github.com/repos/$REPO/releases | grep '"tag_name":' | sed -n 's/[^0-9.]*\([0-9.]*\).*/\1/p' | head -n 1)"
-  echo "Current snapclient with pulse Version: $CUR_VERSION => New Version: $NEW_VERSION"
+  echo "Current $APP_NAME Version: $CUR_VERSION => New Version: $NEW_VERSION"
   if [[ "$CUR_VERSION" < "$NEW_VERSION" ]]; then
-    echo "Downloading new snapclient version $NEW_VERSION"
+    echo "Downloading new $APP_NAME version $NEW_VERSION"
     cd "${CURRDIR}" || exit
     curl --user "$GH_USER:$GH_TOKEN" -sSL https://api.github.com/repos/$REPO/releases \
       | grep "browser_download_url.*snapclient.*_with-pulse.deb" \
@@ -188,19 +188,6 @@ snapclient_with_pulse() {
     echo "Latest $APP_NAME version already downloaded..."
   fi
 }
-
-# download_file() {
-#   echo "Downloading $APP_NAME version $NEW_VERSION"
-#   cd "${CURRDIR}" || exit
-#   curl --user "$GH_USER:$GH_TOKEN" -sSL https://api.github.com/repos/"$REPO"/releases \
-#     | grep "browser_download_url.*$FILE_NAME" \
-#     | cut -d : -f 2,3 \
-#     | tr -d \" \
-#     | head -n 1 \
-#     | wget -qi -
-# }
-
-
 
 timeshift() {
   APP_NAME=timeshift
