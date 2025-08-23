@@ -648,6 +648,23 @@ Description: Snapcast server
  ways to use Snapcast is in conjunction with the music player daemon or Mopidy,
  which can be configured to use a named pipe as audio output.
 
+Package: snapweb
+Version: 0.9.1-1
+Architecture: all
+Maintainer: Johannes Pohl <snapweb@badaix.de>
+Installed-Size: 1202
+Depends: debconf (>= 0.5) | debconf-2.0
+Filename: ./snapweb_0.9.1-1_all.deb
+Size: 486038
+MD5sum: e372ad535e435bdd3e258498ab3ba2f3
+SHA1: 82e7112bd426bdbff8062777445c15378d88ae95
+SHA256: fc89cb7b7b9e757acb1b112769ba655fccb7875fb7853a50fbc924260f5f5187
+Section: sound
+Priority: optional
+Homepage: https://github.com/badaix/snapweb
+Description: Web client for Snapcast
+ Web client for Snapcast with control and playback capabilities.
+
 Package: teamspeak3-client
 Version: 3.5.6
 Architecture: amd64
