@@ -329,3 +329,24 @@ Description: System restore utility
  at a later date to undo system changes. Creates incremental snapshots
  using rsync or BTRFS snapshots using BTRFS tools.
 
+Package: timeshift
+Version: 25.07.7
+Architecture: amd64
+Maintainer: Linux Mint <root@linuxmint.com>
+Installed-Size: 4098
+Depends: libc6 (>= 2.34), libcairo2 (>= 1.2.4), libgdk-pixbuf-2.0-0 (>= 2.22.0), libgee-0.8-2 (>= 0.8.3), libglib2.0-0 (>= 2.61.2), libgtk-3-0 (>= 3.16.2), libjson-glib-1.0-0 (>= 1.5.2), libvte-2.91-0, libxapp1 (>= 1.4.9), rsync, debianutils, btrfs-progs | btrfs-tools
+Replaces: timeshift-btrfs
+Filename: ./timeshift_25.07.7_amd64.deb
+Size: 723740
+MD5sum: 06c1024bc4afd5e315d25372943a2959
+SHA1: 831e1f6fa992d15f6e71828c7d5c40a282e4d4a5
+SHA256: dac7e520d3c2fa757f2dd241a86f5f63766c3bebb61dc7ed58bda0f9b25ef091
+Section: utils
+Priority: extra
+Homepage: https://github.com/linuxmint/timeshift
+Description: System restore utility
+ Timeshift is a system restore utility which takes snapshots
+ of the system at regular intervals. These snapshots can be restored
+ at a later date to undo system changes. Creates incremental snapshots
+ using rsync or BTRFS snapshots using BTRFS tools.
+
