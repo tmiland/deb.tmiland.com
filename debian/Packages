@@ -239,6 +239,24 @@ Description: SSH connection manager with integrated terminal
  sshPilot provides SSH connection management, integrated terminal using VTE,
  tunneling, key management, and tabbed interface.
 
+Package: sshpilot
+Version: 3.0.2-1
+Architecture: all
+Maintainer: mFat <newmfat@gmail.com>
+Installed-Size: 1053
+Depends: python3, python3-gi, python3-gi-cairo, libgtk-4-1 (>= 4.6), gir1.2-gtk-4.0 (>= 4.6), libadwaita-1-0 (>= 1.4), gir1.2-adw-1 (>= 1.4), libvte-2.91-gtk4-0 (>= 0.70), gir1.2-vte-3.91 (>= 0.70), python3-paramiko, python3-cryptography, python3-secretstorage, ssh-askpass, sshpass
+Filename: ./sshpilot_3.0.2-1_all.deb
+Size: 137002
+MD5sum: 5601c9caf49bbc086ebc000b0905b956
+SHA1: 8a2cacba6850af31691e2b34447b64ea868d4e61
+SHA256: bb76e32d7398c3d9a5913d5db6531ceccb7b6af12b44226eacec85f5751b7b04
+Section: utils
+Priority: optional
+Homepage: https://github.com/mfat/sshpilot
+Description: SSH connection manager with integrated terminal
+ sshPilot provides SSH connection management, integrated terminal using VTE,
+ tunneling, key management, and tabbed interface.
+
 Package: teamspeak3-client
 Version: 3.5.6
 Architecture: amd64
