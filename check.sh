@@ -11,14 +11,30 @@ CURRDIR=$(pwd)
 cd - > /dev/null || exit
 
 download_release() {
-  cd "${CURRDIR}"/debian/ || exit
-  curl --user "$GH_USER:$GH_TOKEN" -sSL https://api.github.com/repos/$REPO/releases \
-    | grep "browser_download_url.*$APP_NAME.*deb" \
-    | cut -d : -f 2,3 \
-    | tr -d \" \
-    | head -n 1 \
-    | wget -qi -
-  cd .. || exit
+  cd "${CURRDIR}" || exit
+  URL=$(curl --user "$GH_USER:$GH_TOKEN" -sSL https://api.github.com/repos/$REPO/releases 2>/dev/null \
+      | grep -i -m 1 "browser_download_url.*$APP_NAME.*deb" \
+      | cut -d'"' -f4)
+    DEB_FILE="${URL##*/}"
+    wget --quiet --continue --show-progress --progress=bar:force:noscroll "${URL}" -O "${DEB_FILE}"
+    if [[ $(stat -c%s "$DEB_FILE" 2>/dev/null) -gt 25000000 ]]
+    then
+      # https://www.baeldung.com/linux/package-deb-change-repack
+      mkdir ./debtmp
+      dpkg-deb -R "$DEB_FILE" ./debtmp
+      cp -rp ./postinst ./debtmp/DEBIAN/postinst
+      sed -i "s|REPO=|REPO=$REPO|g" ./debtmp/DEBIAN/postinst
+      sed -i "s|APP_NAME=|APP_NAME=$APP_NAME|g" ./debtmp/DEBIAN/postinst
+      cd ./debtmp/
+      find . -type f -not -path "./DEBIAN/*" -exec md5sum {} + | sort -k 2 | sed 's/\.\/\(.*\)/\1/' > DEBIAN/md5sums
+      # Remove everything but leave DEBIAN folder
+      find . -mindepth 1 -maxdepth 1 -type d -not -name DEBIAN \
+       -exec rm -rf '{}' \;
+      cd .. || exit 0
+      dpkg-deb -b --root-owner-group ./debtmp "$DEB_FILE"
+      rm -rf ./debtmp
+    fi
+    mv "$DEB_FILE" ./debian/
 }
 
 publish_release() {
@@ -44,7 +60,7 @@ get_release() {
       
       cd "${CURRDIR}" || exit
       
-      CUR_VERSION="$(find "${CURRDIR}" -name ""$APP_NAME"_*.deb" | sed 's/.*_\([0-9\.][0-9\.]*\).*/\1/' | sort -rnk3 | head -n 1)"
+      CUR_VERSION="$(ls ./debian | grep -i "$APP_NAME.*deb" | grep -Eo '[0-9]{1,}\.[0-9]{1,}\.[0-9]{1,}' | sort -rnk3 | head -n 1)"
       
       echo "Current $APP_NAME Version: $CUR_VERSION => New Version: $NEW_VERSION"
 
@@ -105,12 +121,12 @@ get_release() {
 #
 #     echo "Downloading new github-desktop version $github_desktop_NEW_VERSION" | mail -s "Downloading new github-desktop version $github_desktop_NEW_VERSION" $email
 #     cd "${CURRDIR}" || exit
-#     curl -sSL https://api.github.com/repos/$github_dektop_repo/releases \
-  #       | grep "browser_download_url.*deb" \
-  #       | cut -d : -f 2,3 \
-  #       | tr -d \" \
-  #       | head -n 1 \
-  #       | wget -qi -
+    # curl -sSL https://api.github.com/repos/$github_dektop_repo/releases \
+    #     | grep "browser_download_url.*deb" \
+    #     | cut -d : -f 2,3 \
+    #     | tr -d \" \
+    #     | head -n 1 \
+    #     | wget -qi -
 #
 #     DEB_FILE="$(find . -name "GitHubDesktop-linux*-$github_desktop_NEW_VERSION-linux*.deb" 2>/dev/null)"
 #     mv "$DEB_FILE" ./debian/
