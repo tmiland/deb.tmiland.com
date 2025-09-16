@@ -221,24 +221,6 @@ Homepage: https://github.com/badaix/snapweb
 Description: Web client for Snapcast
  Web client for Snapcast with control and playback capabilities.
 
-Package: sshpilot
-Version: 2.8.8-1
-Architecture: all
-Maintainer: mFat <newmfat@gmail.com>
-Installed-Size: 887
-Depends: python3, python3-gi, python3-gi-cairo, libgtk-4-1 (>= 4.6), gir1.2-gtk-4.0 (>= 4.6), libadwaita-1-0 (>= 1.4), gir1.2-adw-1 (>= 1.4), libvte-2.91-gtk4-0 (>= 0.70), gir1.2-vte-3.91 (>= 0.70), python3-paramiko, python3-cryptography, python3-secretstorage, ssh-askpass, sshpass
-Filename: ./sshpilot_2.8.8-1_all.deb
-Size: 118180
-MD5sum: 581fe2a9d4886170c9ef77a8fef50fa6
-SHA1: 39d7a6ea90278aa68dc8759a46ace3c065df925b
-SHA256: 84af6353e3d805c8664b7ee5dfa7384063da2516b2c2249c3b4ed57c7dad9f1c
-Section: utils
-Priority: optional
-Homepage: https://github.com/mfat/sshpilot
-Description: SSH connection manager with integrated terminal
- sshPilot provides SSH connection management, integrated terminal using VTE,
- tunneling, key management, and tabbed interface.
-
 Package: teamspeak3-client
 Version: 3.5.6
 Architecture: amd64
