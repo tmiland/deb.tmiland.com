@@ -255,6 +255,23 @@ Homepage: https://github.com/badaix/snapweb
 Description: Web client for Snapcast
  Web client for Snapcast with control and playback capabilities.
 
+Package: snapweb
+Version: 0.9.2-1
+Architecture: all
+Maintainer: Johannes Pohl <snapweb@badaix.de>
+Installed-Size: 1210
+Depends: debconf (>= 0.5) | debconf-2.0
+Filename: ./snapweb_0.9.2-1_all.deb
+Size: 488090
+MD5sum: bfb9da027c2b68007050015de30464fd
+SHA1: 5203ea1c526edbd0fde38e818ea17f04bd464e7c
+SHA256: fbc404f09bd511837c9840b879e8d74001bfd7680cf1a4302c649fb42da175bd
+Section: sound
+Priority: optional
+Homepage: https://github.com/badaix/snapweb
+Description: Web client for Snapcast
+ Web client for Snapcast with control and playback capabilities.
+
 Package: teamspeak3-client
 Version: 3.5.6
 Architecture: amd64
