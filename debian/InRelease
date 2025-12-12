@@ -1,36 +1,36 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA512
 
-Date: Fri, 12 Dec 2025 01:00:05 +0000
+Date: Fri, 12 Dec 2025 02:00:05 +0000
 MD5Sum:
  0061c34cb8aa385dde8fe6cb11723c27            17161 Packages
- df1b2c84dea67c3af8b7d74850a34f16             4793 Packages.gz
- 34c1e0cf9132d783c59ccf712821c7c4               38 Release
+ b9f9886c04e8a9432d24a8706b01341f             4793 Packages.gz
+ 04aee44f1d1e8eca2dfdc2e03cb82905               38 Release
 SHA1:
  cd8a52d9816eccc62aec852bf57b3bd76758f2ee            17161 Packages
- a4b84b0c5e04b39b77f9b7f1879e0b58c2947619             4793 Packages.gz
- 8a2700c25e703ce3ca026699445c4e4407fc1c68               38 Release
+ 120edd238c4cf97108667ebc3a0d0ffd19821d09             4793 Packages.gz
+ 21ce3bdd3fab32507cd22e43688bb1f22d0ea5c7               38 Release
 SHA256:
  d12cd45a8b63ce109897c5a437527557327185569760d2f917b1ceeedd990f27            17161 Packages
- 83bfdc247fa552e6b60859a853c1678ce9cb407a5200e801136157b027137b24             4793 Packages.gz
- 80a84dd7732994739da8c36082e461e38437072fb03fbcbe00815879019aa2bb               38 Release
+ 09c3b1444cac5e9ebe361421c2a1a0218af4d22be7bb6a2b096d990cf6fe5124             4793 Packages.gz
+ 5dbfa797bcd4a9e6be21014ebf55b55dd08f6e8f1f0efd9500c2e10eb34abf2f               38 Release
 SHA512:
  1ada8e27146f0facab21e97667e3df8cc887daeca5045bfe37ca0d2c030c04b736a67d3db5485c1333c80964c282fffcbda91f9289d283a68aaace62ae126d13            17161 Packages
- c13a3fd9cbe302cda5fdfe7820d9583c0a999431bf0d5f5f458ef6e35c4a5075627ea42c85d252fa92d4a855dc39d3ad7ead615b198a86fd3fcf8d167d54fe2d             4793 Packages.gz
- 7bde9cc97af3dee463fb9fcd1a8bc9d16d93e2cc4bbaee11c2b42b68ceef5230ce61a09cf4642ffe2de3931939cf2971687cd22b577bed62204a5d9c252eae63               38 Release
+ 560df2bc12415c801649ed36eab92ff0b57101217ec1b34cf9ca8a79e456870b3364eaa54275d713826df519faeafc93620e47369ef56ca568a73ae963501942             4793 Packages.gz
+ b88c876dfef1986e523a8ad2e8e0bcc014e24807f640f739b07ee8a7ed8c81b9d9ca4bd26c79d2cb4bd57426ef2aeac5345eb5344dd58f41404c2903aa9e364f               38 Release
 -----BEGIN PGP SIGNATURE-----
 
-iQIzBAEBCgAdFiEEfETP6OO5cUhqLgooCimYyy5tYeAFAmk7aRUACgkQCimYyy5t
-YeCbyw/8DdbYdgvUW59jLSWJyPXQlYLnivtIJEIxEUwFkr6CadJof84eh9UT1kEy
-hSSY7W1UXvCBgICg0EkZP3EfnR/oN0aZZbCErJB3Lg1Qgda6DUJGIof9cGb52M/k
-QLEQ9O+dF3OuDBVmKLH59A31jQOxftYKOqD9q4Q4JbhQ9ycNOh55P51nnBAWs+HR
-D8/+bJiIsjrQPUB1DujueZpbi+Cr2FOQ83nE6AzJh8edEyggPNtmOipMslAoafRX
-35EbCTaMO+gSfnLX9c9mYY4upeinwgsfdUx6uFwikQIpWwGIIPZubk4RxvZkHEhj
-c8yKswjgRx18Nx0sWxXYeWRSaL7/4eePeF2Jh/veMuO442ZHlh/2+lYs2NYlyUsq
-qAJ5UlJplSCP9m84WszWHI6ffK5GxAAllJnCQ6hVbDFUvvLRQ8dDb/y7u22AFvR1
-+vAbH24/k2LNOgksJxwAc59JH7Dj4W4AOQIVzHnYDyYqozv7+em2zvJV6GT08Qzm
-lKqTic+NPB2l19K8UiHsjDa1nI0oo9/bS2wf2u8nI2uo70v0/Adj0SHXNs4uXgZf
-r+j21QOzErVkXJYKJcxFsToXjeDE28cajLIbH1VAmgWX2mCXh79wlFKidL4MTE+P
-4RqDEPaTKHsEqQeqmUHaI89G22f1kazIxoSwbumDtxtTCggUar0=
-=Z2RW
+iQIzBAEBCgAdFiEEfETP6OO5cUhqLgooCimYyy5tYeAFAmk7dyUACgkQCimYyy5t
+YeBWgBAAp9s6oGArsiCMhPsZ0+RKvDdl4mIt89F6RodrArfl6KzYwKDfJz2NOvN6
+N6edQlUFwfaeUtjbLTL1sqWjTnWqCV2tzaiviL6eNbS4sqDMJ6xbO2K67yY3dbYj
+codEV5yEfTfs4aHQ1v24YEVnrbU6w/gl/vaDo7/jyzKh/q6kJI4/SYVk9i35X2DT
+AypJN+GzgSdV5sH/8bJdBBp+LPLOlqz3qmktWTQ/Hwo5L2lNGgzWCZWPsl8zTBmN
+TjAwmNlDEkEkODNg0dH4+rIMjBXcbKYx6Ou/6otawXi6NDQQF8Eq7NlKzJxVGLUp
+yQ8GNKVdgZ41vfmrR7XcXyo9YXnAAsh5e0qo+S5RIQOGvKXIsgLKj2FunwWp8cqH
+6sZggT2NyJi5WKfnuRkpBqav0LvkXNio1bjzY9tzj3Buywpdu4m6MZpV6G9yxbc7
+2bZI0wIj4oWTGf7s4gUSHL0h7odGLC5kmj/cQt6oPdpl6bcMJeFe335XFPti/uR4
+sSE/AsR5AAdHOMzR5rAw2B/L8h7RmKizHyYgcFLP8NRrKyanzMx9aehSXm8gqIAg
+7srEjIDepRETaRWID3Xat6eeW18c0YExaSBuqPRnhi8cxekmxpKeN/850uksYoSV
+NXH8i5fpBOeuY7UA8vOuKgmg0XeZ5kUgvnN8DfioHz4E//Xhed8=
+=GtNu
 -----END PGP SIGNATURE-----
