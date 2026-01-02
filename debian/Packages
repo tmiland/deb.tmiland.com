@@ -71,10 +71,10 @@ Version: 140.3.1
 Architecture: amd64
 Maintainer: Tommy Miland (tmiland) <kontakt@tmiland.com>
 Filename: ./icecat_140.3.1_amd64.deb
-Size: 2732
-MD5sum: 02577d95f8d2fc579ab5244ac9a2694b
-SHA1: 281a746c3c56e07a5ba67fa273b7c400d6c3d917
-SHA256: 55123642269969c797f223ddec5edd2f19dad683e9cf8ff9abc300e8ffbb32c3
+Size: 2728
+MD5sum: 2905eddce5350b77eb33bf74546d66e2
+SHA1: cc1840d783f9017276acf09033a8dbca3bd5f590
+SHA256: c656936a37d3b4721ca0038cba1a808b2332b8bfaaea4e946aca2c531d4ea4b3
 Section: non-free/net
 Priority: optional
 Homepage: https://github.com/tmiland/GNU-IceCat
