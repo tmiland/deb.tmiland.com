@@ -1,17 +1,17 @@
-Date: Sun, 05 Jul 2026 12:00:08 +0000
+Date: Sun, 05 Jul 2026 13:00:09 +0000
 MD5Sum:
  ceac7d025cf26e2b13ecbb2f355de3ab            17713 Packages
- fd872171d62b2dd1812a9beb4d2bb8e6             4932 Packages.gz
- a490f8acf154f5773c9acf370ec6f314               38 Release
+ 012b1c64ce5a2591fba6244e2866c900             4932 Packages.gz
+ 74a03c5198d56293a7fb3ffb6ae491b8               38 Release
 SHA1:
  e4c02dc7c02a2e25ec459f81c05682d42dc34459            17713 Packages
- 893763194fbc16651783ef2ad0fbfac606c3ede5             4932 Packages.gz
- ba2bd5fd4c2ed6b58027e5bcfc81a8f5884f7c08               38 Release
+ 1bd018afe6682390228670b907b8a5768ba0b353             4932 Packages.gz
+ 8b3fec0c338126c4e717cdb9cf764e0dc01c3c7a               38 Release
 SHA256:
  9951f88ad8fc873b01ffa9f0baed4194d2f8243370550ea3fe04d54e34f4245e            17713 Packages
- 9d10c7da98f304a00e09c2fddd1210484366924b16cbde399a1a724a3af81506             4932 Packages.gz
- 3facfdca1e2a3ff3e23a9dc11f6637109a386a554cd9ce6f94874786a64b7e9a               38 Release
+ 8b1085a4f1ca06dd7cee9a9d809bc7d0611154748b3ccbdc2e305b223b398428             4932 Packages.gz
+ 2225890a361159d94ee2bb1ffe2be88dae1a5eeb3e5f83a3530977ac8860b653               38 Release
 SHA512:
  039a2aa9ff3b3a33f33f4a6e0e90f898df1954f78ba8cde87cda6875ac612dd5abefd73690a84ee5ab1505ac00cf596e5c77cdfe80461fbb24dfa50b30f4c553            17713 Packages
- 0f677f71257c766cd3fa85731a12126ebdfcc907af416e94d7c1ec45dc0074163e33efb32178ca7eb6a811d1779ddc6e5acbc2b36ebc86407d1b491316bc27c7             4932 Packages.gz
- e581f954dd482198222e94017e9048450c469a0cfe307c2acfe7c5241032b38600bb594c818e3a0f97a357944a988095fdf9daa1277951b21afdb1e29a293da2               38 Release
+ 34f2bbd83e055fa7eb8b161caa4dd5579c65951044fa7239d5b9b8e901d5a4ee857d2e099048fe6c5cb85725f297f6ddc70240c6d7bc7fdbb35776478d2d42fd             4932 Packages.gz
+ 381efa8d3888f0d96865021e51fa69ddf6f8e5ebe58044f7f0732b7367c2a4fef6bed6a62aba0bb0c4f7acdeec99a39ead7ff29d72f69ad73e3447be4e90d061               38 Release
