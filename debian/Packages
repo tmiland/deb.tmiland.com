@@ -1,0 +1,339 @@
+Package: GNU-IceCat
+Version: 128.12.0
+Architecture: amd64
+Maintainer: Tommy Miland (tmiland) <kontakt@tmiland.com>
+Filename: ./icecat_128.12.0_amd64.deb
+Size: 2672
+MD5sum: bf4d2ae3960e10d3ce93679f44c49bfc
+SHA1: 49887013f56895f006383c55f0cd025804deb927
+SHA256: 7252a593d75b118ef4db7980c3d0d494031b18aa6bf200ee00672c1404681f4e
+Section: non-free/net
+Priority: optional
+Homepage: https://github.com/tmiland/GNU-IceCat
+Description: GNU IceCat is the GNU version of the Firefox browser
+ GNUzilla is the GNU version of the Mozilla suite, and GNU IceCat is the GNU version of the Firefox browser. Its main advantage is an ethical one: it is entirely free software. While the Firefox source code from the Mozilla project is free software, they distribute and recommend nonfree software as plug-ins and addons. Also their trademark license imposes requirements for the distribution of modified versions that make it inconvenient to exercise freedom 3.
+ .
+ This package contains the GNU IceCat browser.
+
+Package: GNU-IceCat
+Version: 128.13.0
+Architecture: amd64
+Maintainer: Tommy Miland (tmiland) <kontakt@tmiland.com>
+Filename: ./icecat_128.13.0_amd64.deb
+Size: 2676
+MD5sum: bd818b8b043d4cceb1282595e0187b75
+SHA1: 87a0b1d51f17e0317450f30d5eb123295edfe72d
+SHA256: 6fa5d4285c876be3a2dbdd850b53673adc26e82417560ec9fe13e0b6d044bbcf
+Section: non-free/net
+Priority: optional
+Homepage: https://github.com/tmiland/GNU-IceCat
+Description: GNU IceCat is the GNU version of the Firefox browser
+ GNUzilla is the GNU version of the Mozilla suite, and GNU IceCat is the GNU version of the Firefox browser. Its main advantage is an ethical one: it is entirely free software. While the Firefox source code from the Mozilla project is free software, they distribute and recommend nonfree software as plug-ins and addons. Also their trademark license imposes requirements for the distribution of modified versions that make it inconvenient to exercise freedom 3.
+ .
+ This package contains the GNU IceCat browser.
+
+Package: GNU-IceCat
+Version: 128.14.0
+Architecture: amd64
+Maintainer: Tommy Miland (tmiland) <kontakt@tmiland.com>
+Filename: ./icecat_128.14.0_amd64.deb
+Size: 2732
+MD5sum: c4712c66cabe995a0e21d916fffd48d8
+SHA1: 9bffb53114af7a2e5b70dcb3467eb3f60cec28ab
+SHA256: cd10fbf20facf810a3bcea5eed6ef11625d4ca7cb8614ae7c9c8429b6e670719
+Section: non-free/net
+Priority: optional
+Homepage: https://github.com/tmiland/GNU-IceCat
+Description: GNU IceCat is the GNU version of the Firefox browser
+ GNUzilla is the GNU version of the Mozilla suite, and GNU IceCat is the GNU version of the Firefox browser. Its main advantage is an ethical one: it is entirely free software. While the Firefox source code from the Mozilla project is free software, they distribute and recommend nonfree software as plug-ins and addons. Also their trademark license imposes requirements for the distribution of modified versions that make it inconvenient to exercise freedom 3.
+ .
+ This package contains the GNU IceCat browser.
+
+Package: GNU-IceCat
+Version: 140.3.0
+Architecture: amd64
+Maintainer: Tommy Miland (tmiland) <kontakt@tmiland.com>
+Filename: ./icecat_140.3.0_amd64.deb
+Size: 2732
+MD5sum: 2fd183ce01101ae1d05a3fdda9a85d03
+SHA1: ebc8d07e4149d5cb6cf45a4b6731fb8818d3e85d
+SHA256: 87390c9f747e0f5918b19643d51d2618d3cd07a91e74be0b4f9f11fc83e821fc
+Section: non-free/net
+Priority: optional
+Homepage: https://github.com/tmiland/GNU-IceCat
+Description: GNU IceCat is the GNU version of the Firefox browser
+ GNUzilla is the GNU version of the Mozilla suite, and GNU IceCat is the GNU version of the Firefox browser. Its main advantage is an ethical one: it is entirely free software. While the Firefox source code from the Mozilla project is free software, they distribute and recommend nonfree software as plug-ins and addons. Also their trademark license imposes requirements for the distribution of modified versions that make it inconvenient to exercise freedom 3.
+ .
+ This package contains the GNU IceCat browser.
+
+Package: GNU-IceCat
+Version: 140.3.1
+Architecture: amd64
+Maintainer: Tommy Miland (tmiland) <kontakt@tmiland.com>
+Filename: ./icecat_140.3.1_amd64.deb
+Size: 2728
+MD5sum: 2905eddce5350b77eb33bf74546d66e2
+SHA1: cc1840d783f9017276acf09033a8dbca3bd5f590
+SHA256: c656936a37d3b4721ca0038cba1a808b2332b8bfaaea4e946aca2c531d4ea4b3
+Section: non-free/net
+Priority: optional
+Homepage: https://github.com/tmiland/GNU-IceCat
+Description: GNU IceCat is the GNU version of the Firefox browser
+ GNUzilla is the GNU version of the Mozilla suite, and GNU IceCat is the GNU version of the Firefox browser. Its main advantage is an ethical one: it is entirely free software. While the Firefox source code from the Mozilla project is free software, they distribute and recommend nonfree software as plug-ins and addons. Also their trademark license imposes requirements for the distribution of modified versions that make it inconvenient to exercise freedom 3.
+ .
+ This package contains the GNU IceCat browser.
+
+Package: Invidious-Updater
+Version: 2.2.1
+Architecture: amd64
+Maintainer: Tommy Miland (tmiland) <kontakt@tmiland.com>
+Filename: ./invidious-updater_amd64-2.2.1.deb
+Size: 1196
+MD5sum: 1077ac3089bb7483330f09bb472f4c4a
+SHA1: 406a944387e9aabb9ae694364afc08da3089b1b0
+SHA256: 0bcb6d37454ef10b571b0c153cb3a2474d909af15cec8ea632d5df175e6364d2
+Section: non-free/net
+Priority: optional
+Homepage: https://github.com/tmiland/Invidious-Updater
+Description: Script to install and update Invidious
+    Install invidious
+    Update git repo, rebuild and restart service
+    Update the Script
+    Install Invidious service
+    Run database maintenance
+    Run database migration
+    Uninstall Invidious
+ .
+ This package contains the graphical Invidious-Updater client.
+
+Package: Invidious-Updater
+Version: 2.2.2
+Architecture: amd64
+Maintainer: Tommy Miland (tmiland) <kontakt@tmiland.com>
+Filename: ./invidious-updater_amd64-2.2.2.deb
+Size: 1196
+MD5sum: d8b4f69832a055f31a34f091f0f8cda5
+SHA1: ac3a11ec5655c5ee73789d3f1792db726863743a
+SHA256: d5ab680d4850b6e07d3efc9c5baf5e1a41bc3f401c8aae44aaecc716b4657ec8
+Section: non-free/net
+Priority: optional
+Homepage: https://github.com/tmiland/Invidious-Updater
+Description: Script to install and update Invidious
+    Install invidious
+    Update git repo, rebuild and restart service
+    Update the Script
+    Install Invidious service
+    Run database maintenance
+    Run database migration
+    Uninstall Invidious
+ .
+ This package contains the graphical Invidious-Updater client.
+
+Package: Invidious-Updater
+Version: 2.2.3
+Architecture: amd64
+Maintainer: Tommy Miland (tmiland) <kontakt@tmiland.com>
+Filename: ./invidious-updater_amd64-2.2.3.deb
+Size: 1192
+MD5sum: a3bc0b18dcaf5dcf90c2781f11390fbc
+SHA1: 247cd38a8860212315195811cc360e841790a37b
+SHA256: cfa02b241b210eea1478893aa6e97c53ed80cf4aa069cb5ef3a42b97e96b0816
+Section: non-free/net
+Priority: optional
+Homepage: https://github.com/tmiland/Invidious-Updater
+Description: Script to install and update Invidious
+    Install invidious
+    Update git repo, rebuild and restart service
+    Update the Script
+    Install Invidious service
+    Run database maintenance
+    Run database migration
+    Uninstall Invidious
+ .
+ This package contains the graphical Invidious-Updater client.
+
+Package: dpkg
+Version: 1.20.12
+Architecture: amd64
+Essential: yes
+Maintainer: Dpkg Developers <debian-dpkg@lists.debian.org>
+Installed-Size: 5974
+Pre-Depends: libbz2-1.0, libc6 (>= 2.34), liblzma5 (>= 5.2.2), libselinux1 (>= 3.1~), libzstd1 (>= 1.5.2), zlib1g (>= 1:1.1.4)
+Depends: tar (>= 1.28-1)
+Suggests: apt, debsig-verify
+Breaks: libapt-pkg5.0 (<< 1.7~b), lsb-base (<< 10.2019031300)
+Filename: ./dpkg_1.20.12_amd64.deb
+Size: 1494076
+MD5sum: ee99dd0d44c941b739a5c2945b376e63
+SHA1: d3ff2d18b8ffc243405622e4cd5a51b2fe3db2ee
+SHA256: 03f566d2376d3a9e71cf66c44547b218bc7659b5deb49050a42ca9c2a71aa496
+Section: admin
+Priority: required
+Multi-Arch: foreign
+Homepage: https://wiki.debian.org/Teams/Dpkg
+Description: Debian package management system
+ This package provides the low-level infrastructure for handling the
+ installation and removal of Debian software packages.
+ .
+ For Debian package development tools, install dpkg-dev.
+
+Package: dpkg-repack
+Version: 1.47
+Architecture: all
+Maintainer: Dpkg Developers <debian-dpkg@lists.debian.org>
+Installed-Size: 39
+Depends: perl:any, libdpkg-perl
+Suggests: fakeroot
+Filename: ./dpkg-repack_1.47_all.deb
+Size: 17784
+MD5sum: 58c828450f508625ba3a345a37cba18e
+SHA1: 7879295bca2f9c5de4c53f8303bf92c228a17a9d
+SHA256: 45f1184ac50f40a42ad37f8cb6962a0699328f33881f5e478c04c1a30bb781e6
+Section: admin
+Priority: optional
+Multi-Arch: foreign
+Homepage: https://wiki.debian.org/Teams/Dpkg
+Description: Debian package archiving tool
+ dpkg-repack creates a .deb file out of a package that has already been
+ installed. If any changes have been made to the package while it was
+ unpacked (i.e. files in /etc were modified), the new package will inherit
+ the changes.
+ .
+ This utility can make it easy to copy packages from one computer to another,
+ or to recreate packages that are installed on your system, but no longer
+ available elsewhere, or to store the current state of a package before you
+ upgrade it.
+
+Package: libterm-spinner-color-perl
+Version: 0.05-1
+Architecture: all
+Maintainer: Joe Cooper <joe@virtualmin.com>
+Installed-Size: 115
+Depends: perl, perl-modules
+Filename: ./libterm-spinner-color-perl_0.05-1_all.deb
+Size: 18150
+MD5sum: a4e8025bc7ab63260e55456e915ef06b
+SHA1: 0a64dbff7eca71adfe866f8903eb1407dd4144e7
+SHA256: b46eacf479626c0ec88933893975310d953ad5a83e909e9b86f5cfa8cabbb9a8
+Section: perl
+Priority: optional
+Homepage: http://search.cpan.org/dist/Term-Spinner-Color/
+Description: A terminal spinner/progress bar with Unicode, color, and no non-core dependencies.
+ This is a simple spinner, useful when you want to show some kind of activity
+ during a long-running process of indeterminant length. It's loosely based on
+ the API from Term::Spinner and Term::Spinner::Lite. Unlike Term::Spinner
+ though, this module doesn't have any dependencies outside of modules shipped
+ with Perl itself. And, unlike Term::Spinner::Lite, this module has color
+ support and support for wide progress bars.
+ .
+ Term::Spinner::Color also provides an asynchronous mode, which does not
+ require your program to manually call the next method.
+ .
+ Some features and some (Unicode) frame sets do not work in Windows PowerShell
+ or cmd.exe. If you must work across a wide variety of platforms, choosing
+ ASCII frame sets is wise. run_ok method currently only provides Unicode
+ output, so it is not suitable for use on Windows (bash, of many types, on
+ Windows works fine, however). There's probably a way to fix this by switching
+ to another code page in Windows shells.
+ .
+ This description was automagically extracted from the module by dh-make-perl.
+
+Package: snapweb
+Version: 0.9.1-1
+Architecture: all
+Maintainer: Johannes Pohl <snapweb@badaix.de>
+Installed-Size: 1202
+Depends: debconf (>= 0.5) | debconf-2.0
+Filename: ./snapweb_0.9.1-1_all.deb
+Size: 486038
+MD5sum: e372ad535e435bdd3e258498ab3ba2f3
+SHA1: 82e7112bd426bdbff8062777445c15378d88ae95
+SHA256: fc89cb7b7b9e757acb1b112769ba655fccb7875fb7853a50fbc924260f5f5187
+Section: sound
+Priority: optional
+Homepage: https://github.com/badaix/snapweb
+Description: Web client for Snapcast
+ Web client for Snapcast with control and playback capabilities.
+
+Package: snapweb
+Version: 0.9.2-1
+Architecture: all
+Maintainer: Johannes Pohl <snapweb@badaix.de>
+Installed-Size: 1210
+Depends: debconf (>= 0.5) | debconf-2.0
+Filename: ./snapweb_0.9.2-1_all.deb
+Size: 488090
+MD5sum: bfb9da027c2b68007050015de30464fd
+SHA1: 5203ea1c526edbd0fde38e818ea17f04bd464e7c
+SHA256: fbc404f09bd511837c9840b879e8d74001bfd7680cf1a4302c649fb42da175bd
+Section: sound
+Priority: optional
+Homepage: https://github.com/badaix/snapweb
+Description: Web client for Snapcast
+ Web client for Snapcast with control and playback capabilities.
+
+Package: snapweb
+Version: 0.9.3-1
+Architecture: all
+Maintainer: Johannes Pohl <snapweb@badaix.de>
+Installed-Size: 1209
+Depends: debconf (>= 0.5) | debconf-2.0
+Filename: ./snapweb_0.9.3-1_all.deb
+Size: 488024
+MD5sum: 36c288229346c71973aeda6ce82b4aed
+SHA1: 95cd2e5ea77274eb9fca8ed4c3d73c882c6120c5
+SHA256: 475085a04b5051cc61cb5ed5f08b11730e4054e473cebc8743790e7ce767d80f
+Section: sound
+Priority: optional
+Homepage: https://github.com/snapcast/snapweb
+Description: Web client for Snapcast
+ Web client for Snapcast with control and playback capabilities.
+
+Package: teamspeak3-client
+Version: 3.5.6
+Architecture: amd64
+Maintainer: Tommy Miland (tmiland) <kontakt@tmiland.com>
+Filename: ./teamspeak3-client_amd64-3.5.6.deb
+Size: 1636
+MD5sum: 3950db0310bd0a716b82586e4f9df131
+SHA1: 21748e677471d59a458645dbe7a50937666c1ab4
+SHA256: 4aaf91b3cd12e975fb8eb7254725fe3d474a4e98c5ce7dfb660a2c7cc52d6809
+Section: non-free/net
+Priority: optional
+Homepage: https://github.com/tmiland/TeamSpeak3-Client
+Description: VoIP chat for online gaming
+ TeamSpeak is a quality, scalable application which enables people to speak
+ with one another over the Internet. TeamSpeak consists of both client and
+ server software. The server acts as a host to multiple client connections,
+ capable of handling literally thousands of simultaneous users. This results
+ in an Internet based teleconferencing solution that works in a variety of
+ applications such as team mates speaking with one another while playing
+ their favorite online game, small businesses cutting costs on long distance
+ charges, or for personal communication with friends and family.
+ .
+ This package contains the graphical TeamSpeak3 client.
+
+Package: teamspeak3-client
+Version: 3.6.2
+Architecture: amd64
+Maintainer: Tommy Miland (tmiland) <kontakt@tmiland.com>
+Filename: ./teamspeak3-client_amd64-3.6.2.deb
+Size: 1388
+MD5sum: 6e073efd2f65017122f10bdd81529b00
+SHA1: c157ed36b11276a554d0abae8b1d69110cba1c31
+SHA256: faec9a09a87bfc6d352585f815c12b705245accfe784a0f5341a0c4c373c5810
+Section: non-free/net
+Priority: optional
+Homepage: https://github.com/tmiland/TeamSpeak3-Client
+Description: VoIP chat for online gaming
+ TeamSpeak is a quality, scalable application which enables people to speak
+ with one another over the Internet. TeamSpeak consists of both client and
+ server software. The server acts as a host to multiple client connections,
+ capable of handling literally thousands of simultaneous users. This results
+ in an Internet based teleconferencing solution that works in a variety of
+ applications such as team mates speaking with one another while playing
+ their favorite online game, small businesses cutting costs on long distance
+ charges, or for personal communication with friends and family.
+ .
+ This package contains the graphical TeamSpeak3 client.
+
