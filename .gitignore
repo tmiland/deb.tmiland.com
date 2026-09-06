@@ -3,4 +3,4 @@ deb/build
 /.tmp/
 /*.deb
 /packages.tar.gz
-/noted.md
+/notes.md
