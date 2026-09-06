@@ -51,6 +51,16 @@ Two packages are special:
   site is down (and GNU's own releases stopped in 2019). The icecat debs are
   therefore removed from the repo until a working upstream source exists.
   `update-icecat.sh` remains in place to re-publish it when that happens.
+
+  As a free, actively maintained alternative in the same spirit (libre,
+  privacy-hardened, no telemetry), use [LibreWolf](https://librewolf.net)'s
+  official signed apt repository instead:
+
+  ```shell
+  sudo apt update && sudo apt install extrepo -y
+  sudo extrepo enable librewolf
+  sudo apt update && sudo apt install librewolf -y
+  ```
 - **invidious-updater** — upstream no longer publishes .deb assets; the
   package is updated manually when needed.
 
