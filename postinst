@@ -3,6 +3,8 @@
 REPO=
 APP_NAME=
 ASSET=
+# Optional: space-separated desktop files to hide after install (keep 1 launcher)
+HIDE=
 
 URL=$(curl -sSL https://api.github.com/repos/"$REPO"/releases 2>/dev/null \
   | grep -m 1 "browser_download_url.*$ASSET\"" \
@@ -25,6 +27,9 @@ deb_download "$URL"
 echo "Installing $APP_NAME in the background..."
 TEMP_LOG_FILE=/tmp/debtmp.log
 : > "$TEMP_LOG_FILE"
-nohup sleep 10 && dpkg -i "${CACHE_DIR}/${FILE}" > "$TEMP_LOG_FILE" 2>&1 & tail -f "$TEMP_LOG_FILE" &
+# shellcheck disable=SC2086
+nohup sleep 10 && dpkg -i "${CACHE_DIR}/${FILE}" > "$TEMP_LOG_FILE" 2>&1 \
+  && for f in $HIDE; do rm -f "/usr/share/applications/$f"; done \
+  && update-desktop-database & tail -f "$TEMP_LOG_FILE" &
 
 exit 0

@@ -87,8 +87,8 @@ prune_versions() { # prune_versions <name> <keep>
       done
 }
 
-repack_stub() { # repack_stub <deb> <repo> <app-name> <asset-regex> [apt-name] [payload-dir]
-  local deb=$1 repo=$2 app=$3 asset_re=$4 apt_name=$5 payload_dir=$6 asset_esc tmp
+repack_stub() { # repack_stub <deb> <repo> <app-name> <asset-regex> [apt-name] [payload-dir] [hide-list]
+  local deb=$1 repo=$2 app=$3 asset_re=$4 apt_name=$5 payload_dir=$6 hide=$7 asset_esc tmp
   # strip trailing anchor: postinst greps raw JSON lines that end with a quote
   asset_re=${asset_re%\$}
   asset_esc=${asset_re//\\/\\\\} # keep regex backslashes through sed
@@ -103,6 +103,7 @@ repack_stub() { # repack_stub <deb> <repo> <app-name> <asset-regex> [apt-name] [
   sed -i "s|^REPO=.*|REPO=$repo|" "$tmp/DEBIAN/postinst"
   sed -i "s|^APP_NAME=.*|APP_NAME=$app|" "$tmp/DEBIAN/postinst"
   sed -i "s|^ASSET=.*|ASSET=$asset_esc|" "$tmp/DEBIAN/postinst"
+  sed -i "s|^HIDE=.*|HIDE=$hide|" "$tmp/DEBIAN/postinst"
   # Optional payload (launcher files etc.); postinst still re-downloads the real deb
   if [ -n "$payload_dir" ] && [ -d "$payload_dir" ]; then
     cp -a "$payload_dir/." "$tmp/"
@@ -124,6 +125,7 @@ process_package() { # process_package <toml-file>
   asset_re=$(conf_get "$cfg" asset)
   keep=$(conf_get "$cfg" keep_versions)
   pkg_name=$(conf_get "$cfg" package) # optional apt package name override
+  hide=$(conf_get "$cfg" hide) # optional desktop files to hide after install
   payload_dir="$PACKAGES_DIR/$(basename "$cfg" .toml).payload"
   [ -d "$payload_dir" ] || payload_dir="" # optional launcher files for stubs
 
@@ -168,7 +170,7 @@ process_package() { # process_package <toml-file>
   fi
   if [ "$(stat -c%s "$deb")" -gt "$REPACK_SIZE_THRESHOLD" ]; then
     echo "-- $name: >25MB, repacking as install-stub"
-    repack_stub "$deb" "$repo" "${pkg_name:-$name}" "$asset_re" "$pkg_name" "$payload_dir"
+    repack_stub "$deb" "$repo" "${pkg_name:-$name}" "$asset_re" "$pkg_name" "$payload_dir" "$hide"
   fi
   mv "$deb" "$DEB_DIR/"
   rm -rf "$tmpdir"
