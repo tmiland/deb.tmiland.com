@@ -106,6 +106,8 @@ repack_stub() { # repack_stub <deb> <repo> <app-name> <asset-regex> [apt-name] [
   # Optional payload (launcher files etc.); postinst still re-downloads the real deb
   if [ -n "$payload_dir" ] && [ -d "$payload_dir" ]; then
     cp -a "$payload_dir/." "$tmp/"
+    find "$tmp" -type d -exec chmod 755 {} +
+    find "$tmp" -not -path "$tmp/DEBIAN/*" -type f -exec chmod 644 {} +
   fi
   ( cd "$tmp" \
     && find . -type f -not -path "./DEBIAN/*" -exec md5sum {} + 2>/dev/null \
