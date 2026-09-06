@@ -1,4 +1,6 @@
 # deb
+[![Update apt repo](https://github.com/tmiland/deb.tmiland.com/actions/workflows/update-repo.yml/badge.svg)](https://github.com/tmiland/deb.tmiland.com/actions/workflows/update-repo.yml)
+
  A PPA repository for deb packages:
   
   - [TeamSpeak3 Client](https://github.com/tmiland/TeamSpeak3-Client)

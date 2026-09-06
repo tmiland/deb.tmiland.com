@@ -9,8 +9,9 @@
 # Usage:
 #   ./update-repo.sh                       check all packages, publish updates
 #   ./update-repo.sh --regen-only          only regen metadata (after manual deb add)
-#   ./update-repo.sh --no-push             update locally, don't push
+#   ./update-repo.sh --no-push             update without pushing
 #   ./update-repo.sh --message "..."       custom commit message
+#   ./update-repo.sh --force <name>        force full pipeline for one package (test)
 #
 # Package config (packages/<name>.toml, simple TOML subset):
 #   repo = "owner/name"         GitHub repo with releases (required)
@@ -36,12 +37,14 @@ trap 'rm -rf "$TMP_ROOT"' EXIT
 REGEN_ONLY=0
 PUSH=1
 COMMIT_MSG=""
+FORCE_NAME=""
 while [ $# -gt 0 ]; do
   case "$1" in
     --regen-only) REGEN_ONLY=1; shift ;;
     --no-push)    PUSH=0; shift ;;
     --message)    COMMIT_MSG="$2"; shift 2 ;;
     --message=*)  COMMIT_MSG="${1#--message=}"; shift ;;
+    --force)      FORCE_NAME="${2:-}"; [ -n "$FORCE_NAME" ] || { echo "--force requires a package name" >&2; exit 2; }; shift 2 ;;
     *)            echo "Unknown option: $1" >&2; exit 2 ;;
   esac
 done
@@ -154,7 +157,8 @@ process_package() { # process_package <toml-file>
     echo "!! $name: could not extract version from asset name, skipping" >&2
     return 0
   fi
-  if [ -n "$cur_ver" ] && ! dpkg --compare-versions "$cur_ver" lt "$new_ver"; then
+  # --force skips the up-to-date short-circuit for the named package
+  if [ -z "$FORCE_NAME" ] && [ -n "$cur_ver" ] && ! dpkg --compare-versions "$cur_ver" lt "$new_ver"; then
     return 0
   fi
 
@@ -167,6 +171,18 @@ process_package() { # process_package <toml-file>
     echo "!! $name: download failed or empty, skipping" >&2
     rm -rf "$tmpdir"
     return 0
+  fi
+  # Verify against the upstream .sha256 when the release ships one
+  local sha_url="${url}.sha256"
+  if gh_curl -f -o "$tmpdir/checksum.sha256" "$sha_url" 2>/dev/null; then
+    if ! grep -q "$(sha256sum "$deb" | awk '{print $1}')" "$tmpdir/checksum.sha256"; then
+      echo "!! $name: sha256 mismatch against $sha_url, skipping" >&2
+      rm -rf "$tmpdir"
+      return 0
+    fi
+    echo "-- $name: sha256 verified"
+  else
+    echo "-- $name: no upstream checksum file, skipping verification"
   fi
   if [ "$(stat -c%s "$deb")" -gt "$REPACK_SIZE_THRESHOLD" ]; then
     echo "-- $name: >25MB, repacking as install-stub"
@@ -214,10 +230,22 @@ smoke_test() { # verify signatures + Packages file with a throwaway apt state
   rm -rf "$tmp"
 }
 
+check_size() { # refuse to publish a repo that would break GitHub Pages limits
+  local mb limit="${MAX_DEB_DIR_MB:-500}"
+  mb=$(du -sm --exclude=.git "$ROOT" | awk '{print $1}')
+  if [ "$mb" -gt "$limit" ]; then
+    echo "!! Repo is ${mb}MB (limit ${limit}MB) — prune old debs before publishing" >&2
+    return 1
+  fi
+  echo "-- repo size: ${mb}MB (limit ${limit}MB)"
+}
+
 commit_and_push() {
   if [ -n "${GITHUB_ACTIONS:-}" ]; then
-    git config user.name "${GITHUB_ACTOR:-github-actions}"
-    git config user.email "${GITHUB_ACTOR:-github-actions}@users.noreply.github.com"
+    # match the signing key UID so GitHub marks auto-commits as verified
+    git config user.name "Tommy Miland"
+    git config user.email "tmiland@tmiland.com"
+    git config commit.gpgsign true
   fi
   git add -A
   if git diff --cached --quiet; then
@@ -233,6 +261,9 @@ commit_and_push() {
     msg="Update ${UPDATED[*]}"
   fi
   git commit -m "$msg"
+  if ! check_size; then
+    exit 1 # committed locally, but never pushed
+  fi
   if [ "$PUSH" -eq 1 ]; then
     git push origin HEAD
   else
@@ -246,13 +277,18 @@ main() {
   if [ "$REGEN_ONLY" -eq 1 ]; then
     echo "== Regeneration only"
   else
-    local cfg found=0
+    local cfg found=0 stem
     for cfg in "$PACKAGES_DIR"/*.toml; do
       [ -e "$cfg" ] || { echo "!! No packages found in $PACKAGES_DIR" >&2; exit 1; }
+      stem=$(basename "$cfg" .toml)
+      if [ -n "$FORCE_NAME" ] && [ "$FORCE_NAME" != "$stem" ] \
+        && [ "$FORCE_NAME" != "$(conf_get "$cfg" name)" ]; then
+        continue
+      fi
       found=1
       process_package "$cfg"
     done
-    [ "$found" -eq 1 ] || { echo "!! No packages found in $PACKAGES_DIR" >&2; exit 1; }
+    [ "$found" -eq 1 ] || { echo "!! No package matches --force '$FORCE_NAME'" >&2; exit 1; }
     if [ ${#UPDATED[@]} -eq 0 ]; then
       echo "== All packages up to date, nothing to do"
       exit 0
