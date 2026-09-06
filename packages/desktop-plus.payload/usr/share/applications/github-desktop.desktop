@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=GitHub Desktop
+Comment=GitHub Desktop (DesktopPlus fork) with advanced functionality and improvements.
+GenericName=Git Client
+Exec=desktop-plus %U
+Icon=gh-desktop-plus
+Type=Application
+StartupNotify=true
+StartupWMClass=desktop-plus
+Categories=Development;GitHub;
+MimeType=x-scheme-handler/x-github-client;x-scheme-handler/x-github-desktop-auth;x-scheme-handler/x-github-desktop-dev-auth;

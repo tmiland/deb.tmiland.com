@@ -128,10 +128,10 @@ Depends: libgtk-3-0, libnotify4, libnss3, xdg-utils, libatspi2.0-0, libdrm2, lib
 Recommends: pulseaudio | libasound2
 Suggests: gir1.2-gnomekeyring-1.0, libgnome-keyring0, lsb-release
 Filename: ./DesktopPlus-v3.6.5.1-linux-x86_64.deb
-Size: 1756
-MD5sum: 76fd931c046d293f8842771154267145
-SHA1: b2ca2631699e24625562a4555f10b442e4491188
-SHA256: 35a315244f771177b889945ad69947deab1b98fb06f87acfd626a6d39af41d78
+Size: 2124
+MD5sum: e624cbb8505e2829429467cabed53699
+SHA1: c00cd6baa4bdde3ccad236bc821e0f85046fcd36
+SHA256: 6d65e38bdbe70fe3b510561f14da37519da84ff02c8e587fdbc61cb7455f9bb2
 Section: GNOME;GTK;Development
 Priority: extra
 Homepage: https://desktop-plus.org
