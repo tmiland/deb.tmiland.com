@@ -1,0 +1,2 @@
+repo = 'shiftkey/desktop'
+asset = 'GitHubDesktop-linux-amd64-.*\.deb$'

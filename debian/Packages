@@ -119,6 +119,25 @@ Description: Debian package archiving tool
  available elsewhere, or to store the current state of a package before you
  upgrade it.
 
+Package: github-desktop
+Version: 3.4.9-linux1
+Architecture: amd64
+Maintainer: Brendan Forster <github@brendanforster.com>
+Installed-Size: 447635
+Depends: libgtk-3-0, libnotify4, libnss3, libxtst6, xdg-utils, libatspi2.0-0, libdrm2, libgbm1, libxcb-dri3-0, kde-cli-tools | kde-runtime | trash-cli | libglib2.0-bin | gvfs-bin, libcurl3 | libcurl4, libsecret-1-0, gnome-keyring
+Recommends: pulseaudio | libasound2
+Suggests: gir1.2-gnomekeyring-1.0, libgnome-keyring0, lsb-release
+Filename: ./GitHubDesktop-linux-amd64-3.4.9-linux1.deb
+Size: 1756
+MD5sum: fef64f53087d1c487f556812f8a284cc
+SHA1: 64c42c41bd6354603ceaa931ee4dcb0365c4da92
+SHA256: 687fb3513c6fe6dd5b4e51113affa2a5f0ea1805d4416a58c821edd95edfcd4c
+Section: GNOME;GTK;Development
+Priority: extra
+Homepage: https://github.com/shiftkey/desktop
+Description: Simple collaboration from your desktop
+ This is the unofficial port of GitHub Desktop for Linux distributions
+
 Package: libterm-spinner-color-perl
 Version: 0.05-1
 Architecture: all

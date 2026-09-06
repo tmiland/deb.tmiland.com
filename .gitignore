@@ -1,4 +1,5 @@
 deb/build
 01-main
+/.tmp/
 /*.deb
 /packages.tar.gz

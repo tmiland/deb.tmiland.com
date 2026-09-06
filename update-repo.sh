@@ -28,6 +28,11 @@ PACKAGES_DIR="$ROOT/packages"
 DEB_DIR="$ROOT/debian"
 REPACK_SIZE_THRESHOLD=$((25 * 1000 * 1000))
 
+# Work dir on the repo's disk (a full /tmp tmpfs can break big downloads)
+TMP_ROOT="$ROOT/.tmp"
+mkdir -p "$TMP_ROOT"
+trap 'rm -rf "$TMP_ROOT"' EXIT
+
 REGEN_ONLY=0
 PUSH=1
 COMMIT_MSG=""
@@ -67,14 +72,14 @@ version_from() { # extract first dotted version number from a string
 }
 
 current_version() { # newest version among debian/<name>*.deb
-  find "$DEB_DIR" -maxdepth 1 -type f -name "$1*.deb" -printf '%f\n' \
+  find "$DEB_DIR" -maxdepth 1 -type f -iname "$1*.deb" -printf '%f\n' \
     | { grep -Eo '[0-9]+(\.[0-9]+)+' || true; } \
     | sort -V | tail -n 1
 }
 
 prune_versions() { # prune_versions <name> <keep>
   local name=$1 keep=$2 f
-  find "$DEB_DIR" -maxdepth 1 -type f -name "$name*.deb" -printf '%f\n' \
+  find "$DEB_DIR" -maxdepth 1 -type f -iname "$name*.deb" -printf '%f\n' \
     | sort -V | head -n -"$keep" \
     | while read -r f; do
         echo "-- $name: pruning old $f"
@@ -82,15 +87,16 @@ prune_versions() { # prune_versions <name> <keep>
       done
 }
 
-repack_stub() { # repack_stub <deb> <repo> <app-name> — strip payload, keep DEBIAN/
+repack_stub() { # repack_stub <deb> <repo> <app-name> — control-only install stub
   local deb=$1 repo=$2 app=$3 tmp
-  tmp=$(mktemp -d)
-  dpkg-deb -R "$deb" "$tmp"
+  tmp=$(mktemp -d -p "$TMP_ROOT")
+  mkdir -p "$tmp/DEBIAN"
+  # Extract control files only — no payload, no big temp usage
+  dpkg-deb -e "$deb" "$tmp/DEBIAN"
   cp "$ROOT/postinst" "$tmp/DEBIAN/postinst"
   sed -i "s|^REPO=.*|REPO=$repo|" "$tmp/DEBIAN/postinst"
   sed -i "s|^APP_NAME=.*|APP_NAME=$app|" "$tmp/DEBIAN/postinst"
-  # Remove payload; postinst re-downloads the real deb at install time
-  find "$tmp" -mindepth 1 -maxdepth 1 -type d -not -name DEBIAN -exec rm -rf '{}' +
+  # No payload — postinst re-downloads the real deb at install time
   : > "$tmp/DEBIAN/md5sums"
   dpkg-deb -b --root-owner-group "$tmp" "$deb"
   rm -rf "$tmp"
@@ -135,7 +141,7 @@ process_package() { # process_package <toml-file>
 
   echo "-- $name: downloading $new_ver"
   local tmpdir deb
-  tmpdir=$(mktemp -d)
+  tmpdir=$(mktemp -d -p "$TMP_ROOT")
   deb="$tmpdir/$(basename "$url")"
   gh_curl -o "$deb" "$url"
   if [ ! -s "$deb" ]; then
@@ -159,7 +165,7 @@ process_package() { # process_package <toml-file>
 smoke_test() { # verify signatures + Packages file with a throwaway apt state
   echo "== Smoke test: apt-get update against repo"
   local tmp p list
-  tmp=$(mktemp -d)
+  tmp=$(mktemp -d -p "$TMP_ROOT")
   mkdir -p "$tmp/state/lists/partial" "$tmp/cache/archives/partial"
   gpg --dearmor < "$DEB_DIR/KEY.gpg" > "$tmp/keyring.gpg"
   printf 'deb [signed-by=%s/keyring.gpg] file:%s ./\n' "$tmp" "$DEB_DIR" > "$tmp/tmiland.list"
@@ -172,7 +178,7 @@ smoke_test() { # verify signatures + Packages file with a throwaway apt state
     -o Debug::NoLocking=1 \
     -o APT::Get::List-Cleanup=0 \
     --quiet
-  list=$(ls "$tmp/state/lists/"*_Packages 2>/dev/null | head -n 1)
+  list=$(find "$tmp/state/lists" -maxdepth 1 -name '*_Packages' -print -quit 2>/dev/null)
   if [ -z "$list" ]; then
     echo "!! Smoke test: apt stored no Packages list" >&2
     rm -rf "$tmp"
