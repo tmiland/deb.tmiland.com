@@ -1,3 +1,4 @@
 deb/build
 01-main
-postinst
+/*.deb
+/packages.tar.gz

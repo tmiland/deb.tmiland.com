@@ -1,0 +1,29 @@
+#!/bin/bash
+
+REPO=
+APP_NAME=
+
+URL=$(curl -sSL https://api.github.com/repos/"$REPO"/releases 2>/dev/null \
+  | grep -i -m 1 "browser_download_url.*$APP_NAME.*deb" \
+  | cut -d'"' -f4)
+
+deb_download() {
+  # Credit: deb-get 
+  URL="${1}"
+  FILE="${URL##*/}"
+  CACHE_DIR=/var/cache/apt/archives
+
+  if ! wget --quiet --continue --show-progress --progress=bar:force:noscroll "${URL}" -O "${CACHE_DIR}/${FILE}"; then
+      echo "Failed to download ${URL}. Deleting ${CACHE_DIR}/${FILE}..."
+      rm "${CACHE_DIR}/${FILE}" 2>/dev/null
+      return 1
+  fi
+}
+
+deb_download "$URL"
+echo "Installing $APP_NAME in the background..."
+TEMP_LOG_FILE=/tmp/debtmp.log
+: > "$TEMP_LOG_FILE"
+nohup sleep 10 && dpkg -i "${CACHE_DIR}/${FILE}" > "$TEMP_LOG_FILE" 2>&1 & tail -f "$TEMP_LOG_FILE" &
+
+exit 0

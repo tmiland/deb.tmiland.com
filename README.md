@@ -1,11 +1,10 @@
 # deb
  A PPA repository for deb packages:
- 
+  
   - [TeamSpeak3 Client](https://github.com/tmiland/TeamSpeak3-Client)
- - [GNU-IceCat](https://www.gnu.org/software/gnuzilla/)
- - [Invidious-Updater (And Installer)](https://github.com/tmiland/Invidious-Updater)
- - [sshPilot](https://github.com/mfat/sshpilot)
-
+  - [GNU-IceCat](https://www.gnu.org/software/gnuzilla/)
+  - [Invidious-Updater (And Installer)](https://github.com/tmiland/Invidious-Updater)
+ 
  # Usage
 
  ### Repository
@@ -21,12 +20,12 @@
  ```shell
  $ sudo apt update
  ```
- 
+
  ```shell
  $ sudo apt install {package-name}
  ```
 
-Package names: ```icecat``` ```teamspeak3-client``` ```invidious-updater``` ```sshpilot``` 
+Package names: ```icecat``` ```teamspeak3-client``` ```invidious-updater```
 
 **Note**
 Package ```gnu-icecat``` has changed to ```icecat```
@@ -34,6 +33,32 @@ Package ```gnu-icecat``` has changed to ```icecat```
 To reinstall:
 
 sudo apt remove ```gnu-icecat``` && sudo apt install ```icecat```
+
+# Managing packages
+
+Each tracked package is a declarative config in ```packages/<name>.toml```:
+
+```toml
+repo = 'owner/name'        # GitHub repo that publishes releases
+asset = 'pkg_.*_all\.deb'  # regex matching the .deb release asset
+keep_versions = 2          # optional: only keep the newest N debs
+```
+
+To add an app: drop a new ```.toml``` in ```packages/``` and commit — the
+[update workflow](.github/workflows/update-repo.yml) picks it up on the next
+run (hourly, or manual via *Actions → Update apt repo → Run workflow*).
+
+The workflow checks every package, downloads new versions, regenerates and
+signs the repo metadata, smoke-tests it with apt, and pushes to `master`
+(served via GitHub Pages).
+
+Two packages are special:
+
+- **icecat** — upstream has no .deb release assets, so it is built locally
+  from a checkout of [GNU-IceCat](https://github.com/tmiland/GNU-IceCat) and
+  published with ```./update-icecat.sh```.
+- **invidious-updater** — upstream no longer publishes .deb assets; the
+  package is updated manually when needed.
 
  # Credits
  
