@@ -2,7 +2,7 @@
  A PPA repository for deb packages:
   
   - [TeamSpeak3 Client](https://github.com/tmiland/TeamSpeak3-Client)
-  - [GitHub Desktop](https://github.com/shiftkey/desktop) (Linux builds)
+  - [GitHub Desktop](https://github.com/desktop-plus/desktop-plus) (Linux builds, maintained fork)
   - [Invidious-Updater (And Installer)](https://github.com/tmiland/Invidious-Updater)
  
  # Usage
@@ -25,7 +25,7 @@
  $ sudo apt install {package-name}
  ```
 
-Package names: ```teamspeak3-client``` ```github-desktop``` ```invidious-updater```
+Package names: ```teamspeak3-client``` ```desktop-plus``` ```invidious-updater```
 
 # Managing packages
 

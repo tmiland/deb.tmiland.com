@@ -2,9 +2,10 @@
 
 REPO=
 APP_NAME=
+ASSET=
 
 URL=$(curl -sSL https://api.github.com/repos/"$REPO"/releases 2>/dev/null \
-  | grep -i -m 1 "browser_download_url.*$APP_NAME.*deb" \
+  | grep -m 1 "browser_download_url.*$ASSET\"" \
   | cut -d'"' -f4)
 
 deb_download() {

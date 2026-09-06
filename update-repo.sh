@@ -87,8 +87,11 @@ prune_versions() { # prune_versions <name> <keep>
       done
 }
 
-repack_stub() { # repack_stub <deb> <repo> <app-name> — control-only install stub
-  local deb=$1 repo=$2 app=$3 tmp
+repack_stub() { # repack_stub <deb> <repo> <app-name> <asset-regex> — control-only install stub
+  local deb=$1 repo=$2 app=$3 asset_re=$4 asset_esc tmp
+  # strip trailing anchor: postinst greps raw JSON lines that end with a quote
+  asset_re=${asset_re%\$}
+  asset_esc=${asset_re//\\/\\\\} # keep regex backslashes through sed
   tmp=$(mktemp -d -p "$TMP_ROOT")
   mkdir -p "$tmp/DEBIAN"
   # Extract control files only — no payload, no big temp usage
@@ -96,6 +99,7 @@ repack_stub() { # repack_stub <deb> <repo> <app-name> — control-only install s
   cp "$ROOT/postinst" "$tmp/DEBIAN/postinst"
   sed -i "s|^REPO=.*|REPO=$repo|" "$tmp/DEBIAN/postinst"
   sed -i "s|^APP_NAME=.*|APP_NAME=$app|" "$tmp/DEBIAN/postinst"
+  sed -i "s|^ASSET=.*|ASSET=$asset_esc|" "$tmp/DEBIAN/postinst"
   # No payload — postinst re-downloads the real deb at install time
   : > "$tmp/DEBIAN/md5sums"
   dpkg-deb -b --root-owner-group "$tmp" "$deb"
@@ -151,7 +155,7 @@ process_package() { # process_package <toml-file>
   fi
   if [ "$(stat -c%s "$deb")" -gt "$REPACK_SIZE_THRESHOLD" ]; then
     echo "-- $name: >25MB, repacking as install-stub"
-    repack_stub "$deb" "$repo" "$name"
+    repack_stub "$deb" "$repo" "$name" "$asset_re"
   fi
   mv "$deb" "$DEB_DIR/"
   rm -rf "$tmpdir"
