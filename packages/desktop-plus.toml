@@ -1,3 +1,4 @@
 name = 'DesktopPlus'
+package = 'github-desktop'
 repo = 'desktop-plus/desktop-plus'
 asset = 'DesktopPlus-v.*-linux-x86_64\.deb$'

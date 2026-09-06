@@ -25,7 +25,7 @@
  $ sudo apt install {package-name}
  ```
 
-Package names: ```teamspeak3-client``` ```desktop-plus``` ```invidious-updater```
+Package names: ```teamspeak3-client``` ```github-desktop``` ```invidious-updater```
 
 # Managing packages
 
@@ -35,6 +35,7 @@ Each tracked package is a declarative config in ```packages/<name>.toml```:
 repo = 'owner/name'        # GitHub repo that publishes releases
 asset = 'pkg_.*_all\.deb'  # regex matching the .deb release asset
 keep_versions = 2          # optional: only keep the newest N debs
+package = 'apt-name'       # optional: override apt package name (stub repacks)
 ```
 
 To add an app: drop a new ```.toml``` in ```packages/``` and commit — the

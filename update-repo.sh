@@ -87,8 +87,8 @@ prune_versions() { # prune_versions <name> <keep>
       done
 }
 
-repack_stub() { # repack_stub <deb> <repo> <app-name> <asset-regex> — control-only install stub
-  local deb=$1 repo=$2 app=$3 asset_re=$4 asset_esc tmp
+repack_stub() { # repack_stub <deb> <repo> <app-name> <asset-regex> [apt-name] — control-only install stub
+  local deb=$1 repo=$2 app=$3 asset_re=$4 apt_name=$5 asset_esc tmp
   # strip trailing anchor: postinst greps raw JSON lines that end with a quote
   asset_re=${asset_re%\$}
   asset_esc=${asset_re//\\/\\\\} # keep regex backslashes through sed
@@ -96,6 +96,9 @@ repack_stub() { # repack_stub <deb> <repo> <app-name> <asset-regex> — control-
   mkdir -p "$tmp/DEBIAN"
   # Extract control files only — no payload, no big temp usage
   dpkg-deb -e "$deb" "$tmp/DEBIAN"
+  if [ -n "$apt_name" ]; then # optional apt package name override
+    sed -i "s|^Package: .*|Package: $apt_name|" "$tmp/DEBIAN/control"
+  fi
   cp "$ROOT/postinst" "$tmp/DEBIAN/postinst"
   sed -i "s|^REPO=.*|REPO=$repo|" "$tmp/DEBIAN/postinst"
   sed -i "s|^APP_NAME=.*|APP_NAME=$app|" "$tmp/DEBIAN/postinst"
@@ -108,11 +111,12 @@ repack_stub() { # repack_stub <deb> <repo> <app-name> <asset-regex> — control-
 
 process_package() { # process_package <toml-file>
   local cfg=$1
-  local name repo asset_re keep
+  local name repo asset_re keep pkg_name
   name=$(conf_get "$cfg" name); [ -z "$name" ] && name=$(basename "$cfg" .toml)
   repo=$(conf_get "$cfg" repo)
   asset_re=$(conf_get "$cfg" asset)
   keep=$(conf_get "$cfg" keep_versions)
+  pkg_name=$(conf_get "$cfg" package) # optional apt package name override
 
   if [ -z "$repo" ] || [ -z "$asset_re" ]; then
     echo "!! $cfg: missing 'repo' or 'asset', skipping" >&2
@@ -155,7 +159,7 @@ process_package() { # process_package <toml-file>
   fi
   if [ "$(stat -c%s "$deb")" -gt "$REPACK_SIZE_THRESHOLD" ]; then
     echo "-- $name: >25MB, repacking as install-stub"
-    repack_stub "$deb" "$repo" "$name" "$asset_re"
+    repack_stub "$deb" "$repo" "${pkg_name:-$name}" "$asset_re" "$pkg_name"
   fi
   mv "$deb" "$DEB_DIR/"
   rm -rf "$tmpdir"
