@@ -1,2 +1,3 @@
 repo = 'tmiland/TeamSpeak3-Client'
 asset = 'teamspeak3-client_amd64-.*\.deb'
+keep_versions = 3
