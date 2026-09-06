@@ -2,7 +2,6 @@
  A PPA repository for deb packages:
   
   - [TeamSpeak3 Client](https://github.com/tmiland/TeamSpeak3-Client)
-  - [GNU-IceCat](https://www.gnu.org/software/gnuzilla/)
   - [Invidious-Updater (And Installer)](https://github.com/tmiland/Invidious-Updater)
  
  # Usage
@@ -25,14 +24,7 @@
  $ sudo apt install {package-name}
  ```
 
-Package names: ```icecat``` ```teamspeak3-client``` ```invidious-updater```
-
-**Note**
-Package ```gnu-icecat``` has changed to ```icecat```
-
-To reinstall:
-
-sudo apt remove ```gnu-icecat``` && sudo apt install ```icecat```
+Package names: ```teamspeak3-client``` ```invidious-updater```
 
 # Managing packages
 
@@ -54,9 +46,11 @@ signs the repo metadata, smoke-tests it with apt, and pushes to `master`
 
 Two packages are special:
 
-- **icecat** — upstream has no .deb release assets, so it is built locally
-  from a checkout of [GNU-IceCat](https://github.com/tmiland/GNU-IceCat) and
-  published with ```./update-icecat.sh```.
+- **icecat** — currently **unavailable**: the package was an installer-stub
+  that downloads binaries from icecatbrowser.org at install time, and that
+  site is down (and GNU's own releases stopped in 2019). The icecat debs are
+  therefore removed from the repo until a working upstream source exists.
+  `update-icecat.sh` remains in place to re-publish it when that happens.
 - **invidious-updater** — upstream no longer publishes .deb assets; the
   package is updated manually when needed.
 
