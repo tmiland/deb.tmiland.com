@@ -2,7 +2,7 @@
 #
 # update-repo.sh — apt repo update engine
 #
-# Reads packages/*.toml, downloads new upstream .deb releases,
+# Reads packages/*.pkg, downloads new upstream .deb releases,
 # regenerates and signs repo metadata, smoke-tests it with apt,
 # and commits + pushes if anything changed.
 #
@@ -13,7 +13,7 @@
 #   ./update-repo.sh --message "..."       custom commit message
 #   ./update-repo.sh --force <name>        force full pipeline for one package (test)
 #
-# Package config (packages/<name>.toml, simple TOML subset):
+# Package config (packages/<name>.pkg, simple TOML subset):
 #   repo = "owner/name"         GitHub repo with releases (required)
 #   asset = "regex"             pattern matching the .deb release asset (required)
 #   name = "pkg"                apt package name (defaults to file name)
@@ -27,7 +27,7 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PACKAGES_DIR="$ROOT/packages"
 DEB_DIR="$ROOT/debian"
-CONFIG_EXT="${CONFIG_EXT:-toml}" # package config file extension
+CONFIG_EXT="${CONFIG_EXT:-pkg}" # package config file extension
 REPACK_SIZE_THRESHOLD=$((25 * 1000 * 1000))
 
 # Work dir on the repo's disk (a full /tmp tmpfs can break big downloads)

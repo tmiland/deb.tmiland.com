@@ -70,7 +70,7 @@ The software below can be installed, updated and removed using this repository:
 
 # Managing packages
 
-Each tracked package is a declarative config in ```packages/<name>.toml```:
+Each tracked package is a declarative config in ```packages/<name>.pkg```:
 
 ```toml
 repo = 'owner/name'        # GitHub repo that publishes releases
@@ -79,7 +79,7 @@ keep_versions = 2          # optional: only keep the newest N debs
 package = 'apt-name'       # optional: override apt package name (stub repacks)
 ```
 
-To add an app: drop a new ```.toml``` in ```packages/``` and commit — the
+To add an app: drop a new ```.pkg``` in ```packages/``` and commit — the
 [update workflow](.github/workflows/update-repo.yml) picks it up on the next
 run (hourly, or manual via *Actions → Update apt repo → Run workflow*).
 
