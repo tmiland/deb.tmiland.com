@@ -1,0 +1,3 @@
+repo = 'bitwarden/clients'
+asset = 'Bitwarden-[0-9.]*-amd64\.deb$'
+keep_versions = 3

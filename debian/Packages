@@ -98,6 +98,28 @@ Description: Script to install and update Invidious
  .
  This package contains the graphical Invidious-Updater client.
 
+Package: balena-etcher
+Version: 2.1.6
+Architecture: amd64
+Maintainer: Balena Ltd. <hello@balena.io>
+Installed-Size: 419899
+Depends: libgtk-3-0, libnotify4, libnss3, libxtst6, xdg-utils, libatspi2.0-0, libdrm2, libgbm1, libxcb-dri3-0, kde-cli-tools | kde-runtime | trash-cli | libglib2.0-bin | gvfs-bin, libasound2, libatk1.0-0, libc6, libcairo2, libcups2, libdbus-1-3, libexpat1, libfontconfig1, libfreetype6, libgcc1, libgdk-pixbuf2.0-0 | libgdk-pixbuf-2.0-0, libglib2.0-0, liblzma5, libnspr4, libpango1.0-0 | libpango-1.0-0, libstdc++6, libx11-6, libxcomposite1, libxcursor1, libxdamage1, libxext6, libxfixes3, libxi6, libxrandr2, libxrender1, libxss1, polkit-1-auth-agent | policykit-1-gnome | polkit-kde-1
+Recommends: pulseaudio | libasound2
+Suggests: gir1.2-gnomekeyring-1.0, libgnome-keyring0, lsb-release
+Filename: ./balena-etcher_2.1.6_amd64.deb
+Size: 1908
+MD5sum: 1beb85d150a673efefc7b9d53d62b843
+SHA1: 3cc3961abac4f2ffa636601779f3edd0fa7a0674
+SHA256: 9b41efaf253185f0e34d571398e0b8da52e1e5f28bb716f264110ce46b185f26
+Section: utils
+Priority: optional
+Homepage: https://github.com/balena-io/etcher
+Description: Flash OS images to SD cards and USB drives, safely and easily.
+ Etcher is a powerful OS image flasher built with web technologies to ensure
+ flashing an SDCard or USB drive is a pleasant and safe experience. It protects
+ you from accidentally writing to your hard-drives, ensures every byte of data
+ was written correctly and much more.
+
 Package: bat
 Version: 0.26.1
 Architecture: amd64
@@ -114,6 +136,26 @@ Priority: optional
 Homepage: https://github.com/sharkdp/bat
 Description: cat(1) clone with wings.
   A cat(1) clone with syntax highlighting and Git integration.
+
+Package: bitwarden
+Version: 2026.8.0
+Architecture: amd64
+Maintainer: Bitwarden Inc. <hello@bitwarden.com>
+Installed-Size: 404424
+Depends: libnotify4, libxtst6, libnss3, libxss1
+Recommends: libappindicator3-1
+Filename: ./bitwarden_2026.8.0_amd64.deb
+Size: 1640
+MD5sum: 2e568fde9408f8009ac83750de38793f
+SHA1: 83e4348d85250a92a0304562220f8798e97fa0b6
+SHA256: ee9498be09838b439c30958c58e02e32dd32e3c8caa0a46f8a13ff6ba76c095f
+Section: default
+Priority: optional
+Homepage: https://bitwarden.com
+Description: A secure and free password manager for all of your devices.
+  A secure and free password manager for all of your devices.
+License: GPL-3.0
+Vendor: Bitwarden Inc. <hello@bitwarden.com>
 
 Package: bruno
 Version: 4.1.0
@@ -134,6 +176,25 @@ Description:
   Opensource API Client for Exploring and Testing APIs
 License: unknown
 Vendor: Anoop M D <anoop.md1421@gmail.com>
+
+Package: discord
+Version: 1.0.156
+Architecture: amd64
+Maintainer: Discord Maintainer Team <noreply@discord.com>
+Installed-Size: 4280
+Depends: libc6, libasound2, libatk1.0-0, libatk-bridge2.0-0, libatspi2.0-0, libatomic1, libcairo2, libdbus-1-3, libexpat1, libgbm1, libglib2.0-0, libgtk-3-0, libnotify4, libnspr4, libnss3, libpango-1.0-0, libstdc++6, libudev1, libx11-6, libxcb1, libxcomposite1, libxdamage1, libxext6, libxfixes3, libxkbcommon0, libxrandr2
+Recommends: libunity9, libva2, libpipewire-0.3-0
+Filename: ./discord_1.0.156_amd64.deb
+Size: 2179436
+MD5sum: c0eca575b165d106190c390c1172858a
+SHA1: 4732470f25eae0c0282653f43ce7b709b08ace47
+SHA256: 88bd5dce5bba6af0499d202ddc3f75e9de642060cb5389191569c42be444fae9
+Section: net
+Priority: optional
+Homepage: https://discord.com
+Description: Chat for Communities and Friends
+ Discord is the easiest way to communicate over voice, video, and text. Chat,
+ hang out, and stay close with your friends and communities.
 
 Package: dpkg
 Version: 1.20.12
@@ -457,6 +518,25 @@ Description: general markup converter
   (LaTeX Beamer, PowerPoint, Slidy, reveal.js, Slideous, S5,
   DZSlides), data formats (CSV and TSV tables), and PDF (via
   external programs such as pdflatex or wkhtmltopdf).
+
+Package: protonmail-bridge
+Version: 3.26.0-1
+Architecture: amd64
+Maintainer: Proton AG (Proton Mail Bridge developers) <bridge@protonmail.ch>
+Installed-Size: 205583
+Depends: libxcb-cursor0, libegl1, libopengl0, libc6, libsecret-1-0, libglib2.0-0, libstdc++6, libgcc1, libpulse-mainloop-glib0, fonts-dejavu, libfido2-1
+Suggests: pass, gnome-keyring
+Filename: ./protonmail-bridge_3.26.0_amd64.deb
+Size: 1600
+MD5sum: d87f299632c57dbb50eb47cb24f1142a
+SHA1: b3d3d091a252f3922c554f61b91c4cb9f07bbb80
+SHA256: 7d35357205fe2698adf89748822e58aa9a640398507a2dcdbabbdfaf692b67f0
+Section: default
+Priority: optional
+Homepage: https://proton.me/mail/bridge
+Description: Proton Mail Bridge is a desktop application that runs in the background, encrypting and decrypting messages as they enter and leave your computer.
+License: GPLv3
+Vendor: Proton AG
 
 Package: rustdesk
 Version: 1.5.0

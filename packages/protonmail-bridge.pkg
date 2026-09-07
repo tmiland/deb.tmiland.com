@@ -1,0 +1,3 @@
+repo = 'ProtonMail/proton-bridge'
+asset = 'protonmail-bridge_.*_amd64\.deb$'
+keep_versions = 3

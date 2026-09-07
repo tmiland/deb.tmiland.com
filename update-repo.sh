@@ -129,41 +129,56 @@ repack_stub() { # repack_stub <deb> <repo> <app-name> <asset-regex> [apt-name] [
 
 process_package() { # process_package <toml-file>
   local cfg=$1
-  local name repo asset_re keep pkg_name
+  local name repo asset_re keep pkg_name hide summary payload_dir filekey
   name=$(conf_get "$cfg" name); [ -z "$name" ] && name=$(basename "$cfg" ".$CONFIG_EXT")
   repo=$(conf_get "$cfg" repo)
   asset_re=$(conf_get "$cfg" asset)
   keep=$(conf_get "$cfg" keep_versions)
   pkg_name=$(conf_get "$cfg" package) # optional apt package name override
   hide=$(conf_get "$cfg" hide) # optional desktop files to hide after install
-summary=$(conf_get "$cfg" summary) # optional description for empty upstream controls
+  summary=$(conf_get "$cfg" summary) # optional description for empty upstream controls
   payload_dir="$PACKAGES_DIR/$(basename "$cfg" ".$CONFIG_EXT").payload"
   [ -d "$payload_dir" ] || payload_dir="" # optional launcher files for stubs
 
   filekey="${pkg_name:-$name}" # matches debian/ filenames (normalized: name_ver_arch.deb)
 
-  if [ -z "$repo" ] || [ -z "$asset_re" ]; then
+  local source_type
+  source_type=$(conf_get "$cfg" source)
+  if [ "$source_type" != "url" ] && { [ -z "$repo" ] || [ -z "$asset_re" ]; }; then
     echo "!! $cfg: missing 'repo' or 'asset', skipping" >&2
     return 0
   fi
 
   local json line url rel_tag new_ver cur_ver
-  json=$(gh_curl "https://api.github.com/repos/$repo/releases")
-  # grab the first matching asset together with its release tag
-  line=$(jq -r --arg re "$asset_re" \
-    '.[] | .tag_name as $t | .assets[]? | select(.name | test($re)) | "\(.browser_download_url) \($t)"' \
-    <<<"$json" | head -n 1 || true)
-  url=${line%% *}
-  rel_tag=${line#"$url"}; rel_tag=${rel_tag# }
-
-  if [ -z "$url" ]; then
+  if [ "$source_type" = "url" ]; then
+    # direct-download source: version is parsed from the redirect target
+    url=$(conf_get "$cfg" url)
+    if [ -z "$url" ]; then
+      echo "!! $cfg: source=url requires 'url', skipping" >&2
+      return 0
+    fi
+    url=$(curl -sIL -o /dev/null -w '%{url_effective}' --max-time 60 "$url" || true)
+    if [ -z "$url" ]; then
+      echo "!! $name: could not resolve download URL, skipping" >&2
+      return 0
+    fi
+    new_ver=$(version_from "$url")
+  else
+    json=$(gh_curl "https://api.github.com/repos/$repo/releases")
+    # grab the first matching asset together with its release tag
+    line=$(jq -r --arg re "$asset_re" \
+      '.[] | .tag_name as $t | .assets[]? | select(.name | test($re)) | "\(.browser_download_url) \($t)"' \
+      <<<"$json" | head -n 1 || true)
+    url=${line%% *}
+    rel_tag=${line#"$url"}; rel_tag=${rel_tag# }
+    new_ver=$(version_from "$(basename "$url")")
+    # some assets have unversioned filenames — fall back to the release tag
+    [ -z "$new_ver" ] && [ -n "$rel_tag" ] && new_ver=$(version_from "$rel_tag")
+  fi
+  if [ "$source_type" != "url" ] && [ -z "$url" ]; then
     echo "-- $name: no upstream .deb asset matches '$asset_re', skipping"
     return 0
   fi
-
-  new_ver=$(version_from "$(basename "$url")")
-  # some assets have unversioned filenames — fall back to the release tag
-  [ -z "$new_ver" ] && [ -n "$rel_tag" ] && new_ver=$(version_from "$rel_tag")
   cur_ver=$(current_version "$filekey")
 
   echo "-- $name: current=${cur_ver:-none} latest=${new_ver:-unknown}"
@@ -181,12 +196,26 @@ summary=$(conf_get "$cfg" summary) # optional description for empty upstream con
   local tmpdir deb
   tmpdir=$(mktemp -d -p "$TMP_ROOT")
   deb="$tmpdir/$(basename "$url")"
-  gh_curl -o "$deb" "$url"
+  # plain curl for url sources — never send the GitHub token to third parties
+  if [ "$source_type" = "url" ]; then
+    curl -sSL -o "$deb" "$url"
+  else
+    gh_curl -o "$deb" "$url"
+  fi
   if [ ! -s "$deb" ]; then
     echo "!! $name: download failed or empty, skipping" >&2
     rm -rf "$tmpdir"
     return 0
   fi
+  if [ "$source_type" = "url" ]; then
+    # the deb's control is authoritative when the redirect hides the version
+    local ctrl_ver
+    ctrl_ver=$(dpkg-deb -f "$deb" Version 2>/dev/null || true)
+    if [ -n "$ctrl_ver" ] && [ "$ctrl_ver" != "$new_ver" ]; then
+      echo "-- $name: control version $ctrl_ver differs from URL-detected $new_ver, using $ctrl_ver"
+      new_ver=$ctrl_ver
+    fi
+  else
   # Verify against the upstream .sha256 when the release ships one
   local sha_url="${url}.sha256"
   if gh_curl -f -o "$tmpdir/checksum.sha256" "$sha_url" 2>/dev/null; then
@@ -198,6 +227,7 @@ summary=$(conf_get "$cfg" summary) # optional description for empty upstream con
     echo "-- $name: sha256 verified"
   else
     echo "-- $name: no upstream checksum file, skipping verification"
+  fi
   fi
   if [ "$(stat -c%s "$deb")" -gt "$REPACK_SIZE_THRESHOLD" ]; then
     echo "-- $name: >25MB, repacking as install-stub"

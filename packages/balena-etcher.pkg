@@ -1,0 +1,3 @@
+repo = 'balena-io/etcher'
+asset = 'balena-etcher_[0-9.]*_amd64\.deb$'
+keep_versions = 3
