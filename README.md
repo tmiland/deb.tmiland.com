@@ -27,7 +27,40 @@
  $ sudo apt install {package-name}
  ```
 
-Package names: ```teamspeak3-client``` ```github-desktop``` ```invidious-updater```
+# Supported Software
+
+The software below can be installed, updated and removed using this repository:
+
+| Source   | Package Name   | Description   |
+| :------: | :------------- | :------------ |
+| — | `AppFlowy` | <i>An Open Source Alternative to Notion</i> |
+| [<img src="./.github/github.png" align="top" width="20" />](https://github.com/sharkdp/bat) | `bat` | <i>cat(1) clone with wings.</i> |
+| [www.usebruno.com](https://www.usebruno.com) | `bruno` | <i></i> |
+| [wiki.debian.org/Teams/Dpkg](https://wiki.debian.org/Teams/Dpkg) | `dpkg` | <i>Debian package management system</i> |
+| [wiki.debian.org/Teams/Dpkg](https://wiki.debian.org/Teams/Dpkg) | `dpkg-repack` | <i>Debian package archiving tool</i> |
+| [<img src="./.github/github.png" align="top" width="20" />](https://github.com/jgraph/drawio) | `draw.io` | <i></i> |
+| [fribbledom.com/](https://fribbledom.com/) | `duf` | <i>Disk Usage/Free Utility</i> |
+| [<img src="./.github/github.png" align="top" width="20" />](https://github.com/junegunn/fzf) | `fzf` | <i>Command-line fuzzy finder</i> |
+| [desktop-plus.org](https://desktop-plus.org) | `github-desktop` | <i>GitHub Desktop fork with advanced functionality and improvements.</i> |
+| [goose-docs.ai/](https://goose-docs.ai/) | `goose` | <i>Goose App</i> |
+| [<img src="./.github/github.png" align="top" width="20" />](https://github.com/gohugoio/hugo) | `hugo` | <i>A fast and flexible Static Site Generator written in Go.</i> |
+| [<img src="./.github/github.png" align="top" width="20" />](https://github.com/zeit/hyper#readme) | `hyper` | <i></i> |
+| — | `ImHex` | <i>ImHex Hex Editor</i> |
+| [<img src="./.github/github.png" align="top" width="20" />](https://github.com/tmiland/Invidious-Updater) | `Invidious-Updater` | <i>Script to install and update Invidious</i> |
+| [<img src="./.github/github.png" align="top" width="20" />](https://github.com/laurent22/joplin#readme) | `joplin` | <i></i> |
+| [search.cpan.org/dist/Term-Spinner-Color/](http://search.cpan.org/dist/Term-Spinner-Color/) | `libterm-spinner-color-perl` | <i>A terminal spinner/progress bar with Unicode, color, and no non-core dependencies.</i> |
+| [<img src="./.github/github.png" align="top" width="20" />](https://github.com/mmaher88/logitune) | `logitune` | <i>Logitech device configurator for Linux</i> |
+| [<img src="./.github/github.png" align="top" width="20" />](https://github.com/marktext/marktext) | `marktext` | <i></i> |
+| [opencode.ai](https://opencode.ai) | `opencode` | <i></i> |
+| — | `pandoc` | <i>general markup converter</i> |
+| [rustdesk.com](https://rustdesk.com) | `rustdesk` | <i>A remote control software.</i> |
+| [b3log.org/siyuan](https://b3log.org/siyuan) | `siyuan` | <i></i> |
+| [<img src="./.github/github.png" align="top" width="20" />](https://github.com/badaix/snapweb) | `snapweb` | <i>Web client for Snapcast</i> |
+| [spotube.krtirtho.dev](https://spotube.krtirtho.dev) | `spotube` | <i>Open source extensible music streaming platform and app, based on BYOMM (Bring your own music metadata) concept</i> |
+| [<img src="./.github/github.png" align="top" width="20" />](https://github.com/mfat/sshpilot) | `sshpilot` | <i>modern, lightweight SSH connection manager</i> |
+| — | `stirling-pdf` | <i>Stirling-PDF Desktop Application</i> |
+| [<img src="./.github/github.png" align="top" width="20" />](https://github.com/Eugeny/tabby#readme) | `tabby-terminal` | <i></i> |
+| [<img src="./.github/github.png" align="top" width="20" />](https://github.com/tmiland/TeamSpeak3-Client) | `teamspeak3-client` | <i>VoIP chat for online gaming</i> |
 
 # Managing packages
 
