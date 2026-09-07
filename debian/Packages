@@ -574,6 +574,26 @@ Description:
 License: unknown
 Vendor: Yunnan Liandi Technology Co., Ltd. <845765@qq.com>
 
+Package: siyuan
+Version: 3.8.4~alpha.1
+Architecture: amd64
+Maintainer: Yunnan Liandi Technology Co., Ltd. <845765@qq.com>
+Installed-Size: 651822
+Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
+Recommends: libappindicator3-1
+Filename: ./siyuan_3.8.4_amd64.deb
+Size: 1870
+MD5sum: 2816ae8ae79259303c917c679f049d7d
+SHA1: 2dbb353c1d59b4a144658545bf40cb10609dad74
+SHA256: 35a763373ab36f90b7644f78da3853e47391b0b17e11364ba61dc2d006bc60e7
+Section: default
+Priority: optional
+Homepage: https://b3log.org/siyuan
+Description:
+  From thought to insight, with agents
+License: unknown
+Vendor: Yunnan Liandi Technology Co., Ltd. <845765@qq.com>
+
 Package: snapweb
 Version: 0.9.1-1
 Architecture: all
