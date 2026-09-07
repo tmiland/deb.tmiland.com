@@ -412,13 +412,14 @@ Installed-Size: 455532
 Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
 Recommends: libappindicator3-1
 Filename: ./opencode_1.18.29_amd64.deb
-Size: 1968
-MD5sum: 49b13b6516d981134b38707cfa17de57
-SHA1: 02e2d843b392d0de98fe78dd32a82fe13687ad8b
-SHA256: 634ea326c6546c2d5173f1d7dac5f97598fd13e80304d0fb325b8a09fd215166
+Size: 1980
+MD5sum: dff30977449de050dd5159aabc1d6af2
+SHA1: 89592180dd8caee16e3da962973916ce889818ff
+SHA256: c4f43d41ac75b04fd092ec54a1574c10ea9f4f4b9e99b4b459341934566aff44
 Section: default
 Priority: optional
 Homepage: https://opencode.ai
+Description: The open source coding agent.
 License: MIT
 Vendor: OpenCode <hello@opencode.ai>
 
