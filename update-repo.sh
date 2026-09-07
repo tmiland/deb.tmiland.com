@@ -27,6 +27,7 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PACKAGES_DIR="$ROOT/packages"
 DEB_DIR="$ROOT/debian"
+CONFIG_EXT="${CONFIG_EXT:-toml}" # package config file extension
 REPACK_SIZE_THRESHOLD=$((25 * 1000 * 1000))
 
 # Work dir on the repo's disk (a full /tmp tmpfs can break big downloads)
@@ -129,14 +130,14 @@ repack_stub() { # repack_stub <deb> <repo> <app-name> <asset-regex> [apt-name] [
 process_package() { # process_package <toml-file>
   local cfg=$1
   local name repo asset_re keep pkg_name
-  name=$(conf_get "$cfg" name); [ -z "$name" ] && name=$(basename "$cfg" .toml)
+  name=$(conf_get "$cfg" name); [ -z "$name" ] && name=$(basename "$cfg" ".$CONFIG_EXT")
   repo=$(conf_get "$cfg" repo)
   asset_re=$(conf_get "$cfg" asset)
   keep=$(conf_get "$cfg" keep_versions)
   pkg_name=$(conf_get "$cfg" package) # optional apt package name override
   hide=$(conf_get "$cfg" hide) # optional desktop files to hide after install
 summary=$(conf_get "$cfg" summary) # optional description for empty upstream controls
-  payload_dir="$PACKAGES_DIR/$(basename "$cfg" .toml).payload"
+  payload_dir="$PACKAGES_DIR/$(basename "$cfg" ".$CONFIG_EXT").payload"
   [ -d "$payload_dir" ] || payload_dir="" # optional launcher files for stubs
 
   filekey="${pkg_name:-$name}" # matches debian/ filenames (normalized: name_ver_arch.deb)
@@ -296,9 +297,9 @@ main() {
     echo "== Regeneration only"
   else
     local cfg found=0 stem
-    for cfg in "$PACKAGES_DIR"/*.toml; do
+    for cfg in "$PACKAGES_DIR"/*."$CONFIG_EXT"; do
       [ -e "$cfg" ] || { echo "!! No packages found in $PACKAGES_DIR" >&2; exit 1; }
-      stem=$(basename "$cfg" .toml)
+      stem=$(basename "$cfg" ".$CONFIG_EXT")
       if [ -n "$FORCE_NAME" ] && [ "$FORCE_NAME" != "$stem" ] \
         && [ "$FORCE_NAME" != "$(conf_get "$cfg" name)" ]; then
         continue
