@@ -90,8 +90,8 @@ prune_versions() { # prune_versions <name> <keep>
       done
 }
 
-repack_stub() { # repack_stub <deb> <repo> <app-name> <asset-regex> [apt-name] [payload-dir] [hide-list]
-  local deb=$1 repo=$2 app=$3 asset_re=$4 apt_name=$5 payload_dir=$6 hide=$7 asset_esc tmp
+repack_stub() { # repack_stub <deb> <repo> <app-name> <asset-regex> [apt-name] [payload-dir] [hide-list] [summary]
+  local deb=$1 repo=$2 app=$3 asset_re=$4 apt_name=$5 payload_dir=$6 hide=$7 summary=$8 asset_esc tmp
   # strip trailing anchor: postinst greps raw JSON lines that end with a quote
   asset_re=${asset_re%\$}
   asset_esc=${asset_re//\\/\\\\} # keep regex backslashes through sed
@@ -101,6 +101,12 @@ repack_stub() { # repack_stub <deb> <repo> <app-name> <asset-regex> [apt-name] [
   dpkg-deb -e "$deb" "$tmp/DEBIAN"
   if [ -n "$apt_name" ]; then # optional apt package name override
     sed -i "s|^Package: .*|Package: $apt_name|" "$tmp/DEBIAN/control"
+  fi
+  if [ -n "$summary" ]; then # some upstream controls ship an empty Description
+    awk '/^Description:/{skip=1; next} skip == 1 && /^[[:space:]]/{next} skip == 1 {skip=0} {print}' \
+      "$tmp/DEBIAN/control" > "$tmp/DEBIAN/control.new"
+    printf 'Description: %s\n' "$summary" >> "$tmp/DEBIAN/control.new"
+    mv "$tmp/DEBIAN/control.new" "$tmp/DEBIAN/control"
   fi
   cp "$ROOT/postinst" "$tmp/DEBIAN/postinst"
   sed -i "s|^REPO=.*|REPO=$repo|" "$tmp/DEBIAN/postinst"
@@ -129,6 +135,7 @@ process_package() { # process_package <toml-file>
   keep=$(conf_get "$cfg" keep_versions)
   pkg_name=$(conf_get "$cfg" package) # optional apt package name override
   hide=$(conf_get "$cfg" hide) # optional desktop files to hide after install
+summary=$(conf_get "$cfg" summary) # optional description for empty upstream controls
   payload_dir="$PACKAGES_DIR/$(basename "$cfg" .toml).payload"
   [ -d "$payload_dir" ] || payload_dir="" # optional launcher files for stubs
 
@@ -193,7 +200,7 @@ process_package() { # process_package <toml-file>
   fi
   if [ "$(stat -c%s "$deb")" -gt "$REPACK_SIZE_THRESHOLD" ]; then
     echo "-- $name: >25MB, repacking as install-stub"
-    repack_stub "$deb" "$repo" "${pkg_name:-$name}" "$asset_re" "$pkg_name" "$payload_dir" "$hide"
+    repack_stub "$deb" "$repo" "${pkg_name:-$name}" "$asset_re" "$pkg_name" "$payload_dir" "$hide" "$summary"
   fi
   # normalize the filename so version tracking works even for unversioned
   # upstream asset names (name_version_arch.deb)

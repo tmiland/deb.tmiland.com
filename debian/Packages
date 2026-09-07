@@ -412,10 +412,10 @@ Installed-Size: 455532
 Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
 Recommends: libappindicator3-1
 Filename: ./opencode_1.18.29_amd64.deb
-Size: 1972
-MD5sum: f352cc9d7b6193f91785e083e73239ca
-SHA1: 7a599d63a2ed6a48fa8216aa5e8f37c7261941ca
-SHA256: c9588736113c73509a9a8018d41fbb647cb7127c84b28c08e9afa45e2198f021
+Size: 1968
+MD5sum: 49b13b6516d981134b38707cfa17de57
+SHA1: 02e2d843b392d0de98fe78dd32a82fe13687ad8b
+SHA256: 634ea326c6546c2d5173f1d7dac5f97598fd13e80304d0fb325b8a09fd215166
 Section: default
 Priority: optional
 Homepage: https://opencode.ai
