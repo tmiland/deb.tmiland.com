@@ -1,0 +1,3 @@
+repo = 'KRTirtho/spotube'
+asset = 'Spotube-linux-x86_64\.deb$'
+keep_versions = 3

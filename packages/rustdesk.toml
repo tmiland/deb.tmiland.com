@@ -1,0 +1,3 @@
+repo = 'rustdesk/rustdesk'
+asset = 'rustdesk-.*-x86_64\.deb$'
+keep_versions = 3

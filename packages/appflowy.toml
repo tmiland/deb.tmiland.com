@@ -1,0 +1,3 @@
+repo = 'AppFlowy-IO/AppFlowy'
+asset = 'AppFlowy-[0-9.]*-linux-x86_64\.deb$'
+keep_versions = 3

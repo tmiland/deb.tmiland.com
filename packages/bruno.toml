@@ -1,0 +1,3 @@
+repo = 'usebruno/bruno'
+asset = 'bruno_[0-9.]*_amd64_linux\.deb$'
+keep_versions = 3

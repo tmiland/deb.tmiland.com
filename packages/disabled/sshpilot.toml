@@ -1,3 +1,0 @@
-# Disabled: move to packages/ to re-enable tracking.
-repo = 'mfat/sshpilot'
-asset = 'sshpilot_.*_all\.deb'

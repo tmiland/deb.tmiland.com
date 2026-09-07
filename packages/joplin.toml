@@ -1,0 +1,3 @@
+repo = 'laurent22/joplin'
+asset = 'Joplin-[0-9.]*\.deb$'
+keep_versions = 3

@@ -1,0 +1,3 @@
+repo = 'Stirling-Tools/Stirling-PDF'
+asset = 'Stirling-PDF-linux-x86_64\.deb$'
+keep_versions = 3

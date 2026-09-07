@@ -1,0 +1,3 @@
+repo = 'gohugoio/hugo'
+asset = 'hugo_[0-9.]*_linux-amd64\.deb$'
+keep_versions = 3

@@ -1,0 +1,3 @@
+repo = 'jgraph/drawio-desktop'
+asset = 'drawio-amd64-.*\.deb$'
+keep_versions = 3

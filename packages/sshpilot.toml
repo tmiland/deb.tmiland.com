@@ -1,0 +1,3 @@
+repo = 'mfat/sshpilot'
+asset = 'sshpilot_.*_all\.deb$'
+keep_versions = 3

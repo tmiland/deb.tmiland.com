@@ -71,7 +71,7 @@ conf_get() { # conf_get <file> <key>
 }
 
 version_from() { # extract first dotted version number from a string
-  grep -Eo '[0-9]+(\.[0-9]+)+' <<<"$1" | head -n 1
+  grep -Eo '[0-9]+(\.[0-9]+)+' <<<"$1" | head -n 1 || true
 }
 
 current_version() { # newest version among debian/<name>*.deb
@@ -132,16 +132,21 @@ process_package() { # process_package <toml-file>
   payload_dir="$PACKAGES_DIR/$(basename "$cfg" .toml).payload"
   [ -d "$payload_dir" ] || payload_dir="" # optional launcher files for stubs
 
+  filekey="${pkg_name:-$name}" # matches debian/ filenames (normalized: name_ver_arch.deb)
+
   if [ -z "$repo" ] || [ -z "$asset_re" ]; then
     echo "!! $cfg: missing 'repo' or 'asset', skipping" >&2
     return 0
   fi
 
-  local json url new_ver cur_ver
+  local json line url rel_tag new_ver cur_ver
   json=$(gh_curl "https://api.github.com/repos/$repo/releases")
-  url=$(jq -r --arg re "$asset_re" \
-    '[.[] | .assets[]? | select(.name | test($re))][0].browser_download_url // empty' \
-    <<<"$json")
+  # grab the first matching asset together with its release tag
+  line=$(jq -r --arg re "$asset_re" \
+    '.[] | .tag_name as $t | .assets[]? | select(.name | test($re)) | "\(.browser_download_url) \($t)"' \
+    <<<"$json" | head -n 1 || true)
+  url=${line%% *}
+  rel_tag=${line#"$url"}; rel_tag=${rel_tag# }
 
   if [ -z "$url" ]; then
     echo "-- $name: no upstream .deb asset matches '$asset_re', skipping"
@@ -149,7 +154,9 @@ process_package() { # process_package <toml-file>
   fi
 
   new_ver=$(version_from "$(basename "$url")")
-  cur_ver=$(current_version "$name")
+  # some assets have unversioned filenames — fall back to the release tag
+  [ -z "$new_ver" ] && [ -n "$rel_tag" ] && new_ver=$(version_from "$rel_tag")
+  cur_ver=$(current_version "$filekey")
 
   echo "-- $name: current=${cur_ver:-none} latest=${new_ver:-unknown}"
 
@@ -188,12 +195,16 @@ process_package() { # process_package <toml-file>
     echo "-- $name: >25MB, repacking as install-stub"
     repack_stub "$deb" "$repo" "${pkg_name:-$name}" "$asset_re" "$pkg_name" "$payload_dir" "$hide"
   fi
-  mv "$deb" "$DEB_DIR/"
+  # normalize the filename so version tracking works even for unversioned
+  # upstream asset names (name_version_arch.deb)
+  local arch
+  arch=$(dpkg-deb -f "$deb" Architecture)
+  mv "$deb" "$DEB_DIR/${filekey}_${new_ver}_${arch}.deb"
   rm -rf "$tmpdir"
-  UPDATED+=("$name to $new_ver")
+  UPDATED+=("$filekey to $new_ver")
 
   if [ -n "$keep" ] && [ "$keep" -gt 0 ] 2>/dev/null; then
-    prune_versions "$name" "$keep"
+    prune_versions "$filekey" "$keep"
   fi
 }
 

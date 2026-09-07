@@ -1,0 +1,3 @@
+repo = 'WerWolv/ImHex'
+asset = 'imhex-.*-Ubuntu-24\.04-x86_64\.deb$'
+keep_versions = 3

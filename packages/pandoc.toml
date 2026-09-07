@@ -1,0 +1,3 @@
+repo = 'jgm/pandoc'
+asset = 'pandoc-.*-amd64\.deb$'
+keep_versions = 3

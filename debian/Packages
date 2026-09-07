@@ -1,3 +1,34 @@
+Package: AppFlowy
+Version: 0.14.1
+Architecture: amd64
+Essential: no
+Maintainer: AppFlowy
+Depends: libatk1.0-0 (>= 2.7.91), libc6 (>= 2.35), libcairo-gobject2 (>= 1.10.0), libcairo2 (>= 1.14.0), libepoxy0 (>= 1.0), libfontconfig1 (>= 2.12.6), libgcc-s1 (>= 4.2), libgdk-pixbuf-2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.39.90), libgstreamer-plugins-base1.0-0 (>= 1.0.0), libgstreamer1.0-0 (>= 1.6.0), libgtk-3-0 (>= 3.21.5), libharfbuzz0b (>= 0.6.0), libkeybinder-3.0-0 (>= 0.3.0), libpango-1.0-0 (>= 1.29.4), libpangocairo-1.0-0 (>= 1.14.0), libstdc++6 (>= 12)
+Filename: ./appflowy_0.14.1_amd64.deb
+Size: 1624
+MD5sum: 893667b9966fcb75e03ed304517684e8
+SHA1: e89423a3a5ce88652dd696603c10cbe94cea025a
+SHA256: c8bfff547fbadc2c76d5ff94b1a7b1183321fce808b32e2adfb3b71d0e6bae52
+Priority: optional
+Description: An Open Source Alternative to Notion
+
+Package: ImHex
+Version: 1.38.1
+Architecture: amd64
+Maintainer: WerWolv <hey@werwolv.net>
+Depends: libfontconfig1, libglfw3 | libglfw3-wayland, libmagic1, libmbedtls14, libfreetype6, libopengl0, libdbus-1-3, xdg-desktop-portal, libssh2-1, libmd4c0
+Filename: ./imhex_1.38.1_amd64.deb
+Size: 1532
+MD5sum: 1ed8041f933bb9cb03ca46c708071d0e
+SHA1: d1646eab0c5fc2381097805fcf14321e8e2492f9
+SHA256: 80b5e535ac975e58a390518ea4542aa990cf5a8ca5241e08a4d33b1871295f09
+Section: editors
+Priority: optional
+Description: ImHex Hex Editor
+ A Hex Editor for Reverse Engineers, Programmers and
+ people who value their retinas when working at 3 AM.
+License: GNU GPL-2
+
 Package: Invidious-Updater
 Version: 2.2.1
 Architecture: amd64
@@ -67,6 +98,43 @@ Description: Script to install and update Invidious
  .
  This package contains the graphical Invidious-Updater client.
 
+Package: bat
+Version: 0.26.1
+Architecture: amd64
+Maintainer: David Peter <mail@david-peter.de>
+Conflicts: bat-musl
+Provides: bat
+Filename: ./bat_0.26.1_amd64.deb
+Size: 3037592
+MD5sum: 03b9305cca73527a683c5bb6c67a9788
+SHA1: a83665d81c2ff50c2fa5018e2543be67b67ece9f
+SHA256: ad59954aa1540e526f97267f60557ea5ef4c7dcf91a0811254134537cb353a3c
+Section: utils
+Priority: optional
+Homepage: https://github.com/sharkdp/bat
+Description: cat(1) clone with wings.
+  A cat(1) clone with syntax highlighting and Git integration.
+
+Package: bruno
+Version: 4.1.0
+Architecture: amd64
+Maintainer: Anoop M D <anoop.md1421@gmail.com>
+Installed-Size: 540581
+Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0, libasound2
+Recommends: libappindicator3-1
+Filename: ./bruno_4.1.0_amd64.deb
+Size: 1616
+MD5sum: 08dfa5443d201f70defd4309cda1ed56
+SHA1: 59b1c662573550d3d5b6d8e6b567205e192e7edb
+SHA256: 8d15c667aaf31260dd54fb82d15e9a082365c35fb2b27420c371074ded65e996
+Section: default
+Priority: optional
+Homepage: https://www.usebruno.com
+Description:
+  Opensource API Client for Exploring and Testing APIs
+License: unknown
+Vendor: Anoop M D <anoop.md1421@gmail.com>
+
 Package: dpkg
 Version: 1.20.12
 Architecture: amd64
@@ -119,6 +187,57 @@ Description: Debian package archiving tool
  available elsewhere, or to store the current state of a package before you
  upgrade it.
 
+Package: draw.io
+Version: 31.4.4
+Architecture: amd64
+Maintainer: draw.io <desktop@draw.io>
+Installed-Size: 434228
+Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
+Recommends: libappindicator3-1
+Filename: ./drawio_31.4.4_amd64.deb
+Size: 1960
+MD5sum: a85df7b523f981d1ebdcb0aa79b5e6f0
+SHA1: e2bdaef827a907a41465cbd01aeeb4681e1da7fa
+SHA256: 41a62f6a6ef8ecb6d13e7151ea0e98fd3855a085502f65206dbee05f19f634d5
+Section: default
+Priority: optional
+Homepage: https://github.com/jgraph/drawio
+Description:
+  draw.io desktop
+License: Apache-2.0
+Vendor: draw.io <desktop@draw.io>
+
+Package: duf
+Version: 0.9.1
+Architecture: amd64
+Maintainer: Christian Muehlhaeuser <muesli@gmail.com>
+Installed-Size: 3056
+Filename: ./duf_0.9.1_amd64.deb
+Size: 1287466
+MD5sum: 148c454a70e758bf3580960c47a16109
+SHA1: 561cb184043a79b861e156c5cd90c88658fc9dc7
+SHA256: 4e0065640fbcf33c6abc5312c4c83f4d605820277b4ba5e7779fe6d051d85856
+Priority: optional
+Homepage: https://fribbledom.com/
+Description: Disk Usage/Free Utility
+License: MIT
+
+Package: fzf
+Version: 0.74.3
+Architecture: amd64
+Maintainer: Junegunn Choi <junegunn.c@gmail.com>
+Installed-Size: 4905
+Filename: ./fzf_0.74.3_amd64.deb
+Size: 2053428
+MD5sum: b57a6ab3b9b19cf460fbe0f73fbc8b1f
+SHA1: eb0a76c098f0ea3434fe679684f280eb2974611a
+SHA256: b50cadad4067a5d4aa292364637762f022f06e926b057e6ed92165214c6aa4a3
+Section: utils
+Priority: optional
+Homepage: https://github.com/junegunn/fzf
+Description: Command-line fuzzy finder
+Architecture-Variant: amd64v1
+
 Package: github-desktop
 Version: 3.6.5.1
 Architecture: amd64
@@ -127,7 +246,7 @@ Installed-Size: 590329
 Depends: libgtk-3-0, libnotify4, libnss3, xdg-utils, libatspi2.0-0, libdrm2, libgbm1, libxcb-dri3-0, kde-cli-tools | kde-runtime | trash-cli | libglib2.0-bin | gvfs-bin, libcurl3 | libcurl4, libsecret-1-0, gnome-keyring
 Recommends: pulseaudio | libasound2
 Suggests: gir1.2-gnomekeyring-1.0, libgnome-keyring0, lsb-release
-Filename: ./DesktopPlus-v3.6.5.1-linux-x86_64.deb
+Filename: ./github-desktop_3.6.5.1_amd64.deb
 Size: 2248
 MD5sum: 60fedfcce2ed6f6abb0273da6cce2bf9
 SHA1: 27e1b97c2d42f70a74931b1b0166ab0f0ea6ec53
@@ -137,6 +256,79 @@ Priority: extra
 Homepage: https://desktop-plus.org
 Description: GitHub Desktop fork with advanced functionality and improvements.
  GitHub Desktop fork with advanced functionality and improvements.
+
+Package: goose
+Version: 1.49.0
+Architecture: amd64
+Maintainer: AAIF (Agentic AI Foundation)
+Installed-Size: 638426
+Depends: libgtk-3-0, libnotify4, libnss3, xdg-utils, libatspi2.0-0, libdrm2, libgbm1, libxcb-dri3-0, kde-cli-tools | kde-runtime | trash-cli | libglib2.0-bin | gvfs-bin
+Recommends: pulseaudio | libasound2
+Suggests: gir1.2-gnomekeyring-1.0, libgnome-keyring0, lsb-release
+Filename: ./goose_1.49.0_amd64.deb
+Size: 1532
+MD5sum: 0b35a3e532801f6564ffac1b2a21fd08
+SHA1: 5c09ea808c658529488728c644c10be219242a25
+SHA256: da54b48d0e5527dacb1420365a65549b44cdb62b06684c038bf084927ac8969d
+Section: utils
+Priority: optional
+Homepage: https://goose-docs.ai/
+Description: Goose App
+ Goose App
+
+Package: hugo
+Version: 0.165.0
+Architecture: amd64
+Maintainer: Bjørn Erik Pedersen <bjorn.erik.pedersen@gmail.com>
+Installed-Size: 59208
+Filename: ./hugo_0.165.0_amd64.deb
+Size: 21696158
+MD5sum: f0501dc5f788fbd714dcf41c76497849
+SHA1: 7377f1c6f4f20c74df9f0329e33fff77051d5c95
+SHA256: bab5ace3a13aa7137ee4a679c0e647719a415dc60013b7b442dfaf1606844141
+Priority: optional
+Homepage: https://github.com/gohugoio/hugo
+Description: A fast and flexible Static Site Generator written in Go.
+
+Package: hyper
+Version: 3.4.1
+Architecture: amd64
+Maintainer: ZEIT, Inc. <team@zeit.co>
+Installed-Size: 256492
+Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
+Recommends: libappindicator3-1
+Filename: ./hyper_3.4.1_amd64.deb
+Size: 1556
+MD5sum: 79b579dbe216bf2fde6f48418145b79d
+SHA1: 2a2a634cb7423e47d5b182185d18441b28c831a1
+SHA256: 5ca43fa46321212eb590b2cef43d0fc0e8977b9cf37e192212af04625850c2a8
+Section: default
+Priority: optional
+Homepage: https://github.com/zeit/hyper#readme
+Description:
+  A terminal built on web technologies
+License: MIT
+Vendor: ZEIT, Inc. <team@zeit.co>
+
+Package: joplin
+Version: 3.7.16
+Architecture: amd64
+Maintainer: Joplin Team <no-reply@joplinapp.org>
+Installed-Size: 625484
+Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
+Recommends: libappindicator3-1
+Filename: ./joplin_3.7.16_amd64.deb
+Size: 1988
+MD5sum: ad5bbc661c81136286bf2e406b2dbb0c
+SHA1: 5025c8e7a420c2ad1925e97a6f82515ecb88906a
+SHA256: 150c0fb7602833dc09d7b22ec18ed0685334fa3edbe7c03bcb59f6c24058f0ca
+Section: default
+Priority: optional
+Homepage: https://github.com/laurent22/joplin#readme
+Description:
+  Joplin for Desktop
+License: AGPL-3.0-or-later
+Vendor: Joplin Team <no-reply@joplinapp.org>
 
 Package: libterm-spinner-color-perl
 Version: 0.05-1
@@ -171,6 +363,135 @@ Description: A terminal spinner/progress bar with Unicode, color, and no non-cor
  to another code page in Windows shells.
  .
  This description was automagically extracted from the module by dh-make-perl.
+
+Package: logitune
+Version: 0.3.7
+Architecture: amd64
+Maintainer: Mina Maher <mina.maher88@hotmail.com>
+Depends: libqt6core6 (>= 6.4), libqt6qml6, libqt6quick6, libqt6svg6, libqt6dbus6, libqt6widgets6, libudev1, qml6-module-qtqml, qml6-module-qtqml-workerscript, qml6-module-qtquick, qml6-module-qtquick-controls, qml6-module-qtquick-dialogs, qml6-module-qtquick-layouts, qml6-module-qtquick-templates, qml6-module-qtquick-window
+Recommends: gnome-shell-extension-appindicator
+Filename: ./logitune_0.3.7_amd64.deb
+Size: 21188660
+MD5sum: 9657d1fc5fe4ae2a6a5af94c5a364046
+SHA1: 3bbf4e44d74df30da827fd898505fa0cc89348fe
+SHA256: d451561a3e9308e66fc8dd75ff6ec0fce5b8d4fb5bb2033787d6c2e3ac46b587
+Section: utils
+Priority: optional
+Homepage: https://github.com/mmaher88/logitune
+Description: Logitech device configurator for Linux
+ Configure Logitech HID++ peripherals (MX Master 3S and more).
+ Per-app profiles, button remapping, gestures, DPI, SmartShift,
+ scroll configuration, and thumb wheel modes.
+ Supports KDE Plasma 6 and GNOME 42+ Wayland.
+
+Package: marktext
+Version: 0.19.1
+Architecture: amd64
+Maintainer: MarkText Contributors
+Installed-Size: 355681
+Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
+Recommends: libappindicator3-1
+Filename: ./marktext_0.19.1_amd64.deb
+Size: 1676
+MD5sum: ddc9abf75944d1249e0ea24cdfc41ec1
+SHA1: bdc8c7d51cc5eeea9e6a94bc530f25d63188a955
+SHA256: 7d8fe780d940a6d27daefee84b99c758b51c08360c7e57507bd0eafcec941474
+Section: default
+Priority: optional
+Homepage: https://github.com/marktext/marktext
+Description:
+  A simple and elegant open-source markdown editor that focused on speed and usability.
+License: unknown
+Vendor: MarkText Contributors
+
+Package: opencode
+Version: 1.18.29
+Architecture: amd64
+Maintainer: OpenCode <hello@opencode.ai>
+Installed-Size: 455532
+Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
+Recommends: libappindicator3-1
+Filename: ./opencode_1.18.29_amd64.deb
+Size: 1972
+MD5sum: f352cc9d7b6193f91785e083e73239ca
+SHA1: 7a599d63a2ed6a48fa8216aa5e8f37c7261941ca
+SHA256: c9588736113c73509a9a8018d41fbb647cb7127c84b28c08e9afa45e2198f021
+Section: default
+Priority: optional
+Homepage: https://opencode.ai
+License: MIT
+Vendor: OpenCode <hello@opencode.ai>
+
+Package: pandoc
+Version: 3.11-1
+Architecture: amd64
+Maintainer: John MacFarlane <jgm@berkeley.edu>
+Installed-Size: 159928
+Depends: libc6 (>= 2.13), libgmp10, zlib1g (>= 1:1.1.4)
+Suggests: texlive-latex-recommended, texlive-xetex,
+ texlive-fonts-recommended
+Replaces: pandoc-data
+Filename: ./pandoc_3.11_amd64.deb
+Size: 2032
+MD5sum: 0090861eee02f041e09e666a22523111
+SHA1: 655975fe150519f994c117ba2854aadcd00f192d
+SHA256: 991bc4dfc2d6fd6f609097dbaeb5711e6b6feef2c9279b264b216cf83301c0e3
+Section: text
+Priority: optional
+Description: general markup converter
+  Pandoc is a Haskell library for converting from one markup format
+  to another, and a command-line tool that uses this library. The
+  formats it can handle include light markup formats (many variants
+  of Markdown, reStructuredText, AsciiDoc, Org-mode, Muse, Textile,
+  txt2tags), HTML formats (HTML 4 and 5), ebook formats (EPUB v2
+  and v3, FB2), Documentation formats (GNU TexInfo, Haddock),
+  Roff formats (man, ms), TeX formats (LaTeX, ConTeXt), XML
+  formats (DocBook 4 and 5, JATS, TEI Simple, OpenDocument),
+  outline formats (OPML), bibliography formats (BibTeX, BibLaTeX,
+  CSL JSON, CSL YAML, RIS), word processor formats (Docx, RTF,
+  ODT), interactive notebook formats (Jupyter notebook
+  ipynb), page layout formats (InDesign ICML), wiki markup
+  formats (MediaWiki, DokuWiki, TikiWiki, TWiki, Vimwiki,
+  XWiki, ZimWiki, Jira wiki, Creole), slide show formats
+  (LaTeX Beamer, PowerPoint, Slidy, reveal.js, Slideous, S5,
+  DZSlides), data formats (CSV and TSV tables), and PDF (via
+  external programs such as pdflatex or wkhtmltopdf).
+
+Package: rustdesk
+Version: 1.5.0
+Architecture: amd64
+Maintainer: rustdesk <info@rustdesk.com>
+Depends: libgtk-3-0t64 | libgtk-3-0, libxcb-randr0, libxdo3 | libxdo4, libxfixes3, libxcb-shape0, libxcb-xfixes0, libasound2t64 | libasound2, libsystemd0, curl, libva2, libva-drm2, libva-x11-2, libgstreamer-plugins-base1.0-0, gstreamer1.0-pipewire
+Recommends: libayatana-appindicator3-1
+Filename: ./rustdesk_1.5.0_amd64.deb
+Size: 24813016
+MD5sum: 8a47f63f4d1af0cd3a2cc1bda7a2722f
+SHA1: d9575c53504ed0c905b71b680f84b2bea7d2e1ad
+SHA256: 0fe98f700aed33759abac685387c3a29b2f138271d7111afb69ffeb121054dfb
+Section: net
+Priority: optional
+Homepage: https://rustdesk.com
+Description: A remote control software.
+
+Package: siyuan
+Version: 3.8.3
+Architecture: amd64
+Maintainer: Yunnan Liandi Technology Co., Ltd. <845765@qq.com>
+Installed-Size: 659983
+Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
+Recommends: libappindicator3-1
+Filename: ./siyuan_3.8.3_amd64.deb
+Size: 2004
+MD5sum: f00cc9b927fca4d64882d4bb95f5d1c4
+SHA1: eee12af63767178d9ef80396ce715f6851ed5087
+SHA256: 98767e9eaf7c9a4f9d9d17d3040716ef3d467533da09f0cf9c5f7b88cff6f2d8
+Section: default
+Priority: optional
+Homepage: https://b3log.org/siyuan
+Description:
+  From thought to insight, with agents
+License: unknown
+Vendor: Yunnan Liandi Technology Co., Ltd. <845765@qq.com>
 
 Package: snapweb
 Version: 0.9.1-1
@@ -222,6 +543,79 @@ Priority: optional
 Homepage: https://github.com/snapcast/snapweb
 Description: Web client for Snapcast
  Web client for Snapcast with control and playback capabilities.
+
+Package: spotube
+Version: 5.1.2+45
+Architecture: amd64
+Essential: no
+Maintainer: Kingkor Roy Tirtho <krtirtho@gmail.com>
+Installed-Size: 24400
+Depends: mpv, libappindicator3-1 | libayatana-appindicator3-1, gir1.2-appindicator3-0.1 | gir1.2-ayatanaappindicator3-0.1, libsecret-1-0, libnotify-bin, libjsoncpp1 | libjsoncpp25 | libjsoncpp26, libmpv1 | libmpv2, xdg-user-dirs, avahi-daemon, avahi-discover, avahi-utils, libnss-mdns, mdns-scan, libwebkit2gtk-4.1-0 | libwebkit2gtk-4.0-0, libsoup-3.0-0 | libsoup-2.4-0
+Suggests: yt-dlp
+Filename: ./spotube_5.1.2_amd64.deb
+Size: 1684
+MD5sum: 9abff721137d81c436ef974442537304
+SHA1: 8dd487530dfabe7b07db74e73a65d71e5a395dc5
+SHA256: 7ec4b8a21a8b0336a40bc43f00179d83d2f16472873e5885b767ebecfb78ce93
+Section: x11
+Priority: optional
+Homepage: https://spotube.krtirtho.dev
+Description: Open source extensible music streaming platform and app, based on BYOMM (Bring your own music metadata) concept
+
+Package: sshpilot
+Version: 6.0.6-1
+Architecture: all
+Maintainer: Mehdi <mah.fat@gmail.com>
+Installed-Size: 17002
+Depends: python3:any (>= 3.9~), python3-gi, python3-gi-cairo, gir1.2-gtk-4.0, gir1.2-adw-1 (>= 1.5), gir1.2-vte-3.91, gir1.2-gtksource-5, gir1.2-secret-1, python3-cryptography, python3-keyring, python3-secretstorage, python3-psutil, python3-certifi, libjs-xterm, openssh-client
+Recommends: sshpass, python3-pykeepass, gir1.2-webkit-6.0, ssh-askpass
+Filename: ./sshpilot_6.0.6_all.deb
+Size: 4730220
+MD5sum: 3b3261e656408539212c2781a2d64f72
+SHA1: 51d0a8e2c4d194affbc84af21817aa0563114eb0
+SHA256: 093aaa324aef432792dfe9d0a4b21c09eed3cfb9039ecf1bfa0c28a893a18c1d
+Section: net
+Priority: optional
+Homepage: https://github.com/mfat/sshpilot
+Description: modern, lightweight SSH connection manager
+ SSH Pilot is a user-friendly, modern and lightweight SSH connection manager
+ for Linux and macOS, with an integrated terminal and SFTP file manager.
+
+Package: stirling-pdf
+Version: 2.14.3
+Architecture: amd64
+Maintainer: Stirling-PDF Contributors
+Installed-Size: 330837
+Depends: libwebkit2gtk-4.1-0, libgtk-3-0
+Filename: ./stirling-pdf_2.14.3_amd64.deb
+Size: 1400
+MD5sum: 7a45b40360daf7bc83616991c0950c01
+SHA1: 9ba8157cf2753536864303f08eed2a434b9fe373
+SHA256: b1dea07cb8e37172ceb1c4333a0e18ec550347d6fb4635348e19c49c943a0861
+Priority: optional
+Description: Stirling-PDF Desktop Application
+ (none)
+
+Package: tabby-terminal
+Version: 1.0.235
+Architecture: amd64
+Maintainer: Tabby Developers <e@ajenti.org>
+Installed-Size: 413262
+Depends: gnome-keyring, libnotify4, libsecret-1-0, libxtst6, libnss3
+Recommends: libappindicator3-1
+Replaces: terminus-terminal
+Filename: ./tabby_1.0.235_amd64.deb
+Size: 1664
+MD5sum: 4dc983c0b6e025e4f1eb033f474d6791
+SHA1: 990eb421100c1e03e4d284c709aaf7b6ee4d1e02
+SHA256: a1e0533b2a6a04eab8960c692543ed71905cf66d20932ae3b3a9771ef42345fb
+Section: default
+Priority: optional
+Homepage: https://github.com/Eugeny/tabby#readme
+Description:
+  A terminal for a modern age
+License: unknown
+Vendor: Tabby Developers <e@ajenti.org>
 
 Package: teamspeak3-client
 Version: 3.5.6
