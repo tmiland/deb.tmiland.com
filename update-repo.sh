@@ -91,8 +91,8 @@ prune_versions() { # prune_versions <name> <keep>
       done
 }
 
-repack_stub() { # repack_stub <deb> <repo> <app-name> <asset-regex> [apt-name] [payload-dir] [hide-list] [summary]
-  local deb=$1 repo=$2 app=$3 asset_re=$4 apt_name=$5 payload_dir=$6 hide=$7 summary=$8 asset_esc tmp
+repack_stub() { # repack_stub <deb> <repo> <app-name> <asset-regex> [apt-name] [payload-dir] [hide-list] [summary] [dl-url]
+  local deb=$1 repo=$2 app=$3 asset_re=$4 apt_name=$5 payload_dir=$6 hide=$7 summary=$8 dl_url=$9 asset_esc tmp
   # strip trailing anchor: postinst greps raw JSON lines that end with a quote
   asset_re=${asset_re%\$}
   asset_esc=${asset_re//\\/\\\\} # keep regex backslashes through sed
@@ -113,6 +113,7 @@ repack_stub() { # repack_stub <deb> <repo> <app-name> <asset-regex> [apt-name] [
   sed -i "s|^REPO=.*|REPO=$repo|" "$tmp/DEBIAN/postinst"
   sed -i "s|^APP_NAME=.*|APP_NAME=$app|" "$tmp/DEBIAN/postinst"
   sed -i "s|^ASSET=.*|ASSET=$asset_esc|" "$tmp/DEBIAN/postinst"
+  sed -i "s|^DL_URL=.*|DL_URL=$dl_url|" "$tmp/DEBIAN/postinst"
   sed -i "s|^HIDE=.*|HIDE=$hide|" "$tmp/DEBIAN/postinst"
   # Optional payload (launcher files etc.); postinst still re-downloads the real deb
   if [ -n "$payload_dir" ] && [ -d "$payload_dir" ]; then
@@ -129,7 +130,8 @@ repack_stub() { # repack_stub <deb> <repo> <app-name> <asset-regex> [apt-name] [
 
 process_package() { # process_package <toml-file>
   local cfg=$1
-  local name repo asset_re keep pkg_name hide summary payload_dir filekey
+  local name repo asset_re keep pkg_name hide summary payload_dir filekey dl_url_orig
+  dl_url_orig=$(conf_get "$cfg" url)
   name=$(conf_get "$cfg" name); [ -z "$name" ] && name=$(basename "$cfg" ".$CONFIG_EXT")
   repo=$(conf_get "$cfg" repo)
   asset_re=$(conf_get "$cfg" asset)
@@ -163,6 +165,7 @@ process_package() { # process_package <toml-file>
       return 0
     fi
     new_ver=$(version_from "$url")
+    dl_url=$dl_url_orig
   else
     json=$(gh_curl "https://api.github.com/repos/$repo/releases")
     # grab the first matching asset together with its release tag
@@ -231,7 +234,7 @@ process_package() { # process_package <toml-file>
   fi
   if [ "$(stat -c%s "$deb")" -gt "$REPACK_SIZE_THRESHOLD" ]; then
     echo "-- $name: >25MB, repacking as install-stub"
-    repack_stub "$deb" "$repo" "${pkg_name:-$name}" "$asset_re" "$pkg_name" "$payload_dir" "$hide" "$summary"
+    repack_stub "$deb" "$repo" "${pkg_name:-$name}" "$asset_re" "$pkg_name" "$payload_dir" "$hide" "$summary" "$dl_url_orig"
   fi
   # normalize the filename so version tracking works even for unversioned
   # upstream asset names (name_version_arch.deb)

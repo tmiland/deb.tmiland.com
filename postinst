@@ -3,12 +3,17 @@
 REPO=
 APP_NAME=
 ASSET=
+DL_URL=
 # Optional: space-separated desktop files to hide after install (keep 1 launcher)
 HIDE=
 
-URL=$(curl -sSL https://api.github.com/repos/"$REPO"/releases 2>/dev/null \
-  | grep -m 1 "browser_download_url.*$ASSET\"" \
-  | cut -d'"' -f4)
+if [ -n "$DL_URL" ]; then
+  URL=$DL_URL
+else
+  URL=$(curl -sSL https://api.github.com/repos/"$REPO"/releases 2>/dev/null \
+    | grep -m 1 "browser_download_url.*$ASSET\"" \
+    | cut -d'"' -f4)
+fi
 
 deb_download() {
   # Credit: deb-get 

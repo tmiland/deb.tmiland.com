@@ -34,8 +34,11 @@ The software below can be installed, updated and removed using this repository:
 | Source   | Package Name   | Description   |
 | :------: | :------------- | :------------ |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/AppFlowy-IO/AppFlowy) | `AppFlowy` | <i>An Open Source Alternative to Notion</i> |
+| [<img src="./img/github.png" align="top" width="20" />](https://github.com/balena-io/etcher) | `balena-etcher` | <i>Flash OS images to SD cards and USB drives, safely and easily.</i> |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/sharkdp/bat) | `bat` | <i>cat(1) clone with wings.</i> |
+| [<img src="./img/github.png" align="top" width="20" />](https://github.com/bitwarden/clients) | `bitwarden` | <i>A secure and free password manager for all of your devices.</i> |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/usebruno/bruno) | `bruno` | <i>Opensource API Client for Exploring and Testing APIs</i> |
+| [<img src="./img/direct.png" align="top" width="20" />](https://discord.com) | `discord` | <i>Chat for Communities and Friends</i> |
 | [<img src="./img/debian.png" align="top" width="20" />](https://wiki.debian.org/Teams/Dpkg) | `dpkg` | <i>Debian package management system</i> |
 | [<img src="./img/debian.png" align="top" width="20" />](https://wiki.debian.org/Teams/Dpkg) | `dpkg-repack` | <i>Debian package archiving tool</i> |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/jgraph/drawio-desktop) | `draw.io` | <i>draw.io desktop</i> |
@@ -53,6 +56,7 @@ The software below can be installed, updated and removed using this repository:
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/marktext/marktext) | `marktext` | <i>A simple and elegant open-source markdown editor that focused on speed and usability.</i> |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/anomalyco/opencode) | `opencode` | <i>The open source coding agent.</i> |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/jgm/pandoc) | `pandoc` | <i>general markup converter</i> |
+| [<img src="./img/github.png" align="top" width="20" />](https://github.com/ProtonMail/proton-bridge) | `protonmail-bridge` | <i>Proton Mail Bridge is a desktop application that runs in the background, encrypting and decrypting messages as they enter and leave your computer.</i> |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/rustdesk/rustdesk) | `rustdesk` | <i>A remote control software.</i> |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/siyuan-note/siyuan) | `siyuan` | <i>From thought to insight, with agents</i> |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/badaix/snapweb) | `snapweb` | <i>Web client for Snapcast</i> |
