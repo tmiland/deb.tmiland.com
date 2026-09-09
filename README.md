@@ -116,6 +116,8 @@ Two packages are special:
 - [assafmo/ppa](https://github.com/assafmo/ppa)
 - [Hosting your own PPA repository on GitHub](https://assafmo.github.io/2019/05/02/ppa-repo-hosted-on-github.html)
 
+
+**Full write-up on the blog:** https://tmiland.com/deb-tmiland-com/
 ## Donations
 <a href="https://coindrop.to/tmiland" target="_blank"><img src="https://coindrop.to/embed-button.png" style="border-radius: 10px; height: 57px !important;width: 229px !important;" alt="Coindrop.to me"></img></a>
 
