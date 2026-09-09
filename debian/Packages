@@ -615,6 +615,25 @@ Description: Proton Mail Bridge is a desktop application that runs in the backgr
 License: GPLv3
 Vendor: Proton AG
 
+Package: protonmail-bridge
+Version: 3.27.0-1
+Architecture: amd64
+Maintainer: Proton AG (Proton Mail Bridge developers) <bridge@protonmail.ch>
+Installed-Size: 205600
+Depends: libxcb-cursor0, libegl1, libopengl0, libc6, libsecret-1-0, libglib2.0-0, libstdc++6, libgcc1, libpulse-mainloop-glib0, fonts-dejavu, libfido2-1
+Suggests: pass, gnome-keyring
+Filename: ./protonmail-bridge_3.27.0_amd64.deb
+Size: 1436
+MD5sum: 6c9e2a3e0e61aee9403ce855ba751e28
+SHA1: 2bf259e4ff2443eb23afee36ac77470f7ae3ae3f
+SHA256: d7665ad4940b5ef9e6eb0abf71d4dacc2616f693a54449451789c3dc58b7c750
+Section: default
+Priority: optional
+Homepage: https://proton.me/mail/bridge
+Description: Proton Mail Bridge is a desktop application that runs in the background, encrypting and decrypting messages as they enter and leave your computer.
+License: GPLv3
+Vendor: Proton AG
+
 Package: rustdesk
 Version: 1.5.0
 Architecture: amd64
