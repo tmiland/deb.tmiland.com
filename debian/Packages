@@ -409,6 +409,20 @@ Priority: optional
 Homepage: https://github.com/gohugoio/hugo
 Description: A fast and flexible Static Site Generator written in Go.
 
+Package: hugo
+Version: 0.166.0
+Architecture: amd64
+Maintainer: Bjørn Erik Pedersen <bjorn.erik.pedersen@gmail.com>
+Installed-Size: 58876
+Filename: ./hugo_0.166.0_amd64.deb
+Size: 21785036
+MD5sum: 5000ae41ce67b22147f7a6700271540a
+SHA1: 7918ecbb66be2cc0f190fe5cc96a96cde0b8374a
+SHA256: eebe2ac57a402a0768096c57142334ffc857790cb159d1f68d609496e394d71c
+Priority: optional
+Homepage: https://github.com/gohugoio/hugo
+Description: A fast and flexible Static Site Generator written in Go.
+
 Package: hyper
 Version: 3.4.1
 Architecture: amd64
@@ -790,6 +804,25 @@ Size: 4770024
 MD5sum: e8326bf431f14eec08ebb9563b28e522
 SHA1: f0d75be937003cfb999b66debd521e4c4fece5bb
 SHA256: b3e57a976edeb9af0d5cc8efa924070ea31b43c90d2293930ddf5d5241722d01
+Section: net
+Priority: optional
+Homepage: https://github.com/mfat/sshpilot
+Description: modern, lightweight SSH connection manager
+ SSH Pilot is a user-friendly, modern and lightweight SSH connection manager
+ for Linux and macOS, with an integrated terminal and SFTP file manager.
+
+Package: sshpilot
+Version: 6.0.8-1
+Architecture: all
+Maintainer: Mehdi <mah.fat@gmail.com>
+Installed-Size: 17270
+Depends: python3:any (>= 3.9~), python3-gi, python3-gi-cairo, gir1.2-gtk-4.0, gir1.2-adw-1 (>= 1.5), gir1.2-vte-3.91, gir1.2-gtksource-5, gir1.2-secret-1, python3-cryptography, python3-keyring, python3-secretstorage, python3-psutil, python3-certifi, libjs-xterm, openssh-client
+Recommends: sshpass, python3-pykeepass, gir1.2-webkit-6.0, ssh-askpass
+Filename: ./sshpilot_6.0.8_all.deb
+Size: 4783320
+MD5sum: 94231fa0e5c25c203034cde3c9bd3e34
+SHA1: dfee33bf00e9bb7df8b251f97e06d612d4609cfc
+SHA256: adc93d3fb05a69abee12c89e170b6a3c314ffbd54575359af8d2e8ef525c0f0b
 Section: net
 Priority: optional
 Homepage: https://github.com/mfat/sshpilot
