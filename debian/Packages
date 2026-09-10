@@ -371,6 +371,25 @@ Homepage: https://desktop-plus.org
 Description: GitHub Desktop fork with advanced functionality and improvements.
  GitHub Desktop fork with advanced functionality and improvements.
 
+Package: github-desktop
+Version: 3.6.6.0
+Architecture: amd64
+Maintainer: Pol Rivero <admin@desktop-plus.org>
+Installed-Size: 552881
+Depends: libgtk-3-0, libnotify4, libnss3, xdg-utils, libatspi2.0-0, libdrm2, libgbm1, libxcb-dri3-0, kde-cli-tools | kde-runtime | trash-cli | libglib2.0-bin | gvfs-bin, libcurl3 | libcurl4, libsecret-1-0, gnome-keyring
+Recommends: pulseaudio | libasound2
+Suggests: gir1.2-gnomekeyring-1.0, libgnome-keyring0, lsb-release
+Filename: ./github-desktop_3.6.6.0_amd64.deb
+Size: 2076
+MD5sum: 3ab2b60e8b19df65f54d18d70b7788b4
+SHA1: 7aa455dbaadc9ed9dd20fae510d219de5dd299aa
+SHA256: b641ffc175131309917fbc0febc53881163c6318bfce03a19a6fdacc5b607f3b
+Section: GNOME;GTK;Development
+Priority: extra
+Homepage: https://desktop-plus.org
+Description: GitHub Desktop fork with advanced functionality and improvements.
+ GitHub Desktop fork with advanced functionality and improvements.
+
 Package: goose
 Version: 1.49.0
 Architecture: amd64
