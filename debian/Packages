@@ -496,6 +496,26 @@ Description:
 License: AGPL-3.0-or-later
 Vendor: Joplin Team <no-reply@joplinapp.org>
 
+Package: joplin
+Version: 3.7.18
+Architecture: amd64
+Maintainer: Joplin Team <no-reply@joplinapp.org>
+Installed-Size: 625501
+Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
+Recommends: libappindicator3-1
+Filename: ./joplin_3.7.18_amd64.deb
+Size: 1848
+MD5sum: a912fe5546af2e28dff469d44df02c3c
+SHA1: 1919c6883d0d71199c2e757d3ec7c02884d14661
+SHA256: abeadffb457cd42ac238674af77d8856879feb43b92ff44f142b9212dcf38261
+Section: default
+Priority: optional
+Homepage: https://github.com/laurent22/joplin#readme
+Description:
+  Joplin for Desktop
+License: AGPL-3.0-or-later
+Vendor: Joplin Team <no-reply@joplinapp.org>
+
 Package: libterm-spinner-color-perl
 Version: 0.05-1
 Architecture: all
