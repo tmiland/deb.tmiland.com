@@ -352,6 +352,21 @@ Homepage: https://github.com/junegunn/fzf
 Description: Command-line fuzzy finder
 Architecture-Variant: amd64v1
 
+Package: fzf
+Version: 0.74.4
+Architecture: amd64
+Maintainer: Junegunn Choi <junegunn.c@gmail.com>
+Installed-Size: 5469
+Filename: ./fzf_0.74.4_amd64.deb
+Size: 2316048
+MD5sum: bea8153e5242d672709b65dcdc06d0a5
+SHA1: f25e67d7999bcb7e7800195f5cab563678caa2f2
+SHA256: 0e8a33f32c89c4d7d2daa4975eaa15e302da8d35b846796aef2dd6461101051b
+Section: utils
+Priority: optional
+Homepage: https://github.com/junegunn/fzf
+Description: Command-line fuzzy finder
+
 Package: github-desktop
 Version: 3.6.5.1
 Architecture: amd64
