@@ -643,6 +643,25 @@ Description: The open source coding agent.
 License: MIT
 Vendor: OpenCode <hello@opencode.ai>
 
+Package: opencode
+Version: 1.18.31
+Architecture: amd64
+Maintainer: OpenCode <hello@opencode.ai>
+Installed-Size: 456133
+Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
+Recommends: libappindicator3-1
+Filename: ./opencode_1.18.31_amd64.deb
+Size: 1828
+MD5sum: c6ba8de9dc8c610644cb6fdbfb6638fd
+SHA1: 0ccc70bc442e0e3d0e5622393536483af45a8fe4
+SHA256: d4f7e49c755be2c7dc99bf04c72840bbbf048da9aaaf8f89a37d21a1aab36885
+Section: default
+Priority: optional
+Homepage: https://opencode.ai
+Description: The open source coding agent.
+License: MIT
+Vendor: OpenCode <hello@opencode.ai>
+
 Package: pandoc
 Version: 3.11-1
 Architecture: amd64
