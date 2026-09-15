@@ -229,6 +229,25 @@ Description: Chat for Communities and Friends
  Discord is the easiest way to communicate over voice, video, and text. Chat,
  hang out, and stay close with your friends and communities.
 
+Package: discord
+Version: 1.0.158
+Architecture: amd64
+Maintainer: Discord Maintainer Team <noreply@discord.com>
+Installed-Size: 4280
+Depends: libc6, libasound2, libatk1.0-0, libatk-bridge2.0-0, libatspi2.0-0, libatomic1, libcairo2, libdbus-1-3, libexpat1, libgbm1, libglib2.0-0, libgtk-3-0, libnotify4, libnspr4, libnss3, libpango-1.0-0, libstdc++6, libudev1, libx11-6, libxcb1, libxcomposite1, libxdamage1, libxext6, libxfixes3, libxkbcommon0, libxrandr2
+Recommends: libunity9, libva2, libpipewire-0.3-0
+Filename: ./discord_1.0.158_amd64.deb
+Size: 2179726
+MD5sum: 802f288d24662a724734e8e594c6ad58
+SHA1: 11bf3a3fe0256923cc2be9db43dfdb5f6c2a0320
+SHA256: 022b1e269bcd1523542fb35b51ae840fdb994d96a8a2245f1c54542b545b2060
+Section: net
+Priority: optional
+Homepage: https://discord.com
+Description: Chat for Communities and Friends
+ Discord is the easiest way to communicate over voice, video, and text. Chat,
+ hang out, and stay close with your friends and communities.
+
 Package: dpkg
 Version: 1.20.12
 Architecture: amd64
