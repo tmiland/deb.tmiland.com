@@ -459,25 +459,6 @@ Description: GitHub Desktop fork with advanced functionality and improvements.
  GitHub Desktop fork with advanced functionality and improvements.
 
 Package: goose
-Version: 1.49.0
-Architecture: amd64
-Maintainer: AAIF (Agentic AI Foundation)
-Installed-Size: 638426
-Depends: libgtk-3-0, libnotify4, libnss3, xdg-utils, libatspi2.0-0, libdrm2, libgbm1, libxcb-dri3-0, kde-cli-tools | kde-runtime | trash-cli | libglib2.0-bin | gvfs-bin
-Recommends: pulseaudio | libasound2
-Suggests: gir1.2-gnomekeyring-1.0, libgnome-keyring0, lsb-release
-Filename: ./goose_1.49.0_amd64.deb
-Size: 1532
-MD5sum: 0b35a3e532801f6564ffac1b2a21fd08
-SHA1: 5c09ea808c658529488728c644c10be219242a25
-SHA256: da54b48d0e5527dacb1420365a65549b44cdb62b06684c038bf084927ac8969d
-Section: utils
-Priority: optional
-Homepage: https://goose-docs.ai/
-Description: Goose App
- Goose App
-
-Package: goose
 Version: 1.50.0
 Architecture: amd64
 Maintainer: AAIF (Agentic AI Foundation)
@@ -509,6 +490,25 @@ Size: 1370
 MD5sum: 48e8deded80b6b76e6db19c2cf0e9060
 SHA1: 553a774cfe7887b8247d94882235cf8d518b8543
 SHA256: ac80b40aaae9b94a044baf737f45f9bf81ef0d176600e1d4d62ba9be12b056e9
+Section: utils
+Priority: optional
+Homepage: https://goose-docs.ai/
+Description: Goose App
+ Goose App
+
+Package: goose
+Version: 1.51.0
+Architecture: amd64
+Maintainer: AAIF (Agentic AI Foundation)
+Installed-Size: 635627
+Depends: libgtk-3-0, libnotify4, libnss3, xdg-utils, libatspi2.0-0, libdrm2, libgbm1, libxcb-dri3-0, kde-cli-tools | kde-runtime | trash-cli | libglib2.0-bin | gvfs-bin
+Recommends: pulseaudio | libasound2
+Suggests: gir1.2-gnomekeyring-1.0, libgnome-keyring0, lsb-release
+Filename: ./goose_1.51.0_amd64.deb
+Size: 1372
+MD5sum: b516a252539ed32f1c683a4412c90af0
+SHA1: 98d7be499fe713743773b9615e46d97beb18d329
+SHA256: 50ead096c9891c6475318184c05e8eea6d242dab55c1ea70d873077a038cc527
 Section: utils
 Priority: optional
 Homepage: https://goose-docs.ai/
