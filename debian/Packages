@@ -185,6 +185,26 @@ Description: A secure and free password manager for all of your devices.
 License: GPL-3.0
 Vendor: Bitwarden Inc. <hello@bitwarden.com>
 
+Package: bitwarden
+Version: 2026.9.0
+Architecture: amd64
+Maintainer: Bitwarden Inc. <hello@bitwarden.com>
+Installed-Size: 411063
+Depends: libnotify4, libxtst6, libnss3, libxss1
+Recommends: libappindicator3-1
+Filename: ./bitwarden_2026.9.0_amd64.deb
+Size: 1490
+MD5sum: f4fc84d1f1a116427dd21fda5e53d74b
+SHA1: 46dc0dec6b3b7731eef6146082f87e64670e33fc
+SHA256: b4db83739fae4b1b620f297b4968d7c391b248059c4ce2e3e009b2f39f53b7f4
+Section: default
+Priority: optional
+Homepage: https://bitwarden.com
+Description: A secure and free password manager for all of your devices.
+  A secure and free password manager for all of your devices.
+License: GPL-3.0
+Vendor: Bitwarden Inc. <hello@bitwarden.com>
+
 Package: bruno
 Version: 4.1.0
 Architecture: amd64
