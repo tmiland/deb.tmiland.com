@@ -1,18 +1,4 @@
 Package: AppFlowy
-Version: 0.14.1
-Architecture: amd64
-Essential: no
-Maintainer: AppFlowy
-Depends: libatk1.0-0 (>= 2.7.91), libc6 (>= 2.35), libcairo-gobject2 (>= 1.10.0), libcairo2 (>= 1.14.0), libepoxy0 (>= 1.0), libfontconfig1 (>= 2.12.6), libgcc-s1 (>= 4.2), libgdk-pixbuf-2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.39.90), libgstreamer-plugins-base1.0-0 (>= 1.0.0), libgstreamer1.0-0 (>= 1.6.0), libgtk-3-0 (>= 3.21.5), libharfbuzz0b (>= 0.6.0), libkeybinder-3.0-0 (>= 0.3.0), libpango-1.0-0 (>= 1.29.4), libpangocairo-1.0-0 (>= 1.14.0), libstdc++6 (>= 12)
-Filename: ./appflowy_0.14.1_amd64.deb
-Size: 1624
-MD5sum: 893667b9966fcb75e03ed304517684e8
-SHA1: e89423a3a5ce88652dd696603c10cbe94cea025a
-SHA256: c8bfff547fbadc2c76d5ff94b1a7b1183321fce808b32e2adfb3b71d0e6bae52
-Priority: optional
-Description: An Open Source Alternative to Notion
-
-Package: AppFlowy
 Version: 0.14.2
 Architecture: amd64
 Essential: no
@@ -37,6 +23,20 @@ Size: 1760
 MD5sum: 2b0df45a7b80f169d2a726d17c8d533b
 SHA1: 1f8ce84f8b6868e740fcb1109f2d1478a3513aa3
 SHA256: d9e3bfb900374e6a7cb04fce0e8261d683b2cf1d928bb3e36d7e50ce3ca81e3b
+Priority: optional
+Description: An Open Source Alternative to Notion
+
+Package: AppFlowy
+Version: 0.14.4
+Architecture: amd64
+Essential: no
+Maintainer: AppFlowy
+Depends: libatk1.0-0 (>= 2.7.91), libc6 (>= 2.35), libcairo-gobject2 (>= 1.10.0), libcairo2 (>= 1.15.12), libdbus-1-3 (>= 1.9.14), libdrm2 (>= 2.4.101), libegl1, libepoxy0 (>= 1.4.3), libffi8 (>= 3.4), libfontconfig1 (>= 2.13.0), libfreetype6 (>= 2.3.5), libfribidi0 (>= 1.0.0), libgbm1 (>= 8.1~0), libgcc-s1 (>= 4.3), libgcrypt20 (>= 1.9.0), libgdk-pixbuf-2.0-0 (>= 2.31.1), libgl1, libgles2, libglib2.0-0 (>= 2.49.3), libgpg-error0 (>= 1.14), libgstreamer-plugins-base1.0-0 (>= 1.0.0), libgstreamer1.0-0 (>= 1.6.0), libgtk-3-0 (>= 3.21.5), libharfbuzz0b (>= 1.2.6), libkeybinder-3.0-0 (>= 0.3.0), liblz4-1 (>= 0.0~r130), liblzma5 (>= 5.2.2), libnotify4, libpango-1.0-0 (>= 1.45.5), libpangocairo-1.0-0 (>= 1.22.0), libpng16-16 (>= 1.6.2-1), libstdc++6 (>= 12), libsystemd0, libvulkan1 (>= 1.2.131.2), libwayland-client0 (>= 1.20.0), libwayland-cursor0 (>= 1.0.2), libwayland-egl1 (>= 1.15.0), libx11-6 (>= 2:1.6.0), libxcb-shm0, libxcb1, libxcursor1 (>> 1.1.2), libxext6, libxfixes3 (>= 1:5.0), libxi6 (>= 2:1.5.99.2), libxinerama1 (>= 2:1.1.4), libxkbcommon0 (>= 0.5.0), libxrandr2 (>= 2:1.2.99.3), libzstd1 (>= 1.4.0), zlib1g (>= 1:1.2.3.3)
+Filename: ./appflowy_0.14.4_amd64.deb
+Size: 1750
+MD5sum: 16a297f75f738069f412637fc2d86fc3
+SHA1: ced8ec2e24d888fb114594d8f7085be951a28c31
+SHA256: 2f5561da4e5ce8af47e5c0d078828865717996fba64e7723489fba90ba48b6ab
 Priority: optional
 Description: An Open Source Alternative to Notion
 
@@ -975,25 +975,6 @@ Homepage: https://spotube.krtirtho.dev
 Description: Open source extensible music streaming platform and app, based on BYOMM (Bring your own music metadata) concept
 
 Package: sshpilot
-Version: 6.1.3-1
-Architecture: all
-Maintainer: Mehdi <mah.fat@gmail.com>
-Installed-Size: 17512
-Depends: python3:any (>= 3.9~), python3-gi, python3-gi-cairo, gir1.2-gtk-4.0, gir1.2-adw-1 (>= 1.5), gir1.2-vte-3.91, gir1.2-gtksource-5, gir1.2-secret-1, python3-cryptography, python3-keyring, python3-secretstorage, python3-psutil, python3-certifi, python3-yaml, libjs-xterm, openssh-client
-Recommends: sshpass, python3-pykeepass, gir1.2-webkit-6.0, ssh-askpass
-Filename: ./sshpilot_6.1.3_all.deb
-Size: 4825210
-MD5sum: 1bae15be6faae26b465944864c690aa9
-SHA1: 086c0c64371c60c0bc9ed74aacfa9289773bee89
-SHA256: 87780f9af967c335ac9ced3929e47b1ed8b6cc83bcbf307c51434e60448e6521
-Section: net
-Priority: optional
-Homepage: https://github.com/mfat/sshpilot
-Description: modern, lightweight SSH connection manager
- SSH Pilot is a user-friendly, modern and lightweight SSH connection manager
- for Linux and macOS, with an integrated terminal and SFTP file manager.
-
-Package: sshpilot
 Version: 6.1.4-1
 Architecture: all
 Maintainer: Mehdi <mah.fat@gmail.com>
@@ -1024,6 +1005,25 @@ Size: 4830570
 MD5sum: 54ceed355761bec1ff2ee6b979d93733
 SHA1: 9a895b2767337a93c807a63531b1a255a917a577
 SHA256: 70a72358c6cc995a5d61f4409f74dd440b2450fe5eba0e29dab21222b211e399
+Section: net
+Priority: optional
+Homepage: https://github.com/mfat/sshpilot
+Description: modern, lightweight SSH connection manager
+ SSH Pilot is a user-friendly, modern and lightweight SSH connection manager
+ for Linux and macOS, with an integrated terminal and SFTP file manager.
+
+Package: sshpilot
+Version: 6.1.7-1
+Architecture: all
+Maintainer: Mehdi <mah.fat@gmail.com>
+Installed-Size: 17553
+Depends: python3:any (>= 3.9~), python3-gi, python3-gi-cairo, gir1.2-gtk-4.0, gir1.2-adw-1 (>= 1.5), gir1.2-vte-3.91, gir1.2-gtksource-5, gir1.2-secret-1, python3-cryptography, python3-keyring, python3-secretstorage, python3-psutil, python3-certifi, python3-yaml, libjs-xterm, openssh-client
+Recommends: sshpass, python3-pykeepass, gir1.2-webkit-6.0, ssh-askpass
+Filename: ./sshpilot_6.1.7_all.deb
+Size: 4832700
+MD5sum: 6dc3116ce3d7e2c921a49b572e83c53f
+SHA1: 48f7404eb45148a584294fc0e184eb8f16d23939
+SHA256: 22c8609d7ba539327287593ed79ce4548ae64367900e6a63b0feec1a670d04be
 Section: net
 Priority: optional
 Homepage: https://github.com/mfat/sshpilot
