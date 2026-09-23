@@ -865,26 +865,6 @@ Homepage: https://rustdesk.com
 Description: A remote control software.
 
 Package: siyuan
-Version: 3.8.3
-Architecture: amd64
-Maintainer: Yunnan Liandi Technology Co., Ltd. <845765@qq.com>
-Installed-Size: 659983
-Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
-Recommends: libappindicator3-1
-Filename: ./siyuan_3.8.3_amd64.deb
-Size: 2004
-MD5sum: f00cc9b927fca4d64882d4bb95f5d1c4
-SHA1: eee12af63767178d9ef80396ce715f6851ed5087
-SHA256: 98767e9eaf7c9a4f9d9d17d3040716ef3d467533da09f0cf9c5f7b88cff6f2d8
-Section: default
-Priority: optional
-Homepage: https://b3log.org/siyuan
-Description:
-  From thought to insight, with agents
-License: unknown
-Vendor: Yunnan Liandi Technology Co., Ltd. <845765@qq.com>
-
-Package: siyuan
 Version: 3.8.4~alpha.1
 Architecture: amd64
 Maintainer: Yunnan Liandi Technology Co., Ltd. <845765@qq.com>
@@ -916,6 +896,26 @@ Size: 1866
 MD5sum: 0a0e2c0c0d32705297388e6048136632
 SHA1: 888d8f1e704726fbf0d93140b7a7e2864bc29755
 SHA256: d02a3f2e813b88aecd6db35fe140f6bb60100086e3207a5ee75bd23a9642f19c
+Section: default
+Priority: optional
+Homepage: https://b3log.org/siyuan
+Description:
+  From thought to insight, with agents
+License: unknown
+Vendor: Yunnan Liandi Technology Co., Ltd. <845765@qq.com>
+
+Package: siyuan
+Version: 3.8.6~alpha.1
+Architecture: amd64
+Maintainer: Yunnan Liandi Technology Co., Ltd. <845765@qq.com>
+Installed-Size: 686212
+Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
+Recommends: libappindicator3-1
+Filename: ./siyuan_3.8.6_amd64.deb
+Size: 1866
+MD5sum: 09c3f540f64e90aca0bfbf8e5df65228
+SHA1: cafb260991957d9d93ece5243184ae4cc58f6cbc
+SHA256: 96f90097f9c6d19d4f25df61023fb97e72e01c0d7894b51560af83e8e4a25ae7
 Section: default
 Priority: optional
 Homepage: https://b3log.org/siyuan
