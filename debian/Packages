@@ -247,6 +247,26 @@ Description:
 License: unknown
 Vendor: Anoop M D <anoop.md1421@gmail.com>
 
+Package: bruno
+Version: 4.2.0
+Architecture: amd64
+Maintainer: Anoop M D <anoop.md1421@gmail.com>
+Installed-Size: 539550
+Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0, libasound2
+Recommends: libappindicator3-1
+Filename: ./bruno_4.2.0_amd64.deb
+Size: 1466
+MD5sum: 745e3ddc5630491f2ae98f6e1c998d05
+SHA1: b59cd4d3696a4169ca85547208ab24beda461799
+SHA256: 85851fd6371732a5d503c522a335863dbafa932aead439a180713b8c80c88a76
+Section: default
+Priority: optional
+Homepage: https://www.usebruno.com
+Description:
+  Opensource API Client for Exploring and Testing APIs
+License: unknown
+Vendor: Anoop M D <anoop.md1421@gmail.com>
+
 Package: discord
 Version: 1.0.157
 Architecture: amd64
@@ -500,25 +520,6 @@ Description: GitHub Desktop fork with advanced functionality and improvements.
  GitHub Desktop fork with advanced functionality and improvements.
 
 Package: goose
-Version: 1.50.0
-Architecture: amd64
-Maintainer: AAIF (Agentic AI Foundation)
-Installed-Size: 637580
-Depends: libgtk-3-0, libnotify4, libnss3, xdg-utils, libatspi2.0-0, libdrm2, libgbm1, libxcb-dri3-0, kde-cli-tools | kde-runtime | trash-cli | libglib2.0-bin | gvfs-bin
-Recommends: pulseaudio | libasound2
-Suggests: gir1.2-gnomekeyring-1.0, libgnome-keyring0, lsb-release
-Filename: ./goose_1.50.0_amd64.deb
-Size: 1372
-MD5sum: 5bcfeb2d0021aa2e8874f5d7ae584fcc
-SHA1: 92082ada30a84849a06cec272123a3155b1e48f7
-SHA256: edb04f16968d89ce45295ff8f33874bcbd138f709e3d6f7296e15f257a00f844
-Section: utils
-Priority: optional
-Homepage: https://goose-docs.ai/
-Description: Goose App
- Goose App
-
-Package: goose
 Version: 1.50.1
 Architecture: amd64
 Maintainer: AAIF (Agentic AI Foundation)
@@ -550,6 +551,25 @@ Size: 1372
 MD5sum: b516a252539ed32f1c683a4412c90af0
 SHA1: 98d7be499fe713743773b9615e46d97beb18d329
 SHA256: 50ead096c9891c6475318184c05e8eea6d242dab55c1ea70d873077a038cc527
+Section: utils
+Priority: optional
+Homepage: https://goose-docs.ai/
+Description: Goose App
+ Goose App
+
+Package: goose
+Version: 1.52.0
+Architecture: amd64
+Maintainer: AAIF (Agentic AI Foundation)
+Installed-Size: 624292
+Depends: libgtk-3-0, libnotify4, libnss3, xdg-utils, libatspi2.0-0, libdrm2, libgbm1, libxcb-dri3-0, kde-cli-tools | kde-runtime | trash-cli | libglib2.0-bin | gvfs-bin
+Recommends: pulseaudio | libasound2
+Suggests: gir1.2-gnomekeyring-1.0, libgnome-keyring0, lsb-release
+Filename: ./goose_1.52.0_amd64.deb
+Size: 1370
+MD5sum: faf78894e58c2a54615caf85d9eb17df
+SHA1: 9befe8dc5dc872afe7feb89899fcacd243c6dd77
+SHA256: cdbcd15fc56d46f4181dbbd60671307cf182f579f7f4accd5964b0d255dceed0
 Section: utils
 Priority: optional
 Homepage: https://goose-docs.ai/
@@ -1078,6 +1098,27 @@ Size: 1664
 MD5sum: 4dc983c0b6e025e4f1eb033f474d6791
 SHA1: 990eb421100c1e03e4d284c709aaf7b6ee4d1e02
 SHA256: a1e0533b2a6a04eab8960c692543ed71905cf66d20932ae3b3a9771ef42345fb
+Section: default
+Priority: optional
+Homepage: https://github.com/Eugeny/tabby#readme
+Description:
+  A terminal for a modern age
+License: unknown
+Vendor: Tabby Developers <e@ajenti.org>
+
+Package: tabby-terminal
+Version: 1.0.236
+Architecture: amd64
+Maintainer: Tabby Developers <e@ajenti.org>
+Installed-Size: 441138
+Depends: gnome-keyring, libnotify4, libsecret-1-0, libxtst6, libnss3
+Recommends: libappindicator3-1
+Replaces: terminus-terminal
+Filename: ./tabby_1.0.236_amd64.deb
+Size: 1840
+MD5sum: 84e9a7c4dae6158e078ecbc5e33d7197
+SHA1: 29f71efd15364b0cfd5b3e3c5c67ae0e851d2751
+SHA256: 5a986e69b86670516912aa05879556ea4ed82509f24646280968fcaad327aa8c
 Section: default
 Priority: optional
 Homepage: https://github.com/Eugeny/tabby#readme
