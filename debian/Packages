@@ -416,6 +416,26 @@ Description:
 License: Apache-2.0
 Vendor: draw.io <desktop@draw.io>
 
+Package: draw.io
+Version: 31.5.2
+Architecture: amd64
+Maintainer: draw.io <desktop@draw.io>
+Installed-Size: 352699
+Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
+Recommends: libappindicator3-1
+Filename: ./drawio_31.5.2_amd64.deb
+Size: 1810
+MD5sum: 37254502be6c4b084eda4a32ca7d81ed
+SHA1: ebf2a1999bcec935edae31e9799dfc718da84f8a
+SHA256: 645d8fdb87f3bcab33ad54a20280f6cf4ed1d8215a223a7b20137421a07c2de1
+Section: default
+Priority: optional
+Homepage: https://github.com/jgraph/drawio
+Description:
+  draw.io desktop
+License: Apache-2.0
+Vendor: draw.io <desktop@draw.io>
+
 Package: duf
 Version: 0.9.1
 Architecture: amd64
