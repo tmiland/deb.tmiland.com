@@ -1162,6 +1162,27 @@ Description:
 License: unknown
 Vendor: Tabby Developers <e@ajenti.org>
 
+Package: tabby-terminal
+Version: 1.0.237
+Architecture: amd64
+Maintainer: Tabby Developers <e@ajenti.org>
+Installed-Size: 441183
+Depends: gnome-keyring, libnotify4, libsecret-1-0, libxtst6, libnss3
+Recommends: libappindicator3-1
+Replaces: terminus-terminal
+Filename: ./tabby_1.0.237_amd64.deb
+Size: 1842
+MD5sum: dab6f3db437000dd1e2426cd1066bac3
+SHA1: 91b46ee34c50eaecb94aca650d7df332187d49eb
+SHA256: b404866dadf7c539253cbccdd85c32a38d7c042e32ff418193266362084ff86d
+Section: default
+Priority: optional
+Homepage: https://github.com/Eugeny/tabby#readme
+Description:
+  A terminal for a modern age
+License: unknown
+Vendor: Tabby Developers <e@ajenti.org>
+
 Package: teamspeak3-client
 Version: 3.5.6
 Architecture: amd64
