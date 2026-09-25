@@ -1,0 +1,4 @@
+repo = 'tmiland-lab/fancontrol-gui'
+asset = 'fancontrol-gui_[0-9.]+_amd64\.deb$'
+keep_versions = 2
+summary = 'Qt6/KF6 GUI for the fancontrol (lm-sensors) fan-control daemon.'
