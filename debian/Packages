@@ -377,26 +377,6 @@ Description: Debian package archiving tool
  upgrade it.
 
 Package: draw.io
-Version: 31.4.4
-Architecture: amd64
-Maintainer: draw.io <desktop@draw.io>
-Installed-Size: 434228
-Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
-Recommends: libappindicator3-1
-Filename: ./drawio_31.4.4_amd64.deb
-Size: 1960
-MD5sum: a85df7b523f981d1ebdcb0aa79b5e6f0
-SHA1: e2bdaef827a907a41465cbd01aeeb4681e1da7fa
-SHA256: 41a62f6a6ef8ecb6d13e7151ea0e98fd3855a085502f65206dbee05f19f634d5
-Section: default
-Priority: optional
-Homepage: https://github.com/jgraph/drawio
-Description:
-  draw.io desktop
-License: Apache-2.0
-Vendor: draw.io <desktop@draw.io>
-
-Package: draw.io
 Version: 31.4.5
 Architecture: amd64
 Maintainer: draw.io <desktop@draw.io>
@@ -436,6 +416,26 @@ Description:
 License: Apache-2.0
 Vendor: draw.io <desktop@draw.io>
 
+Package: draw.io
+Version: 31.5.3
+Architecture: amd64
+Maintainer: draw.io <desktop@draw.io>
+Installed-Size: 352730
+Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
+Recommends: libappindicator3-1
+Filename: ./drawio_31.5.3_amd64.deb
+Size: 1814
+MD5sum: 3dde6d610ed9a704ec063ffda8eae295
+SHA1: 8d3c61c4c2da43400b9e542ce168352b9e313b34
+SHA256: ae28b2b7629223532b21bd80bfc4610d7bb1b432e3840435715bf4a27f8068bb
+Section: default
+Priority: optional
+Homepage: https://github.com/jgraph/drawio
+Description:
+  draw.io desktop
+License: GPL-3.0-only
+Vendor: draw.io <desktop@draw.io>
+
 Package: duf
 Version: 0.9.1
 Architecture: amd64
@@ -462,6 +462,22 @@ Size: 5210016
 MD5sum: 8aa7dd3b2da76118cea5c20cf6eb6d86
 SHA1: 68bfd763b7f417762e5ca37b29b40e7b92fdf966
 SHA256: 52291c6b08bd4024d9b10a66800c6c2b000a8b90204f673afd5453a96edc08da
+Section: utils
+Priority: optional
+Homepage: https://github.com/Maldela/fancontrol-gui
+Description: GUI for the fancontrol (lm-sensors) fan-control daemon
+
+Package: fancontrol-gui
+Version: 1.0.1
+Architecture: amd64
+Maintainer: Tommy Miland <kontakt@tmiland.com>
+Installed-Size: 14052
+Depends: qml6-module-org-kde-kirigami, qml6-module-qtquick-controls, qml6-module-qtquick-layouts, qml6-module-qtquick-dialogs, qml6-module-qtquick-window, qml6-module-qtquick, qml6-module-qtqml-workerscript, libc6 (>= 2.34), libkf6authcore6 (>= 6.0.0), libkf6configcore6 (>= 6.0.0), libkf6configgui6 (>= 6.0.0), libkf6coreaddons6 (>= 6.0.0), libkf6dbusaddons6 (>= 6.0.0), libkf6i18n6 (>= 6.0.0), libkf6kcmutilscore6 (>= 6.0.0), libkf6kcmutilsquick6 (>= 6.0.0), libkf6notifications6 (>= 6.0.0), libkf6statusnotifieritem6 (>= 6.0.0), libqt6core6t64 (>= 6.8.2), libqt6dbus6 (>= 6.8.2), libqt6gui6 (>= 6.6.0), libqt6qml6 (>= 6.6.0), libqt6quickcontrols2-6 (>= 6.6.0), libqt6widgets6 (>= 6.3.0), libstdc++6 (>= 5)
+Filename: ./fancontrol-gui_1.0.1_amd64.deb
+Size: 5210554
+MD5sum: 843134f03c357d75e5935766f98bcc86
+SHA1: 416d303bffb30a9dd90e72095a768a133bec5a08
+SHA256: 11902e452bbcddb61374da81c3db6b12825d54cd5a1ea824800d11e38ce0b971
 Section: utils
 Priority: optional
 Homepage: https://github.com/Maldela/fancontrol-gui
