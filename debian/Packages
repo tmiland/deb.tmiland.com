@@ -1172,6 +1172,21 @@ Priority: optional
 Description: Stirling-PDF Desktop Application
  (none)
 
+Package: stirling-pdf
+Version: 3.0.1
+Architecture: amd64
+Maintainer: Stirling-PDF Contributors
+Installed-Size: 373806
+Depends: libwebkit2gtk-4.1-0, libgtk-3-0
+Filename: ./stirling-pdf_3.0.1_amd64.deb
+Size: 1240
+MD5sum: 145a6fd47a99d19c99993ffdf8ae2898
+SHA1: 3772df92319d84916ada9376900f0d82de4fa819
+SHA256: e574d6ccf5bcdc95582cf3c02a62bb765eee6d9563f4b743c0e0babef8e43b40
+Priority: optional
+Description: Stirling-PDF Desktop Application
+ (none)
+
 Package: tabby-terminal
 Version: 1.0.235
 Architecture: amd64
