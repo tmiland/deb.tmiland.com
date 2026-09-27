@@ -1,4 +1,4 @@
-# deb
+# deb.tmiland.com
 [![Update apt repo](https://github.com/tmiland/deb.tmiland.com/actions/workflows/update-repo.yml/badge.svg)](https://github.com/tmiland/deb.tmiland.com/actions/workflows/update-repo.yml)
 
  # Usage
