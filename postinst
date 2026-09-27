@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Only act on `configure`. dpkg also calls maintainer scripts with other actions
+# (abort-upgrade, abort-remove, abort-deconfigure, disappear, ...); if a real-deb
+# install fails and dpkg calls this script back as abort-upgrade while the stub is
+# still installed, acting anyway re-triggers the download -> endless reinstall loop.
+[ "${1:-}" = "configure" ] || exit 0
+
 REPO=
 APP_NAME=
 ASSET=
