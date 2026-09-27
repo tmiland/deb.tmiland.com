@@ -33,10 +33,10 @@ Essential: no
 Maintainer: AppFlowy
 Depends: libatk1.0-0 (>= 2.7.91), libc6 (>= 2.35), libcairo-gobject2 (>= 1.10.0), libcairo2 (>= 1.14.0), libdbus-1-3 (>= 1.9.14), libdrm2 (>= 2.4.101), libegl1, libepoxy0 (>= 1.4.3), libffi8 (>= 3.4), libfontconfig1 (>= 2.13.0), libfreetype6 (>= 2.3.5), libfribidi0 (>= 1.0.0), libgbm1 (>= 8.1~0), libgcc-s1 (>= 4.3), libgcrypt20 (>= 1.9.0), libgdk-pixbuf-2.0-0 (>= 2.22.0), libgl1, libgles2, libglib2.0-0 (>= 2.39.90), libgpg-error0 (>= 1.14), libgstreamer-plugins-base1.0-0 (>= 1.0.0), libgstreamer1.0-0 (>= 1.6.0), libgtk-3-0 (>= 3.21.5), libharfbuzz0b (>= 1.2.6), libkeybinder-3.0-0 (>= 0.3.0), liblz4-1 (>= 0.0~r130), liblzma5 (>= 5.2.2), libnotify4, libpango-1.0-0 (>= 1.29.4), libpangocairo-1.0-0 (>= 1.14.0), libpng16-16 (>= 1.6.2-1), librsvg2-2 (>= 2.14.4), libstdc++6 (>= 12), libsystemd0, libvulkan1 (>= 1.2.131.2), libwayland-client0 (>= 1.20.0), libwayland-cursor0 (>= 1.0.2), libwayland-egl1 (>= 1.15.0), libx11-6 (>= 2:1.6.0), libxcb-shm0, libxcb1, libxcursor1 (>> 1.1.2), libxext6, libxfixes3 (>= 1:5.0), libxi6 (>= 2:1.5.99.2), libxinerama1 (>= 2:1.1.4), libxkbcommon0 (>= 0.5.0), libxrandr2 (>= 2:1.2.99.3), libzstd1 (>= 1.4.0), zlib1g (>= 1:1.2.3.3)
 Filename: ./appflowy_0.14.5_amd64.deb
-Size: 1754
-MD5sum: b6a08990f01f3a2c4fd05cc7474ead84
-SHA1: 9f094d47d6ddb798556e285fe5435572fbfe034e
-SHA256: bc2695df74d4f8ca2c5a95dfecf5781efa14a79d35dea9311392db695ad0f1e6
+Size: 1966
+MD5sum: a804c6a2cb4e77b62bdd77debe809367
+SHA1: 3d4dc7f5ee4f2cf3e78a83d1277361e00faf5ca9
+SHA256: dd11172195096d5faa880d3a335a85b32f2733578cf70f80aaeb74b466a40eaa
 Priority: optional
 Description: An Open Source Alternative to Notion
 
@@ -46,10 +46,10 @@ Architecture: amd64
 Maintainer: WerWolv <hey@werwolv.net>
 Depends: libfontconfig1, libglfw3 | libglfw3-wayland, libmagic1, libmbedtls14, libfreetype6, libopengl0, libdbus-1-3, xdg-desktop-portal, libssh2-1, libmd4c0
 Filename: ./imhex_1.38.1_amd64.deb
-Size: 1532
-MD5sum: 1ed8041f933bb9cb03ca46c708071d0e
-SHA1: d1646eab0c5fc2381097805fcf14321e8e2492f9
-SHA256: 80b5e535ac975e58a390518ea4542aa990cf5a8ca5241e08a4d33b1871295f09
+Size: 1586
+MD5sum: ced31044d947189340c50aba8f47bfec
+SHA1: 0ad18812081142c3fb2be8b826f1591b17abad22
+SHA256: 34cacc4b7310bec06ca201ba29c26ac0b2d2adc359ef5f5b9bdafef5105d86ca
 Section: editors
 Priority: optional
 Description: ImHex Hex Editor
@@ -157,10 +157,10 @@ Depends: libgtk-3-0, libnotify4, libnss3, libxtst6, xdg-utils, libatspi2.0-0, li
 Recommends: pulseaudio | libasound2
 Suggests: gir1.2-gnomekeyring-1.0, libgnome-keyring0, lsb-release
 Filename: ./balena-etcher_2.1.7_amd64.deb
-Size: 1744
-MD5sum: cd5535915e9162329ca4088454c930c5
-SHA1: 27b093cf3143b8a0a8b80fb89bfcb1dbcfe20f9d
-SHA256: afe20c48f8b0fd124331abdd1ca603eaef591d5f052bcbcf0273a60a241af003
+Size: 1958
+MD5sum: 0867e037c2cbbea9dda7691c008c4f2a
+SHA1: 982e453b673d716683dc049635a36611aa323df5
+SHA256: 395b84e3f9eafc950d96361c9cad253d9f8f75960a085a8b5a6c400566ca3cd2
 Section: utils
 Priority: optional
 Homepage: https://github.com/balena-io/etcher
@@ -215,10 +215,10 @@ Installed-Size: 411063
 Depends: libnotify4, libxtst6, libnss3, libxss1
 Recommends: libappindicator3-1
 Filename: ./bitwarden_2026.9.0_amd64.deb
-Size: 1490
-MD5sum: f4fc84d1f1a116427dd21fda5e53d74b
-SHA1: 46dc0dec6b3b7731eef6146082f87e64670e33fc
-SHA256: b4db83739fae4b1b620f297b4968d7c391b248059c4ce2e3e009b2f39f53b7f4
+Size: 1690
+MD5sum: 0a1642eef6340782e1a9b911d1fdbcba
+SHA1: 86eaacd9cfbd4e673ee92823358ec26687a44255
+SHA256: 3b54a321d8f989d14c07f7d42c8f326030996eb3ece54ea5fd2a0c98a1f35f6c
 Section: default
 Priority: optional
 Homepage: https://bitwarden.com
@@ -255,10 +255,10 @@ Installed-Size: 539550
 Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0, libasound2
 Recommends: libappindicator3-1
 Filename: ./bruno_4.2.0_amd64.deb
-Size: 1466
-MD5sum: 745e3ddc5630491f2ae98f6e1c998d05
-SHA1: b59cd4d3696a4169ca85547208ab24beda461799
-SHA256: 85851fd6371732a5d503c522a335863dbafa932aead439a180713b8c80c88a76
+Size: 1670
+MD5sum: 0aad68b4e0748613daef293fba0f2124
+SHA1: 89dcbffab9ae0ded2799cae765947501de69969f
+SHA256: 106d78d0e0b84ff622b80f1efc11191fc72353d6654c2c5649496b698a6cbb58
 Section: default
 Priority: optional
 Homepage: https://www.usebruno.com
@@ -424,10 +424,10 @@ Installed-Size: 352730
 Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
 Recommends: libappindicator3-1
 Filename: ./drawio_31.5.3_amd64.deb
-Size: 1814
-MD5sum: 3dde6d610ed9a704ec063ffda8eae295
-SHA1: 8d3c61c4c2da43400b9e542ce168352b9e313b34
-SHA256: ae28b2b7629223532b21bd80bfc4610d7bb1b432e3840435715bf4a27f8068bb
+Size: 2028
+MD5sum: cad858e5af09009d4e69d214de8f7fcc
+SHA1: ad8f6cf06baa0d55d4efef23d3e34849283306a4
+SHA256: e2f8bc2261bcf045a7754ccb25f63741b230566a9f64246a93a361e29acac51e
 Section: default
 Priority: optional
 Homepage: https://github.com/jgraph/drawio
@@ -561,10 +561,10 @@ Depends: libgtk-3-0, libnotify4, libnss3, xdg-utils, libatspi2.0-0, libdrm2, lib
 Recommends: pulseaudio | libasound2
 Suggests: gir1.2-gnomekeyring-1.0, libgnome-keyring0, lsb-release
 Filename: ./github-desktop_3.6.6.1_amd64.deb
-Size: 2080
-MD5sum: 754ee61cd4233809cd488a4f34cc6577
-SHA1: b5cc1441d3b5b1f30bb433394b5f0af123300250
-SHA256: a7a7e6348c73922fe8a55ab1c5871fcfc457224db274644d229bc1d28a7fae52
+Size: 2302
+MD5sum: 2ebba7234c37b14ae6a94e77b661e4af
+SHA1: 8f78fbf21640a1e9cc66cd516169589f7b864148
+SHA256: 236092a9556ba243cf45e9fa00b50e8533e2228f3294c81c7bf7e1d945daf767
 Section: GNOME;GTK;Development
 Priority: extra
 Homepage: https://desktop-plus.org
@@ -618,10 +618,10 @@ Depends: libgtk-3-0, libnotify4, libnss3, xdg-utils, libatspi2.0-0, libdrm2, lib
 Recommends: pulseaudio | libasound2
 Suggests: gir1.2-gnomekeyring-1.0, libgnome-keyring0, lsb-release
 Filename: ./goose_1.52.0_amd64.deb
-Size: 1370
-MD5sum: faf78894e58c2a54615caf85d9eb17df
-SHA1: 9befe8dc5dc872afe7feb89899fcacd243c6dd77
-SHA256: cdbcd15fc56d46f4181dbbd60671307cf182f579f7f4accd5964b0d255dceed0
+Size: 1588
+MD5sum: e714ec180c8518c42622bb2c3337d0d4
+SHA1: fa07b9736e1d21848d77aa463e25de4009cc4b48
+SHA256: bccfb9c3499c834a32b95026eea5b6f7102d3adc5c54a3e6df3b998e52f1eaf1
 Section: utils
 Priority: optional
 Homepage: https://goose-docs.ai/
@@ -664,10 +664,10 @@ Installed-Size: 256492
 Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
 Recommends: libappindicator3-1
 Filename: ./hyper_3.4.1_amd64.deb
-Size: 1556
-MD5sum: 79b579dbe216bf2fde6f48418145b79d
-SHA1: 2a2a634cb7423e47d5b182185d18441b28c831a1
-SHA256: 5ca43fa46321212eb590b2cef43d0fc0e8977b9cf37e192212af04625850c2a8
+Size: 1620
+MD5sum: d842b291e6a65c3a9a16881d3308056b
+SHA1: 303a283040bd3afd88b083bc9b88704cd9af643f
+SHA256: a438284209f7a1e857a62f0f752314c98ae9ae844b71c3515f0c1a05648ccbcd
 Section: default
 Priority: optional
 Homepage: https://github.com/zeit/hyper#readme
@@ -724,10 +724,10 @@ Installed-Size: 625641
 Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
 Recommends: libappindicator3-1
 Filename: ./joplin_3.7.21_amd64.deb
-Size: 1848
-MD5sum: 9f3f7aec5c8a99c274f9c9d967c47e5b
-SHA1: 9e164a0901e3699809cf045691a1d122aadbd86c
-SHA256: 43164c24ca8fe8fdd26d288d76476a8fa6adc35ff7678cef2b0ae74ce9a00e01
+Size: 2056
+MD5sum: d8bbf41c395d29d75de8aaba7ad51b9e
+SHA1: 9fdb7fb95a7ccb635def821014c7b7413e670704
+SHA256: 879b149e2a4cdff973cd56a235d0147bea8365e9e532768d1d3d6ea068a945a4
 Section: default
 Priority: optional
 Homepage: https://github.com/laurent22/joplin#readme
@@ -798,10 +798,10 @@ Installed-Size: 355681
 Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
 Recommends: libappindicator3-1
 Filename: ./marktext_0.19.1_amd64.deb
-Size: 1676
-MD5sum: ddc9abf75944d1249e0ea24cdfc41ec1
-SHA1: bdc8c7d51cc5eeea9e6a94bc530f25d63188a955
-SHA256: 7d8fe780d940a6d27daefee84b99c758b51c08360c7e57507bd0eafcec941474
+Size: 1730
+MD5sum: c2e3de4d7cf527f56ede52c74ec06992
+SHA1: 7095e3a11fa1cb0e34372b54499206e6ae969469
+SHA256: a4f9176b48cce6b3c892e5d017e84d96153f7f9a2288c8c212a5a8a419783c6b
 Section: default
 Priority: optional
 Homepage: https://github.com/marktext/marktext
@@ -856,10 +856,10 @@ Installed-Size: 456309
 Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
 Recommends: libappindicator3-1
 Filename: ./opencode_1.18.32_amd64.deb
-Size: 1832
-MD5sum: f4df3d0aaab0b0b11335f24d1a9aab3e
-SHA1: 564c1090036e9197a46b4229c403071afb159ff3
-SHA256: 73dfccbfe7912feb82217228cf5ee0b65acfa18afbe8137eed5230dddce30975
+Size: 2044
+MD5sum: ebe21e7b87267d88a67a58f240e8f601
+SHA1: c2350150b6066553108ed42f9382c18ae1fc6bbc
+SHA256: 0f77326f930e3ddb45237702911a598b9c0c58e0341311fe03b3481fb04c9719
 Section: default
 Priority: optional
 Homepage: https://opencode.ai
@@ -877,10 +877,10 @@ Suggests: texlive-latex-recommended, texlive-xetex,
  texlive-fonts-recommended
 Replaces: pandoc-data
 Filename: ./pandoc_3.11_amd64.deb
-Size: 2032
-MD5sum: 0090861eee02f041e09e666a22523111
-SHA1: 655975fe150519f994c117ba2854aadcd00f192d
-SHA256: 991bc4dfc2d6fd6f609097dbaeb5711e6b6feef2c9279b264b216cf83301c0e3
+Size: 2078
+MD5sum: 79bda240adc5dcb0bf694492466fa749
+SHA1: 741dad5f8d2ad530be05922d973fe5314c1f3495
+SHA256: fab4b09daea770db95c105eef345fa899a207b144e2e1a208c34146a6784e70b
 Section: text
 Priority: optional
 Description: general markup converter
@@ -929,10 +929,10 @@ Installed-Size: 205600
 Depends: libxcb-cursor0, libegl1, libopengl0, libc6, libsecret-1-0, libglib2.0-0, libstdc++6, libgcc1, libpulse-mainloop-glib0, fonts-dejavu, libfido2-1
 Suggests: pass, gnome-keyring
 Filename: ./protonmail-bridge_3.27.0_amd64.deb
-Size: 1436
-MD5sum: 6c9e2a3e0e61aee9403ce855ba751e28
-SHA1: 2bf259e4ff2443eb23afee36ac77470f7ae3ae3f
-SHA256: d7665ad4940b5ef9e6eb0abf71d4dacc2616f693a54449451789c3dc58b7c750
+Size: 1654
+MD5sum: 52f4d048c9e2409ffa872bd25198f496
+SHA1: 433543a2b81f1eba759904ed783ea40929f99a6b
+SHA256: 7a010fa7f655d292d1614812b67b54ef44c0d05f2a8a79138b8ae219ee3c639c
 Section: default
 Priority: optional
 Homepage: https://proton.me/mail/bridge
@@ -947,10 +947,10 @@ Maintainer: rustdesk <info@rustdesk.com>
 Depends: libgtk-3-0t64 | libgtk-3-0, libxcb-randr0, libxdo3 | libxdo4, libxfixes3, libxcb-shape0, libxcb-xfixes0, libasound2t64 | libasound2, libsystemd0, curl, libva2, libva-drm2, libva-x11-2, libgstreamer-plugins-base1.0-0, gstreamer1.0-pipewire
 Recommends: libayatana-appindicator3-1
 Filename: ./rustdesk_1.5.0_amd64.deb
-Size: 24813016
-MD5sum: 8a47f63f4d1af0cd3a2cc1bda7a2722f
-SHA1: d9575c53504ed0c905b71b680f84b2bea7d2e1ad
-SHA256: 0fe98f700aed33759abac685387c3a29b2f138271d7111afb69ffeb121054dfb
+Size: 24932096
+MD5sum: 3b98eb05c036579d212b8894adeba2f7
+SHA1: 59ef1bb8514bb9fc1fb09268dd5290f3f6e66308
+SHA256: 7a73ae5781827d4de78b85f1a86796c6247d23a447f1f640c5b9af4250e79fcf
 Section: net
 Priority: optional
 Homepage: https://rustdesk.com
@@ -963,10 +963,10 @@ Maintainer: Tommy Miland <tmiland@tmiland.com>
 Installed-Size: 299220
 Depends: libc6 (>= 2.34), libgcc-s1, libstdc++6, zlib1g, libcom-err2, libdrm2, libegl1, libfontconfig1, libfreetype6, libgbm1, libgl1, libglx0, libgmp10, libgpg-error0, libopengl0, libssh2-1, libuuid1, libwayland-client0, libx11-6, libx11-xcb1, libxcb1
 Filename: ./screencloud_1.6.2_amd64.deb
-Size: 1480
-MD5sum: 5095cc9a562e0fbf1599e51e51a633b4
-SHA1: c076e85e478f402dab4b85cde764413af9d0dcea
-SHA256: 2b7ce02b3b662f5432277c8c1e92d41b47695d862af71b5ca4df17faa1c1f713
+Size: 1696
+MD5sum: 51a0d1852c1cd461e0b6ceb0ca25d93c
+SHA1: 9004ceb4cf92fbdfc104b7afe9c59a0cf7c37f2b
+SHA256: d35906ce21ec5872fa09d0a6b6fecf5f8514c400044487ed3edbc37a13afc92d
 Section: graphics
 Priority: optional
 Homepage: https://screencloud.net/
@@ -1013,17 +1013,17 @@ License: unknown
 Vendor: Yunnan Liandi Technology Co., Ltd. <845765@qq.com>
 
 Package: siyuan
-Version: 3.8.6~alpha.1
+Version: 3.8.6~alpha.9
 Architecture: amd64
 Maintainer: Yunnan Liandi Technology Co., Ltd. <845765@qq.com>
-Installed-Size: 686212
+Installed-Size: 687891
 Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
 Recommends: libappindicator3-1
 Filename: ./siyuan_3.8.6_amd64.deb
-Size: 1866
-MD5sum: 09c3f540f64e90aca0bfbf8e5df65228
-SHA1: cafb260991957d9d93ece5243184ae4cc58f6cbc
-SHA256: 96f90097f9c6d19d4f25df61023fb97e72e01c0d7894b51560af83e8e4a25ae7
+Size: 2078
+MD5sum: 411105c6eb009a68048f5c0e5c7d10cf
+SHA1: cb906c97716e55e20de010461a3974597142eef7
+SHA256: f1a3caa111e847689c6beb9ec1b5cd851a61a17a069c13a55adc041665729c12
 Section: default
 Priority: optional
 Homepage: https://b3log.org/siyuan
@@ -1031,23 +1031,6 @@ Description:
   From thought to insight, with agents
 License: unknown
 Vendor: Yunnan Liandi Technology Co., Ltd. <845765@qq.com>
-
-Package: snapweb
-Version: 0.9.1-1
-Architecture: all
-Maintainer: Johannes Pohl <snapweb@badaix.de>
-Installed-Size: 1202
-Depends: debconf (>= 0.5) | debconf-2.0
-Filename: ./snapweb_0.9.1-1_all.deb
-Size: 486038
-MD5sum: e372ad535e435bdd3e258498ab3ba2f3
-SHA1: 82e7112bd426bdbff8062777445c15378d88ae95
-SHA256: fc89cb7b7b9e757acb1b112769ba655fccb7875fb7853a50fbc924260f5f5187
-Section: sound
-Priority: optional
-Homepage: https://github.com/badaix/snapweb
-Description: Web client for Snapcast
- Web client for Snapcast with control and playback capabilities.
 
 Package: snapweb
 Version: 0.9.2-1
@@ -1083,6 +1066,23 @@ Homepage: https://github.com/snapcast/snapweb
 Description: Web client for Snapcast
  Web client for Snapcast with control and playback capabilities.
 
+Package: snapweb
+Version: 0.9.3-1
+Architecture: all
+Maintainer: Johannes Pohl <snapweb@badaix.de>
+Installed-Size: 1209
+Depends: debconf (>= 0.5) | debconf-2.0
+Filename: ./snapweb_0.9.3_all.deb
+Size: 488024
+MD5sum: 36c288229346c71973aeda6ce82b4aed
+SHA1: 95cd2e5ea77274eb9fca8ed4c3d73c882c6120c5
+SHA256: 475085a04b5051cc61cb5ed5f08b11730e4054e473cebc8743790e7ce767d80f
+Section: sound
+Priority: optional
+Homepage: https://github.com/snapcast/snapweb
+Description: Web client for Snapcast
+ Web client for Snapcast with control and playback capabilities.
+
 Package: spotube
 Version: 5.1.2+45
 Architecture: amd64
@@ -1092,10 +1092,10 @@ Installed-Size: 24400
 Depends: mpv, libappindicator3-1 | libayatana-appindicator3-1, gir1.2-appindicator3-0.1 | gir1.2-ayatanaappindicator3-0.1, libsecret-1-0, libnotify-bin, libjsoncpp1 | libjsoncpp25 | libjsoncpp26, libmpv1 | libmpv2, xdg-user-dirs, avahi-daemon, avahi-discover, avahi-utils, libnss-mdns, mdns-scan, libwebkit2gtk-4.1-0 | libwebkit2gtk-4.0-0, libsoup-3.0-0 | libsoup-2.4-0
 Suggests: yt-dlp
 Filename: ./spotube_5.1.2_amd64.deb
-Size: 1684
-MD5sum: 9abff721137d81c436ef974442537304
-SHA1: 8dd487530dfabe7b07db74e73a65d71e5a395dc5
-SHA256: 7ec4b8a21a8b0336a40bc43f00179d83d2f16472873e5885b767ebecfb78ce93
+Size: 1750
+MD5sum: b0a419e29620ae9b8f0376f7e250a378
+SHA1: a8f8cd059ebdc7b1ba708009a58b640d352e82f6
+SHA256: 12a496042d3d8082cb254fb7da078801c85db2a16c48ffc1d311c4779e6382c5
 Section: x11
 Priority: optional
 Homepage: https://spotube.krtirtho.dev
@@ -1195,10 +1195,10 @@ Maintainer: Stirling-PDF Contributors
 Installed-Size: 373806
 Depends: libwebkit2gtk-4.1-0, libgtk-3-0
 Filename: ./stirling-pdf_3.0.1_amd64.deb
-Size: 1240
-MD5sum: 145a6fd47a99d19c99993ffdf8ae2898
-SHA1: 3772df92319d84916ada9376900f0d82de4fa819
-SHA256: e574d6ccf5bcdc95582cf3c02a62bb765eee6d9563f4b743c0e0babef8e43b40
+Size: 1456
+MD5sum: 8d2912bfffc70717442973f2f510791b
+SHA1: c2cb62e2fa51c4bb7a2d995ea1b42644a8cd3b64
+SHA256: 4d470c27fc3849d1ba3f457fc7e6447badb47cfa381613e6706a88faf68db498
 Priority: optional
 Description: Stirling-PDF Desktop Application
  (none)
@@ -1254,10 +1254,10 @@ Depends: gnome-keyring, libnotify4, libsecret-1-0, libxtst6, libnss3
 Recommends: libappindicator3-1
 Replaces: terminus-terminal
 Filename: ./tabby_1.0.237_amd64.deb
-Size: 1842
-MD5sum: dab6f3db437000dd1e2426cd1066bac3
-SHA1: 91b46ee34c50eaecb94aca650d7df332187d49eb
-SHA256: b404866dadf7c539253cbccdd85c32a38d7c042e32ff418193266362084ff86d
+Size: 2054
+MD5sum: 7399310d9bd1075ee34ba2af3d3f51ec
+SHA1: a19bb43c1174490d4861a5bf1b6df4976f00ce2d
+SHA256: 94392060ae9072ebb7eb4ebb5b59acbd49ffea181dfe78a245fec72c10c3f080
 Section: default
 Priority: optional
 Homepage: https://github.com/Eugeny/tabby#readme
@@ -1295,6 +1295,30 @@ Version: 3.6.2
 Architecture: amd64
 Maintainer: Tommy Miland (tmiland) <kontakt@tmiland.com>
 Filename: ./teamspeak3-client_amd64-3.6.2.deb
+Size: 1388
+MD5sum: 6e073efd2f65017122f10bdd81529b00
+SHA1: c157ed36b11276a554d0abae8b1d69110cba1c31
+SHA256: faec9a09a87bfc6d352585f815c12b705245accfe784a0f5341a0c4c373c5810
+Section: non-free/net
+Priority: optional
+Homepage: https://github.com/tmiland/TeamSpeak3-Client
+Description: VoIP chat for online gaming
+ TeamSpeak is a quality, scalable application which enables people to speak
+ with one another over the Internet. TeamSpeak consists of both client and
+ server software. The server acts as a host to multiple client connections,
+ capable of handling literally thousands of simultaneous users. This results
+ in an Internet based teleconferencing solution that works in a variety of
+ applications such as team mates speaking with one another while playing
+ their favorite online game, small businesses cutting costs on long distance
+ charges, or for personal communication with friends and family.
+ .
+ This package contains the graphical TeamSpeak3 client.
+
+Package: teamspeak3-client
+Version: 3.6.2
+Architecture: amd64
+Maintainer: Tommy Miland (tmiland) <kontakt@tmiland.com>
+Filename: ./teamspeak3-client_3.6.2_amd64.deb
 Size: 1388
 MD5sum: 6e073efd2f65017122f10bdd81529b00
 SHA1: c157ed36b11276a554d0abae8b1d69110cba1c31
