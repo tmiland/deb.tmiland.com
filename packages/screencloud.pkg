@@ -1,0 +1,4 @@
+repo = 'tmiland/screencloud-deb'
+asset = 'screencloud_[0-9.]*_amd64\.deb$'
+keep_versions = 3
+summary = 'Easy to use screenshot sharing tool'
