@@ -972,6 +972,21 @@ Priority: optional
 Homepage: https://screencloud.net/
 Description: Easy to use screenshot sharing tool
 
+Package: shield-optimizer
+Version: 2.2.0
+Architecture: amd64
+Maintainer: Bryan Roscoe
+Installed-Size: 28327
+Depends: libwebkit2gtk-4.1-0, libgtk-3-0
+Filename: ./shield-optimizer_2.2.0_amd64.deb
+Size: 8512936
+MD5sum: 0a199a35c36fff721371f97ff3239e97
+SHA1: 6577e182df4f710559c2b1c4ad7b7e4e6c4763e7
+SHA256: ce91638037839a573b958b33c21170bf56b984069b61ddb12753b3b4006bfa1a
+Priority: optional
+Description: Debloat and tune Android TV devices via ADB.
+ Shield Optimizer is a cross-platform tool for debloating and tuning Nvidia Shield TV, Onn 4K Pro, Chromecast with Google TV, and other Android TV devices. v2 is a Rust/Tauri rewrite of the original PowerShell script.
+
 Package: siyuan
 Version: 3.8.4~alpha.1
 Architecture: amd64
