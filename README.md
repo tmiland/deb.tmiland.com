@@ -41,12 +41,12 @@ The software below can be installed, updated and removed using this repository:
 | [<img src="./img/direct.png" align="top" width="20" />](http://search.cpan.org/dist/Term-Spinner-Color/) | `libterm-spinner-color-perl` | <i>A terminal spinner/progress bar with Unicode, color, and no non-core dependencies.</i> |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/mmaher88/logitune) | `logitune` | <i>Logitech device configurator for Linux</i> |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/marktext/marktext) | `marktext` | <i>A simple and elegant open-source markdown editor that focused on speed and usability.</i> |
-| [<img src="./img/github.png" align="top" width="20" />](https://github.com/nextcloud/desktop) | `nextcloud-desktop` | <i>Nextcloud desktop synchronization client (AppImage repackaged as .deb, current upstream version)</i> |
+| [<img src="./img/github.png" align="top" width="20" />](https://github.com/tmiland/nextcloud-desktop-deb) | `nextcloud-desktop` | <i>Nextcloud desktop synchronization client (repackaged from upstream [nextcloud/desktop](https://github.com/nextcloud/desktop) AppImage)</i> |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/anomalyco/opencode) | `opencode` | <i>The open source coding agent.</i> |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/jgm/pandoc) | `pandoc` | <i>general markup converter</i> |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/ProtonMail/proton-bridge) | `protonmail-bridge` | <i>Proton Mail Bridge is a desktop application that runs in the background, encrypting and decrypting messages as they enter and leave your computer.</i> |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/rustdesk/rustdesk) | `rustdesk` | <i>A remote control software.</i> |
-| [<img src="./img/github.png" align="top" width="20" />](https://github.com/olav-st/screencloud) | `screencloud` | <i>Easy to use screenshot sharing tool (AppImage repackaged as .deb)</i> |
+| [<img src="./img/github.png" align="top" width="20" />](https://github.com/tmiland/screencloud-deb) | `screencloud` | <i>Easy to use screenshot sharing tool (repackaged from upstream [olav-st/screencloud](https://github.com/olav-st/screencloud) AppImage)</i> |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/bryanroscoe/shield_optimizer) | `shield-optimizer` | <i>Debloat and tune Android TV devices via ADB.</i> |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/siyuan-note/siyuan) | `siyuan` | <i>From thought to insight, with agents</i> |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/badaix/snapweb) | `snapweb` | <i>Web client for Snapcast</i> |
