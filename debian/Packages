@@ -741,6 +741,22 @@ Description:
 License: unknown
 Vendor: MarkText Contributors
 
+Package: nextcloud-desktop
+Version: 34.0.4
+Architecture: amd64
+Maintainer: Tommy Miland <tmiland@tmiland.com>
+Installed-Size: 242040
+Depends: libc6 (>= 2.34), libgcc-s1, libstdc++6, libcom-err2, libfontconfig1, libfreetype6, libx11-6, libx11-xcb1, libxcb1, libgl1, libegl1, libopengl0
+Filename: ./nextcloud-desktop_34.0.4_amd64.deb
+Size: 1644
+MD5sum: 41d6d435173bb7c00dffc182542376d0
+SHA1: b92035c7b3c03a0668115510f302048e76f3632a
+SHA256: 31a0091a73b7076814f37763833308586438180a23d35845a6cb62b7cdb89015
+Section: utils
+Priority: optional
+Homepage: https://nextcloud.com/desktop/
+Description: Nextcloud desktop synchronization client
+
 Package: opencode
 Version: 1.18.30
 Architecture: amd64
@@ -1048,25 +1064,6 @@ Homepage: https://spotube.krtirtho.dev
 Description: Open source extensible music streaming platform and app, based on BYOMM (Bring your own music metadata) concept
 
 Package: sshpilot
-Version: 6.2.1-1
-Architecture: all
-Maintainer: Mehdi <mah.fat@gmail.com>
-Installed-Size: 17809
-Depends: python3:any (>= 3.9~), python3-gi, python3-gi-cairo, gir1.2-gtk-4.0, gir1.2-adw-1 (>= 1.5), gir1.2-vte-3.91, gir1.2-gtksource-5, gir1.2-secret-1, python3-cryptography, python3-keyring, python3-secretstorage, python3-psutil, python3-certifi, python3-yaml, libjs-xterm, openssh-client
-Recommends: sshpass, python3-pykeepass, gir1.2-webkit-6.0, ssh-askpass
-Filename: ./sshpilot_6.2.1_all.deb
-Size: 4883716
-MD5sum: 1a6b53123bd610cf58f88938bcfc1e2f
-SHA1: 7528dda7be567b9f543f4bbd252f12afc37cc02f
-SHA256: 8f04ef7c3c3d659b52a06b56dd8e261e388da3e0acea32e630c6e787f4ca7d3c
-Section: net
-Priority: optional
-Homepage: https://github.com/mfat/sshpilot
-Description: modern, lightweight SSH connection manager
- SSH Pilot is a user-friendly, modern and lightweight SSH connection manager
- for Linux and macOS, with an integrated terminal and SFTP file manager.
-
-Package: sshpilot
 Version: 6.2.2-1
 Architecture: all
 Maintainer: Mehdi <mah.fat@gmail.com>
@@ -1097,6 +1094,25 @@ Size: 4942348
 MD5sum: 57e7180a5b6afe6a52bf0bc0509f7a86
 SHA1: 34074327de9dbdc71f543df69ed241e3101a6f12
 SHA256: 101ec72bc69e84038aa23ac0c2596aed04fdcc41fc5fae874774422c2f61f7f0
+Section: net
+Priority: optional
+Homepage: https://github.com/mfat/sshpilot
+Description: modern, lightweight SSH connection manager
+ SSH Pilot is a user-friendly, modern and lightweight SSH connection manager
+ for Linux and macOS, with an integrated terminal and SFTP file manager.
+
+Package: sshpilot
+Version: 6.2.4-1
+Architecture: all
+Maintainer: Mehdi <mah.fat@gmail.com>
+Installed-Size: 18878
+Depends: python3:any (>= 3.9~), python3-gi, python3-gi-cairo, gir1.2-gtk-4.0, gir1.2-adw-1 (>= 1.5), gir1.2-vte-3.91, gir1.2-gtksource-5, gir1.2-secret-1, python3-cryptography, python3-keyring, python3-secretstorage, python3-psutil, python3-certifi, python3-yaml, libjs-xterm, openssh-client
+Recommends: sshpass, python3-pykeepass, gir1.2-webkit-6.0, ssh-askpass
+Filename: ./sshpilot_6.2.4_all.deb
+Size: 5030462
+MD5sum: 9c8f5ca8a4e0c70f3658287288e6e521
+SHA1: 28a45919a3cd31e288a28b21097f078662348684
+SHA256: f8364da4a6009175abf4c073676e91817cc580270db4db5098d5142851ed6658
 Section: net
 Priority: optional
 Homepage: https://github.com/mfat/sshpilot
