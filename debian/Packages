@@ -963,10 +963,10 @@ Maintainer: Tommy Miland <tmiland@tmiland.com>
 Installed-Size: 299220
 Depends: libc6 (>= 2.34), libgcc-s1, libstdc++6, zlib1g, libcom-err2, libdrm2, libegl1, libfontconfig1, libfreetype6, libgbm1, libgl1, libglx0, libgmp10, libgpg-error0, libopengl0, libssh2-1, libuuid1, libwayland-client0, libx11-6, libx11-xcb1, libxcb1
 Filename: ./screencloud_1.6.2_amd64.deb
-Size: 1472
-MD5sum: 4f23b67e11d58b7e901eff0e1e14e6dc
-SHA1: 57837221e3c30cd2606e55877ab0d01794a37cf2
-SHA256: 0d83c1e3a58ba934c550611075f735ea9bfae42d395fe83d5c3f0e260eb31c11
+Size: 1480
+MD5sum: 5095cc9a562e0fbf1599e51e51a633b4
+SHA1: c076e85e478f402dab4b85cde764413af9d0dcea
+SHA256: 2b7ce02b3b662f5432277c8c1e92d41b47695d862af71b5ca4df17faa1c1f713
 Section: graphics
 Priority: optional
 Homepage: https://screencloud.net/
