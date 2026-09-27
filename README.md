@@ -59,6 +59,7 @@ The software below can be installed, updated and removed using this repository:
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/ProtonMail/proton-bridge) | `protonmail-bridge` | <i>Proton Mail Bridge is a desktop application that runs in the background, encrypting and decrypting messages as they enter and leave your computer.</i> |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/rustdesk/rustdesk) | `rustdesk` | <i>A remote control software.</i> |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/olav-st/screencloud) | `screencloud` | <i>Easy to use screenshot sharing tool (AppImage repackaged as .deb)</i> |
+| [<img src="./img/github.png" align="top" width="20" />](https://github.com/bryanroscoe/shield_optimizer) | `shield-optimizer` | <i>Debloat and tune Android TV devices via ADB.</i> |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/siyuan-note/siyuan) | `siyuan` | <i>From thought to insight, with agents</i> |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/badaix/snapweb) | `snapweb` | <i>Web client for Snapcast</i> |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/KRTirtho/spotube) | `spotube` | <i>Open source extensible music streaming platform and app, based on BYOMM (Bring your own music metadata) concept</i> |
