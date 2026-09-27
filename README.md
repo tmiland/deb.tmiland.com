@@ -6,19 +6,13 @@
  ### Repository
 
  ```shell
- $ sudo curl -SsL -o /etc/apt/sources.list.d/tmiland.list https://deb.tmiland.com/debian/tmiland.list
+ sudo curl -SsL -o /etc/apt/sources.list.d/tmiland.list https://deb.tmiland.com/debian/tmiland.list && \
+ curl -SsL https://deb.tmiland.com/debian/KEY.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/tmiland-archive-keyring.gpg >/dev/null && \
+sudo apt update
  ```
 
  ```shell
- $ curl -SsL https://deb.tmiland.com/debian/KEY.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/tmiland-archive-keyring.gpg >/dev/null
- ```
-
- ```shell
- $ sudo apt update
- ```
-
- ```shell
- $ sudo apt install {package-name}
+ sudo apt install {package-name}
  ```
 
 # Supported Software
