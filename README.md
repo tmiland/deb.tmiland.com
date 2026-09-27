@@ -1,12 +1,6 @@
 # deb
 [![Update apt repo](https://github.com/tmiland/deb.tmiland.com/actions/workflows/update-repo.yml/badge.svg)](https://github.com/tmiland/deb.tmiland.com/actions/workflows/update-repo.yml)
 
- A PPA repository for deb packages:
-  
-  - [TeamSpeak3 Client](https://github.com/tmiland/TeamSpeak3-Client)
-  - [GitHub Desktop](https://github.com/desktop-plus/desktop-plus) (Linux builds, maintained fork)
-  - [Invidious-Updater (And Installer)](https://github.com/tmiland/Invidious-Updater)
- 
  # Usage
 
  ### Repository
@@ -49,7 +43,6 @@ The software below can be installed, updated and removed using this repository:
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/gohugoio/hugo) | `hugo` | <i>A fast and flexible Static Site Generator written in Go.</i> |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/vercel/hyper) | `hyper` | <i>A terminal built on web technologies</i> |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/WerWolv/ImHex) | `ImHex` | <i>ImHex Hex Editor</i> |
-| [<img src="./img/github.png" align="top" width="20" />](https://github.com/tmiland/Invidious-Updater) | `Invidious-Updater` | <i>Script to install and update Invidious</i> |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/laurent22/joplin) | `joplin` | <i>Joplin for Desktop</i> |
 | [<img src="./img/direct.png" align="top" width="20" />](http://search.cpan.org/dist/Term-Spinner-Color/) | `libterm-spinner-color-perl` | <i>A terminal spinner/progress bar with Unicode, color, and no non-core dependencies.</i> |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/mmaher88/logitune) | `logitune` | <i>Logitech device configurator for Linux</i> |
@@ -93,7 +86,7 @@ The workflow checks every package, downloads new versions, regenerates and
 signs the repo metadata, smoke-tests it with apt, and pushes to `master`
 (served via GitHub Pages).
 
-Two packages are special:
+One package is special:
 
 - **icecat** — currently **unavailable**: the package was an installer-stub
   that downloads binaries from icecatbrowser.org at install time, and that
@@ -110,8 +103,6 @@ Two packages are special:
   sudo extrepo enable librewolf
   sudo apt update && sudo apt install librewolf -y
   ```
-- **invidious-updater** — upstream no longer publishes .deb assets; the
-  package is updated manually when needed.
 
  # Credits
  
