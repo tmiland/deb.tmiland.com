@@ -16,25 +16,32 @@ else
 fi
 
 deb_download() {
-  # Credit: deb-get 
+  # Credit: deb-get
   URL="${1}"
   FILE="${URL##*/}"
   CACHE_DIR=/var/cache/apt/archives
+  # Download to a unique temp file, then move into place. Writing straight to
+  # ${CACHE_DIR}/${FILE} with `wget --continue` corrupts the download when the
+  # upstream asset basename equals the repo deb filename: wget appends the real
+  # deb onto the apt-cached install-stub, yet the stub's own postinst survives
+  # in the concatenated archive -> dpkg reinstalls the stub -> endless loop.
+  TMP_DEB="$(mktemp "${CACHE_DIR}/.${FILE}.XXXXXX")"
 
-  if ! wget --quiet --continue --show-progress --progress=bar:force:noscroll "${URL}" -O "${CACHE_DIR}/${FILE}"; then
-      echo "Failed to download ${URL}. Deleting ${CACHE_DIR}/${FILE}..."
-      rm "${CACHE_DIR}/${FILE}" 2>/dev/null
+  if ! wget --quiet --show-progress --progress=bar:force:noscroll "${URL}" -O "${TMP_DEB}"; then
+      echo "Failed to download ${URL}. Deleting ${TMP_DEB}..."
+      rm -f "${TMP_DEB}"
       return 1
   fi
+  mv -f "${TMP_DEB}" "${CACHE_DIR}/${FILE}"
 }
 
-deb_download "$URL"
+deb_download "$URL" || exit 1
 echo "Installing $APP_NAME in the background..."
 TEMP_LOG_FILE=/tmp/debtmp.log
 : > "$TEMP_LOG_FILE"
 # shellcheck disable=SC2086
 nohup sleep 10 && dpkg -i "${CACHE_DIR}/${FILE}" > "$TEMP_LOG_FILE" 2>&1 \
   && for f in $HIDE; do rm -f "/usr/share/applications/$f"; done \
-  && update-desktop-database & tail -f "$TEMP_LOG_FILE" &
+  && update-desktop-database &
 
 exit 0

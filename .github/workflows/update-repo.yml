@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: "23 * * * *" # hourly, offset from the top of the hour
   workflow_dispatch:
+    inputs:
+      force:
+        description: "Force full pipeline for one package name, or 'all'"
+        required: false
+        type: string
 
 permissions:
   contents: write
@@ -15,7 +20,7 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
 
@@ -34,4 +39,9 @@ jobs:
       - name: Update packages and regenerate metadata
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: ./update-repo.sh
+        run: |
+          if [ -n "${{ inputs.force }}" ]; then
+            ./update-repo.sh --force "${{ inputs.force }}"
+          else
+            ./update-repo.sh
+          fi

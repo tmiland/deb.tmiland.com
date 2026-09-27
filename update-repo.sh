@@ -12,6 +12,9 @@
 #   ./update-repo.sh --no-push             update without pushing
 #   ./update-repo.sh --message "..."       custom commit message
 #   ./update-repo.sh --force <name>        force full pipeline for one package (test)
+#   ./update-repo.sh --force all           force full pipeline for every package
+#                                          (e.g. to rebuild install-stubs after a
+#                                          postinst fix)
 #
 # Package config (packages/<name>.pkg, simple TOML subset):
 #   repo = "owner/name"         GitHub repo with releases (required)
@@ -333,7 +336,8 @@ main() {
     for cfg in "$PACKAGES_DIR"/*."$CONFIG_EXT"; do
       [ -e "$cfg" ] || { echo "!! No packages found in $PACKAGES_DIR" >&2; exit 1; }
       stem=$(basename "$cfg" ".$CONFIG_EXT")
-      if [ -n "$FORCE_NAME" ] && [ "$FORCE_NAME" != "$stem" ] \
+      if [ -n "$FORCE_NAME" ] && [ "$FORCE_NAME" != "all" ] \
+        && [ "$FORCE_NAME" != "$stem" ] \
         && [ "$FORCE_NAME" != "$(conf_get "$cfg" name)" ]; then
         continue
       fi
