@@ -1,21 +1,39 @@
 # deb.tmiland.com
+
 [![Update apt repo](https://github.com/tmiland/deb.tmiland.com/actions/workflows/update-repo.yml/badge.svg)](https://github.com/tmiland/deb.tmiland.com/actions/workflows/update-repo.yml)
 
- # Usage
+A personal APT repository for **Debian and Ubuntu (`amd64`)** that tracks a curated
+set of applications and packages the latest upstream releases — either native `.deb`
+release assets or AppImages repackaged as `.deb`. The repository is regenerated,
+signed and published **hourly** by GitHub Actions, and served via GitHub Pages.
 
- ### Repository
+## Usage
 
- ```shell
- sudo curl -SsL -o /etc/apt/sources.list.d/tmiland.list https://deb.tmiland.com/debian/tmiland.list && \
- curl -SsL https://deb.tmiland.com/debian/KEY.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/tmiland-archive-keyring.gpg >/dev/null && \
+Add the repository and its signing key:
+
+```shell
+sudo curl -SsL -o /etc/apt/sources.list.d/tmiland.list https://deb.tmiland.com/debian/tmiland.list
+curl -SsL https://deb.tmiland.com/debian/KEY.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/tmiland-archive-keyring.gpg >/dev/null
 sudo apt update
- ```
+```
 
- ```shell
- sudo apt install {package-name}
- ```
+Install any package from the [list below](#supported-software), e.g.:
 
-# Supported Software
+```shell
+sudo apt install screencloud
+```
+
+Updates arrive through the normal `apt upgrade`; remove a package with
+`sudo apt remove <package-name>`.
+
+<details>
+<summary>Verify the signing key</summary>
+
+Key fingerprint: `7C44CFE8E3B971486A2E0A280A2998CB2E6D61E0`
+
+</details>
+
+## Supported Software
 
 The software below can be installed, updated and removed using this repository:
 
@@ -62,36 +80,46 @@ The software below can be installed, updated and removed using this repository:
 - <img src="./img/debian.png" align="top" width="16" /> Debian packages
 - <img src="./img/direct.png" align="top" width="16" /> other source
 
-# Managing packages
+> Packages whose payload exceeds 25 MB are published as small **install-stubs**:
+> `apt install` fetches a tiny control-only package whose `postinst` downloads and
+> installs the real `.deb` from the release at install time. This keeps the Git
+> repository within GitHub Pages size limits.
 
-Each tracked package is a declarative config in ```packages/<name>.pkg```:
+## Managing packages
+
+Each tracked package is a declarative config in `packages/<name>.pkg` (a TOML subset):
 
 ```toml
 repo = 'owner/name'        # GitHub repo that publishes releases
 asset = 'pkg_.*_all\.deb'  # regex matching the .deb release asset
-keep_versions = 2          # optional: only keep the newest N debs
+name = 'apt-name'          # optional: apt package name (defaults to the file name)
 package = 'apt-name'       # optional: override apt package name (stub repacks)
+keep_versions = 2          # optional: keep only the newest N debs
+summary = '...'            # optional: description injected into stubs with an empty upstream control
+hide = 'app.desktop'       # optional: desktop file(s) to hide after install (keep a single launcher)
+source = 'url'             # optional: track a direct-download URL instead of GitHub releases
 ```
 
-To add an app: drop a new ```.pkg``` in ```packages/``` and commit — the
-[update workflow](.github/workflows/update-repo.yml) picks it up on the next
-run (hourly, or manual via *Actions → Update apt repo → Run workflow*).
+To add an app: drop a new `.pkg` in `packages/` and commit — the
+[update workflow](.github/workflows/update-repo.yml) picks it up on the next run
+(hourly, or manually via *Actions → Update apt repo → Run workflow*).
 
-The workflow checks every package, downloads new versions, regenerates and
-signs the repo metadata, smoke-tests it with apt, and pushes to `master`
-(served via GitHub Pages).
+The workflow checks every package, downloads new versions, regenerates and signs the
+repo metadata, smoke-tests it with apt, and pushes to `master` (served via GitHub
+Pages). Use `--force <name>` or `--force all` to rebuild a package (or every package)
+even when it is already up to date, e.g. after a change to the stub `postinst`.
 
 One package is special:
 
-- **icecat** — currently **unavailable**: the package was an installer-stub
-  that downloads binaries from icecatbrowser.org at install time, and that
-  site is down (and GNU's own releases stopped in 2019). The icecat debs are
-  therefore removed from the repo until a working upstream source exists.
-  `update-icecat.sh` remains in place to re-publish it when that happens.
+- **icecat** — currently **unavailable**: the package was an installer-stub that
+  downloads binaries from icecatbrowser.org at install time, and that site is down
+  (and GNU's own releases stopped in 2019). The icecat debs are therefore removed
+  from the repo until a working upstream source exists. `update-icecat.sh` remains
+  in place to re-publish it when that happens.
 
-  As a free, actively maintained alternative in the same spirit (libre,
-  privacy-hardened, no telemetry), use [LibreWolf](https://librewolf.net)'s
-  official signed apt repository instead:
+  As a free, actively maintained alternative in the same spirit (libre, privacy-
+  hardened, no telemetry), use [LibreWolf](https://librewolf.net)'s official signed
+  apt repository instead:
 
   ```shell
   sudo apt update && sudo apt install extrepo -y
@@ -99,18 +127,19 @@ One package is special:
   sudo apt update && sudo apt install librewolf -y
   ```
 
- # Credits
- 
+## Credits
+
 - [assafmo/ppa](https://github.com/assafmo/ppa)
 - [Hosting your own PPA repository on GitHub](https://assafmo.github.io/2019/05/02/ppa-repo-hosted-on-github.html)
 
+**Full write-up on the blog:** <https://tmiland.com/deb-tmiland-com/>
 
-**Full write-up on the blog:** https://tmiland.com/deb-tmiland-com/
 ## Donations
+
 <a href="https://coindrop.to/tmiland" target="_blank"><img src="https://coindrop.to/embed-button.png" style="border-radius: 10px; height: 57px !important;width: 229px !important;" alt="Coindrop.to me"></img></a>
 
-### License
+## License
 
-[![MIT License Image](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/MIT_logo.svg/220px-MIT_logo.svg.png)](https://github.com/tmiland/deb/blob/master/LICENSE)
+[![MIT License Image](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/MIT_logo.svg/220px-MIT_logo.svg.png)](https://github.com/tmiland/deb.tmiland.com/blob/master/LICENSE)
 
-[MIT License](https://github.com/tmiland/deb/blob/master/LICENSE)
+[MIT License](https://github.com/tmiland/deb.tmiland.com/blob/master/LICENSE)
