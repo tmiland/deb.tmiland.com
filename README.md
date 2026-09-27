@@ -41,6 +41,7 @@ The software below can be installed, updated and removed using this repository:
 | [<img src="./img/direct.png" align="top" width="20" />](http://search.cpan.org/dist/Term-Spinner-Color/) | `libterm-spinner-color-perl` | <i>A terminal spinner/progress bar with Unicode, color, and no non-core dependencies.</i> |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/mmaher88/logitune) | `logitune` | <i>Logitech device configurator for Linux</i> |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/marktext/marktext) | `marktext` | <i>A simple and elegant open-source markdown editor that focused on speed and usability.</i> |
+| [<img src="./img/github.png" align="top" width="20" />](https://github.com/nextcloud/desktop) | `nextcloud-desktop` | <i>Nextcloud desktop synchronization client (AppImage repackaged as .deb, current upstream version)</i> |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/anomalyco/opencode) | `opencode` | <i>The open source coding agent.</i> |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/jgm/pandoc) | `pandoc` | <i>general markup converter</i> |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/ProtonMail/proton-bridge) | `protonmail-bridge` | <i>Proton Mail Bridge is a desktop application that runs in the background, encrypting and decrypting messages as they enter and leave your computer.</i> |

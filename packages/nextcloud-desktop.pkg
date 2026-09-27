@@ -1,0 +1,4 @@
+repo = 'tmiland/nextcloud-desktop-deb'
+asset = 'nextcloud-desktop-[0-9.]*-linux-amd64\.deb$'
+keep_versions = 3
+summary = 'Nextcloud desktop synchronization client'
