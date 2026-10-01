@@ -1,18 +1,4 @@
 Package: AppFlowy
-Version: 0.14.3
-Architecture: amd64
-Essential: no
-Maintainer: AppFlowy
-Depends: libatk1.0-0 (>= 2.7.91), libbsd0 (>= 0.0), libc6 (>= 2.35), libcairo-gobject2 (>= 1.10.0), libcairo2 (>= 1.15.12), libdbus-1-3 (>= 1.9.14), libdrm2 (>= 2.4.101), libegl1, libepoxy0 (>= 1.4.3), libffi8 (>= 3.4), libfontconfig1 (>= 2.13.0), libfreetype6 (>= 2.3.5), libfribidi0 (>= 1.0.0), libgbm1 (>= 8.1~0), libgcc-s1 (>= 4.3), libgcrypt20 (>= 1.9.0), libgdk-pixbuf-2.0-0 (>= 2.31.1), libgl1, libgles2, libglib2.0-0 (>= 2.49.3), libgpg-error0 (>= 1.14), libgstreamer-plugins-base1.0-0 (>= 1.0.0), libgstreamer1.0-0 (>= 1.6.0), libgtk-3-0 (>= 3.21.5), libharfbuzz0b (>= 1.2.6), libjpeg8 (>= 8c), libkeybinder-3.0-0 (>= 0.3.0), liblz4-1 (>= 0.0~r130), liblzma5 (>= 5.2.2), libnotify4, libpango-1.0-0 (>= 1.45.5), libpangocairo-1.0-0 (>= 1.22.0), libpng16-16 (>= 1.6.2-1), libstdc++6 (>= 12), libsystemd0, libvulkan1 (>= 1.2.131.2), libwayland-client0 (>= 1.20.0), libwayland-cursor0 (>= 1.0.2), libwayland-egl1 (>= 1.15.0), libx11-6 (>= 2:1.6.0), libxcb-shm0, libxcb1, libxcursor1 (>> 1.1.2), libxext6, libxfixes3 (>= 1:5.0), libxi6 (>= 2:1.5.99.2), libxinerama1 (>= 2:1.1.4), libxkbcommon0 (>= 0.5.0), libxrandr2 (>= 2:1.2.99.3), libzstd1 (>= 1.4.0), zlib1g (>= 1:1.2.3.3)
-Filename: ./appflowy_0.14.3_amd64.deb
-Size: 1760
-MD5sum: 2b0df45a7b80f169d2a726d17c8d533b
-SHA1: 1f8ce84f8b6868e740fcb1109f2d1478a3513aa3
-SHA256: d9e3bfb900374e6a7cb04fce0e8261d683b2cf1d928bb3e36d7e50ce3ca81e3b
-Priority: optional
-Description: An Open Source Alternative to Notion
-
-Package: AppFlowy
 Version: 0.14.4
 Architecture: amd64
 Essential: no
@@ -37,6 +23,20 @@ Size: 2142
 MD5sum: c25de6dbe322bfe3618d2aab0b93cfad
 SHA1: bb164b7e7891f980522b2ed1a876e222d7e20ef8
 SHA256: 28a86276bf266a863f332cf8b7675301700b4bcc4ed01b9f5fdf69d696d11ab6
+Priority: optional
+Description: An Open Source Alternative to Notion
+
+Package: AppFlowy
+Version: 0.14.6
+Architecture: amd64
+Essential: no
+Maintainer: AppFlowy
+Depends: libatk1.0-0 (>= 2.7.91), libc6 (>= 2.35), libcairo-gobject2 (>= 1.10.0), libcairo2 (>= 1.14.0), libdbus-1-3 (>= 1.9.14), libdrm2 (>= 2.4.101), libegl1, libepoxy0 (>= 1.4.3), libffi8 (>= 3.4), libfontconfig1 (>= 2.13.0), libfreetype6 (>= 2.3.5), libfribidi0 (>= 1.0.0), libgbm1 (>= 8.1~0), libgcc-s1 (>= 4.3), libgcrypt20 (>= 1.9.0), libgdk-pixbuf-2.0-0 (>= 2.22.0), libgl1, libgles2, libglib2.0-0 (>= 2.39.90), libgpg-error0 (>= 1.14), libgstreamer-plugins-base1.0-0 (>= 1.0.0), libgstreamer1.0-0 (>= 1.6.0), libgtk-3-0 (>= 3.21.5), libharfbuzz0b (>= 1.2.6), libkeybinder-3.0-0 (>= 0.3.0), liblz4-1 (>= 0.0~r130), liblzma5 (>= 5.2.2), libnotify4, libpango-1.0-0 (>= 1.29.4), libpangocairo-1.0-0 (>= 1.14.0), libpng16-16 (>= 1.6.2-1), librsvg2-2 (>= 2.14.4), libstdc++6 (>= 12), libsystemd0, libvulkan1 (>= 1.2.131.2), libwayland-client0 (>= 1.20.0), libwayland-cursor0 (>= 1.0.2), libwayland-egl1 (>= 1.15.0), libx11-6 (>= 2:1.6.0), libxcb-shm0, libxcb1, libxcursor1 (>> 1.1.2), libxext6, libxfixes3 (>= 1:5.0), libxi6 (>= 2:1.5.99.2), libxinerama1 (>= 2:1.1.4), libxkbcommon0 (>= 0.5.0), libxrandr2 (>= 2:1.2.99.3), libzstd1 (>= 1.4.0), zlib1g (>= 1:1.2.3.3)
+Filename: ./appflowy_0.14.6_amd64.deb
+Size: 2142
+MD5sum: 00a384d3053db701d6044cb6148973bd
+SHA1: dbed5aabff99fef2bba93c59a1d920101e81d3d5
+SHA256: f763d97c8807eaf8e0a4d9dd9c74c32fd38e2a9d28284a09acce56e8839cc648
 Priority: optional
 Description: An Open Source Alternative to Notion
 
