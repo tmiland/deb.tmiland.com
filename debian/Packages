@@ -158,6 +158,26 @@ Description: A secure and free password manager for all of your devices.
 License: GPL-3.0
 Vendor: Bitwarden Inc. <hello@bitwarden.com>
 
+Package: bitwarden
+Version: 2026.9.1
+Architecture: amd64
+Maintainer: Bitwarden Inc. <hello@bitwarden.com>
+Installed-Size: 411620
+Depends: libnotify4, libxtst6, libnss3, libxss1
+Recommends: libappindicator3-1
+Filename: ./bitwarden_2026.9.1_amd64.deb
+Size: 1870
+MD5sum: 470d3b1695599f64e39d783497c631da
+SHA1: e6b8e6fdf9f246f84cc95a9277f38deabb289020
+SHA256: 944b9d9cd14b0207d2ab8ed683c8474fde92e4c0f1e6c1860ac64e63a4a3dd5d
+Section: default
+Priority: optional
+Homepage: https://bitwarden.com
+Description: A secure and free password manager for all of your devices.
+  A secure and free password manager for all of your devices.
+License: GPL-3.0
+Vendor: Bitwarden Inc. <hello@bitwarden.com>
+
 Package: bruno
 Version: 4.1.0
 Architecture: amd64
@@ -1213,21 +1233,6 @@ Description: modern, lightweight SSH connection manager
  for Linux and macOS, with an integrated terminal and SFTP file manager.
 
 Package: stirling-pdf
-Version: 2.14.3
-Architecture: amd64
-Maintainer: Stirling-PDF Contributors
-Installed-Size: 330837
-Depends: libwebkit2gtk-4.1-0, libgtk-3-0
-Filename: ./stirling-pdf_2.14.3_amd64.deb
-Size: 1400
-MD5sum: 7a45b40360daf7bc83616991c0950c01
-SHA1: 9ba8157cf2753536864303f08eed2a434b9fe373
-SHA256: b1dea07cb8e37172ceb1c4333a0e18ec550347d6fb4635348e19c49c943a0861
-Priority: optional
-Description: Stirling-PDF Desktop Application
- (none)
-
-Package: stirling-pdf
 Version: 3.0.0
 Architecture: amd64
 Maintainer: Stirling-PDF Contributors
@@ -1253,6 +1258,21 @@ Size: 1630
 MD5sum: a611693022e7dab64ffd441b748b2ba4
 SHA1: 6fa4b84a536369a1c9c2b023a416a2bca7c0b4ae
 SHA256: 0bccec0b0c0f52604f735588a3a9fc39a42574460bd8244d8567e3d12cdc095b
+Priority: optional
+Description: Stirling-PDF Desktop Application
+ (none)
+
+Package: stirling-pdf
+Version: 3.0.2
+Architecture: amd64
+Maintainer: Stirling-PDF Contributors
+Installed-Size: 370547
+Depends: libwebkit2gtk-4.1-0, libgtk-3-0
+Filename: ./stirling-pdf_3.0.2_amd64.deb
+Size: 1632
+MD5sum: 7debbb77f6928a259700aae4f91ee9aa
+SHA1: 7fc800ba6d2e2c367f489d2760b6810a5be4a4b1
+SHA256: c81ea90d868eca1a68457d89aa189abbfc9eef465733e63b4704b2122bf76feb
 Priority: optional
 Description: Stirling-PDF Desktop Application
  (none)
