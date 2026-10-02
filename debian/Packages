@@ -348,26 +348,6 @@ Description: Debian package archiving tool
  upgrade it.
 
 Package: draw.io
-Version: 31.4.5
-Architecture: amd64
-Maintainer: draw.io <desktop@draw.io>
-Installed-Size: 354265
-Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
-Recommends: libappindicator3-1
-Filename: ./drawio_31.4.5_amd64.deb
-Size: 1812
-MD5sum: 824517c1f0382988cd13d4aad5bc659c
-SHA1: 61712fe8cb0fda3d81549154837785a4f9e75842
-SHA256: 937ab507fb2626e34996fcdf183b5cb4d398d4f4cbdef9d1cb971a69de6ad004
-Section: default
-Priority: optional
-Homepage: https://github.com/jgraph/drawio
-Description:
-  draw.io desktop
-License: Apache-2.0
-Vendor: draw.io <desktop@draw.io>
-
-Package: draw.io
 Version: 31.5.2
 Architecture: amd64
 Maintainer: draw.io <desktop@draw.io>
@@ -399,6 +379,26 @@ Size: 2198
 MD5sum: fb064ef69ea54ce6468eef56d2bd6b5c
 SHA1: aba945bd0fade95f9a39b00dbf5f44509e5f811a
 SHA256: aa9e4f4c7bc0cf68b6eca43c012a6466a1e9f696a58a9f1a360d337c27cfa803
+Section: default
+Priority: optional
+Homepage: https://github.com/jgraph/drawio
+Description:
+  draw.io desktop
+License: GPL-3.0-only
+Vendor: draw.io <desktop@draw.io>
+
+Package: draw.io
+Version: 31.7.0
+Architecture: amd64
+Maintainer: draw.io <desktop@draw.io>
+Installed-Size: 352495
+Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
+Recommends: libappindicator3-1
+Filename: ./drawio_31.7.0_amd64.deb
+Size: 2198
+MD5sum: 4ee089974d60fa4d5daaa7ce93258bab
+SHA1: 2ec9d8a06daa2c87c07e5c8f16c0440280e2c94e
+SHA256: fcaae9d8b2293a74b1986d430da8da14611f0d3e9331126d131fedd3ff9cd338
 Section: default
 Priority: optional
 Homepage: https://github.com/jgraph/drawio
@@ -787,6 +787,26 @@ Size: 1904
 MD5sum: 1a5c8f596edc5f8f48bccb5eda73a08d
 SHA1: 74cb93cd57a46f3c8f6171df84142b2739707768
 SHA256: a27f4aaa74141e1ebb7e44d1c7c818e9274e05196007f62498ea73a86ebe3ba5
+Section: default
+Priority: optional
+Homepage: https://github.com/marktext/marktext
+Description:
+  A simple and elegant open-source markdown editor that focused on speed and usability.
+License: unknown
+Vendor: MarkText Contributors
+
+Package: marktext
+Version: 0.20.0
+Architecture: amd64
+Maintainer: MarkText Contributors
+Installed-Size: 420272
+Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
+Recommends: libappindicator3-1
+Filename: ./marktext_0.20.0_amd64.deb
+Size: 2244
+MD5sum: b9674db79c6ba78afd55f7c49ba7713a
+SHA1: bc3b5d2605345da211594fcc09dd5a31b2f56c2d
+SHA256: aecd7cf3983d2aaef0ee5c8a4413a0e4800a87a8473d59991fda7b08d7736a9c
 Section: default
 Priority: optional
 Homepage: https://github.com/marktext/marktext
