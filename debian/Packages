@@ -239,25 +239,6 @@ License: unknown
 Vendor: Anoop M D <anoop.md1421@gmail.com>
 
 Package: discord
-Version: 1.0.158
-Architecture: amd64
-Maintainer: Discord Maintainer Team <noreply@discord.com>
-Installed-Size: 4280
-Depends: libc6, libasound2, libatk1.0-0, libatk-bridge2.0-0, libatspi2.0-0, libatomic1, libcairo2, libdbus-1-3, libexpat1, libgbm1, libglib2.0-0, libgtk-3-0, libnotify4, libnspr4, libnss3, libpango-1.0-0, libstdc++6, libudev1, libx11-6, libxcb1, libxcomposite1, libxdamage1, libxext6, libxfixes3, libxkbcommon0, libxrandr2
-Recommends: libunity9, libva2, libpipewire-0.3-0
-Filename: ./discord_1.0.158_amd64.deb
-Size: 2179726
-MD5sum: 802f288d24662a724734e8e594c6ad58
-SHA1: 11bf3a3fe0256923cc2be9db43dfdb5f6c2a0320
-SHA256: 022b1e269bcd1523542fb35b51ae840fdb994d96a8a2245f1c54542b545b2060
-Section: net
-Priority: optional
-Homepage: https://discord.com
-Description: Chat for Communities and Friends
- Discord is the easiest way to communicate over voice, video, and text. Chat,
- hang out, and stay close with your friends and communities.
-
-Package: discord
 Version: 1.0.159
 Architecture: amd64
 Maintainer: Discord Maintainer Team <noreply@discord.com>
@@ -288,6 +269,25 @@ Size: 2168620
 MD5sum: 6ecbd24fd5342589207347438930fc47
 SHA1: 0591a75f0ad1e352a8a332cc0e5bc301c2c286f6
 SHA256: f17836def26468a12978ce30a4a46c4e8407cf6528fddd96357935038efbef23
+Section: net
+Priority: optional
+Homepage: https://discord.com
+Description: Chat for Communities and Friends
+ Discord is the easiest way to communicate over voice, video, and text. Chat,
+ hang out, and stay close with your friends and communities.
+
+Package: discord
+Version: 1.0.161
+Architecture: amd64
+Maintainer: Discord Maintainer Team <noreply@discord.com>
+Installed-Size: 4264
+Depends: libc6, libasound2, libatk1.0-0, libatk-bridge2.0-0, libatspi2.0-0, libatomic1, libcairo2, libdbus-1-3, libexpat1, libgbm1, libglib2.0-0, libgtk-3-0, libnotify4, libnspr4, libnss3, libpango-1.0-0, libstdc++6, libudev1, libx11-6, libxcb1, libxcomposite1, libxdamage1, libxext6, libxfixes3, libxkbcommon0, libxrandr2
+Recommends: libunity9, libva2, libpipewire-0.3-0
+Filename: ./discord_1.0.161_amd64.deb
+Size: 2168622
+MD5sum: 6319b0e0187ad7e3a708390655ba1252
+SHA1: 1bd586391a286cf550393fb33e68eee53d56a3c7
+SHA256: 1a486a0cd0dc0e79b952b14dd5e361a8614dc28d1d371cd00ebf37a2ad0ce63d
 Section: net
 Priority: optional
 Homepage: https://discord.com
@@ -1194,25 +1194,6 @@ Homepage: https://spotube.krtirtho.dev
 Description: Open source extensible music streaming platform and app, based on BYOMM (Bring your own music metadata) concept
 
 Package: sshpilot
-Version: 6.2.6-1
-Architecture: all
-Maintainer: Mehdi <mah.fat@gmail.com>
-Installed-Size: 18961
-Depends: python3:any (>= 3.9~), python3-gi, python3-gi-cairo, gir1.2-gtk-4.0, gir1.2-adw-1 (>= 1.5), gir1.2-vte-3.91, gir1.2-gtksource-5, gir1.2-secret-1, python3-cryptography, python3-keyring, python3-secretstorage, python3-psutil, python3-certifi, python3-yaml, libjs-xterm, openssh-client
-Recommends: sshpass, python3-pykeepass, gir1.2-webkit-6.0, ssh-askpass
-Filename: ./sshpilot_6.2.6_all.deb
-Size: 5047820
-MD5sum: e4d008ef4e947e9d7e24c1573cada6fd
-SHA1: e8f4a094c4979f6ee02d0cbf9e0729d96f93f2bf
-SHA256: 6d44f91c4d1acf315386a2ca907a4fe20f2a916ac099c573e52a5d43f2532343
-Section: net
-Priority: optional
-Homepage: https://github.com/mfat/sshpilot
-Description: modern, lightweight SSH connection manager
- SSH Pilot is a user-friendly, modern and lightweight SSH connection manager
- for Linux and macOS, with an integrated terminal and SFTP file manager.
-
-Package: sshpilot
 Version: 6.2.7-1
 Architecture: all
 Maintainer: Mehdi <mah.fat@gmail.com>
@@ -1245,6 +1226,26 @@ Size: 5068462
 MD5sum: c906f45365ccd0eed4dc55e5460def18
 SHA1: d2dfdf079e629c77b01b09716dcf1a244cb0d582
 SHA256: 36621beb99eff0a2f0b51a60b96a621515c218ea647ffb61958a0c0b2e557a06
+Section: net
+Priority: optional
+Homepage: https://github.com/mfat/sshpilot
+Description: modern, lightweight SSH connection manager
+ SSH Pilot is a user-friendly, modern and lightweight SSH connection manager
+ for Linux and macOS, with an integrated terminal and SFTP file manager.
+
+Package: sshpilot
+Version: 6.2.9-1
+Architecture: all
+Maintainer: Mehdi <mah.fat@gmail.com>
+Installed-Size: 18941
+Depends: python3:any (>= 3.9~), python3-gi, python3-gi-cairo, gir1.2-gtk-4.0, gir1.2-adw-1 (>= 1.5), gir1.2-vte-3.91, gir1.2-gtksource-5, gir1.2-secret-1, python3-cryptography, python3-keyring, python3-secretstorage, python3-psutil, python3-certifi, python3-yaml, libjs-xterm, openssh-client
+Recommends: sshpass, python3-pykeepass, gir1.2-webkit-6.0, ssh-askpass
+Suggests: freerdp3-sdl | freerdp3-x11
+Filename: ./sshpilot_6.2.9_all.deb
+Size: 5033868
+MD5sum: 1eba28d91a46b882bd260fe42c05a7f7
+SHA1: 2c5f0b958f98597e2b6512ccea93b2454ab81610
+SHA256: 8885b9b8cedff313e2b733bc83bee11bb25df001c95a19d725f562c5758cede8
 Section: net
 Priority: optional
 Homepage: https://github.com/mfat/sshpilot
