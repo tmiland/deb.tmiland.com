@@ -1317,27 +1317,6 @@ Description: Stirling-PDF Desktop Application
  (none)
 
 Package: tabby-terminal
-Version: 1.0.235
-Architecture: amd64
-Maintainer: Tabby Developers <e@ajenti.org>
-Installed-Size: 413262
-Depends: gnome-keyring, libnotify4, libsecret-1-0, libxtst6, libnss3
-Recommends: libappindicator3-1
-Replaces: terminus-terminal
-Filename: ./tabby_1.0.235_amd64.deb
-Size: 1664
-MD5sum: 4dc983c0b6e025e4f1eb033f474d6791
-SHA1: 990eb421100c1e03e4d284c709aaf7b6ee4d1e02
-SHA256: a1e0533b2a6a04eab8960c692543ed71905cf66d20932ae3b3a9771ef42345fb
-Section: default
-Priority: optional
-Homepage: https://github.com/Eugeny/tabby#readme
-Description:
-  A terminal for a modern age
-License: unknown
-Vendor: Tabby Developers <e@ajenti.org>
-
-Package: tabby-terminal
 Version: 1.0.236
 Architecture: amd64
 Maintainer: Tabby Developers <e@ajenti.org>
@@ -1371,6 +1350,27 @@ Size: 2226
 MD5sum: a94ce6e0474a0e00b28b6d5fe2e09b64
 SHA1: 70b35963693a1b6438e68074578ba336dc969d11
 SHA256: d79a3662c07f647e0df48030178905562ce531363cd0be236219585ca4cdb0c7
+Section: default
+Priority: optional
+Homepage: https://github.com/Eugeny/tabby#readme
+Description:
+  A terminal for a modern age
+License: unknown
+Vendor: Tabby Developers <e@ajenti.org>
+
+Package: tabby-terminal
+Version: 1.0.238
+Architecture: amd64
+Maintainer: Tabby Developers <e@ajenti.org>
+Installed-Size: 441211
+Depends: gnome-keyring, libnotify4, libsecret-1-0, libxtst6, libnss3
+Recommends: libappindicator3-1
+Replaces: terminus-terminal
+Filename: ./tabby_1.0.238_amd64.deb
+Size: 2222
+MD5sum: 652bad47865873d2c9c0027521615b93
+SHA1: 035539d13fc66ec2594e923b82c0b860bd078348
+SHA256: 4c52052f659f85bef5946eae5a7b52d97ffa2bf64362ef569228170d7ec39988
 Section: default
 Priority: optional
 Homepage: https://github.com/Eugeny/tabby#readme
