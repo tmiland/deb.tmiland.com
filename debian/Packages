@@ -1,18 +1,4 @@
 Package: AppFlowy
-Version: 0.14.5
-Architecture: amd64
-Essential: no
-Maintainer: AppFlowy
-Depends: libatk1.0-0 (>= 2.7.91), libc6 (>= 2.35), libcairo-gobject2 (>= 1.10.0), libcairo2 (>= 1.14.0), libdbus-1-3 (>= 1.9.14), libdrm2 (>= 2.4.101), libegl1, libepoxy0 (>= 1.4.3), libffi8 (>= 3.4), libfontconfig1 (>= 2.13.0), libfreetype6 (>= 2.3.5), libfribidi0 (>= 1.0.0), libgbm1 (>= 8.1~0), libgcc-s1 (>= 4.3), libgcrypt20 (>= 1.9.0), libgdk-pixbuf-2.0-0 (>= 2.22.0), libgl1, libgles2, libglib2.0-0 (>= 2.39.90), libgpg-error0 (>= 1.14), libgstreamer-plugins-base1.0-0 (>= 1.0.0), libgstreamer1.0-0 (>= 1.6.0), libgtk-3-0 (>= 3.21.5), libharfbuzz0b (>= 1.2.6), libkeybinder-3.0-0 (>= 0.3.0), liblz4-1 (>= 0.0~r130), liblzma5 (>= 5.2.2), libnotify4, libpango-1.0-0 (>= 1.29.4), libpangocairo-1.0-0 (>= 1.14.0), libpng16-16 (>= 1.6.2-1), librsvg2-2 (>= 2.14.4), libstdc++6 (>= 12), libsystemd0, libvulkan1 (>= 1.2.131.2), libwayland-client0 (>= 1.20.0), libwayland-cursor0 (>= 1.0.2), libwayland-egl1 (>= 1.15.0), libx11-6 (>= 2:1.6.0), libxcb-shm0, libxcb1, libxcursor1 (>> 1.1.2), libxext6, libxfixes3 (>= 1:5.0), libxi6 (>= 2:1.5.99.2), libxinerama1 (>= 2:1.1.4), libxkbcommon0 (>= 0.5.0), libxrandr2 (>= 2:1.2.99.3), libzstd1 (>= 1.4.0), zlib1g (>= 1:1.2.3.3)
-Filename: ./appflowy_0.14.5_amd64.deb
-Size: 2142
-MD5sum: c25de6dbe322bfe3618d2aab0b93cfad
-SHA1: bb164b7e7891f980522b2ed1a876e222d7e20ef8
-SHA256: 28a86276bf266a863f332cf8b7675301700b4bcc4ed01b9f5fdf69d696d11ab6
-Priority: optional
-Description: An Open Source Alternative to Notion
-
-Package: AppFlowy
 Version: 0.14.6
 Architecture: amd64
 Essential: no
@@ -37,6 +23,20 @@ Size: 2142
 MD5sum: 657bb0aa1b26a39e10921853e97aad1c
 SHA1: b555a537fbc88325e9b3155c36d954ac3f442d43
 SHA256: 0769aef3bf898ce28525750f092451bfff844de5f750872ee971f25f099692d9
+Priority: optional
+Description: An Open Source Alternative to Notion
+
+Package: AppFlowy
+Version: 0.14.8
+Architecture: amd64
+Essential: no
+Maintainer: AppFlowy
+Depends: libatk1.0-0 (>= 2.7.91), libc6 (>= 2.35), libcairo-gobject2 (>= 1.10.0), libcairo2 (>= 1.14.0), libdbus-1-3 (>= 1.9.14), libdrm2 (>= 2.4.101), libegl1, libepoxy0 (>= 1.4.3), libffi8 (>= 3.4), libfontconfig1 (>= 2.13.0), libfreetype6 (>= 2.3.5), libfribidi0 (>= 1.0.0), libgbm1 (>= 8.1~0), libgcc-s1 (>= 4.3), libgcrypt20 (>= 1.9.0), libgdk-pixbuf-2.0-0 (>= 2.22.0), libgl1, libgles2, libglib2.0-0 (>= 2.39.90), libgpg-error0 (>= 1.14), libgstreamer-plugins-base1.0-0 (>= 1.0.0), libgstreamer1.0-0 (>= 1.6.0), libgtk-3-0 (>= 3.21.5), libharfbuzz0b (>= 1.2.6), libkeybinder-3.0-0 (>= 0.3.0), liblz4-1 (>= 0.0~r130), liblzma5 (>= 5.2.2), libnotify4, libpango-1.0-0 (>= 1.29.4), libpangocairo-1.0-0 (>= 1.14.0), libpng16-16 (>= 1.6.2-1), librsvg2-2 (>= 2.14.4), libstdc++6 (>= 12), libsystemd0, libvulkan1 (>= 1.2.131.2), libwayland-client0 (>= 1.20.0), libwayland-cursor0 (>= 1.0.2), libwayland-egl1 (>= 1.15.0), libx11-6 (>= 2:1.6.0), libxcb-shm0, libxcb1, libxcursor1 (>> 1.1.2), libxext6, libxfixes3 (>= 1:5.0), libxi6 (>= 2:1.5.99.2), libxinerama1 (>= 2:1.1.4), libxkbcommon0 (>= 0.5.0), libxrandr2 (>= 2:1.2.99.3), libzstd1 (>= 1.4.0), zlib1g (>= 1:1.2.3.3)
+Filename: ./appflowy_0.14.8_amd64.deb
+Size: 2144
+MD5sum: c13d47a4ffef8e6bceb3f274c63dbc7a
+SHA1: 9ac79d8296a19fbbbd3d65389dfae3e013de3ca0
+SHA256: a4049fc76af0823eb57712dccd1b26b343892bbf26d962950c0c0a8b612e3d10
 Priority: optional
 Description: An Open Source Alternative to Notion
 
@@ -807,6 +807,26 @@ Size: 2244
 MD5sum: b9674db79c6ba78afd55f7c49ba7713a
 SHA1: bc3b5d2605345da211594fcc09dd5a31b2f56c2d
 SHA256: aecd7cf3983d2aaef0ee5c8a4413a0e4800a87a8473d59991fda7b08d7736a9c
+Section: default
+Priority: optional
+Homepage: https://github.com/marktext/marktext
+Description:
+  A simple and elegant open-source markdown editor that focused on speed and usability.
+License: unknown
+Vendor: MarkText Contributors
+
+Package: marktext
+Version: 0.21.1
+Architecture: amd64
+Maintainer: MarkText Contributors
+Installed-Size: 420574
+Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
+Recommends: libappindicator3-1
+Filename: ./marktext_0.21.1_amd64.deb
+Size: 2242
+MD5sum: d3ea13d22be2ab45efc6151ca9c3be17
+SHA1: c69cce8aae3f6c2be7dc9119e91b55668b847cb5
+SHA256: bbbc280fef6e96dea73a1be85fe3338ce5ab0f3509a2be8560251d9695be1b51
 Section: default
 Priority: optional
 Homepage: https://github.com/marktext/marktext
