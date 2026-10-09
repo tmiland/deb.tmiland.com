@@ -348,26 +348,6 @@ Description: Debian package archiving tool
  upgrade it.
 
 Package: draw.io
-Version: 31.5.3
-Architecture: amd64
-Maintainer: draw.io <desktop@draw.io>
-Installed-Size: 352730
-Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
-Recommends: libappindicator3-1
-Filename: ./drawio_31.5.3_amd64.deb
-Size: 2198
-MD5sum: fb064ef69ea54ce6468eef56d2bd6b5c
-SHA1: aba945bd0fade95f9a39b00dbf5f44509e5f811a
-SHA256: aa9e4f4c7bc0cf68b6eca43c012a6466a1e9f696a58a9f1a360d337c27cfa803
-Section: default
-Priority: optional
-Homepage: https://github.com/jgraph/drawio
-Description:
-  draw.io desktop
-License: GPL-3.0-only
-Vendor: draw.io <desktop@draw.io>
-
-Package: draw.io
 Version: 31.7.0
 Architecture: amd64
 Maintainer: draw.io <desktop@draw.io>
@@ -399,6 +379,26 @@ Size: 2200
 MD5sum: d1982355d437257491f87b45e276734c
 SHA1: 5842c7d3854c80a386499d407592dc1df0ebef6a
 SHA256: d35d5de23b9d81831106fea5191900e6c0338866d1db7ff76664c4177bd68b6e
+Section: default
+Priority: optional
+Homepage: https://github.com/jgraph/drawio
+Description:
+  draw.io desktop
+License: GPL-3.0-only
+Vendor: draw.io <desktop@draw.io>
+
+Package: draw.io
+Version: 32.4.1
+Architecture: amd64
+Maintainer: draw.io <desktop@draw.io>
+Installed-Size: 350773
+Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
+Recommends: libappindicator3-1
+Filename: ./drawio_32.4.1_amd64.deb
+Size: 2196
+MD5sum: 9dd8ecebcce08c3afc1153ad70c9b4ac
+SHA1: 6858a66d9a451d1dfa3687d8abade4dc7a173ed7
+SHA256: 7916d683dea533e15507a0ed232f6527a74bdb492bd05ee6693bbc963582d014
 Section: default
 Priority: optional
 Homepage: https://github.com/jgraph/drawio
