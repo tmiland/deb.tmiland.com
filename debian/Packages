@@ -485,6 +485,21 @@ Priority: optional
 Homepage: https://github.com/junegunn/fzf
 Description: Command-line fuzzy finder
 
+Package: fzf
+Version: 0.74.5
+Architecture: amd64
+Maintainer: Junegunn Choi <junegunn.c@gmail.com>
+Installed-Size: 5485
+Filename: ./fzf_0.74.5_amd64.deb
+Size: 2320404
+MD5sum: c32c346fc5f76c84f30486861e550cc0
+SHA1: 91bcfff9db32d6b7b63167f4424a542b8e969a2d
+SHA256: 0f9f693c12eeabf776c05430e082bda62dac8207fdc85ae3d1b06ac27daedec7
+Section: utils
+Priority: optional
+Homepage: https://github.com/junegunn/fzf
+Description: Command-line fuzzy finder
+
 Package: github-desktop
 Version: 3.6.6.1
 Architecture: amd64
@@ -872,25 +887,6 @@ Homepage: https://nextcloud.com/desktop/
 Description: Nextcloud desktop synchronization client
 
 Package: opencode
-Version: 1.18.33
-Architecture: amd64
-Maintainer: OpenCode <hello@opencode.ai>
-Installed-Size: 456514
-Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
-Recommends: libappindicator3-1
-Filename: ./opencode_1.18.33_amd64.deb
-Size: 2216
-MD5sum: 4497fd2d9e1baa632d1c37514afdd8a7
-SHA1: 3939af6635dbd14bd721d727619890140798c469
-SHA256: 0fb00d56a40827cffddf3bda6bf6919f7df439aa884c29942c3e056c492272d9
-Section: default
-Priority: optional
-Homepage: https://opencode.ai
-Description: The open source coding agent.
-License: MIT
-Vendor: OpenCode <hello@opencode.ai>
-
-Package: opencode
 Version: 1.18.34
 Architecture: amd64
 Maintainer: OpenCode <hello@opencode.ai>
@@ -921,6 +917,25 @@ Size: 2218
 MD5sum: c1d89396ec3c3097f0963a68cb1685ae
 SHA1: 30ef002f352ab64f392ff386008dabbea7a21eeb
 SHA256: de270c150fc1d78915e4f079314b93fb87a31732acb62ac0fe013fd271cdd3c1
+Section: default
+Priority: optional
+Homepage: https://opencode.ai
+Description: The open source coding agent.
+License: MIT
+Vendor: OpenCode <hello@opencode.ai>
+
+Package: opencode
+Version: 1.19.0
+Architecture: amd64
+Maintainer: OpenCode <hello@opencode.ai>
+Installed-Size: 456924
+Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
+Recommends: libappindicator3-1
+Filename: ./opencode_1.19.0_amd64.deb
+Size: 2220
+MD5sum: 5717565f6bb2be1f072e5a64585c2199
+SHA1: 64e400f313e9fe0fa27224b59b177d0063fda377
+SHA256: cb958cd51f22891bb56a9b203f377205fb86185e201328f92cec46b98732844a
 Section: default
 Priority: optional
 Homepage: https://opencode.ai
