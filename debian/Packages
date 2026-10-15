@@ -119,17 +119,17 @@ Description: cat(1) clone with wings.
   A cat(1) clone with syntax highlighting and Git integration.
 
 Package: bitwarden
-Version: 2026.8.0
+Version: 2026.10.0
 Architecture: amd64
 Maintainer: Bitwarden Inc. <hello@bitwarden.com>
-Installed-Size: 404424
+Installed-Size: 416480
 Depends: libnotify4, libxtst6, libnss3, libxss1
 Recommends: libappindicator3-1
-Filename: ./bitwarden_2026.8.0_amd64.deb
-Size: 1640
-MD5sum: 2e568fde9408f8009ac83750de38793f
-SHA1: 83e4348d85250a92a0304562220f8798e97fa0b6
-SHA256: ee9498be09838b439c30958c58e02e32dd32e3c8caa0a46f8a13ff6ba76c095f
+Filename: ./bitwarden_2026.10.0_amd64.deb
+Size: 1866
+MD5sum: 2da6bae89e90582c2164a6a0f5d38545
+SHA1: ada28d3947b068b564c88fc201cc35521efb3198
+SHA256: ced8e17def128f6d4addf78c73d03cb93cf8a109e3f6d672be9c8c77f6f8642c
 Section: default
 Priority: optional
 Homepage: https://bitwarden.com
@@ -905,25 +905,6 @@ Homepage: https://nextcloud.com/desktop/
 Description: Nextcloud desktop synchronization client
 
 Package: opencode
-Version: 1.18.34
-Architecture: amd64
-Maintainer: OpenCode <hello@opencode.ai>
-Installed-Size: 456803
-Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
-Recommends: libappindicator3-1
-Filename: ./opencode_1.18.34_amd64.deb
-Size: 2218
-MD5sum: 6fa2792442fdbe2c3589926df7c583e2
-SHA1: a0efa0e5709ef520cd068f72fc03ef808901a3ff
-SHA256: 30c0f63f56d47b694f9d3ca23e9d5e158fa9ebb55597a68f470e252622ae9f84
-Section: default
-Priority: optional
-Homepage: https://opencode.ai
-Description: The open source coding agent.
-License: MIT
-Vendor: OpenCode <hello@opencode.ai>
-
-Package: opencode
 Version: 1.18.35
 Architecture: amd64
 Maintainer: OpenCode <hello@opencode.ai>
@@ -954,6 +935,25 @@ Size: 2220
 MD5sum: 5717565f6bb2be1f072e5a64585c2199
 SHA1: 64e400f313e9fe0fa27224b59b177d0063fda377
 SHA256: cb958cd51f22891bb56a9b203f377205fb86185e201328f92cec46b98732844a
+Section: default
+Priority: optional
+Homepage: https://opencode.ai
+Description: The open source coding agent.
+License: MIT
+Vendor: OpenCode <hello@opencode.ai>
+
+Package: opencode
+Version: 1.19.1
+Architecture: amd64
+Maintainer: OpenCode <hello@opencode.ai>
+Installed-Size: 457190
+Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
+Recommends: libappindicator3-1
+Filename: ./opencode_1.19.1_amd64.deb
+Size: 2212
+MD5sum: 2e4acb6ead8c22e5d9ac8bb7890b278d
+SHA1: 47ad07da23072c8074e6be2a7068faab1da3a4c7
+SHA256: 3f4a1156f0579692f838acafb79449081db19f23632a0586a34ea0a747d9bcb9
 Section: default
 Priority: optional
 Homepage: https://opencode.ai
@@ -1360,21 +1360,6 @@ Description: modern, lightweight SSH connection manager
  for Linux and macOS, with an integrated terminal and SFTP file manager.
 
 Package: stirling-pdf
-Version: 3.0.1
-Architecture: amd64
-Maintainer: Stirling-PDF Contributors
-Installed-Size: 373806
-Depends: libwebkit2gtk-4.1-0, libgtk-3-0
-Filename: ./stirling-pdf_3.0.1_amd64.deb
-Size: 1630
-MD5sum: a611693022e7dab64ffd441b748b2ba4
-SHA1: 6fa4b84a536369a1c9c2b023a416a2bca7c0b4ae
-SHA256: 0bccec0b0c0f52604f735588a3a9fc39a42574460bd8244d8567e3d12cdc095b
-Priority: optional
-Description: Stirling-PDF Desktop Application
- (none)
-
-Package: stirling-pdf
 Version: 3.0.2
 Architecture: amd64
 Maintainer: Stirling-PDF Contributors
@@ -1400,6 +1385,21 @@ Size: 1630
 MD5sum: 60435a4aa0e75801f6f4ad46e9829b8b
 SHA1: c7708c17781b5a95e2462d7c96664714d4f4188b
 SHA256: 1341db496b3e3a25497dd0c0c18895791ae6237057b9cbf4fd6630a8da5ec1ec
+Priority: optional
+Description: Stirling-PDF Desktop Application
+ (none)
+
+Package: stirling-pdf
+Version: 3.2.0
+Architecture: amd64
+Maintainer: Stirling-PDF Contributors
+Installed-Size: 315274
+Depends: libwebkit2gtk-4.1-0, libgtk-3-0
+Filename: ./stirling-pdf_3.2.0_amd64.deb
+Size: 1632
+MD5sum: 317868261e7ca8556df6cec4d30b886a
+SHA1: ded92046c0dd43d31a91d6ee2b4b7542c4f799f7
+SHA256: 375edc2c745bd27d70139de92ddbc293bd7605fb927d01ac679c15e8176667b5
 Priority: optional
 Description: Stirling-PDF Desktop Application
  (none)
