@@ -1171,26 +1171,6 @@ Description: Debloat and tune Android TV devices via ADB.
  Shield Optimizer is a cross-platform tool for debloating and tuning Nvidia Shield TV, Onn 4K Pro, Chromecast with Google TV, and other Android TV devices. v2 is a Rust/Tauri rewrite of the original PowerShell script.
 
 Package: siyuan
-Version: 3.8.5~alpha.1
-Architecture: amd64
-Maintainer: Yunnan Liandi Technology Co., Ltd. <845765@qq.com>
-Installed-Size: 680568
-Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
-Recommends: libappindicator3-1
-Filename: ./siyuan_3.8.5_amd64.deb
-Size: 1866
-MD5sum: 0a0e2c0c0d32705297388e6048136632
-SHA1: 888d8f1e704726fbf0d93140b7a7e2864bc29755
-SHA256: d02a3f2e813b88aecd6db35fe140f6bb60100086e3207a5ee75bd23a9642f19c
-Section: default
-Priority: optional
-Homepage: https://b3log.org/siyuan
-Description:
-  From thought to insight, with agents
-License: unknown
-Vendor: Yunnan Liandi Technology Co., Ltd. <845765@qq.com>
-
-Package: siyuan
 Version: 3.8.6~alpha.9
 Architecture: amd64
 Maintainer: Yunnan Liandi Technology Co., Ltd. <845765@qq.com>
@@ -1222,6 +1202,26 @@ Size: 2248
 MD5sum: 9fa72addc852b66e3f51c116af901149
 SHA1: cca52757a015bda1f6db3614aa9f282c8b3e1dd6
 SHA256: f75d55bb7a0a5f0def6b6348fccf19b3c7bba3d0f4890cce6a0b8b0ccb54af14
+Section: default
+Priority: optional
+Homepage: https://b3log.org/siyuan
+Description:
+  From thought to insight, with agents
+License: unknown
+Vendor: Yunnan Liandi Technology Co., Ltd. <845765@qq.com>
+
+Package: siyuan
+Version: 3.8.8~alpha.1
+Architecture: amd64
+Maintainer: Yunnan Liandi Technology Co., Ltd. <845765@qq.com>
+Installed-Size: 731334
+Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
+Recommends: libappindicator3-1
+Filename: ./siyuan_3.8.8_amd64.deb
+Size: 2248
+MD5sum: 59963fa214cbf15fc0af4526f1808ce3
+SHA1: e0003eb560374ba4a3b8b45730050abd9d78bfe2
+SHA256: 6fa6367559af54527de2ce6e9ffa2247bdd231a91232ac145e272424fbab3ac2
 Section: default
 Priority: optional
 Homepage: https://b3log.org/siyuan
