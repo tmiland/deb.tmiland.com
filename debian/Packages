@@ -905,25 +905,6 @@ Homepage: https://nextcloud.com/desktop/
 Description: Nextcloud desktop synchronization client
 
 Package: opencode
-Version: 1.19.0
-Architecture: amd64
-Maintainer: OpenCode <hello@opencode.ai>
-Installed-Size: 456924
-Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
-Recommends: libappindicator3-1
-Filename: ./opencode_1.19.0_amd64.deb
-Size: 2220
-MD5sum: 5717565f6bb2be1f072e5a64585c2199
-SHA1: 64e400f313e9fe0fa27224b59b177d0063fda377
-SHA256: cb958cd51f22891bb56a9b203f377205fb86185e201328f92cec46b98732844a
-Section: default
-Priority: optional
-Homepage: https://opencode.ai
-Description: The open source coding agent.
-License: MIT
-Vendor: OpenCode <hello@opencode.ai>
-
-Package: opencode
 Version: 1.19.1
 Architecture: amd64
 Maintainer: OpenCode <hello@opencode.ai>
@@ -954,6 +935,25 @@ Size: 2214
 MD5sum: 7579a648a7a761912d34c5c15a989639
 SHA1: 554064f9081723cfe9d3363d992db2d3c06baacd
 SHA256: 6c7f7d63b1df068b04134f5b0a5c469eae84197c91bfc7d56bc5fa8f4d1b46ff
+Section: default
+Priority: optional
+Homepage: https://opencode.ai
+Description: The open source coding agent.
+License: MIT
+Vendor: OpenCode <hello@opencode.ai>
+
+Package: opencode
+Version: 1.19.3
+Architecture: amd64
+Maintainer: OpenCode <hello@opencode.ai>
+Installed-Size: 457214
+Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
+Recommends: libappindicator3-1
+Filename: ./opencode_1.19.3_amd64.deb
+Size: 2214
+MD5sum: d08d797e5933025ecdd9cb3ee8105c7f
+SHA1: 820ea6db60e9fa8ef6171d7095cf1a1ef2203b04
+SHA256: 5c59230f9be8105ba92b2ff5a637c46dc6f433d14adaebc442da7d10d3ae438e
 Section: default
 Priority: optional
 Homepage: https://opencode.ai
@@ -1300,26 +1300,6 @@ Homepage: https://spotube.krtirtho.dev
 Description: Open source extensible music streaming platform and app, based on BYOMM (Bring your own music metadata) concept
 
 Package: sshpilot
-Version: 6.2.9-1
-Architecture: all
-Maintainer: Mehdi <mah.fat@gmail.com>
-Installed-Size: 18941
-Depends: python3:any (>= 3.9~), python3-gi, python3-gi-cairo, gir1.2-gtk-4.0, gir1.2-adw-1 (>= 1.5), gir1.2-vte-3.91, gir1.2-gtksource-5, gir1.2-secret-1, python3-cryptography, python3-keyring, python3-secretstorage, python3-psutil, python3-certifi, python3-yaml, libjs-xterm, openssh-client
-Recommends: sshpass, python3-pykeepass, gir1.2-webkit-6.0, ssh-askpass
-Suggests: freerdp3-sdl | freerdp3-x11
-Filename: ./sshpilot_6.2.9_all.deb
-Size: 5033868
-MD5sum: 1eba28d91a46b882bd260fe42c05a7f7
-SHA1: 2c5f0b958f98597e2b6512ccea93b2454ab81610
-SHA256: 8885b9b8cedff313e2b733bc83bee11bb25df001c95a19d725f562c5758cede8
-Section: net
-Priority: optional
-Homepage: https://github.com/mfat/sshpilot
-Description: modern, lightweight SSH connection manager
- SSH Pilot is a user-friendly, modern and lightweight SSH connection manager
- for Linux and macOS, with an integrated terminal and SFTP file manager.
-
-Package: sshpilot
 Version: 6.3.0-1
 Architecture: all
 Maintainer: Mehdi <mah.fat@gmail.com>
@@ -1352,6 +1332,26 @@ Size: 5083658
 MD5sum: 7ce30a967c849e7c7a713de13c7d69d9
 SHA1: a8092db442d25f5eabdd5f38e253936191a556a3
 SHA256: 3440351a38227e379bed8c44f6cea438ae709b6a1f09913b1dc136eecd308d00
+Section: net
+Priority: optional
+Homepage: https://github.com/mfat/sshpilot
+Description: modern, lightweight SSH connection manager
+ SSH Pilot is a user-friendly, modern and lightweight SSH connection manager
+ for Linux and macOS, with an integrated terminal and SFTP file manager.
+
+Package: sshpilot
+Version: 6.3.2-1
+Architecture: all
+Maintainer: Mehdi <mah.fat@gmail.com>
+Installed-Size: 19643
+Depends: python3:any (>= 3.9~), python3-gi, python3-gi-cairo, gir1.2-gtk-4.0, gir1.2-adw-1 (>= 1.5), gir1.2-vte-3.91, gir1.2-gtksource-5, gir1.2-secret-1, python3-cryptography, python3-keyring, python3-secretstorage, python3-psutil, python3-certifi, python3-yaml, libjs-xterm, openssh-client
+Recommends: sshpass, python3-pykeepass, gir1.2-webkit-6.0, ssh-askpass
+Suggests: freerdp3-sdl | freerdp3-x11
+Filename: ./sshpilot_6.3.2_all.deb
+Size: 5165822
+MD5sum: e60f94016514b7863af98cfd88d0e628
+SHA1: 78d0b0908ceb51a38fb66ca9097831727432c229
+SHA256: 58f376beb21c8e34ffa892dc0d827b49ca4db84e598362c2733a703eefb2dff7
 Section: net
 Priority: optional
 Homepage: https://github.com/mfat/sshpilot
