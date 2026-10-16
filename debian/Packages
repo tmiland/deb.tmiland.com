@@ -1300,26 +1300,6 @@ Homepage: https://spotube.krtirtho.dev
 Description: Open source extensible music streaming platform and app, based on BYOMM (Bring your own music metadata) concept
 
 Package: sshpilot
-Version: 6.3.0-1
-Architecture: all
-Maintainer: Mehdi <mah.fat@gmail.com>
-Installed-Size: 19102
-Depends: python3:any (>= 3.9~), python3-gi, python3-gi-cairo, gir1.2-gtk-4.0, gir1.2-adw-1 (>= 1.5), gir1.2-vte-3.91, gir1.2-gtksource-5, gir1.2-secret-1, python3-cryptography, python3-keyring, python3-secretstorage, python3-psutil, python3-certifi, python3-yaml, libjs-xterm, openssh-client
-Recommends: sshpass, python3-pykeepass, gir1.2-webkit-6.0, ssh-askpass
-Suggests: freerdp3-sdl | freerdp3-x11
-Filename: ./sshpilot_6.3.0_all.deb
-Size: 5063888
-MD5sum: 094e078bef1946a133c783394f32da4c
-SHA1: 6506fb13b65e4a5e0dd82eb607e2ad5c40e50ba6
-SHA256: 9ca7f05cf2664af7bc1b17a12c62b313ec51fad8f0c6293948681155a1874805
-Section: net
-Priority: optional
-Homepage: https://github.com/mfat/sshpilot
-Description: modern, lightweight SSH connection manager
- SSH Pilot is a user-friendly, modern and lightweight SSH connection manager
- for Linux and macOS, with an integrated terminal and SFTP file manager.
-
-Package: sshpilot
 Version: 6.3.1-1
 Architecture: all
 Maintainer: Mehdi <mah.fat@gmail.com>
@@ -1352,6 +1332,26 @@ Size: 5165822
 MD5sum: e60f94016514b7863af98cfd88d0e628
 SHA1: 78d0b0908ceb51a38fb66ca9097831727432c229
 SHA256: 58f376beb21c8e34ffa892dc0d827b49ca4db84e598362c2733a703eefb2dff7
+Section: net
+Priority: optional
+Homepage: https://github.com/mfat/sshpilot
+Description: modern, lightweight SSH connection manager
+ SSH Pilot is a user-friendly, modern and lightweight SSH connection manager
+ for Linux and macOS, with an integrated terminal and SFTP file manager.
+
+Package: sshpilot
+Version: 6.3.3-1
+Architecture: all
+Maintainer: Mehdi <mah.fat@gmail.com>
+Installed-Size: 19660
+Depends: python3:any (>= 3.9~), python3-gi, python3-gi-cairo, gir1.2-gtk-4.0, gir1.2-adw-1 (>= 1.5), gir1.2-vte-3.91, gir1.2-gtksource-5, gir1.2-secret-1, python3-cryptography, python3-keyring, python3-secretstorage, python3-psutil, python3-certifi, python3-yaml, libjs-xterm, openssh-client
+Recommends: sshpass, python3-pykeepass, gir1.2-webkit-6.0, ssh-askpass
+Suggests: freerdp3-sdl | freerdp3-x11
+Filename: ./sshpilot_6.3.3_all.deb
+Size: 5174336
+MD5sum: 413395daec1b260d24b635328f82c371
+SHA1: fbe2cc1d4fa94b92b5c30328a6c673c32985276a
+SHA256: 010ddee90642edaf80432810c90a4d2d701ff35a71692d0703b8fbbfffc4b0a7
 Section: net
 Priority: optional
 Homepage: https://github.com/mfat/sshpilot
