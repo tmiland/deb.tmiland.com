@@ -348,26 +348,6 @@ Description: Debian package archiving tool
  upgrade it.
 
 Package: draw.io
-Version: 31.7.0
-Architecture: amd64
-Maintainer: draw.io <desktop@draw.io>
-Installed-Size: 352495
-Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
-Recommends: libappindicator3-1
-Filename: ./drawio_31.7.0_amd64.deb
-Size: 2198
-MD5sum: 4ee089974d60fa4d5daaa7ce93258bab
-SHA1: 2ec9d8a06daa2c87c07e5c8f16c0440280e2c94e
-SHA256: fcaae9d8b2293a74b1986d430da8da14611f0d3e9331126d131fedd3ff9cd338
-Section: default
-Priority: optional
-Homepage: https://github.com/jgraph/drawio
-Description:
-  draw.io desktop
-License: GPL-3.0-only
-Vendor: draw.io <desktop@draw.io>
-
-Package: draw.io
 Version: 32.3.0
 Architecture: amd64
 Maintainer: draw.io <desktop@draw.io>
@@ -399,6 +379,26 @@ Size: 2196
 MD5sum: 9dd8ecebcce08c3afc1153ad70c9b4ac
 SHA1: 6858a66d9a451d1dfa3687d8abade4dc7a173ed7
 SHA256: 7916d683dea533e15507a0ed232f6527a74bdb492bd05ee6693bbc963582d014
+Section: default
+Priority: optional
+Homepage: https://github.com/jgraph/drawio
+Description:
+  draw.io desktop
+License: GPL-3.0-only
+Vendor: draw.io <desktop@draw.io>
+
+Package: draw.io
+Version: 32.5.5
+Architecture: amd64
+Maintainer: draw.io <desktop@draw.io>
+Installed-Size: 351897
+Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
+Recommends: libappindicator3-1
+Filename: ./drawio_32.5.5_amd64.deb
+Size: 2200
+MD5sum: 3b2708d39df76248d387a07396201a91
+SHA1: 17479ec76cf2f94a8056e8e6a469066a5bc5a5e7
+SHA256: 576d78a5b735ec9660c549070b339fbfadaa370b727ae3c3c5644f2c7157bfbe
 Section: default
 Priority: optional
 Homepage: https://github.com/jgraph/drawio
@@ -1300,26 +1300,6 @@ Homepage: https://spotube.krtirtho.dev
 Description: Open source extensible music streaming platform and app, based on BYOMM (Bring your own music metadata) concept
 
 Package: sshpilot
-Version: 6.3.2-1
-Architecture: all
-Maintainer: Mehdi <mah.fat@gmail.com>
-Installed-Size: 19643
-Depends: python3:any (>= 3.9~), python3-gi, python3-gi-cairo, gir1.2-gtk-4.0, gir1.2-adw-1 (>= 1.5), gir1.2-vte-3.91, gir1.2-gtksource-5, gir1.2-secret-1, python3-cryptography, python3-keyring, python3-secretstorage, python3-psutil, python3-certifi, python3-yaml, libjs-xterm, openssh-client
-Recommends: sshpass, python3-pykeepass, gir1.2-webkit-6.0, ssh-askpass
-Suggests: freerdp3-sdl | freerdp3-x11
-Filename: ./sshpilot_6.3.2_all.deb
-Size: 5165822
-MD5sum: e60f94016514b7863af98cfd88d0e628
-SHA1: 78d0b0908ceb51a38fb66ca9097831727432c229
-SHA256: 58f376beb21c8e34ffa892dc0d827b49ca4db84e598362c2733a703eefb2dff7
-Section: net
-Priority: optional
-Homepage: https://github.com/mfat/sshpilot
-Description: modern, lightweight SSH connection manager
- SSH Pilot is a user-friendly, modern and lightweight SSH connection manager
- for Linux and macOS, with an integrated terminal and SFTP file manager.
-
-Package: sshpilot
 Version: 6.3.3-1
 Architecture: all
 Maintainer: Mehdi <mah.fat@gmail.com>
@@ -1352,6 +1332,26 @@ Size: 5179292
 MD5sum: 536f955df195946624963766ad4764e2
 SHA1: 6cc92b25264c72c2998d969195a6f6ff4b986182
 SHA256: 1e21c5a2ff4968e51097443a522c6ef034cc08812ca0d40912e126e5f1a6e79d
+Section: net
+Priority: optional
+Homepage: https://github.com/mfat/sshpilot
+Description: modern, lightweight SSH connection manager
+ SSH Pilot is a user-friendly, modern and lightweight SSH connection manager
+ for Linux and macOS, with an integrated terminal and SFTP file manager.
+
+Package: sshpilot
+Version: 6.3.5-1
+Architecture: all
+Maintainer: Mehdi <mah.fat@gmail.com>
+Installed-Size: 19697
+Depends: python3:any (>= 3.9~), python3-gi, python3-gi-cairo, gir1.2-gtk-4.0, gir1.2-adw-1 (>= 1.5), gir1.2-vte-3.91, gir1.2-gtksource-5, gir1.2-secret-1, python3-cryptography, python3-keyring, python3-secretstorage, python3-psutil, python3-certifi, python3-yaml, libjs-xterm, openssh-client
+Recommends: sshpass, python3-pykeepass, gir1.2-webkit-6.0, ssh-askpass
+Suggests: freerdp3-sdl | freerdp3-x11
+Filename: ./sshpilot_6.3.5_all.deb
+Size: 5179666
+MD5sum: bb3ecd70e0893e4ae585a8192b184b87
+SHA1: 19ec4e9074a10e440addddc080813b9342b62491
+SHA256: 08b8863b634f7c9fb4b462318f9fc2911f0a69996506fa309d6c42c0aace7185
 Section: net
 Priority: optional
 Homepage: https://github.com/mfat/sshpilot
