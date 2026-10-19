@@ -1,18 +1,4 @@
 Package: AppFlowy
-Version: 0.14.6
-Architecture: amd64
-Essential: no
-Maintainer: AppFlowy
-Depends: libatk1.0-0 (>= 2.7.91), libc6 (>= 2.35), libcairo-gobject2 (>= 1.10.0), libcairo2 (>= 1.14.0), libdbus-1-3 (>= 1.9.14), libdrm2 (>= 2.4.101), libegl1, libepoxy0 (>= 1.4.3), libffi8 (>= 3.4), libfontconfig1 (>= 2.13.0), libfreetype6 (>= 2.3.5), libfribidi0 (>= 1.0.0), libgbm1 (>= 8.1~0), libgcc-s1 (>= 4.3), libgcrypt20 (>= 1.9.0), libgdk-pixbuf-2.0-0 (>= 2.22.0), libgl1, libgles2, libglib2.0-0 (>= 2.39.90), libgpg-error0 (>= 1.14), libgstreamer-plugins-base1.0-0 (>= 1.0.0), libgstreamer1.0-0 (>= 1.6.0), libgtk-3-0 (>= 3.21.5), libharfbuzz0b (>= 1.2.6), libkeybinder-3.0-0 (>= 0.3.0), liblz4-1 (>= 0.0~r130), liblzma5 (>= 5.2.2), libnotify4, libpango-1.0-0 (>= 1.29.4), libpangocairo-1.0-0 (>= 1.14.0), libpng16-16 (>= 1.6.2-1), librsvg2-2 (>= 2.14.4), libstdc++6 (>= 12), libsystemd0, libvulkan1 (>= 1.2.131.2), libwayland-client0 (>= 1.20.0), libwayland-cursor0 (>= 1.0.2), libwayland-egl1 (>= 1.15.0), libx11-6 (>= 2:1.6.0), libxcb-shm0, libxcb1, libxcursor1 (>> 1.1.2), libxext6, libxfixes3 (>= 1:5.0), libxi6 (>= 2:1.5.99.2), libxinerama1 (>= 2:1.1.4), libxkbcommon0 (>= 0.5.0), libxrandr2 (>= 2:1.2.99.3), libzstd1 (>= 1.4.0), zlib1g (>= 1:1.2.3.3)
-Filename: ./appflowy_0.14.6_amd64.deb
-Size: 2142
-MD5sum: 00a384d3053db701d6044cb6148973bd
-SHA1: dbed5aabff99fef2bba93c59a1d920101e81d3d5
-SHA256: f763d97c8807eaf8e0a4d9dd9c74c32fd38e2a9d28284a09acce56e8839cc648
-Priority: optional
-Description: An Open Source Alternative to Notion
-
-Package: AppFlowy
 Version: 0.14.7
 Architecture: amd64
 Essential: no
@@ -37,6 +23,20 @@ Size: 2144
 MD5sum: c13d47a4ffef8e6bceb3f274c63dbc7a
 SHA1: 9ac79d8296a19fbbbd3d65389dfae3e013de3ca0
 SHA256: a4049fc76af0823eb57712dccd1b26b343892bbf26d962950c0c0a8b612e3d10
+Priority: optional
+Description: An Open Source Alternative to Notion
+
+Package: AppFlowy
+Version: 0.14.9
+Architecture: amd64
+Essential: no
+Maintainer: AppFlowy
+Depends: libatk1.0-0 (>= 2.7.91), libc6 (>= 2.35), libcairo-gobject2 (>= 1.10.0), libcairo2 (>= 1.14.0), libdbus-1-3 (>= 1.9.14), libdrm2 (>= 2.4.101), libegl1, libepoxy0 (>= 1.4.3), libffi8 (>= 3.4), libfontconfig1 (>= 2.13.0), libfreetype6 (>= 2.3.5), libfribidi0 (>= 1.0.0), libgbm1 (>= 8.1~0), libgcc-s1 (>= 4.3), libgcrypt20 (>= 1.9.0), libgdk-pixbuf-2.0-0 (>= 2.22.0), libgl1, libgles2, libglib2.0-0 (>= 2.39.90), libgpg-error0 (>= 1.14), libgstreamer-plugins-base1.0-0 (>= 1.0.0), libgstreamer1.0-0 (>= 1.6.0), libgtk-3-0 (>= 3.21.5), libharfbuzz0b (>= 1.2.6), libkeybinder-3.0-0 (>= 0.3.0), liblz4-1 (>= 0.0~r130), liblzma5 (>= 5.2.2), libnotify4, libpango-1.0-0 (>= 1.29.4), libpangocairo-1.0-0 (>= 1.14.0), libpng16-16 (>= 1.6.2-1), librsvg2-2 (>= 2.14.4), libstdc++6 (>= 12), libsystemd0, libvulkan1 (>= 1.2.131.2), libwayland-client0 (>= 1.20.0), libwayland-cursor0 (>= 1.0.2), libwayland-egl1 (>= 1.15.0), libx11-6 (>= 2:1.6.0), libxcb-shm0, libxcb1, libxcursor1 (>> 1.1.2), libxext6, libxfixes3 (>= 1:5.0), libxi6 (>= 2:1.5.99.2), libxinerama1 (>= 2:1.1.4), libxkbcommon0 (>= 0.5.0), libxrandr2 (>= 2:1.2.99.3), libzstd1 (>= 1.4.0), zlib1g (>= 1:1.2.3.3)
+Filename: ./appflowy_0.14.9_amd64.deb
+Size: 2140
+MD5sum: c72a7830f825d18d4ce876597f92734e
+SHA1: 879cee5f98c8acec67a8b7e51bb78911a5c2c001
+SHA256: 6059dc682697b62e1880b52bcff74759585abdb2012554c25faa5beeccf8ee08
 Priority: optional
 Description: An Open Source Alternative to Notion
 
@@ -92,6 +92,28 @@ Size: 2132
 MD5sum: 6f3f0d7e8c9d969bf1700d65f559a69d
 SHA1: c3d234453151a2f3f45e889d6f70e7230aa4bdb8
 SHA256: 65bbbd58b551b85e42f09e769801181e5346b9414fd92928b36eb3bb10f0d877
+Section: utils
+Priority: optional
+Homepage: https://github.com/balena-io/etcher
+Description: Flash OS images to SD cards and USB drives, safely and easily.
+ Etcher is a powerful OS image flasher built with web technologies to ensure
+ flashing an SDCard or USB drive is a pleasant and safe experience. It protects
+ you from accidentally writing to your hard-drives, ensures every byte of data
+ was written correctly and much more.
+
+Package: balena-etcher
+Version: 2.1.8
+Architecture: amd64
+Maintainer: Balena Ltd. <hello@balena.io>
+Installed-Size: 419764
+Depends: libgtk-3-0, libnotify4, libnss3, libxtst6, xdg-utils, libatspi2.0-0, libdrm2, libgbm1, libxcb-dri3-0, kde-cli-tools | kde-runtime | trash-cli | libglib2.0-bin | gvfs-bin, libasound2, libatk1.0-0, libc6, libcairo2, libcups2, libdbus-1-3, libexpat1, libfontconfig1, libfreetype6, libgcc1, libgdk-pixbuf2.0-0 | libgdk-pixbuf-2.0-0, libglib2.0-0, liblzma5, libnspr4, libpango1.0-0 | libpango-1.0-0, libstdc++6, libx11-6, libxcomposite1, libxcursor1, libxdamage1, libxext6, libxfixes3, libxi6, libxrandr2, libxrender1, libxss1, polkit-1-auth-agent | policykit-1-gnome | polkit-kde-1
+Recommends: pulseaudio | libasound2
+Suggests: gir1.2-gnomekeyring-1.0, libgnome-keyring0, lsb-release
+Filename: ./balena-etcher_2.1.8_amd64.deb
+Size: 2130
+MD5sum: 47e0b24b9f35c70a2ceb8972a77e6b27
+SHA1: 34ca78d851a115d2843c87da94f0575c8ee70ac2
+SHA256: b741091df7a529c68e3fd90f39a58177cf10e7337682238cba47b79f722ae1cb
 Section: utils
 Priority: optional
 Homepage: https://github.com/balena-io/etcher
@@ -1300,26 +1322,6 @@ Homepage: https://spotube.krtirtho.dev
 Description: Open source extensible music streaming platform and app, based on BYOMM (Bring your own music metadata) concept
 
 Package: sshpilot
-Version: 6.3.3-1
-Architecture: all
-Maintainer: Mehdi <mah.fat@gmail.com>
-Installed-Size: 19660
-Depends: python3:any (>= 3.9~), python3-gi, python3-gi-cairo, gir1.2-gtk-4.0, gir1.2-adw-1 (>= 1.5), gir1.2-vte-3.91, gir1.2-gtksource-5, gir1.2-secret-1, python3-cryptography, python3-keyring, python3-secretstorage, python3-psutil, python3-certifi, python3-yaml, libjs-xterm, openssh-client
-Recommends: sshpass, python3-pykeepass, gir1.2-webkit-6.0, ssh-askpass
-Suggests: freerdp3-sdl | freerdp3-x11
-Filename: ./sshpilot_6.3.3_all.deb
-Size: 5174336
-MD5sum: 413395daec1b260d24b635328f82c371
-SHA1: fbe2cc1d4fa94b92b5c30328a6c673c32985276a
-SHA256: 010ddee90642edaf80432810c90a4d2d701ff35a71692d0703b8fbbfffc4b0a7
-Section: net
-Priority: optional
-Homepage: https://github.com/mfat/sshpilot
-Description: modern, lightweight SSH connection manager
- SSH Pilot is a user-friendly, modern and lightweight SSH connection manager
- for Linux and macOS, with an integrated terminal and SFTP file manager.
-
-Package: sshpilot
 Version: 6.3.4-1
 Architecture: all
 Maintainer: Mehdi <mah.fat@gmail.com>
@@ -1352,6 +1354,26 @@ Size: 5179666
 MD5sum: bb3ecd70e0893e4ae585a8192b184b87
 SHA1: 19ec4e9074a10e440addddc080813b9342b62491
 SHA256: 08b8863b634f7c9fb4b462318f9fc2911f0a69996506fa309d6c42c0aace7185
+Section: net
+Priority: optional
+Homepage: https://github.com/mfat/sshpilot
+Description: modern, lightweight SSH connection manager
+ SSH Pilot is a user-friendly, modern and lightweight SSH connection manager
+ for Linux and macOS, with an integrated terminal and SFTP file manager.
+
+Package: sshpilot
+Version: 6.3.6-1
+Architecture: all
+Maintainer: Mehdi <mah.fat@gmail.com>
+Installed-Size: 19778
+Depends: python3:any (>= 3.9~), python3-gi, python3-gi-cairo, gir1.2-gtk-4.0, gir1.2-adw-1 (>= 1.5), gir1.2-vte-3.91, gir1.2-gtksource-5, gir1.2-secret-1, python3-cryptography, python3-keyring, python3-secretstorage, python3-psutil, python3-certifi, python3-yaml, libjs-xterm, openssh-client
+Recommends: sshpass, python3-pykeepass, gir1.2-webkit-6.0, ssh-askpass
+Suggests: freerdp3-sdl | freerdp3-x11
+Filename: ./sshpilot_6.3.6_all.deb
+Size: 5221698
+MD5sum: b3b8e3e494f49f5fdc7d1becbcb6b36b
+SHA1: 984bf4c9bb38b9274cad249a3726724d08efe04b
+SHA256: 971b8e961c5a033e940862520cf93c1649fa010ef4e52ebef5716ab77392ea38
 Section: net
 Priority: optional
 Homepage: https://github.com/mfat/sshpilot
