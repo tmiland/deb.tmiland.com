@@ -261,25 +261,6 @@ License: unknown
 Vendor: Anoop M D <anoop.md1421@gmail.com>
 
 Package: discord
-Version: 1.0.161
-Architecture: amd64
-Maintainer: Discord Maintainer Team <noreply@discord.com>
-Installed-Size: 4264
-Depends: libc6, libasound2, libatk1.0-0, libatk-bridge2.0-0, libatspi2.0-0, libatomic1, libcairo2, libdbus-1-3, libexpat1, libgbm1, libglib2.0-0, libgtk-3-0, libnotify4, libnspr4, libnss3, libpango-1.0-0, libstdc++6, libudev1, libx11-6, libxcb1, libxcomposite1, libxdamage1, libxext6, libxfixes3, libxkbcommon0, libxrandr2
-Recommends: libunity9, libva2, libpipewire-0.3-0
-Filename: ./discord_1.0.161_amd64.deb
-Size: 2168622
-MD5sum: 6319b0e0187ad7e3a708390655ba1252
-SHA1: 1bd586391a286cf550393fb33e68eee53d56a3c7
-SHA256: 1a486a0cd0dc0e79b952b14dd5e361a8614dc28d1d371cd00ebf37a2ad0ce63d
-Section: net
-Priority: optional
-Homepage: https://discord.com
-Description: Chat for Communities and Friends
- Discord is the easiest way to communicate over voice, video, and text. Chat,
- hang out, and stay close with your friends and communities.
-
-Package: discord
 Version: 1.0.162
 Architecture: amd64
 Maintainer: Discord Maintainer Team <noreply@discord.com>
@@ -310,6 +291,25 @@ Size: 2249528
 MD5sum: deefb525ee4b49f5106536a7868bb1a9
 SHA1: b2b4cf1f87d8d8db3b407ecbd2de556fc97d7907
 SHA256: 03584ea109a6787acbb861489da450afd7617af50562d86598f23ea846f2032e
+Section: net
+Priority: optional
+Homepage: https://discord.com
+Description: Chat for Communities and Friends
+ Discord is the easiest way to communicate over voice, video, and text. Chat,
+ hang out, and stay close with your friends and communities.
+
+Package: discord
+Version: 1.0.164
+Architecture: amd64
+Maintainer: Discord Maintainer Team <noreply@discord.com>
+Installed-Size: 4428
+Depends: libc6, libasound2, libatk1.0-0, libatk-bridge2.0-0, libatspi2.0-0, libatomic1, libcairo2, libdbus-1-3, libexpat1, libgbm1, libglib2.0-0, libgtk-3-0, libnotify4, libnspr4, libnss3, libpango-1.0-0, libstdc++6, libudev1, libx11-6, libxcb1, libxcomposite1, libxdamage1, libxext6, libxfixes3, libxkbcommon0, libxrandr2
+Recommends: libunity9, libva2, libpipewire-0.3-0
+Filename: ./discord_1.0.164_amd64.deb
+Size: 2249524
+MD5sum: eda22ab77a1cbfc48466424510fb69bd
+SHA1: bb160a591f23bb1187fff78de83c5be0dc45dfa7
+SHA256: f611377ef291e914a8bb6ecace7959dec38c3c16f8875d975805042ff26f1cf2
 Section: net
 Priority: optional
 Homepage: https://discord.com
@@ -523,25 +523,6 @@ Homepage: https://github.com/junegunn/fzf
 Description: Command-line fuzzy finder
 
 Package: github-desktop
-Version: 3.6.7.0
-Architecture: amd64
-Maintainer: Pol Rivero <admin@desktop-plus.org>
-Installed-Size: 554052
-Depends: libgtk-3-0, libnotify4, libnss3, xdg-utils, libatspi2.0-0, libdrm2, libgbm1, libxcb-dri3-0, kde-cli-tools | kde-runtime | trash-cli | libglib2.0-bin | gvfs-bin, libcurl3 | libcurl4, libsecret-1-0, gnome-keyring
-Recommends: pulseaudio | libasound2
-Suggests: gir1.2-gnomekeyring-1.0, libgnome-keyring0, lsb-release
-Filename: ./github-desktop_3.6.7.0_amd64.deb
-Size: 2458
-MD5sum: b15ed3f2d4156f024f270f6fc9b91890
-SHA1: 2c994348f51c57cc2a4ff931d1cdcbfc401ec945
-SHA256: ba8b7b54c5a6c10b243c71c17bfc0933fd6ed751d3746eaf5de7da9bf13a7809
-Section: GNOME;GTK;Development
-Priority: extra
-Homepage: https://desktop-plus.org
-Description: GitHub Desktop fork with advanced functionality and improvements.
- GitHub Desktop fork with advanced functionality and improvements.
-
-Package: github-desktop
 Version: 3.6.7.1
 Architecture: amd64
 Maintainer: Pol Rivero <admin@desktop-plus.org>
@@ -573,6 +554,25 @@ Size: 2460
 MD5sum: f91cf73e5a65f31387ed12079f2cfc5f
 SHA1: da34d643fe1d767d60db7689bfe38cefcd3369bc
 SHA256: 5bafad2406e89122c952254bb62fdcc243ebfa7fa33b4f003ed12be9f7f66f45
+Section: GNOME;GTK;Development
+Priority: extra
+Homepage: https://desktop-plus.org
+Description: GitHub Desktop fork with advanced functionality and improvements.
+ GitHub Desktop fork with advanced functionality and improvements.
+
+Package: github-desktop
+Version: 3.6.8.0
+Architecture: amd64
+Maintainer: Pol Rivero <admin@desktop-plus.org>
+Installed-Size: 595638
+Depends: libgtk-3-0, libnotify4, libnss3, xdg-utils, libatspi2.0-0, libdrm2, libgbm1, libxcb-dri3-0, kde-cli-tools | kde-runtime | trash-cli | libglib2.0-bin | gvfs-bin, libcurl3 | libcurl4, libsecret-1-0, gnome-keyring
+Recommends: pulseaudio | libasound2
+Suggests: gir1.2-gnomekeyring-1.0, libgnome-keyring0, lsb-release
+Filename: ./github-desktop_3.6.8.0_amd64.deb
+Size: 2464
+MD5sum: ba4fd50b659d0300a89720be354d6a65
+SHA1: 06c317ec98351bf6bae05fbf38404bd00d80649b
+SHA256: 44988d713c3759d18e3c438e4e6d72e6cb74c1c97b341605a7f990943e21abf0
 Section: GNOME;GTK;Development
 Priority: extra
 Homepage: https://desktop-plus.org
