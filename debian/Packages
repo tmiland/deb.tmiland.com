@@ -1193,26 +1193,6 @@ Description: Debloat and tune Android TV devices via ADB.
  Shield Optimizer is a cross-platform tool for debloating and tuning Nvidia Shield TV, Onn 4K Pro, Chromecast with Google TV, and other Android TV devices. v2 is a Rust/Tauri rewrite of the original PowerShell script.
 
 Package: siyuan
-Version: 3.8.6~alpha.9
-Architecture: amd64
-Maintainer: Yunnan Liandi Technology Co., Ltd. <845765@qq.com>
-Installed-Size: 687891
-Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
-Recommends: libappindicator3-1
-Filename: ./siyuan_3.8.6_amd64.deb
-Size: 2250
-MD5sum: 3d1315e4b4c3c2d31a143fd6a4546875
-SHA1: 4d794a4f91a525cac6191d3610bb80dfe4946cdc
-SHA256: 448918f9ea97b11de1670f59254b92d0e98e32b54c7619111d417bd5a3eb0473
-Section: default
-Priority: optional
-Homepage: https://b3log.org/siyuan
-Description:
-  From thought to insight, with agents
-License: unknown
-Vendor: Yunnan Liandi Technology Co., Ltd. <845765@qq.com>
-
-Package: siyuan
 Version: 3.8.7~alpha.1
 Architecture: amd64
 Maintainer: Yunnan Liandi Technology Co., Ltd. <845765@qq.com>
@@ -1244,6 +1224,26 @@ Size: 2248
 MD5sum: 59963fa214cbf15fc0af4526f1808ce3
 SHA1: e0003eb560374ba4a3b8b45730050abd9d78bfe2
 SHA256: 6fa6367559af54527de2ce6e9ffa2247bdd231a91232ac145e272424fbab3ac2
+Section: default
+Priority: optional
+Homepage: https://b3log.org/siyuan
+Description:
+  From thought to insight, with agents
+License: unknown
+Vendor: Yunnan Liandi Technology Co., Ltd. <845765@qq.com>
+
+Package: siyuan
+Version: 3.8.9~alpha.1
+Architecture: amd64
+Maintainer: Yunnan Liandi Technology Co., Ltd. <845765@qq.com>
+Installed-Size: 754794
+Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
+Recommends: libappindicator3-1
+Filename: ./siyuan_3.8.9_amd64.deb
+Size: 2250
+MD5sum: 65ffa56feec1953af72fc95a27bb3465
+SHA1: d2de157e1a460e4929437e3a762bbdecc090fe37
+SHA256: 3b0ef70879d74deedf39d992a9dbf97b6c2de21f690f020390e56de5c01656d6
 Section: default
 Priority: optional
 Homepage: https://b3log.org/siyuan
