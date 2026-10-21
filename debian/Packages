@@ -1,14 +1,14 @@
 Package: AppFlowy
-Version: 0.14.7
+Version: 0.14.10
 Architecture: amd64
 Essential: no
 Maintainer: AppFlowy
 Depends: libatk1.0-0 (>= 2.7.91), libc6 (>= 2.35), libcairo-gobject2 (>= 1.10.0), libcairo2 (>= 1.14.0), libdbus-1-3 (>= 1.9.14), libdrm2 (>= 2.4.101), libegl1, libepoxy0 (>= 1.4.3), libffi8 (>= 3.4), libfontconfig1 (>= 2.13.0), libfreetype6 (>= 2.3.5), libfribidi0 (>= 1.0.0), libgbm1 (>= 8.1~0), libgcc-s1 (>= 4.3), libgcrypt20 (>= 1.9.0), libgdk-pixbuf-2.0-0 (>= 2.22.0), libgl1, libgles2, libglib2.0-0 (>= 2.39.90), libgpg-error0 (>= 1.14), libgstreamer-plugins-base1.0-0 (>= 1.0.0), libgstreamer1.0-0 (>= 1.6.0), libgtk-3-0 (>= 3.21.5), libharfbuzz0b (>= 1.2.6), libkeybinder-3.0-0 (>= 0.3.0), liblz4-1 (>= 0.0~r130), liblzma5 (>= 5.2.2), libnotify4, libpango-1.0-0 (>= 1.29.4), libpangocairo-1.0-0 (>= 1.14.0), libpng16-16 (>= 1.6.2-1), librsvg2-2 (>= 2.14.4), libstdc++6 (>= 12), libsystemd0, libvulkan1 (>= 1.2.131.2), libwayland-client0 (>= 1.20.0), libwayland-cursor0 (>= 1.0.2), libwayland-egl1 (>= 1.15.0), libx11-6 (>= 2:1.6.0), libxcb-shm0, libxcb1, libxcursor1 (>> 1.1.2), libxext6, libxfixes3 (>= 1:5.0), libxi6 (>= 2:1.5.99.2), libxinerama1 (>= 2:1.1.4), libxkbcommon0 (>= 0.5.0), libxrandr2 (>= 2:1.2.99.3), libzstd1 (>= 1.4.0), zlib1g (>= 1:1.2.3.3)
-Filename: ./appflowy_0.14.7_amd64.deb
-Size: 2142
-MD5sum: 657bb0aa1b26a39e10921853e97aad1c
-SHA1: b555a537fbc88325e9b3155c36d954ac3f442d43
-SHA256: 0769aef3bf898ce28525750f092451bfff844de5f750872ee971f25f099692d9
+Filename: ./appflowy_0.14.10_amd64.deb
+Size: 2136
+MD5sum: 4633a7e61aeefbc709aba37980ff5c1e
+SHA1: c48c68bacf125601b5fa507925163630485ad86a
+SHA256: 059a666763b71defd77c1ae14946604ee64b2e141edab478f041d97cd4d5bae5
 Priority: optional
 Description: An Open Source Alternative to Notion
 
@@ -813,26 +813,6 @@ Description: Logitech device configurator for Linux
  Supports KDE Plasma 6 and GNOME 42+ Wayland.
 
 Package: marktext
-Version: 0.21.1
-Architecture: amd64
-Maintainer: MarkText Contributors
-Installed-Size: 420574
-Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
-Recommends: libappindicator3-1
-Filename: ./marktext_0.21.1_amd64.deb
-Size: 2242
-MD5sum: d3ea13d22be2ab45efc6151ca9c3be17
-SHA1: c69cce8aae3f6c2be7dc9119e91b55668b847cb5
-SHA256: bbbc280fef6e96dea73a1be85fe3338ce5ab0f3509a2be8560251d9695be1b51
-Section: default
-Priority: optional
-Homepage: https://github.com/marktext/marktext
-Description:
-  A simple and elegant open-source markdown editor that focused on speed and usability.
-License: unknown
-Vendor: MarkText Contributors
-
-Package: marktext
 Version: 0.21.2
 Architecture: amd64
 Maintainer: MarkText Contributors
@@ -864,6 +844,26 @@ Size: 2240
 MD5sum: 6e1cace911ad5882b81cc68df6c7d493
 SHA1: 8da122dbad1c488964fb498cd4204cac64c3612a
 SHA256: 155ad4b91f037466b231ecee8ae95266a6d21612bd8022f3331fadba896f17a4
+Section: default
+Priority: optional
+Homepage: https://github.com/marktext/marktext
+Description:
+  A simple and elegant open-source markdown editor that focused on speed and usability.
+License: unknown
+Vendor: MarkText Contributors
+
+Package: marktext
+Version: 0.23.0
+Architecture: amd64
+Maintainer: MarkText Contributors
+Installed-Size: 450777
+Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0, libasound2t64 | libasound2, libgbm1
+Recommends: libappindicator3-1
+Filename: ./marktext_0.23.0_amd64.deb
+Size: 2270
+MD5sum: 39503c0e5a16cfe5b27b2a47f920da9f
+SHA1: a9d5ac641176093156a03969579f1b97e9cf6a56
+SHA256: 559d05caae9a2f0ea02344b2e767a823bc1344fb9d66219cbce2383bc6e376f2
 Section: default
 Priority: optional
 Homepage: https://github.com/marktext/marktext
