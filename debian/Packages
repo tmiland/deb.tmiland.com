@@ -201,26 +201,6 @@ License: GPL-3.0
 Vendor: Bitwarden Inc. <hello@bitwarden.com>
 
 Package: bruno
-Version: 4.1.0
-Architecture: amd64
-Maintainer: Anoop M D <anoop.md1421@gmail.com>
-Installed-Size: 540581
-Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0, libasound2
-Recommends: libappindicator3-1
-Filename: ./bruno_4.1.0_amd64.deb
-Size: 1616
-MD5sum: 08dfa5443d201f70defd4309cda1ed56
-SHA1: 59b1c662573550d3d5b6d8e6b567205e192e7edb
-SHA256: 8d15c667aaf31260dd54fb82d15e9a082365c35fb2b27420c371074ded65e996
-Section: default
-Priority: optional
-Homepage: https://www.usebruno.com
-Description:
-  Opensource API Client for Exploring and Testing APIs
-License: unknown
-Vendor: Anoop M D <anoop.md1421@gmail.com>
-
-Package: bruno
 Version: 4.2.0
 Architecture: amd64
 Maintainer: Anoop M D <anoop.md1421@gmail.com>
@@ -252,6 +232,26 @@ Size: 1846
 MD5sum: 1d610f22b3d1e0410a3408fecf2932c8
 SHA1: 32a8c4d7fbc64e11001296890919f882e0fe623b
 SHA256: 92ee45a791ffb5d5aebf2fe2f65cf58d3a447ef70ad5e4a0bdc95c4844674c1d
+Section: default
+Priority: optional
+Homepage: https://www.usebruno.com
+Description:
+  Opensource API Client for Exploring and Testing APIs
+License: unknown
+Vendor: Anoop M D <anoop.md1421@gmail.com>
+
+Package: bruno
+Version: 4.3.0
+Architecture: amd64
+Maintainer: Anoop M D <anoop.md1421@gmail.com>
+Installed-Size: 540805
+Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0, libasound2
+Recommends: libappindicator3-1
+Filename: ./bruno_4.3.0_amd64.deb
+Size: 1846
+MD5sum: e75f0706633deb2fba52acdf08a0cc11
+SHA1: 60b17dd2b986d147c54c9970b3090c788d0b1a90
+SHA256: 0c8a8d7182d2b29f80a79f2e3fef108526f3a16a766eb547446d5afcda838b7f
 Section: default
 Priority: optional
 Homepage: https://www.usebruno.com
@@ -927,25 +927,6 @@ Homepage: https://nextcloud.com/desktop/
 Description: Nextcloud desktop synchronization client
 
 Package: opencode
-Version: 1.19.1
-Architecture: amd64
-Maintainer: OpenCode <hello@opencode.ai>
-Installed-Size: 457190
-Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
-Recommends: libappindicator3-1
-Filename: ./opencode_1.19.1_amd64.deb
-Size: 2212
-MD5sum: 2e4acb6ead8c22e5d9ac8bb7890b278d
-SHA1: 47ad07da23072c8074e6be2a7068faab1da3a4c7
-SHA256: 3f4a1156f0579692f838acafb79449081db19f23632a0586a34ea0a747d9bcb9
-Section: default
-Priority: optional
-Homepage: https://opencode.ai
-Description: The open source coding agent.
-License: MIT
-Vendor: OpenCode <hello@opencode.ai>
-
-Package: opencode
 Version: 1.19.2
 Architecture: amd64
 Maintainer: OpenCode <hello@opencode.ai>
@@ -976,6 +957,25 @@ Size: 2214
 MD5sum: d08d797e5933025ecdd9cb3ee8105c7f
 SHA1: 820ea6db60e9fa8ef6171d7095cf1a1ef2203b04
 SHA256: 5c59230f9be8105ba92b2ff5a637c46dc6f433d14adaebc442da7d10d3ae438e
+Section: default
+Priority: optional
+Homepage: https://opencode.ai
+Description: The open source coding agent.
+License: MIT
+Vendor: OpenCode <hello@opencode.ai>
+
+Package: opencode
+Version: 1.19.4
+Architecture: amd64
+Maintainer: OpenCode <hello@opencode.ai>
+Installed-Size: 461825
+Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
+Recommends: libappindicator3-1
+Filename: ./opencode_1.19.4_amd64.deb
+Size: 2214
+MD5sum: f68a4b7030f3eaa2c00fde82312a8028
+SHA1: 0aa7a98ce352ab3177ab200fa8194ad26776acb7
+SHA256: 61b9629bb3f3a0a60fcee593b90514dfe013d8528c7b437a01ab465bfb0a9801
 Section: default
 Priority: optional
 Homepage: https://opencode.ai
