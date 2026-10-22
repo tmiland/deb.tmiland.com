@@ -58,28 +58,6 @@ Description: ImHex Hex Editor
 License: GNU GPL-2
 
 Package: balena-etcher
-Version: 2.1.6
-Architecture: amd64
-Maintainer: Balena Ltd. <hello@balena.io>
-Installed-Size: 419899
-Depends: libgtk-3-0, libnotify4, libnss3, libxtst6, xdg-utils, libatspi2.0-0, libdrm2, libgbm1, libxcb-dri3-0, kde-cli-tools | kde-runtime | trash-cli | libglib2.0-bin | gvfs-bin, libasound2, libatk1.0-0, libc6, libcairo2, libcups2, libdbus-1-3, libexpat1, libfontconfig1, libfreetype6, libgcc1, libgdk-pixbuf2.0-0 | libgdk-pixbuf-2.0-0, libglib2.0-0, liblzma5, libnspr4, libpango1.0-0 | libpango-1.0-0, libstdc++6, libx11-6, libxcomposite1, libxcursor1, libxdamage1, libxext6, libxfixes3, libxi6, libxrandr2, libxrender1, libxss1, polkit-1-auth-agent | policykit-1-gnome | polkit-kde-1
-Recommends: pulseaudio | libasound2
-Suggests: gir1.2-gnomekeyring-1.0, libgnome-keyring0, lsb-release
-Filename: ./balena-etcher_2.1.6_amd64.deb
-Size: 1908
-MD5sum: 1beb85d150a673efefc7b9d53d62b843
-SHA1: 3cc3961abac4f2ffa636601779f3edd0fa7a0674
-SHA256: 9b41efaf253185f0e34d571398e0b8da52e1e5f28bb716f264110ce46b185f26
-Section: utils
-Priority: optional
-Homepage: https://github.com/balena-io/etcher
-Description: Flash OS images to SD cards and USB drives, safely and easily.
- Etcher is a powerful OS image flasher built with web technologies to ensure
- flashing an SDCard or USB drive is a pleasant and safe experience. It protects
- you from accidentally writing to your hard-drives, ensures every byte of data
- was written correctly and much more.
-
-Package: balena-etcher
 Version: 2.1.7
 Architecture: amd64
 Maintainer: Balena Ltd. <hello@balena.io>
@@ -114,6 +92,28 @@ Size: 2130
 MD5sum: 47e0b24b9f35c70a2ceb8972a77e6b27
 SHA1: 34ca78d851a115d2843c87da94f0575c8ee70ac2
 SHA256: b741091df7a529c68e3fd90f39a58177cf10e7337682238cba47b79f722ae1cb
+Section: utils
+Priority: optional
+Homepage: https://github.com/balena-io/etcher
+Description: Flash OS images to SD cards and USB drives, safely and easily.
+ Etcher is a powerful OS image flasher built with web technologies to ensure
+ flashing an SDCard or USB drive is a pleasant and safe experience. It protects
+ you from accidentally writing to your hard-drives, ensures every byte of data
+ was written correctly and much more.
+
+Package: balena-etcher
+Version: 2.1.9
+Architecture: amd64
+Maintainer: Balena Ltd. <hello@balena.io>
+Installed-Size: 538668
+Depends: libgtk-3-0, libnotify4, libnss3, libxtst6, xdg-utils, libatspi2.0-0, libdrm2, libgbm1, libxcb-dri3-0, kde-cli-tools | kde-runtime | trash-cli | libglib2.0-bin | gvfs-bin, libasound2, libatk1.0-0, libc6, libcairo2, libcups2, libdbus-1-3, libexpat1, libfontconfig1, libfreetype6, libgcc1, libgdk-pixbuf2.0-0 | libgdk-pixbuf-2.0-0, libglib2.0-0, liblzma5, libnspr4, libpango1.0-0 | libpango-1.0-0, libstdc++6, libx11-6, libxcomposite1, libxcursor1, libxdamage1, libxext6, libxfixes3, libxi6, libxrandr2, libxrender1, libxss1, polkit-1-auth-agent | policykit-1-gnome | polkit-kde-1
+Recommends: pulseaudio | libasound2
+Suggests: gir1.2-gnomekeyring-1.0, libgnome-keyring0, lsb-release
+Filename: ./balena-etcher_2.1.9_amd64.deb
+Size: 2130
+MD5sum: aef0abf19b9c1aaf4a701c710cbada71
+SHA1: f137ba188e09d5bc5957dc8d9312f0c4262752e8
+SHA256: 7adcce46b941fed8acebae99be1012f0d8ed86e9b62449a093a401c126e58a61
 Section: utils
 Priority: optional
 Homepage: https://github.com/balena-io/etcher
@@ -161,17 +161,17 @@ License: GPL-3.0
 Vendor: Bitwarden Inc. <hello@bitwarden.com>
 
 Package: bitwarden
-Version: 2026.9.0
+Version: 2026.10.1
 Architecture: amd64
 Maintainer: Bitwarden Inc. <hello@bitwarden.com>
-Installed-Size: 411063
+Installed-Size: 416480
 Depends: libnotify4, libxtst6, libnss3, libxss1
 Recommends: libappindicator3-1
-Filename: ./bitwarden_2026.9.0_amd64.deb
-Size: 1868
-MD5sum: dab84107f69d6fca6ea2bde3304ee074
-SHA1: b20b33215bc5fc2d0bf4dc2e5844049ec173dc82
-SHA256: 53f40ef055936096adff072e60739216fb806170bf92901208328237c8cae052
+Filename: ./bitwarden_2026.10.1_amd64.deb
+Size: 1872
+MD5sum: 933a1c3d6cafec48db3bdfa5570f7b80
+SHA1: b7cdda116a6dcee45fef43e5bcd126a4e3404750
+SHA256: 5733cbcbcb4ec09b7efb846581bb5b09c5e1646056ea1803d3091e3db975621b
 Section: default
 Priority: optional
 Homepage: https://bitwarden.com
