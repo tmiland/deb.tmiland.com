@@ -763,15 +763,15 @@ Version: 0.10.1-0
 Architecture: amd64
 Essential: no
 Maintainer: ilya-zlobintsev
-Installed-Size: 11756
-Depends: libgtk-4-1, libadwaita-1-0, clinfo, vulkan-tools, libdisplay-info2, libdrm-amdgpu1, libdrm2, hwdata
+Installed-Size: 11548
+Depends: libdrm2, hwdata, libadwaita-1-0, vulkan-tools, libgtk-4-1, clinfo, libdisplay-info2, libdrm-amdgpu1
 Conflicts: lact-headless
 Provides: lact
 Filename: ./lact_0.10.1_amd64.deb
-Size: 3845324
-MD5sum: ed181c2afd640fe593fb601b7d7ef61c
-SHA1: 2bb967ff18858bf09b022cb8a7f7d057760fa5ed
-SHA256: 302a31c019c8f385377f996987960fe1006ad9d35d6a94627e39316ce42fad28
+Size: 3784048
+MD5sum: 813134affb8e881baf2e782f018dd507
+SHA1: 1bb8093a0a776129c66e31b09c4656be2d2c823a
+SHA256: 44f25c6e95ad6d0fb869b36ae10c593bb22b7d021cd3f1f282cc677ed883248d
 Homepage: https://github.com/ilya-zlobintsev/lact
 Description: GPU control utility
 
