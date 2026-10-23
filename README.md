@@ -105,6 +105,9 @@ To add an app: drop a new `.pkg` in `packages/` and commit — the
 [update workflow](.github/workflows/update-repo.yml) picks it up on the next run
 (hourly, or manually via *Actions → Update apt repo → Run workflow*).
 
+When picking an asset, stable releases are preferred: an asset from a prerelease
+(nightly, test build) is only used when no stable release provides a match.
+
 The workflow checks every package, downloads new versions, regenerates and signs the
 repo metadata, smoke-tests it with apt, and pushes to `master` (served via GitHub
 Pages). Use `--force <name>` or `--force all` to rebuild a package (or every package)

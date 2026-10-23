@@ -22,6 +22,9 @@
 #   name = "pkg"                apt package name (defaults to file name)
 #   keep_versions = 2           optional: prune old debs, keep newest N
 #
+# Release selection: stable releases are preferred; a prerelease asset
+# (nightly/test build) is only used when no stable release matches.
+#
 # Environment:
 #   GH_TOKEN   optional GitHub token (CI uses the built-in GITHUB_TOKEN)
 
@@ -171,9 +174,12 @@ process_package() { # process_package <toml-file>
     dl_url=$dl_url_orig
   else
     json=$(gh_curl "https://api.github.com/repos/$repo/releases")
-    # grab the first matching asset together with its release tag
+    # grab the first matching asset together with its release tag;
+    # stable releases are preferred — a prerelease (nightly/test build) is
+    # only used when no stable release provides a matching asset
     line=$(jq -r --arg re "$asset_re" \
-      '.[] | .tag_name as $t | .assets[]? | select(.name | test($re)) | "\(.browser_download_url) \($t)"' \
+      '([.[] | select(.prerelease | not)] + [.[] | select(.prerelease)])[]
+       | .tag_name as $t | .assets[]? | select(.name | test($re)) | "\(.browser_download_url) \($t)"' \
       <<<"$json" | head -n 1 || true)
     url=${line%% *}
     rel_tag=${line#"$url"}; rel_tag=${rel_tag# }
