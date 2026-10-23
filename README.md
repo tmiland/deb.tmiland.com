@@ -56,6 +56,7 @@ The software below can be installed, updated and removed using this repository:
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/vercel/hyper) | `hyper` | <i>A terminal built on web technologies</i> |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/WerWolv/ImHex) | `ImHex` | <i>ImHex Hex Editor</i> |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/laurent22/joplin) | `joplin` | <i>Joplin for Desktop</i> |
+| [<img src="./img/github.png" align="top" width="20" />](https://github.com/ilya-zlobintsev/LACT) | `lact` | <i>Linux GPU Configuration And Monitoring Tool (Debian 13 build)</i> |
 | [<img src="./img/direct.png" align="top" width="20" />](http://search.cpan.org/dist/Term-Spinner-Color/) | `libterm-spinner-color-perl` | <i>A terminal spinner/progress bar with Unicode, color, and no non-core dependencies.</i> |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/mmaher88/logitune) | `logitune` | <i>Logitech device configurator for Linux</i> |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/marktext/marktext) | `marktext` | <i>A simple and elegant open-source markdown editor that focused on speed and usability.</i> |

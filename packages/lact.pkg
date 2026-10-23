@@ -1,0 +1,4 @@
+repo = 'ilya-zlobintsev/LACT'
+asset = 'lact-[0-9.]+-[0-9]+\.amd64\.debian-13\.deb$'
+keep_versions = 3
+summary = 'Linux GPU Configuration And Monitoring Tool'
