@@ -758,6 +758,23 @@ Description:
 License: AGPL-3.0-or-later
 Vendor: Joplin Team <no-reply@joplinapp.org>
 
+Package: lact
+Version: 0.10.1-0
+Architecture: amd64
+Essential: no
+Maintainer: ilya-zlobintsev
+Installed-Size: 11756
+Depends: libgtk-4-1, libadwaita-1-0, clinfo, vulkan-tools, libdisplay-info2, libdrm-amdgpu1, libdrm2, hwdata
+Conflicts: lact-headless
+Provides: lact
+Filename: ./lact_0.10.1_amd64.deb
+Size: 3845324
+MD5sum: ed181c2afd640fe593fb601b7d7ef61c
+SHA1: 2bb967ff18858bf09b022cb8a7f7d057760fa5ed
+SHA256: 302a31c019c8f385377f996987960fe1006ad9d35d6a94627e39316ce42fad28
+Homepage: https://github.com/ilya-zlobintsev/lact
+Description: GPU control utility
+
 Package: libterm-spinner-color-perl
 Version: 0.05-1
 Architecture: all
