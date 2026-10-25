@@ -62,7 +62,7 @@ The software below can be installed, updated and removed using this repository:
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/harry0703/MangoDisk) | `mango-disk` | <i>MangoDisk cross-platform disk space manager</i> |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/marktext/marktext) | `marktext` | <i>A simple and elegant open-source markdown editor that focused on speed and usability.</i> |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/tmiland/nextcloud-desktop-deb) | `nextcloud-desktop` | <i>Nextcloud desktop synchronization client (repackaged from upstream [nextcloud/desktop](https://github.com/nextcloud/desktop) AppImage)</i> |
-| [<img src="./img/github.png" align="top" width="20" />](https://github.com/anomalyco/opencode) | `opencode` | <i>The open source coding agent.</i> |
+| [<img src="./img/direct.png" align="top" width="20" />](https://opencode.ai) | `opencode` | <i>The open source coding agent.</i> |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/jgm/pandoc) | `pandoc` | <i>general markup converter</i> |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/ProtonMail/proton-bridge) | `protonmail-bridge` | <i>Proton Mail Bridge is a desktop application that runs in the background, encrypting and decrypting messages as they enter and leave your computer.</i> |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/rustdesk/rustdesk) | `rustdesk` | <i>A remote control software.</i> |

@@ -1,4 +1,7 @@
-repo = 'anomalyco/opencode'
-asset = 'opencode-desktop-linux-amd64\.deb$'
+# OpenCode Desktop is on its own 2.x release line, published via opencode.ai;
+# the GitHub releases (anomalyco/opencode) still carry the older CLI-versioned
+# desktop build, so track the official stable download instead.
+source = 'url'
+url = 'https://opencode.ai/download/stable/linux-x64-deb'
 keep_versions = 3
 summary = 'The open source coding agent.'
