@@ -523,25 +523,6 @@ Homepage: https://github.com/junegunn/fzf
 Description: Command-line fuzzy finder
 
 Package: github-desktop
-Version: 3.6.7.1
-Architecture: amd64
-Maintainer: Pol Rivero <admin@desktop-plus.org>
-Installed-Size: 554052
-Depends: libgtk-3-0, libnotify4, libnss3, xdg-utils, libatspi2.0-0, libdrm2, libgbm1, libxcb-dri3-0, kde-cli-tools | kde-runtime | trash-cli | libglib2.0-bin | gvfs-bin, libcurl3 | libcurl4, libsecret-1-0, gnome-keyring
-Recommends: pulseaudio | libasound2
-Suggests: gir1.2-gnomekeyring-1.0, libgnome-keyring0, lsb-release
-Filename: ./github-desktop_3.6.7.1_amd64.deb
-Size: 2460
-MD5sum: 9892ff2acd39c4a49261ce8b5ae265a7
-SHA1: 9bdbf65f1026b4c199ded8a747b654cde4bbee1a
-SHA256: 4d4eeeb3dbdf334dfe4aebd3a9d34b53771f3e31b168798f51365cb3ca5e9c48
-Section: GNOME;GTK;Development
-Priority: extra
-Homepage: https://desktop-plus.org
-Description: GitHub Desktop fork with advanced functionality and improvements.
- GitHub Desktop fork with advanced functionality and improvements.
-
-Package: github-desktop
 Version: 3.6.7.2
 Architecture: amd64
 Maintainer: Pol Rivero <admin@desktop-plus.org>
@@ -573,6 +554,25 @@ Size: 2464
 MD5sum: ba4fd50b659d0300a89720be354d6a65
 SHA1: 06c317ec98351bf6bae05fbf38404bd00d80649b
 SHA256: 44988d713c3759d18e3c438e4e6d72e6cb74c1c97b341605a7f990943e21abf0
+Section: GNOME;GTK;Development
+Priority: extra
+Homepage: https://desktop-plus.org
+Description: GitHub Desktop fork with advanced functionality and improvements.
+ GitHub Desktop fork with advanced functionality and improvements.
+
+Package: github-desktop
+Version: 3.6.8.1
+Architecture: amd64
+Maintainer: Pol Rivero <admin@desktop-plus.org>
+Installed-Size: 614127
+Depends: libgtk-3-0, libnotify4, libnss3, xdg-utils, libatspi2.0-0, libdrm2, libgbm1, libxcb-dri3-0, kde-cli-tools | kde-runtime | trash-cli | libglib2.0-bin | gvfs-bin, libcurl3 | libcurl4, libsecret-1-0, gnome-keyring
+Recommends: pulseaudio | libasound2
+Suggests: gir1.2-gnomekeyring-1.0, libgnome-keyring0, lsb-release
+Filename: ./github-desktop_3.6.8.1_amd64.deb
+Size: 2460
+MD5sum: 842b366814dec80e1549d2823b9cae51
+SHA1: fea433fe97ad40c602fb7b8b9891ebb4d5ce2099
+SHA256: 486ebaeed3e781001cd9f6144bb5ebf3af6a22a6776ea5311580d0548a0a55c5
 Section: GNOME;GTK;Development
 Priority: extra
 Homepage: https://desktop-plus.org
