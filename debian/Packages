@@ -829,6 +829,22 @@ Description: Logitech device configurator for Linux
  scroll configuration, and thumb wheel modes.
  Supports KDE Plasma 6 and GNOME 42+ Wayland.
 
+Package: mango-disk
+Version: 1.2.0
+Architecture: amd64
+Maintainer: harry0703
+Installed-Size: 49630
+Depends: libayatana-appindicator3-1, libwebkit2gtk-4.1-0, libgtk-3-0
+Filename: ./mango-disk_1.2.0_amd64.deb
+Size: 16051066
+MD5sum: 54c95ad51589e28df08448aee2ff5125
+SHA1: 551868bc2d61a9636c61cd9420e654ea718560c7
+SHA256: bf3a1f13a65e7da2a6ef34428e68fd90d0ed3a82f9aaffef23920bbd00066028
+Priority: optional
+Homepage: https://mangodisk.app
+Description: MangoDisk cross-platform disk space manager
+ (none)
+
 Package: marktext
 Version: 0.21.2
 Architecture: amd64
