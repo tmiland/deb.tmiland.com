@@ -845,6 +845,22 @@ Homepage: https://mangodisk.app
 Description: MangoDisk cross-platform disk space manager
  (none)
 
+Package: mango-disk
+Version: 1.2.1
+Architecture: amd64
+Maintainer: harry0703
+Installed-Size: 51988
+Depends: libayatana-appindicator3-1, libwebkit2gtk-4.1-0, libgtk-3-0
+Filename: ./mango-disk_1.2.1_amd64.deb
+Size: 16865342
+MD5sum: 85ec3aa45d9d876c911cfbf0dec7dbb6
+SHA1: e42cb9864803da265d5b1788df18e472e1dbfb76
+SHA256: 1ba909180d4b252747e5a6353423132f481785b05fc17b4234d957d6137c34fe
+Priority: optional
+Homepage: https://mangodisk.app
+Description: MangoDisk cross-platform disk space manager
+ (none)
+
 Package: marktext
 Version: 0.21.2
 Architecture: amd64
@@ -960,25 +976,6 @@ Homepage: https://nextcloud.com/desktop/
 Description: Nextcloud desktop synchronization client
 
 Package: opencode
-Version: 1.19.3
-Architecture: amd64
-Maintainer: OpenCode <hello@opencode.ai>
-Installed-Size: 457214
-Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
-Recommends: libappindicator3-1
-Filename: ./opencode_1.19.3_amd64.deb
-Size: 2214
-MD5sum: d08d797e5933025ecdd9cb3ee8105c7f
-SHA1: 820ea6db60e9fa8ef6171d7095cf1a1ef2203b04
-SHA256: 5c59230f9be8105ba92b2ff5a637c46dc6f433d14adaebc442da7d10d3ae438e
-Section: default
-Priority: optional
-Homepage: https://opencode.ai
-Description: The open source coding agent.
-License: MIT
-Vendor: OpenCode <hello@opencode.ai>
-
-Package: opencode
 Version: 1.19.4
 Architecture: amd64
 Maintainer: OpenCode <hello@opencode.ai>
@@ -1009,6 +1006,25 @@ Size: 2372
 MD5sum: 68375147bc24142251d005aa8c54a487
 SHA1: e772bd0ec6a9f1b08c20d56e215d63b96b00c19d
 SHA256: 9a3f83a7143d0455457bf72524e4b46c3cfcd920fef7b56f86c37122d61b242c
+Section: default
+Priority: optional
+Homepage: https://opencode.ai
+Description: The open source coding agent.
+License: MIT
+Vendor: OpenCode <hello@opencode.ai>
+
+Package: opencode
+Version: 2.2.0
+Architecture: amd64
+Maintainer: OpenCode <hello@opencode.ai>
+Installed-Size: 757902
+Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
+Recommends: libappindicator3-1
+Filename: ./opencode_2.2.0_amd64.deb
+Size: 2218
+MD5sum: de8b1a7725a04a9ffe52eb4b93a10a9e
+SHA1: 7927f49a694378d1da299233bc6ef80b29e05b40
+SHA256: 9783f654683eb34d68722f766961ba380485999047333e511a4a7e8a08bdc32e
 Section: default
 Priority: optional
 Homepage: https://opencode.ai
