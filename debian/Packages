@@ -580,25 +580,6 @@ Description: GitHub Desktop fork with advanced functionality and improvements.
  GitHub Desktop fork with advanced functionality and improvements.
 
 Package: goose
-Version: 1.54.0
-Architecture: amd64
-Maintainer: AAIF (Agentic AI Foundation)
-Installed-Size: 631034
-Depends: libgtk-3-0, libnotify4, libnss3, xdg-utils, libatspi2.0-0, libdrm2, libgbm1, libxcb-dri3-0, kde-cli-tools | kde-runtime | trash-cli | libglib2.0-bin | gvfs-bin
-Recommends: pulseaudio | libasound2
-Suggests: gir1.2-gnomekeyring-1.0, libgnome-keyring0, lsb-release
-Filename: ./goose_1.54.0_amd64.deb
-Size: 1766
-MD5sum: 5aa690398f540f12c8f2e5519034ae55
-SHA1: 181ea3925b8e2d0464b8c5ed9b2f1dbec36143c5
-SHA256: 5b5cc9e55acaf6bc07b67a2121a332ab4378415f25df01a694d1ec74b1a0f0f7
-Section: utils
-Priority: optional
-Homepage: https://goose-docs.ai/
-Description: Goose App
- Goose App
-
-Package: goose
 Version: 1.55.0
 Architecture: amd64
 Maintainer: AAIF (Agentic AI Foundation)
@@ -630,6 +611,25 @@ Size: 1764
 MD5sum: b2de96c1cf7676c54d42a69396f60476
 SHA1: 8afbb419e8cf56e36555c3300a8b6420f58983b7
 SHA256: 4ca0bf74dcb051248dca9fdd8185ec01938a9c4d9d5c4b31339cd609ac58e111
+Section: utils
+Priority: optional
+Homepage: https://goose-docs.ai/
+Description: Goose App
+ Goose App
+
+Package: goose
+Version: 1.57.0
+Architecture: amd64
+Maintainer: AAIF (Agentic AI Foundation)
+Installed-Size: 533843
+Depends: libgtk-3-0, libnotify4, libnss3, xdg-utils, libatspi2.0-0, libdrm2, libgbm1, libxcb-dri3-0, kde-cli-tools | kde-runtime | trash-cli | libglib2.0-bin | gvfs-bin
+Recommends: pulseaudio | libasound2
+Suggests: gir1.2-gnomekeyring-1.0, libgnome-keyring0, lsb-release
+Filename: ./goose_1.57.0_amd64.deb
+Size: 1764
+MD5sum: ce764ced50f4bb725f9e54556bc80dfb
+SHA1: 711b95da7c27fc3fc896148a4c562c48138ae133
+SHA256: da77b705665871fbefc5f775d31e0e4f2e2b2d6192cd6ca0fc2cedd400130a91
 Section: utils
 Priority: optional
 Homepage: https://goose-docs.ai/
@@ -699,26 +699,6 @@ License: MIT
 Vendor: ZEIT, Inc. <team@zeit.co>
 
 Package: joplin
-Version: 3.7.16
-Architecture: amd64
-Maintainer: Joplin Team <no-reply@joplinapp.org>
-Installed-Size: 625484
-Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
-Recommends: libappindicator3-1
-Filename: ./joplin_3.7.16_amd64.deb
-Size: 1988
-MD5sum: ad5bbc661c81136286bf2e406b2dbb0c
-SHA1: 5025c8e7a420c2ad1925e97a6f82515ecb88906a
-SHA256: 150c0fb7602833dc09d7b22ec18ed0685334fa3edbe7c03bcb59f6c24058f0ca
-Section: default
-Priority: optional
-Homepage: https://github.com/laurent22/joplin#readme
-Description:
-  Joplin for Desktop
-License: AGPL-3.0-or-later
-Vendor: Joplin Team <no-reply@joplinapp.org>
-
-Package: joplin
 Version: 3.7.18
 Architecture: amd64
 Maintainer: Joplin Team <no-reply@joplinapp.org>
@@ -750,6 +730,26 @@ Size: 2234
 MD5sum: d24c0d7ccf730b8886204043e4d02a39
 SHA1: 947ebeb3ddd8fc830285082cb35613d2c8711cae
 SHA256: 81148837cdb7e82ca3443958ef2bf1be991b66fec467439b5565badedbad42e3
+Section: default
+Priority: optional
+Homepage: https://github.com/laurent22/joplin#readme
+Description:
+  Joplin for Desktop
+License: AGPL-3.0-or-later
+Vendor: Joplin Team <no-reply@joplinapp.org>
+
+Package: joplin
+Version: 3.7.22
+Architecture: amd64
+Maintainer: Joplin Team <no-reply@joplinapp.org>
+Installed-Size: 636425
+Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
+Recommends: libappindicator3-1
+Filename: ./joplin_3.7.22_amd64.deb
+Size: 2234
+MD5sum: 3a94ef5f9a82f96eef5210087d5f485d
+SHA1: 04f0e2ca1fdd5037d610f3c0da7b83b236f9ab41
+SHA256: cd140f60b0756c6a5cb51bfa27b73f410688d2d701de9a6999f6502471a28e46
 Section: default
 Priority: optional
 Homepage: https://github.com/laurent22/joplin#readme
@@ -1324,7 +1324,7 @@ Architecture: all
 Maintainer: Johannes Pohl <snapweb@badaix.de>
 Installed-Size: 1209
 Depends: debconf (>= 0.5) | debconf-2.0
-Filename: ./snapweb_0.9.3-1_all.deb
+Filename: ./snapweb_0.9.3_all.deb
 Size: 488024
 MD5sum: 36c288229346c71973aeda6ce82b4aed
 SHA1: 95cd2e5ea77274eb9fca8ed4c3d73c882c6120c5
@@ -1341,7 +1341,7 @@ Architecture: all
 Maintainer: Johannes Pohl <snapweb@badaix.de>
 Installed-Size: 1209
 Depends: debconf (>= 0.5) | debconf-2.0
-Filename: ./snapweb_0.9.3_all.deb
+Filename: ./snapweb_0.9.3-1_all.deb
 Size: 488024
 MD5sum: 36c288229346c71973aeda6ce82b4aed
 SHA1: 95cd2e5ea77274eb9fca8ed4c3d73c882c6120c5
@@ -1566,7 +1566,7 @@ Package: teamspeak3-client
 Version: 3.6.2
 Architecture: amd64
 Maintainer: Tommy Miland (tmiland) <kontakt@tmiland.com>
-Filename: ./teamspeak3-client_amd64-3.6.2.deb
+Filename: ./teamspeak3-client_3.6.2_amd64.deb
 Size: 1388
 MD5sum: 6e073efd2f65017122f10bdd81529b00
 SHA1: c157ed36b11276a554d0abae8b1d69110cba1c31
@@ -1590,7 +1590,7 @@ Package: teamspeak3-client
 Version: 3.6.2
 Architecture: amd64
 Maintainer: Tommy Miland (tmiland) <kontakt@tmiland.com>
-Filename: ./teamspeak3-client_3.6.2_amd64.deb
+Filename: ./teamspeak3-client_amd64-3.6.2.deb
 Size: 1388
 MD5sum: 6e073efd2f65017122f10bdd81529b00
 SHA1: c157ed36b11276a554d0abae8b1d69110cba1c31
