@@ -976,25 +976,6 @@ Homepage: https://nextcloud.com/desktop/
 Description: Nextcloud desktop synchronization client
 
 Package: opencode
-Version: 2.1.4
-Architecture: amd64
-Maintainer: OpenCode <hello@opencode.ai>
-Installed-Size: 698250
-Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
-Recommends: libappindicator3-1
-Filename: ./opencode_2.1.4_amd64.deb
-Size: 2372
-MD5sum: 68375147bc24142251d005aa8c54a487
-SHA1: e772bd0ec6a9f1b08c20d56e215d63b96b00c19d
-SHA256: 9a3f83a7143d0455457bf72524e4b46c3cfcd920fef7b56f86c37122d61b242c
-Section: default
-Priority: optional
-Homepage: https://opencode.ai
-Description: The open source coding agent.
-License: MIT
-Vendor: OpenCode <hello@opencode.ai>
-
-Package: opencode
 Version: 2.2.0
 Architecture: amd64
 Maintainer: OpenCode <hello@opencode.ai>
@@ -1025,6 +1006,25 @@ Size: 2216
 MD5sum: 6a70ba7d8373f21550b12bb1b26f2370
 SHA1: 660b7819b9b462e6cc36764e798c40e29ea05326
 SHA256: 52af16d69c51a5906803c88cb25523091c2bb7b21595c66e0f67d826afd98def
+Section: default
+Priority: optional
+Homepage: https://opencode.ai
+Description: The open source coding agent.
+License: MIT
+Vendor: OpenCode <hello@opencode.ai>
+
+Package: opencode
+Version: 2.2.2
+Architecture: amd64
+Maintainer: OpenCode <hello@opencode.ai>
+Installed-Size: 761298
+Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
+Recommends: libappindicator3-1
+Filename: ./opencode_2.2.2_amd64.deb
+Size: 2210
+MD5sum: 6964387ff8839d46d16a097ece287d0e
+SHA1: a69f80be22201ce27b65792eec092b425df6cd78
+SHA256: e1faa437225a7d89e5ca2446aade5c87c228e0d98be4250e8a4560569da92f5a
 Section: default
 Priority: optional
 Homepage: https://opencode.ai
