@@ -181,17 +181,17 @@ License: GPL-3.0
 Vendor: Bitwarden Inc. <hello@bitwarden.com>
 
 Package: bitwarden
-Version: 2026.9.1
+Version: 2026.10.2
 Architecture: amd64
 Maintainer: Bitwarden Inc. <hello@bitwarden.com>
-Installed-Size: 411620
+Installed-Size: 668560
 Depends: libnotify4, libxtst6, libnss3, libxss1
 Recommends: libappindicator3-1
-Filename: ./bitwarden_2026.9.1_amd64.deb
-Size: 1870
-MD5sum: 470d3b1695599f64e39d783497c631da
-SHA1: e6b8e6fdf9f246f84cc95a9277f38deabb289020
-SHA256: 944b9d9cd14b0207d2ab8ed683c8474fde92e4c0f1e6c1860ac64e63a4a3dd5d
+Filename: ./bitwarden_2026.10.2_amd64.deb
+Size: 1868
+MD5sum: b72a72d53e6fa6816a6e7a2a232665fd
+SHA1: 01f2982311301fa4e394b303ccdb645510ae67f5
+SHA256: 580b9e2ec51c1682dedab7de3654acd1312275f5dd1cb2b604487c90e0dab9b2
 Section: default
 Priority: optional
 Homepage: https://bitwarden.com
