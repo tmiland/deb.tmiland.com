@@ -922,24 +922,6 @@ License: unknown
 Vendor: MarkText Contributors
 
 Package: nextcloud-desktop
-Version: 34.0.4
-Architecture: amd64
-Maintainer: Tommy Miland <tmiland@tmiland.com>
-Installed-Size: 242040
-Depends: libc6 (>= 2.34), libgcc-s1, libstdc++6, libcom-err2, libfontconfig1, libfreetype6, libx11-6, libx11-xcb1, libxcb1, libgl1, libegl1, libopengl0
-Conflicts: nextcloud-desktop-common
-Replaces: nextcloud-desktop-common
-Filename: ./nextcloud-desktop_34.0.4_amd64.deb
-Size: 1834
-MD5sum: 2961bdea4fa1e16ddc21b77c9e4109a3
-SHA1: 5fa8e911e91bbfa016cdf642c87aa589549a042e
-SHA256: 157fb55d4d128890617b6ea79a7e5657e42b3676613846e8c9936808f12a75c5
-Section: utils
-Priority: optional
-Homepage: https://nextcloud.com/desktop/
-Description: Nextcloud desktop synchronization client
-
-Package: nextcloud-desktop
 Version: 34.0.5
 Architecture: amd64
 Maintainer: Tommy Miland <tmiland@tmiland.com>
@@ -975,24 +957,23 @@ Priority: optional
 Homepage: https://nextcloud.com/desktop/
 Description: Nextcloud desktop synchronization client
 
-Package: opencode
-Version: 2.2.0
+Package: nextcloud-desktop
+Version: 35.0.1
 Architecture: amd64
-Maintainer: OpenCode <hello@opencode.ai>
-Installed-Size: 757902
-Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
-Recommends: libappindicator3-1
-Filename: ./opencode_2.2.0_amd64.deb
-Size: 2218
-MD5sum: de8b1a7725a04a9ffe52eb4b93a10a9e
-SHA1: 7927f49a694378d1da299233bc6ef80b29e05b40
-SHA256: 9783f654683eb34d68722f766961ba380485999047333e511a4a7e8a08bdc32e
-Section: default
+Maintainer: Tommy Miland <tmiland@tmiland.com>
+Installed-Size: 197772
+Depends: libc6 (>= 2.34), libgcc-s1, libstdc++6, libcom-err2, libfontconfig1, libfreetype6, libx11-6, libx11-xcb1, libxcb1, libgl1, libegl1, libopengl0
+Conflicts: nextcloud-desktop-common
+Replaces: nextcloud-desktop-common
+Filename: ./nextcloud-desktop_35.0.1_amd64.deb
+Size: 1836
+MD5sum: 49b592ee97040880dbad97bd49cc6bbd
+SHA1: 6d9d4320bc4b2c677b348357e3cbeecc8b0131bc
+SHA256: d25e2e75894e446a12eaff440421e97fa329fb1474b9cd829b1227c6d8a3280e
+Section: utils
 Priority: optional
-Homepage: https://opencode.ai
-Description: The open source coding agent.
-License: MIT
-Vendor: OpenCode <hello@opencode.ai>
+Homepage: https://nextcloud.com/desktop/
+Description: Nextcloud desktop synchronization client
 
 Package: opencode
 Version: 2.2.1
@@ -1025,6 +1006,25 @@ Size: 2210
 MD5sum: 6964387ff8839d46d16a097ece287d0e
 SHA1: a69f80be22201ce27b65792eec092b425df6cd78
 SHA256: e1faa437225a7d89e5ca2446aade5c87c228e0d98be4250e8a4560569da92f5a
+Section: default
+Priority: optional
+Homepage: https://opencode.ai
+Description: The open source coding agent.
+License: MIT
+Vendor: OpenCode <hello@opencode.ai>
+
+Package: opencode
+Version: 2.2.3
+Architecture: amd64
+Maintainer: OpenCode <hello@opencode.ai>
+Installed-Size: 765926
+Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
+Recommends: libappindicator3-1
+Filename: ./opencode_2.2.3_amd64.deb
+Size: 2218
+MD5sum: 453380bcafd96c07d55503baa6073ac5
+SHA1: bd34debb34ec03fd8b3687620b0c8e6a7fa43c1a
+SHA256: 078a8f61b59b78ae354f2a8a8d9d060cfea66eae50638e7f1afa1d9675db8645
 Section: default
 Priority: optional
 Homepage: https://opencode.ai
@@ -1369,6 +1369,26 @@ Section: x11
 Priority: optional
 Homepage: https://spotube.krtirtho.dev
 Description: Open source extensible music streaming platform and app, based on BYOMM (Bring your own music metadata) concept
+
+Package: spotube
+Version: 6.0.0
+Architecture: amd64
+Maintainer: Team Spotube <team.spotube@proton.me>
+Installed-Size: 185092
+Depends: libvlc5, vlc-plugin-base, libwebkit2gtk-4.1-0, libgtk-3-0 | libgtk-3-0t64, libglib2.0-0 | libglib2.0-0t64, libdbus-1-3, libasound2 | libasound2t64, libgl1, libfontconfig1, libfreetype6, libx11-6, libxext6, libxi6, libxrender1, libxtst6
+Recommends: libappindicator3-1
+Filename: ./spotube_6.0.0_amd64.deb
+Size: 2276
+MD5sum: 8fb8cb84b73fad31db27ccbc4f63f0ac
+SHA1: e803c474b1085e3598b7b831daa5de22b5a3ff6f
+SHA256: ceabe82a516dc8049d296e3db4c1e067090e2fafda900608afa8a9f8ec45106b
+Section: default
+Priority: optional
+Homepage: https://spotube.cc
+Description:
+  Packaged desktop application
+License: unknown
+Vendor: Team Spotube <team.spotube@proton.me>
 
 Package: sshpilot
 Version: 6.3.4-1
