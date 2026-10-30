@@ -261,25 +261,6 @@ License: unknown
 Vendor: Anoop M D <anoop.md1421@gmail.com>
 
 Package: discord
-Version: 1.0.165
-Architecture: amd64
-Maintainer: Discord Maintainer Team <noreply@discord.com>
-Installed-Size: 4664
-Depends: libc6, libasound2, libatk1.0-0, libatk-bridge2.0-0, libatspi2.0-0, libatomic1, libcairo2, libdbus-1-3, libexpat1, libgbm1, libglib2.0-0, libgtk-3-0, libnotify4, libnspr4, libnss3, libpango-1.0-0, libstdc++6, libudev1, libx11-6, libxcb1, libxcomposite1, libxdamage1, libxext6, libxfixes3, libxkbcommon0, libxrandr2
-Recommends: libunity9, libva2, libpipewire-0.3-0
-Filename: ./discord_1.0.165_amd64.deb
-Size: 2374402
-MD5sum: 3850e88017d7acda6f8f9d97ca35abea
-SHA1: 63fa8324da33147dce4d4f4a8a03e1e75ea7ca35
-SHA256: 2a5c3a97b65a93f3bd2cb8b93fb1317d7ace7f85ee947d07ee97eb762638b48d
-Section: net
-Priority: optional
-Homepage: https://discord.com
-Description: Chat for Communities and Friends
- Discord is the easiest way to communicate over voice, video, and text. Chat,
- hang out, and stay close with your friends and communities.
-
-Package: discord
 Version: 1.0.166
 Architecture: amd64
 Maintainer: Discord Maintainer Team <noreply@discord.com>
@@ -310,6 +291,25 @@ Size: 2387226
 MD5sum: b7e0c0e0d5545d1b72b2b26a00520827
 SHA1: 305281b04ff5f9b4530ca296ab9ee6305a635b97
 SHA256: 540cdc7204e7a069513b7f5f5a74fbae79133bdbd8e1bc50c3916132efb23e21
+Section: net
+Priority: optional
+Homepage: https://discord.com
+Description: Chat for Communities and Friends
+ Discord is the easiest way to communicate over voice, video, and text. Chat,
+ hang out, and stay close with your friends and communities.
+
+Package: discord
+Version: 1.0.168
+Architecture: amd64
+Maintainer: Discord Maintainer Team <noreply@discord.com>
+Installed-Size: 4696
+Depends: libc6, libasound2, libatk1.0-0, libatk-bridge2.0-0, libatspi2.0-0, libatomic1, libcairo2, libdbus-1-3, libexpat1, libgbm1, libglib2.0-0, libgtk-3-0, libnotify4, libnspr4, libnss3, libpango-1.0-0, libstdc++6, libudev1, libx11-6, libxcb1, libxcomposite1, libxdamage1, libxext6, libxfixes3, libxkbcommon0, libxrandr2
+Recommends: libunity9, libva2, libpipewire-0.3-0
+Filename: ./discord_1.0.168_amd64.deb
+Size: 2387236
+MD5sum: 13eeeffed3ba06c724b4c4be3b69af3d
+SHA1: 1656d77637b4f341fcc614998569be9940bc465d
+SHA256: 93d43ad090825b9edcacfb3841506ea51e7040c60d93a9e377d0caca547bea28
 Section: net
 Priority: optional
 Homepage: https://discord.com
@@ -976,25 +976,6 @@ Homepage: https://nextcloud.com/desktop/
 Description: Nextcloud desktop synchronization client
 
 Package: opencode
-Version: 2.2.1
-Architecture: amd64
-Maintainer: OpenCode <hello@opencode.ai>
-Installed-Size: 758037
-Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
-Recommends: libappindicator3-1
-Filename: ./opencode_2.2.1_amd64.deb
-Size: 2216
-MD5sum: 6a70ba7d8373f21550b12bb1b26f2370
-SHA1: 660b7819b9b462e6cc36764e798c40e29ea05326
-SHA256: 52af16d69c51a5906803c88cb25523091c2bb7b21595c66e0f67d826afd98def
-Section: default
-Priority: optional
-Homepage: https://opencode.ai
-Description: The open source coding agent.
-License: MIT
-Vendor: OpenCode <hello@opencode.ai>
-
-Package: opencode
 Version: 2.2.2
 Architecture: amd64
 Maintainer: OpenCode <hello@opencode.ai>
@@ -1025,6 +1006,25 @@ Size: 2218
 MD5sum: 453380bcafd96c07d55503baa6073ac5
 SHA1: bd34debb34ec03fd8b3687620b0c8e6a7fa43c1a
 SHA256: 078a8f61b59b78ae354f2a8a8d9d060cfea66eae50638e7f1afa1d9675db8645
+Section: default
+Priority: optional
+Homepage: https://opencode.ai
+Description: The open source coding agent.
+License: MIT
+Vendor: OpenCode <hello@opencode.ai>
+
+Package: opencode
+Version: 2.2.4
+Architecture: amd64
+Maintainer: OpenCode <hello@opencode.ai>
+Installed-Size: 766119
+Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
+Recommends: libappindicator3-1
+Filename: ./opencode_2.2.4_amd64.deb
+Size: 2210
+MD5sum: 7b9f611cc3e81d22edfb82dcf93f622f
+SHA1: 3c57c8e4b6a63a13aa053648fe3feda75350fa46
+SHA256: 81a38386b271814df2296937bd6e64329bc8c297e6be15244c05be167c849c83
 Section: default
 Priority: optional
 Homepage: https://opencode.ai
