@@ -1,4 +1,4 @@
 repo = 'tmiland/pixelflasher-deb'
-asset = 'pixelflasher-[0-9.]+-linux-amd64\.deb$'
+asset = 'pixelflasher-[0-9.]*-linux-amd64\.deb$'
 keep_versions = 3
 summary = 'Android firmware flashing GUI for Pixel devices'
