@@ -1168,10 +1168,10 @@ Depends: libc6 (>= 2.35), libgcc-s1, libstdc++6, zlib1g, libglib2.0-0,
  libwayland-client0, libexpat1, libuuid1, libbz2-1.0, liblzma5
 Recommends: android-sdk-platform-tools
 Filename: ./pixelflasher_10.2.0.0_amd64.deb
-Size: 2044
-MD5sum: 370838f24ed299a8115a823736529f9e
-SHA1: e74c0f186e05add94e8761a7abcaf8e488c352b0
-SHA256: e460a4264f06a00e912fd779ac1538eae90db6ba3e6a9f6160386055975db401
+Size: 2336
+MD5sum: b7ecec904aa305254215f3795c44561f
+SHA1: 372f58274a862b5d67ba938d8fcaffc1ee4adbc5
+SHA256: 3e6cc3d1effaae009f71b237322cf1528ca7f7ac44db4ce2bfcc515ecfa3135a
 Section: utils
 Priority: optional
 Homepage: https://github.com/badabing2005/PixelFlasher
