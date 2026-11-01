@@ -44,10 +44,28 @@ deb_download() {
 deb_download "$URL" || exit 1
 echo "Installing $APP_NAME in the background..."
 TEMP_LOG_FILE=/tmp/debtmp.log
-: > "$TEMP_LOG_FILE"
-# shellcheck disable=SC2086
-nohup sleep 10 && dpkg -i "${CACHE_DIR}/${FILE}" > "$TEMP_LOG_FILE" 2>&1 \
-  && for f in $HIDE; do rm -f "/usr/share/applications/$f"; done \
-  && update-desktop-database &
+
+# apt still holds the dpkg lock for a moment after this postinst returns, so a
+# fixed sleep is a race: on 2026-11-01 the real deb was installed while apt was
+# finishing and dpkg -i died with "dpkg database lock was locked by ...", leaving
+# only the stub installed. Retry while the failure is a lock error instead.
+# shellcheck disable=SC2016 # variables are passed as positional args, not expanded here
+nohup bash -c '
+  FILE=$1; LOG=$2; HIDE=$3
+  : > "$LOG"
+  attempt=0
+  while [ "$attempt" -lt 20 ]; do
+    attempt=$((attempt + 1))
+    if dpkg -i "$FILE" >> "$LOG" 2>&1; then
+      # shellcheck disable=SC2086
+      for f in $HIDE; do rm -f "/usr/share/applications/$f"; done
+      update-desktop-database >/dev/null 2>&1 || true
+      exit 0
+    fi
+    grep -qi "lock" "$LOG" || exit 1
+    sleep 10
+  done
+  exit 1
+' _ "${CACHE_DIR}/${FILE}" "$TEMP_LOG_FILE" "$HIDE" &
 
 exit 0
