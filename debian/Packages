@@ -141,26 +141,6 @@ Description: cat(1) clone with wings.
   A cat(1) clone with syntax highlighting and Git integration.
 
 Package: bitwarden
-Version: 2026.10.1
-Architecture: amd64
-Maintainer: Bitwarden Inc. <hello@bitwarden.com>
-Installed-Size: 416480
-Depends: libnotify4, libxtst6, libnss3, libxss1
-Recommends: libappindicator3-1
-Filename: ./bitwarden_2026.10.1_amd64.deb
-Size: 1872
-MD5sum: 933a1c3d6cafec48db3bdfa5570f7b80
-SHA1: b7cdda116a6dcee45fef43e5bcd126a4e3404750
-SHA256: 5733cbcbcb4ec09b7efb846581bb5b09c5e1646056ea1803d3091e3db975621b
-Section: default
-Priority: optional
-Homepage: https://bitwarden.com
-Description: A secure and free password manager for all of your devices.
-  A secure and free password manager for all of your devices.
-License: GPL-3.0
-Vendor: Bitwarden Inc. <hello@bitwarden.com>
-
-Package: bitwarden
 Version: 2026.10.2
 Architecture: amd64
 Maintainer: Bitwarden Inc. <hello@bitwarden.com>
@@ -192,6 +172,26 @@ Size: 2148
 MD5sum: 32f11862e5d0162a06b408707c3c3474
 SHA1: d3bdc5dbae23089a01116878971d09ada75b436e
 SHA256: 5f161e6d6d81a6170ab4a9ea662d9a72cec43034f7f4bbd8d71243b76cad4515
+Section: default
+Priority: optional
+Homepage: https://bitwarden.com
+Description: A secure and free password manager for all of your devices.
+  A secure and free password manager for all of your devices.
+License: GPL-3.0
+Vendor: Bitwarden Inc. <hello@bitwarden.com>
+
+Package: bitwarden
+Version: 2026.10.4
+Architecture: amd64
+Maintainer: Bitwarden Inc. <hello@bitwarden.com>
+Installed-Size: 668560
+Depends: libnotify4, libxtst6, libnss3, libxss1
+Recommends: libappindicator3-1
+Filename: ./bitwarden_2026.10.4_amd64.deb
+Size: 2152
+MD5sum: 8575cb242dee1400b2277a1146566c2f
+SHA1: aab5d23050f1d1e79290b27265438cdb45165649
+SHA256: 856e8ebafad6ef550e917f2568393c767151cca303da5363e1179aeb5274bde9
 Section: default
 Priority: optional
 Homepage: https://bitwarden.com
@@ -938,24 +938,6 @@ License: unknown
 Vendor: MarkText Contributors
 
 Package: nextcloud-desktop
-Version: 35.0.0
-Architecture: amd64
-Maintainer: Tommy Miland <tmiland@tmiland.com>
-Installed-Size: 197456
-Depends: libc6 (>= 2.34), libgcc-s1, libstdc++6, libcom-err2, libfontconfig1, libfreetype6, libx11-6, libx11-xcb1, libxcb1, libgl1, libegl1, libopengl0
-Conflicts: nextcloud-desktop-common
-Replaces: nextcloud-desktop-common
-Filename: ./nextcloud-desktop_35.0.0_amd64.deb
-Size: 1838
-MD5sum: ea11024275d49b592dfe17e8e151eb69
-SHA1: b6d0a4ef1dc9edf52ca97ca9c14cc2c08b7f0590
-SHA256: 36617b5174165c4047915afb9b7e507fb1526b4471782f9a68e12649b0200c9b
-Section: utils
-Priority: optional
-Homepage: https://nextcloud.com/desktop/
-Description: Nextcloud desktop synchronization client
-
-Package: nextcloud-desktop
 Version: 35.0.1
 Architecture: amd64
 Maintainer: Tommy Miland <tmiland@tmiland.com>
@@ -986,6 +968,24 @@ Size: 2128
 MD5sum: 52b55136dff8400dafcb04fae3b3991a
 SHA1: 519be0588e7f315ae9fdad89e2ff73cd7ccbbb6b
 SHA256: bfeedf6f97cd8670758ef1df586537810844e42ce3e92b5f69342dda47806350
+Section: utils
+Priority: optional
+Homepage: https://nextcloud.com/desktop/
+Description: Nextcloud desktop synchronization client
+
+Package: nextcloud-desktop
+Version: 35.0.3
+Architecture: amd64
+Maintainer: Tommy Miland <tmiland@tmiland.com>
+Installed-Size: 197804
+Depends: libc6 (>= 2.34), libgcc-s1, libstdc++6, libcom-err2, libfontconfig1, libfreetype6, libx11-6, libx11-xcb1, libxcb1, libgl1, libegl1, libopengl0
+Conflicts: nextcloud-desktop-common
+Replaces: nextcloud-desktop-common
+Filename: ./nextcloud-desktop_35.0.3_amd64.deb
+Size: 2130
+MD5sum: 723a38b172cb5b51445e22d76d997ca0
+SHA1: ff515b6efeb4be946d1f717b02b07e7dfda19111
+SHA256: 79e8c6aec4a23804d895dab961c59a9f69d050e8aa78ac1ddb03f712ac65c43c
 Section: utils
 Priority: optional
 Homepage: https://nextcloud.com/desktop/
