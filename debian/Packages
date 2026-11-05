@@ -1507,21 +1507,6 @@ Description: modern, lightweight SSH connection manager
  for Linux and macOS, with an integrated terminal and SFTP file manager.
 
 Package: stirling-pdf
-Version: 3.2.0
-Architecture: amd64
-Maintainer: Stirling-PDF Contributors
-Installed-Size: 315274
-Depends: libwebkit2gtk-4.1-0, libgtk-3-0
-Filename: ./stirling-pdf_3.2.0_amd64.deb
-Size: 1632
-MD5sum: 317868261e7ca8556df6cec4d30b886a
-SHA1: ded92046c0dd43d31a91d6ee2b4b7542c4f799f7
-SHA256: 375edc2c745bd27d70139de92ddbc293bd7605fb927d01ac679c15e8176667b5
-Priority: optional
-Description: Stirling-PDF Desktop Application
- (none)
-
-Package: stirling-pdf
 Version: 3.2.1
 Architecture: amd64
 Maintainer: Stirling-PDF Contributors
@@ -1547,6 +1532,21 @@ Size: 1634
 MD5sum: a4707b34cf93f57248e0077a5e485a9b
 SHA1: df372c7973ffa7f92885dc73f821b667d93f17f0
 SHA256: fb9968b18cb24ef8e664b37ffafa8b719930b2883c0888148fa199e7977e8a56
+Priority: optional
+Description: Stirling-PDF Desktop Application
+ (none)
+
+Package: stirling-pdf
+Version: 3.3.0
+Architecture: amd64
+Maintainer: Stirling-PDF Contributors
+Installed-Size: 282747
+Depends: libwebkit2gtk-4.1-0, libgtk-3-0
+Filename: ./stirling-pdf_3.3.0_amd64.deb
+Size: 1922
+MD5sum: 6cc07e8c897996df55109d525b14a8ad
+SHA1: 42fe7f635612be846bec42591988bc1739e2e3b6
+SHA256: 82d7be60e44fa0b8f8531c85230580cc2c9bb961528662b30fe3d30c6826c5bd
 Priority: optional
 Description: Stirling-PDF Desktop Application
  (none)
