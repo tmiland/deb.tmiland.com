@@ -830,22 +830,6 @@ Description: Logitech device configurator for Linux
  Supports KDE Plasma 6 and GNOME 42+ Wayland.
 
 Package: mango-disk
-Version: 1.2.0
-Architecture: amd64
-Maintainer: harry0703
-Installed-Size: 49630
-Depends: libayatana-appindicator3-1, libwebkit2gtk-4.1-0, libgtk-3-0
-Filename: ./mango-disk_1.2.0_amd64.deb
-Size: 16051066
-MD5sum: 54c95ad51589e28df08448aee2ff5125
-SHA1: 551868bc2d61a9636c61cd9420e654ea718560c7
-SHA256: bf3a1f13a65e7da2a6ef34428e68fd90d0ed3a82f9aaffef23920bbd00066028
-Priority: optional
-Homepage: https://mangodisk.app
-Description: MangoDisk cross-platform disk space manager
- (none)
-
-Package: mango-disk
 Version: 1.2.1
 Architecture: amd64
 Maintainer: harry0703
@@ -872,6 +856,22 @@ Size: 17126608
 MD5sum: a681d9b6ae4f56033aba2b83de0a3b1b
 SHA1: 2f5febdaf07720f2a3bb60599218bf11b022e4c9
 SHA256: 4f3ef554bbedd2688c1dddee9a9ff372dc846b0010f739c58089c2e7ddcede88
+Priority: optional
+Homepage: https://mangodisk.app
+Description: MangoDisk cross-platform disk space manager
+ (none)
+
+Package: mango-disk
+Version: 1.2.3
+Architecture: amd64
+Maintainer: harry0703
+Installed-Size: 53763
+Depends: libayatana-appindicator3-1, libwebkit2gtk-4.1-0, libgtk-3-0
+Filename: ./mango-disk_1.2.3_amd64.deb
+Size: 17403164
+MD5sum: 296ad859c8f45a264b4f1ff9e67b0782
+SHA1: 11056cc666a53ea6b13555a5979a389ae26089a6
+SHA256: 0915f490d620f592a62971ade22310cdb59de812bdaa2b9c9cff3d2bfe67214d
 Priority: optional
 Homepage: https://mangodisk.app
 Description: MangoDisk cross-platform disk space manager
