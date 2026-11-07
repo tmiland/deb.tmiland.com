@@ -477,22 +477,6 @@ Homepage: https://github.com/Maldela/fancontrol-gui
 Description: GUI for the fancontrol (lm-sensors) fan-control daemon
 
 Package: fzf
-Version: 0.74.3
-Architecture: amd64
-Maintainer: Junegunn Choi <junegunn.c@gmail.com>
-Installed-Size: 4905
-Filename: ./fzf_0.74.3_amd64.deb
-Size: 2053428
-MD5sum: b57a6ab3b9b19cf460fbe0f73fbc8b1f
-SHA1: eb0a76c098f0ea3434fe679684f280eb2974611a
-SHA256: b50cadad4067a5d4aa292364637762f022f06e926b057e6ed92165214c6aa4a3
-Section: utils
-Priority: optional
-Homepage: https://github.com/junegunn/fzf
-Description: Command-line fuzzy finder
-Architecture-Variant: amd64v1
-
-Package: fzf
 Version: 0.74.4
 Architecture: amd64
 Maintainer: Junegunn Choi <junegunn.c@gmail.com>
@@ -517,6 +501,21 @@ Size: 2320404
 MD5sum: c32c346fc5f76c84f30486861e550cc0
 SHA1: 91bcfff9db32d6b7b63167f4424a542b8e969a2d
 SHA256: 0f9f693c12eeabf776c05430e082bda62dac8207fdc85ae3d1b06ac27daedec7
+Section: utils
+Priority: optional
+Homepage: https://github.com/junegunn/fzf
+Description: Command-line fuzzy finder
+
+Package: fzf
+Version: 0.75.0
+Architecture: amd64
+Maintainer: Junegunn Choi <junegunn.c@gmail.com>
+Installed-Size: 5494
+Filename: ./fzf_0.75.0_amd64.deb
+Size: 2323990
+MD5sum: 0aaf457c5eea171a1cb14c2fc364f0da
+SHA1: 36185ed8c3b78f4680a1880e6ecc50831d5afc99
+SHA256: 0a784e98a0d6311ea36b558117640fd267f160364022732de17cd18cde728121
 Section: utils
 Priority: optional
 Homepage: https://github.com/junegunn/fzf
@@ -1172,6 +1171,30 @@ Size: 2336
 MD5sum: b7ecec904aa305254215f3795c44561f
 SHA1: 372f58274a862b5d67ba938d8fcaffc1ee4adbc5
 SHA256: 3e6cc3d1effaae009f71b237322cf1528ca7f7ac44db4ce2bfcc515ecfa3135a
+Section: utils
+Priority: optional
+Homepage: https://github.com/badabing2005/PixelFlasher
+Description: Android firmware flashing GUI for Pixel devices
+
+Package: pixelflasher
+Version: 10.3.0.0
+Architecture: amd64
+Maintainer: Tommy Miland <tmiland@tmiland.com>
+Installed-Size: 164704
+Depends: libc6 (>= 2.35), libgcc-s1, libstdc++6, zlib1g, libglib2.0-0,
+ libgtk-3-0, libgdk-pixbuf-2.0-0, libpango-1.0-0, libcairo2, libfontconfig1,
+ libfreetype6, libdbus-1-3, libsecret-1-0, libnotify4, libx11-6, libx11-xcb1,
+ libxcb1, libxcb-cursor0, libxcb-icccm4, libxcb-image0, libxcb-keysyms1,
+ libxcb-randr0, libxcb-render0, libxcb-render-util0, libxcb-shape0,
+ libxcb-xinerama0, libxcb-xkb1, libxkbcommon0, libxkbcommon-x11-0, libgl1,
+ libegl1, libsm6, libice6, libxi6, libxtst6, libdrm2, libgbm1,
+ libwayland-client0, libexpat1, libuuid1, libbz2-1.0, liblzma5
+Recommends: android-sdk-platform-tools
+Filename: ./pixelflasher_10.3.0.0_amd64.deb
+Size: 2336
+MD5sum: 93193e7562d8eaad133085267f7f0f19
+SHA1: 246b79200bb78c1b2b5ff809d71bb02b7a39a083
+SHA256: c27645b660f2217f890276c5b8ab595679cd00e5afc4aafd7901a9105ab69ddd
 Section: utils
 Priority: optional
 Homepage: https://github.com/badabing2005/PixelFlasher
