@@ -579,25 +579,6 @@ Description: GitHub Desktop fork with advanced functionality and improvements.
  GitHub Desktop fork with advanced functionality and improvements.
 
 Package: goose
-Version: 1.56.0
-Architecture: amd64
-Maintainer: AAIF (Agentic AI Foundation)
-Installed-Size: 534842
-Depends: libgtk-3-0, libnotify4, libnss3, xdg-utils, libatspi2.0-0, libdrm2, libgbm1, libxcb-dri3-0, kde-cli-tools | kde-runtime | trash-cli | libglib2.0-bin | gvfs-bin
-Recommends: pulseaudio | libasound2
-Suggests: gir1.2-gnomekeyring-1.0, libgnome-keyring0, lsb-release
-Filename: ./goose_1.56.0_amd64.deb
-Size: 1764
-MD5sum: b2de96c1cf7676c54d42a69396f60476
-SHA1: 8afbb419e8cf56e36555c3300a8b6420f58983b7
-SHA256: 4ca0bf74dcb051248dca9fdd8185ec01938a9c4d9d5c4b31339cd609ac58e111
-Section: utils
-Priority: optional
-Homepage: https://goose-docs.ai/
-Description: Goose App
- Goose App
-
-Package: goose
 Version: 1.57.0
 Architecture: amd64
 Maintainer: AAIF (Agentic AI Foundation)
@@ -629,6 +610,25 @@ Size: 2058
 MD5sum: d040ecb702b09795201561ac41547318
 SHA1: 4afa0d98470edc258f6b5de1ddf161dbbd029348
 SHA256: 8b29a39d48eb78fb9da5988f3bc602f03966c739882aaeab9e600dfacefc4d0e
+Section: utils
+Priority: optional
+Homepage: https://goose-docs.ai/
+Description: Goose App
+ Goose App
+
+Package: goose
+Version: 1.58.1
+Architecture: amd64
+Maintainer: AAIF (Agentic AI Foundation)
+Installed-Size: 533744
+Depends: libgtk-3-0, libnotify4, libnss3, xdg-utils, libatspi2.0-0, libdrm2, libgbm1, libxcb-dri3-0, kde-cli-tools | kde-runtime | trash-cli | libglib2.0-bin | gvfs-bin
+Recommends: pulseaudio | libasound2
+Suggests: gir1.2-gnomekeyring-1.0, libgnome-keyring0, lsb-release
+Filename: ./goose_1.58.1_amd64.deb
+Size: 2056
+MD5sum: ccc13eacfa18035328aaedb49e69db6b
+SHA1: 4d4c7a366847b2f82396b1f31d460017dbf2b6bb
+SHA256: 8eed3052ded1d51c48f9edee5bdd382a9931496a79327ca1c953fcce6586d517
 Section: utils
 Priority: optional
 Homepage: https://goose-docs.ai/
@@ -1321,17 +1321,17 @@ Description: Debloat and tune Android TV devices via ADB.
  Shield Optimizer is a cross-platform tool for debloating and tuning Nvidia Shield TV, Onn 4K Pro, Chromecast with Google TV, and other Android TV devices. v2 is a Rust/Tauri rewrite of the original PowerShell script.
 
 Package: siyuan
-Version: 3.8.7~alpha.1
+Version: 3.8.10
 Architecture: amd64
 Maintainer: Yunnan Liandi Technology Co., Ltd. <845765@qq.com>
-Installed-Size: 688599
+Installed-Size: 769041
 Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
 Recommends: libappindicator3-1
-Filename: ./siyuan_3.8.7_amd64.deb
-Size: 2248
-MD5sum: 9fa72addc852b66e3f51c116af901149
-SHA1: cca52757a015bda1f6db3614aa9f282c8b3e1dd6
-SHA256: f75d55bb7a0a5f0def6b6348fccf19b3c7bba3d0f4890cce6a0b8b0ccb54af14
+Filename: ./siyuan_3.8.10_amd64.deb
+Size: 2530
+MD5sum: 48432a2269aeb5731481a3c33c16ef3b
+SHA1: 501ecad2058bd8251875eaad92cf3d318b152d27
+SHA256: 75a8c5721ed24f8ef9297a2e87e86a3c06387a2bf04d57ebb7c021d97331dbd3
 Section: default
 Priority: optional
 Homepage: https://b3log.org/siyuan
