@@ -1083,19 +1083,19 @@ Description: general markup converter
   external programs such as pdflatex or wkhtmltopdf).
 
 Package: pandoc
-Version: 3.12.1-1
+Version: 3.13-1
 Architecture: amd64
 Maintainer: John MacFarlane <jgm@berkeley.edu>
-Installed-Size: 161692
+Installed-Size: 164544
 Depends: libc6 (>= 2.13), libgmp10, zlib1g (>= 1:1.1.4)
 Suggests: texlive-latex-recommended, texlive-xetex,
  texlive-fonts-recommended
 Replaces: pandoc-data
-Filename: ./pandoc_3.12.1_amd64.deb
-Size: 2250
-MD5sum: a00e064425b204719789b6be08d96f16
-SHA1: c7377cd3e08b8dc7265365dc7e2b6e3272c7b10c
-SHA256: 1f100bfe992e92f4104c78e3f786a6aa0535c6e56e346f796fdd8b7924a71699
+Filename: ./pandoc_3.13_amd64.deb
+Size: 2248
+MD5sum: 92ff1548eca6a7740b151fae0520fc25
+SHA1: c5a233e7c023c9b7d03d91d0f3646f8912b074dd
+SHA256: a0d6cf1a941a94ec6aa81208cf8617d232572b57c7be65972089af5cfd8344e1
 Section: text
 Priority: optional
 Description: general markup converter
@@ -1118,19 +1118,19 @@ Description: general markup converter
   external programs such as pdflatex or wkhtmltopdf).
 
 Package: pandoc
-Version: 3.13-1
+Version: 3.14-1
 Architecture: amd64
 Maintainer: John MacFarlane <jgm@berkeley.edu>
-Installed-Size: 164544
+Installed-Size: 165980
 Depends: libc6 (>= 2.13), libgmp10, zlib1g (>= 1:1.1.4)
 Suggests: texlive-latex-recommended, texlive-xetex,
  texlive-fonts-recommended
 Replaces: pandoc-data
-Filename: ./pandoc_3.13_amd64.deb
-Size: 2248
-MD5sum: 92ff1548eca6a7740b151fae0520fc25
-SHA1: c5a233e7c023c9b7d03d91d0f3646f8912b074dd
-SHA256: a0d6cf1a941a94ec6aa81208cf8617d232572b57c7be65972089af5cfd8344e1
+Filename: ./pandoc_3.14_amd64.deb
+Size: 2542
+MD5sum: cfec7340678c4b947649870848d5af21
+SHA1: 1b28be03b207fc91b910a8a941c15809952c6dd5
+SHA256: ee6262f21d43f7424926610dc51a88aacb031f9c1ce1febf0826d3d7879783f6
 Section: text
 Priority: optional
 Description: general markup converter
