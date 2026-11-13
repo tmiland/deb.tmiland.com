@@ -829,22 +829,6 @@ Description: Logitech device configurator for Linux
  Supports KDE Plasma 6 and GNOME 42+ Wayland.
 
 Package: mango-disk
-Version: 1.2.1
-Architecture: amd64
-Maintainer: harry0703
-Installed-Size: 51988
-Depends: libayatana-appindicator3-1, libwebkit2gtk-4.1-0, libgtk-3-0
-Filename: ./mango-disk_1.2.1_amd64.deb
-Size: 16865342
-MD5sum: 85ec3aa45d9d876c911cfbf0dec7dbb6
-SHA1: e42cb9864803da265d5b1788df18e472e1dbfb76
-SHA256: 1ba909180d4b252747e5a6353423132f481785b05fc17b4234d957d6137c34fe
-Priority: optional
-Homepage: https://mangodisk.app
-Description: MangoDisk cross-platform disk space manager
- (none)
-
-Package: mango-disk
 Version: 1.2.2
 Architecture: amd64
 Maintainer: harry0703
@@ -871,6 +855,22 @@ Size: 17403164
 MD5sum: 296ad859c8f45a264b4f1ff9e67b0782
 SHA1: 11056cc666a53ea6b13555a5979a389ae26089a6
 SHA256: 0915f490d620f592a62971ade22310cdb59de812bdaa2b9c9cff3d2bfe67214d
+Priority: optional
+Homepage: https://mangodisk.app
+Description: MangoDisk cross-platform disk space manager
+ (none)
+
+Package: mango-disk
+Version: 2.0.0
+Architecture: amd64
+Maintainer: harry0703
+Installed-Size: 54858
+Depends: libayatana-appindicator3-1, libwebkit2gtk-4.1-0, libgtk-3-0
+Filename: ./mango-disk_2.0.0_amd64.deb
+Size: 17746456
+MD5sum: c0bf1e2910cc7c69dd01ece5d327e552
+SHA1: f97c52f03413bc1d7f39b0e46b5188234c81500c
+SHA256: 3f7955850965cb1ad9efc0728183cc3c750449fad3dc09bf99e321ce5b90258e
 Priority: optional
 Homepage: https://mangodisk.app
 Description: MangoDisk cross-platform disk space manager
@@ -1419,7 +1419,7 @@ Architecture: all
 Maintainer: Johannes Pohl <snapweb@badaix.de>
 Installed-Size: 1209
 Depends: debconf (>= 0.5) | debconf-2.0
-Filename: ./snapweb_0.9.3_all.deb
+Filename: ./snapweb_0.9.3-1_all.deb
 Size: 488024
 MD5sum: 36c288229346c71973aeda6ce82b4aed
 SHA1: 95cd2e5ea77274eb9fca8ed4c3d73c882c6120c5
@@ -1436,7 +1436,7 @@ Architecture: all
 Maintainer: Johannes Pohl <snapweb@badaix.de>
 Installed-Size: 1209
 Depends: debconf (>= 0.5) | debconf-2.0
-Filename: ./snapweb_0.9.3-1_all.deb
+Filename: ./snapweb_0.9.3_all.deb
 Size: 488024
 MD5sum: 36c288229346c71973aeda6ce82b4aed
 SHA1: 95cd2e5ea77274eb9fca8ed4c3d73c882c6120c5
@@ -1681,7 +1681,7 @@ Package: teamspeak3-client
 Version: 3.6.2
 Architecture: amd64
 Maintainer: Tommy Miland (tmiland) <kontakt@tmiland.com>
-Filename: ./teamspeak3-client_3.6.2_amd64.deb
+Filename: ./teamspeak3-client_amd64-3.6.2.deb
 Size: 1388
 MD5sum: 6e073efd2f65017122f10bdd81529b00
 SHA1: c157ed36b11276a554d0abae8b1d69110cba1c31
@@ -1705,7 +1705,7 @@ Package: teamspeak3-client
 Version: 3.6.2
 Architecture: amd64
 Maintainer: Tommy Miland (tmiland) <kontakt@tmiland.com>
-Filename: ./teamspeak3-client_amd64-3.6.2.deb
+Filename: ./teamspeak3-client_3.6.2_amd64.deb
 Size: 1388
 MD5sum: 6e073efd2f65017122f10bdd81529b00
 SHA1: c157ed36b11276a554d0abae8b1d69110cba1c31
