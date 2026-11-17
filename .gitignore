@@ -1,5 +1,6 @@
 deb/build
 01-main
+/.superpowers/
 /.tmp/
 /*.deb
 /packages.tar.gz
