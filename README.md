@@ -57,12 +57,15 @@ The software below can be installed, updated and removed using this repository:
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/WerWolv/ImHex) | `ImHex` | <i>ImHex Hex Editor</i> |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/laurent22/joplin) | `joplin` | <i>Joplin for Desktop</i> |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/ilya-zlobintsev/LACT) | `lact` | <i>Linux GPU Configuration And Monitoring Tool (Debian 13 build)</i> |
+| [<img src="./img/direct.png" align="top" width="20" />](https://codeberg.org/OpenRGB/hidapi-hotplug) | `libhidapi-hotplug-hidraw0` | <i>Multi-Platform library for communication with HID devices with hotplug support (hidraw backend)</i> |
+| [<img src="./img/direct.png" align="top" width="20" />](https://codeberg.org/OpenRGB/hidapi-hotplug) | `libhidapi-hotplug-libusb0` | <i>Multi-Platform library for communication with HID devices with hotplug support (libusb backend)</i> |
 | [<img src="./img/direct.png" align="top" width="20" />](http://search.cpan.org/dist/Term-Spinner-Color/) | `libterm-spinner-color-perl` | <i>A terminal spinner/progress bar with Unicode, color, and no non-core dependencies.</i> |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/mmaher88/logitune) | `logitune` | <i>Logitech device configurator for Linux</i> |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/harry0703/MangoDisk) | `mango-disk` | <i>MangoDisk cross-platform disk space manager</i> |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/marktext/marktext) | `marktext` | <i>A simple and elegant open-source markdown editor that focused on speed and usability.</i> |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/tmiland/nextcloud-desktop-deb) | `nextcloud-desktop` | <i>Nextcloud desktop synchronization client (repackaged from upstream [nextcloud/desktop](https://github.com/nextcloud/desktop) AppImage)</i> |
 | [<img src="./img/direct.png" align="top" width="20" />](https://opencode.ai) | `opencode` | <i>The open source coding agent.</i> |
+| [<img src="./img/direct.png" align="top" width="20" />](https://codeberg.org/OpenRGB/OpenRGB) | `openrgb` | <i>Open source RGB lighting control</i> |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/jgm/pandoc) | `pandoc` | <i>general markup converter</i> |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/tmiland/pixelflasher-deb) | `pixelflasher` | <i>Android firmware flashing GUI for Pixel devices (repackaged from upstream [badabing2005/PixelFlasher](https://github.com/badabing2005/PixelFlasher) standalone build)</i> |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/ProtonMail/proton-bridge) | `protonmail-bridge` | <i>Proton Mail Bridge is a desktop application that runs in the background, encrypting and decrypting messages as they enter and leave your computer.</i> |

@@ -1,0 +1,5 @@
+# OpenRGB is hosted on Codeberg (Gitea-compatible API), not GitHub.
+repo = 'OpenRGB/OpenRGB'
+host = 'codeberg.org'
+asset = '^openrgb_[0-9]+(\.[0-9]+)+_amd64_trixie_.*\.deb$'
+keep_versions = 3
