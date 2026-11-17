@@ -774,6 +774,50 @@ SHA256: 44f25c6e95ad6d0fb869b36ae10c593bb22b7d021cd3f1f282cc677ed883248d
 Homepage: https://github.com/ilya-zlobintsev/lact
 Description: GPU control utility
 
+Package: libhidapi-hotplug-hidraw0
+Source: hidapi-hotplug
+Version: 0.15.0-1
+Architecture: amd64
+Maintainer: Adam Honse <calcprogrammer1@gmail.com>
+Installed-Size: 42
+Depends: libc6 (>= 2.34), libudev1 (>= 183)
+Filename: ./libhidapi-hotplug-hidraw0_0.15.0_amd64.deb
+Size: 11184
+MD5sum: ec1f588a4729b52ffad0e78564f30cdf
+SHA1: da0e92d87cab3674459cc410e1d6a70546a81d1d
+SHA256: 4c12ad429aad50b6e38ff7a04be37268a2401b76884d4067f70ed9df37ebbd2d
+Section: libs
+Priority: optional
+Multi-Arch: same
+Homepage: https://gitlab.com/OpenRGBDevelopers/hidapi-hotplug.git
+Description: Multi-Platform library for communication with HID devices with hotplug support (hidraw backend)
+ HIDAPI is a multi-platform library enabling applications to easily
+ interface with Bluetooth and USB HID-class devices.
+ .
+ This package contains the hidraw-based implementation of HIDAPI.
+
+Package: libhidapi-hotplug-libusb0
+Source: hidapi-hotplug
+Version: 0.15.0-1
+Architecture: amd64
+Maintainer: Adam Honse <calcprogrammer1@gmail.com>
+Installed-Size: 58
+Depends: libc6 (>= 2.34), libusb-1.0-0 (>= 2:1.0.23~)
+Filename: ./libhidapi-hotplug-libusb0_0.15.0_amd64.deb
+Size: 15184
+MD5sum: 31614e71443de0ca425cf2d2263a6844
+SHA1: f9e0b8f106858799b84da65ff7aa74ad068e3f23
+SHA256: ff4c563d396a80acd876454bf831af3e6578e4bd1d0b5b47990f75e6577450a6
+Section: libs
+Priority: optional
+Multi-Arch: same
+Homepage: https://gitlab.com/OpenRGBDevelopers/hidapi-hotplug.git
+Description: Multi-Platform library for communication with HID devices with hotplug support (libusb backend)
+ HIDAPI is a multi-platform library enabling applications to easily
+ interface with Bluetooth and USB HID-class devices.
+ .
+ This package contains the libusb-based implementation of HIDAPI.
+
 Package: libterm-spinner-color-perl
 Version: 0.05-1
 Architecture: all
@@ -1046,6 +1090,25 @@ Homepage: https://opencode.ai
 Description: The open source coding agent.
 License: MIT
 Vendor: OpenCode <hello@opencode.ai>
+
+Package: openrgb
+Version: 1.1.0
+Architecture: amd64
+Maintainer: Adam Honse <calcprogrammer1@gmail.com>
+Installed-Size: 14594
+Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libhidapi-hotplug-hidraw0 (>= 0.15.0), libmbedcrypto16 (>= 3.6.0), libmbedtls21 (>= 3.6.0), libmbedx509-7 (>= 3.6.0), libqt6core6t64 (>= 6.8.2), libqt6dbus6 (>= 6.1.2), libqt6gui6 (>= 6.8.2), libqt6widgets6 (>= 6.7.2), libstdc++6 (>= 14), libusb-1.0-0 (>= 2:1.0.16), udev, libhidapi-hotplug-libusb0
+Recommends: openrgb-dkms-drivers
+Conflicts: openrgb-udev
+Filename: ./openrgb_1.1_amd64.deb
+Size: 3447716
+MD5sum: 993d93829f8166ee3223fdf80dce708a
+SHA1: a72ccd7efd9fd057eb5a98f290680622905c2033
+SHA256: 45d1ecf6a5d7b8e309ec6edd45a5759eac4eff14101ed210a87b88d121747d25
+Section: misc
+Priority: optional
+Homepage: https://gitlab.com/CalcProgrammer1/OpenRGB
+Description: Open source RGB lighting control
+ OpenRGB controls RGB lighting
 
 Package: pandoc
 Version: 3.12-1
