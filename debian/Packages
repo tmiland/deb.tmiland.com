@@ -636,20 +636,6 @@ Description: Goose App
  Goose App
 
 Package: hugo
-Version: 0.168.0
-Architecture: amd64
-Maintainer: Bjørn Erik Pedersen <bjorn.erik.pedersen@gmail.com>
-Installed-Size: 59144
-Filename: ./hugo_0.168.0_amd64.deb
-Size: 21936492
-MD5sum: dc2b99498ac5d42bcf22be9e8d3f9ae1
-SHA1: e589b6d14f0aa9f4f9be704092a8e7990ae67db4
-SHA256: b310006a4ea1fb8b3a8211c36893aa56408398c485be9c8f752865fee7864f26
-Priority: optional
-Homepage: https://github.com/gohugoio/hugo
-Description: A fast and flexible Static Site Generator written in Go.
-
-Package: hugo
 Version: 0.169.0
 Architecture: amd64
 Maintainer: Bjørn Erik Pedersen <bjorn.erik.pedersen@gmail.com>
@@ -673,6 +659,20 @@ Size: 22190440
 MD5sum: f9bbd227d250e07aa351295c15f59647
 SHA1: 4d8056f138814d75945c9cbb7d14f2dc1a093073
 SHA256: f9708cd2eee28504a0c5b488ddb8e8b49008bd7e99862bccfa76bbe50809d3ee
+Priority: optional
+Homepage: https://github.com/gohugoio/hugo
+Description: A fast and flexible Static Site Generator written in Go.
+
+Package: hugo
+Version: 0.170.1
+Architecture: amd64
+Maintainer: Bjørn Erik Pedersen <bjorn.erik.pedersen@gmail.com>
+Installed-Size: 59712
+Filename: ./hugo_0.170.1_amd64.deb
+Size: 22188678
+MD5sum: 0ce699373fb1247230688524b011ca27
+SHA1: 1b5a175285dea7b326f8a876f09e02211951a717
+SHA256: df49c8227fd5e97580d1b017850e03895f730e07cb65f9f7599d4e14331d33b4
 Priority: optional
 Homepage: https://github.com/gohugoio/hugo
 Description: A fast and flexible Static Site Generator written in Go.
