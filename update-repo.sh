@@ -18,6 +18,7 @@
 #
 # Package config (packages/<name>.pkg, simple TOML subset):
 #   repo = "owner/name"         GitHub repo with releases (required)
+#   host = "codeberg.org"       optional: non-GitHub release host (Gitea-compatible API)
 #   asset = "regex"             pattern matching the .deb release asset (required)
 #   name = "pkg"                apt package name (defaults to file name)
 #   keep_versions = 2           optional: prune old debs, keep newest N
@@ -65,6 +66,9 @@ gh_curl() {
     curl -sSL "$@"
   fi
 }
+
+# plain fetch for third-party hosts — never send the GitHub token elsewhere
+host_curl() { curl -sSL "$@"; }
 
 # Minimal TOML reader: 'literal', "escaped" and bare values, single line only
 conf_get() { # conf_get <file> <key>
@@ -136,10 +140,15 @@ repack_stub() { # repack_stub <deb> <repo> <app-name> <asset-regex> [apt-name] [
 
 process_package() { # process_package <toml-file>
   local cfg=$1
-  local name repo asset_re keep pkg_name hide summary payload_dir filekey dl_url_orig
+  local name repo host asset_re keep pkg_name hide summary payload_dir filekey dl_url_orig fetch
   dl_url_orig=$(conf_get "$cfg" url)
   name=$(conf_get "$cfg" name); [ -z "$name" ] && name=$(basename "$cfg" ".$CONFIG_EXT")
   repo=$(conf_get "$cfg" repo)
+  host=$(conf_get "$cfg" host) # optional non-GitHub release host (e.g. codeberg.org)
+  fetch=gh_curl
+  if [ -n "$host" ]; then
+    fetch=host_curl # plain curl — never send the GitHub token to third parties
+  fi
   asset_re=$(conf_get "$cfg" asset)
   keep=$(conf_get "$cfg" keep_versions)
   pkg_name=$(conf_get "$cfg" package) # optional apt package name override
@@ -173,7 +182,13 @@ process_package() { # process_package <toml-file>
     new_ver=$(version_from "$url")
     dl_url=$dl_url_orig
   else
-    json=$(gh_curl "https://api.github.com/repos/$repo/releases")
+    local api
+    if [ -n "$host" ]; then
+      api="https://$host/api/v1/repos/$repo/releases" # Gitea-compatible (Codeberg)
+    else
+      api="https://api.github.com/repos/$repo/releases"
+    fi
+    json=$($fetch "$api")
     # grab the first matching asset together with its release tag;
     # stable releases are preferred — a prerelease (nightly/test build) is
     # only used when no stable release provides a matching asset
@@ -208,14 +223,21 @@ process_package() { # process_package <toml-file>
   local tmpdir deb
   tmpdir=$(mktemp -d -p "$TMP_ROOT")
   deb="$tmpdir/$(basename "$url")"
-  # plain curl for url sources — never send the GitHub token to third parties
+  # plain curl for url sources and third-party hosts — never send the GitHub token elsewhere
   if [ "$source_type" = "url" ]; then
     curl -sSL -o "$deb" "$url"
   else
-    gh_curl -o "$deb" "$url"
+    $fetch -o "$deb" "$url"
   fi
   if [ ! -s "$deb" ]; then
     echo "!! $name: download failed or empty, skipping" >&2
+    rm -rf "$tmpdir"
+    return 0
+  fi
+  # some hosts (e.g. Codeberg) intermittently serve error pages with HTTP 200 —
+  # skip the package instead of letting dpkg-deb abort the whole run
+  if ! dpkg-deb -I "$deb" >/dev/null 2>&1; then
+    echo "!! $name: download is not a valid .deb (upstream error page?), skipping" >&2
     rm -rf "$tmpdir"
     return 0
   fi
@@ -230,7 +252,7 @@ process_package() { # process_package <toml-file>
   else
   # Verify against the upstream .sha256 when the release ships one
   local sha_url="${url}.sha256"
-  if gh_curl -f -o "$tmpdir/checksum.sha256" "$sha_url" 2>/dev/null; then
+  if $fetch -f -o "$tmpdir/checksum.sha256" "$sha_url" 2>/dev/null; then
     if ! grep -q "$(sha256sum "$deb" | awk '{print $1}')" "$tmpdir/checksum.sha256"; then
       echo "!! $name: sha256 mismatch against $sha_url, skipping" >&2
       rm -rf "$tmpdir"
