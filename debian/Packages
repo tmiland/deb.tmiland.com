@@ -370,26 +370,6 @@ Description: Debian package archiving tool
  upgrade it.
 
 Package: draw.io
-Version: 32.5.5
-Architecture: amd64
-Maintainer: draw.io <desktop@draw.io>
-Installed-Size: 351897
-Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
-Recommends: libappindicator3-1
-Filename: ./drawio_32.5.5_amd64.deb
-Size: 2200
-MD5sum: 3b2708d39df76248d387a07396201a91
-SHA1: 17479ec76cf2f94a8056e8e6a469066a5bc5a5e7
-SHA256: 576d78a5b735ec9660c549070b339fbfadaa370b727ae3c3c5644f2c7157bfbe
-Section: default
-Priority: optional
-Homepage: https://github.com/jgraph/drawio
-Description:
-  draw.io desktop
-License: GPL-3.0-only
-Vendor: draw.io <desktop@draw.io>
-
-Package: draw.io
 Version: 32.6.1
 Architecture: amd64
 Maintainer: draw.io <desktop@draw.io>
@@ -421,6 +401,26 @@ Size: 2486
 MD5sum: afa80fa016901555ec30a93bc46f9688
 SHA1: 28366014413514b28da97c6b8ba0991c52471dad
 SHA256: ac7f64d5537a84032812b7ae80934051e9f1fc70c5b1d0223e52f51d0f208436
+Section: default
+Priority: optional
+Homepage: https://github.com/jgraph/drawio
+Description:
+  draw.io desktop
+License: GPL-3.0-only
+Vendor: draw.io <desktop@draw.io>
+
+Package: draw.io
+Version: 32.7.4
+Architecture: amd64
+Maintainer: draw.io <desktop@draw.io>
+Installed-Size: 357858
+Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
+Recommends: libappindicator3-1
+Filename: ./drawio_32.7.4_amd64.deb
+Size: 2482
+MD5sum: e24c27c0570fc293bda7be4699a2b54c
+SHA1: 43589783ed850f8a40a19fc8adddff436932c4fa
+SHA256: b2ad3912cd5a94fa8f5ae1e45cb55d87fb67acd21fce465a1283eb21840112f2
 Section: default
 Priority: optional
 Homepage: https://github.com/jgraph/drawio
@@ -579,25 +579,6 @@ Description: GitHub Desktop fork with advanced functionality and improvements.
  GitHub Desktop fork with advanced functionality and improvements.
 
 Package: goose
-Version: 1.59.0
-Architecture: amd64
-Maintainer: AAIF (Agentic AI Foundation)
-Installed-Size: 534258
-Depends: libgtk-3-0, libnotify4, libnss3, xdg-utils, libatspi2.0-0, libdrm2, libgbm1, libxcb-dri3-0, kde-cli-tools | kde-runtime | trash-cli | libglib2.0-bin | gvfs-bin
-Recommends: pulseaudio | libasound2
-Suggests: gir1.2-gnomekeyring-1.0, libgnome-keyring0, lsb-release
-Filename: ./goose_1.59.0_amd64.deb
-Size: 2056
-MD5sum: 7d635c8027a67f41a8985e0fbefd1a1a
-SHA1: b2f7577f243ac8c724524e95dba8e75538057772
-SHA256: 2a9e7fc6d971a1165bbcf806a98ffb96a86ccb7db07f14998c8983235694d491
-Section: utils
-Priority: optional
-Homepage: https://goose-docs.ai/
-Description: Goose App
- Goose App
-
-Package: goose
 Version: 1.59.1
 Architecture: amd64
 Maintainer: AAIF (Agentic AI Foundation)
@@ -629,6 +610,25 @@ Size: 2058
 MD5sum: 24b2d185341bd500d1491d3b72013a9f
 SHA1: 9a3b06f84b56ccd229a1ee5b4ed48f368fb5203c
 SHA256: 1431fcc7d8037192f8f83366feccaaf4ca94098752a6812c9b110ee404c2098b
+Section: utils
+Priority: optional
+Homepage: https://goose-docs.ai/
+Description: Goose App
+ Goose App
+
+Package: goose
+Version: 1.60.1
+Architecture: amd64
+Maintainer: AAIF (Agentic AI Foundation)
+Installed-Size: 499109
+Depends: libgtk-3-0, libnotify4, libnss3, xdg-utils, libatspi2.0-0, libdrm2, libgbm1, libxcb-dri3-0, kde-cli-tools | kde-runtime | trash-cli | libglib2.0-bin | gvfs-bin
+Recommends: pulseaudio | libasound2
+Suggests: gir1.2-gnomekeyring-1.0, libgnome-keyring0, lsb-release
+Filename: ./goose_1.60.1_amd64.deb
+Size: 2056
+MD5sum: 6902d085b87237f2d966464a70cf8325
+SHA1: 7ae03ac801adbe321b7078f84c36cba7b07c1caf
+SHA256: 3b3dc7f9c293883ece16d603559401f35c958b3afbec72c0fe0a3c24776fc922
 Section: utils
 Priority: optional
 Homepage: https://goose-docs.ai/
