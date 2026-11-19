@@ -155,20 +155,28 @@ build_from_tarball() { # build_from_tarball <tarball> <filekey> <new_ver> [arch]
   mkdir -p "$build_dir/usr/bin" \
            "$build_dir/usr/share/doc/$filekey" \
            "$build_dir/DEBIAN"
-  # Install all binaries from the tarball's bin/ directory
-  if [ -d "$extracted_dir/bin" ]; then
-    for bin in "$extracted_dir/bin/"*; do
-      [ -f "$bin" ] || continue
-      cp "$bin" "$build_dir/usr/bin/"
-      chmod 755 "$build_dir/usr/bin/$(basename "$bin")"
-    done
-  fi
-  # Copy docs (skip install.sh — it's an upstream installer, not a doc)
-  for f in LICENSE.TXT README.md THIRD_PARTY_NOTICES.txt; do
-    if [ -f "$extracted_dir/$f" ]; then
-      cp "$extracted_dir/$f" "$build_dir/usr/share/doc/$filekey/"
-    fi
-  done
+
+  # Install all executable files (ELF binaries, scripts) to /usr/bin/,
+  # skipping common installer/build scripts that don't belong in the package
+  find "$extracted_dir" -type f -executable \
+    | while read -r exe; do
+        local_name=$(basename "$exe")
+        case "$local_name" in
+          install.sh|setup.sh|build.sh|Makefile) continue ;;
+        esac
+        cp "$exe" "$build_dir/usr/bin/"
+        chmod 755 "$build_dir/usr/bin/$local_name"
+      done
+
+  # Copy common doc files (case-insensitive match) if present,
+  # using find -iname instead of shell glob to avoid CWD expansion issues
+  find "$extracted_dir" -maxdepth 1 -type f \
+    \( -iname 'LICENSE*' -o -iname 'README*' -o -iname 'CHANGELOG*' \
+       -o -iname 'COPYING*' -o -iname 'NOTICE*' -o -iname 'THIRD_PARTY*' \
+       -o -iname 'ATTRIBUTION*' \) \
+    | while read -r doc; do
+        cp "$doc" "$build_dir/usr/share/doc/$filekey/"
+      done
 
   # Compute Installed-Size (dpkg size in KB = bytes / 1024, rounded up)
   local payload_bytes payload_kb
@@ -184,8 +192,7 @@ build_from_tarball() { # build_from_tarball <tarball> <filekey> <new_ver> [arch]
     printf 'Installed-Size: %s\n' "$payload_kb"
     printf 'Section: utils\n'
     printf 'Priority: optional\n'
-    echo 'Description: ROCm CLI tool'
-    printf ' %s\n' "AMD ROCm command-line interface (upstream $new_ver)"
+    printf 'Description: CLI tool from upstream %s (upstream version %s)\n' "$filekey" "$new_ver"
   } > "$build_dir/DEBIAN/control"
 
   # postinst: no-op (binary is already embedded in the deb payload)
