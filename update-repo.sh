@@ -142,14 +142,19 @@ repack_stub() { # repack_stub <deb> <repo> <app-name> <asset-regex> [apt-name] [
 
 build_from_tarball() { # build_from_tarball <tarball> <filekey> <new_ver> [arch]
   local tarball=$1 filekey=$2 new_ver=$3 arch=${4:-amd64}
-  local tmp build_dir deb_name pkg_dir extracted_dir
+  local tmp build_dir deb_name extracted_dir
   tmp=$(mktemp -d -p "$TMP_ROOT")
 
-  # Extract the tarball FIRST (before creating $tmp/build, which would
-  # confuse the glob that picks the extracted directory below)
-  tar xzf "$tarball" -C "$tmp"
-  extracted_dir=$(ls -1d "$tmp"/*/ | head -n1)
-  extracted_dir=${extracted_dir%/}  # strip trailing slash only
+  # Extract into a dedicated src/ dir. Using the whole extracted tree (instead
+  # of picking one top-level directory) handles flat tarballs and archives
+  # with multiple top-level directories.
+  extracted_dir="$tmp/src"
+  mkdir -p "$extracted_dir"
+  if ! tar xzf "$tarball" -C "$extracted_dir" 2>/dev/null; then
+    echo "!! tarball is not a valid .tar.gz (upstream error page?)" >&2
+    rm -rf "$tmp"
+    return 1
+  fi
 
   build_dir="$tmp/build"
   mkdir -p "$build_dir/usr/bin" \
@@ -157,8 +162,9 @@ build_from_tarball() { # build_from_tarball <tarball> <filekey> <new_ver> [arch]
            "$build_dir/DEBIAN"
 
   # Install all executable files (ELF binaries, scripts) to /usr/bin/,
-  # skipping common installer/build scripts that don't belong in the package
-  find "$extracted_dir" -type f -executable \
+  # following symlinks, skipping common installer/build scripts.
+  # "|| true" keeps a find warning (e.g. broken symlink) from aborting the run.
+  { find -L "$extracted_dir" -type f -executable 2>/dev/null || true; } \
     | while read -r exe; do
         local_name=$(basename "$exe")
         case "$local_name" in
@@ -168,12 +174,19 @@ build_from_tarball() { # build_from_tarball <tarball> <filekey> <new_ver> [arch]
         chmod 755 "$build_dir/usr/bin/$local_name"
       done
 
-  # Copy common doc files (case-insensitive match) if present,
+  # Refuse to publish an empty package (unexpected tarball layout)
+  if [ -z "$(find "$build_dir/usr/bin" -type f -print -quit)" ]; then
+    echo "!! tarball contains no executable files, refusing empty package" >&2
+    rm -rf "$tmp"
+    return 1
+  fi
+
+  # Copy common doc files (case-insensitive, recursive) if present,
   # using find -iname instead of shell glob to avoid CWD expansion issues
-  find "$extracted_dir" -maxdepth 1 -type f \
+  { find "$extracted_dir" -type f \
     \( -iname 'LICENSE*' -o -iname 'README*' -o -iname 'CHANGELOG*' \
        -o -iname 'COPYING*' -o -iname 'NOTICE*' -o -iname 'THIRD_PARTY*' \
-       -o -iname 'ATTRIBUTION*' \) \
+       -o -iname 'ATTRIBUTION*' \) 2>/dev/null || true; } \
     | while read -r doc; do
         cp "$doc" "$build_dir/usr/share/doc/$filekey/"
       done
@@ -306,12 +319,26 @@ process_package() { # process_package <toml-file>
     return 0
   fi
 
-  # source=tarball: extract binary and build a .deb with dpkg-deb
+  # source=tarball: verify the raw tarball checksum, then build a .deb
   if [ "$source_type" = "tarball" ]; then
+    # The upstream .sha256 hashes the raw tarball, so verify the download
+    # BEFORE building. Built debs have no matching upstream checksum.
+    local sha_url="${url}.sha256"
+    if $fetch -f -o "$tmpdir/checksum.sha256" "$sha_url" 2>/dev/null; then
+      if ! grep -q "$(sha256sum "$deb" | awk '{print $1}')" "$tmpdir/checksum.sha256"; then
+        echo "!! $name: tarball sha256 mismatch against $sha_url, skipping" >&2
+        rm -rf "$tmpdir"
+        return 0
+      fi
+      echo "-- $name: tarball sha256 verified"
+    else
+      echo "-- $name: no upstream checksum for tarball, skipping verification"
+    fi
     echo "-- $name: building .deb from tarball"
-    build_from_tarball "$deb" "$filekey" "$new_ver" # arch defaults to amd64
-    # overwrite the raw download placeholder with the built deb path
-    deb="$DEB_DIR/${filekey}_${new_ver}_amd64.deb"
+    if ! build_from_tarball "$deb" "$filekey" "$new_ver"; then
+      rm -rf "$tmpdir"
+      return 0 # invalid/empty tarball — skip this package, keep the run going
+    fi
     rm -rf "$tmpdir"
   fi
 
@@ -328,23 +355,18 @@ process_package() { # process_package <toml-file>
       echo "-- $name: control version $ctrl_ver differs from URL-detected $new_ver, using $ctrl_ver"
       new_ver=$ctrl_ver
     fi
-  else
+  elif [ "$source_type" != "tarball" ]; then
     # Verify against the upstream .sha256 when the release ships one
-    # (only for native deb assets; built-from-tarball debs have no matching checksum)
-    if [ "$source_type" != "tarball" ]; then
-      local sha_url="${url}.sha256"
-      if $fetch -f -o "$tmpdir/checksum.sha256" "$sha_url" 2>/dev/null; then
-        if ! grep -q "$(sha256sum "$deb" | awk '{print $1}')" "$tmpdir/checksum.sha256"; then
-          echo "!! $name: sha256 mismatch against $sha_url, skipping" >&2
-          rm -rf "$tmpdir"
-          return 0
-        fi
-        echo "-- $name: sha256 verified"
-      else
-        echo "-- $name: no upstream checksum file, skipping verification"
+    local sha_url="${url}.sha256"
+    if $fetch -f -o "$tmpdir/checksum.sha256" "$sha_url" 2>/dev/null; then
+      if ! grep -q "$(sha256sum "$deb" | awk '{print $1}')" "$tmpdir/checksum.sha256"; then
+        echo "!! $name: sha256 mismatch against $sha_url, skipping" >&2
+        rm -rf "$tmpdir"
+        return 0
       fi
+      echo "-- $name: sha256 verified"
     else
-      echo "-- $name: tarball source, skipping sha256 verification (checksum is for raw asset)"
+      echo "-- $name: no upstream checksum file, skipping verification"
     fi
   fi
   if [ "$source_type" != "tarball" ] && [ "$(stat -c%s "$deb")" -gt "$REPACK_SIZE_THRESHOLD" ]; then
