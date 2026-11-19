@@ -1344,6 +1344,20 @@ Description: Proton Mail Bridge is a desktop application that runs in the backgr
 License: GPLv3
 Vendor: Proton AG
 
+Package: rocm-cli
+Version: 0.3.0
+Architecture: amd64
+Maintainer: Tommy Miland <kontakt@tmiland.com>
+Installed-Size: 54262
+Filename: ./rocm-cli_0.3.0_amd64.deb
+Size: 14129372
+MD5sum: 78b1291ab41023c0e59f1d9ee45e1a97
+SHA1: f91318c9615bc09528a181b3dcd1f58104c58c24
+SHA256: e4afde8ea9e232b95c6769d4cf878c101244ed5e9b911bd868053f348fd886ab
+Section: utils
+Priority: optional
+Description: CLI tool from upstream rocm-cli (upstream version 0.3.0)
+
 Package: rustdesk
 Version: 1.5.0
 Architecture: amd64
