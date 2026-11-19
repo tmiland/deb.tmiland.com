@@ -22,6 +22,8 @@
 #   asset = "regex"             pattern matching the .deb release asset (required)
 #   name = "pkg"                apt package name (defaults to file name)
 #   keep_versions = 2           optional: prune old debs, keep newest N
+#   source = "tarball"          optional: asset is a tar.gz containing a binary;
+#                               builds a .deb with dpkg-deb and installs to /usr/local/bin
 #
 # Release selection: stable releases are preferred; a prerelease asset
 # (nightly/test build) is only used when no stable release matches.
@@ -138,6 +140,68 @@ repack_stub() { # repack_stub <deb> <repo> <app-name> <asset-regex> [apt-name] [
   rm -rf "$tmp"
 }
 
+build_from_tarball() { # build_from_tarball <tarball> <filekey> <new_ver> [arch]
+  local tarball=$1 filekey=$2 new_ver=$3 arch=${4:-amd64}
+  local tmp build_dir deb_name pkg_dir extracted_dir
+  tmp=$(mktemp -d -p "$TMP_ROOT")
+
+  # Extract the tarball FIRST (before creating $tmp/build, which would
+  # confuse the glob that picks the extracted directory below)
+  tar xzf "$tarball" -C "$tmp"
+  extracted_dir=$(ls -1d "$tmp"/*/ | head -n1)
+  extracted_dir=${extracted_dir%/}  # strip trailing slash only
+
+  build_dir="$tmp/build"
+  mkdir -p "$build_dir/usr/bin" \
+           "$build_dir/usr/share/doc/$filekey" \
+           "$build_dir/DEBIAN"
+  # Install all binaries from the tarball's bin/ directory
+  if [ -d "$extracted_dir/bin" ]; then
+    for bin in "$extracted_dir/bin/"*; do
+      [ -f "$bin" ] || continue
+      cp "$bin" "$build_dir/usr/bin/"
+      chmod 755 "$build_dir/usr/bin/$(basename "$bin")"
+    done
+  fi
+  # Copy docs (skip install.sh — it's an upstream installer, not a doc)
+  for f in LICENSE.TXT README.md THIRD_PARTY_NOTICES.txt; do
+    if [ -f "$extracted_dir/$f" ]; then
+      cp "$extracted_dir/$f" "$build_dir/usr/share/doc/$filekey/"
+    fi
+  done
+
+  # Compute Installed-Size (dpkg size in KB = bytes / 1024, rounded up)
+  local payload_bytes payload_kb
+  payload_bytes=$(find "$build_dir/usr" -type f -exec stat -c%s {} + 2>/dev/null | awk '{s+=$1}END{print s+0}')
+  payload_kb=$(( (payload_bytes + 1023) / 1024 ))
+
+  # Build minimal DEBIAN/control
+  {
+    printf 'Package: %s\n' "$filekey"
+    printf 'Version: %s\n' "$new_ver"
+    printf 'Architecture: %s\n' "$arch"
+    echo 'Maintainer: Tommy Miland <kontakt@tmiland.com>'
+    printf 'Installed-Size: %s\n' "$payload_kb"
+    printf 'Section: utils\n'
+    printf 'Priority: optional\n'
+    echo 'Description: ROCm CLI tool'
+    printf ' %s\n' "AMD ROCm command-line interface (upstream $new_ver)"
+  } > "$build_dir/DEBIAN/control"
+
+  # postinst: no-op (binary is already embedded in the deb payload)
+  printf '#!/bin/bash\n[ "${1:-}" = "configure" ] || exit 0\nexit 0\n' > "$build_dir/DEBIAN/postinst"
+  chmod 755 "$build_dir/DEBIAN/postinst"
+
+  # md5sums for payload files (only under DEBIAN and the rest of build_dir)
+  ( cd "$build_dir" \
+    && find . -type f -not -path "./DEBIAN/*" -exec md5sum {} + 2>/dev/null \
+      | sort -k 2 | sed 's/\.\/\(.*\)/\1/' > DEBIAN/md5sums )
+
+  deb_name="${filekey}_${new_ver}_${arch}.deb"
+  dpkg-deb -b --root-owner-group "$build_dir" "$DEB_DIR/$deb_name"
+  rm -rf "$tmp"
+}
+
 process_package() { # process_package <toml-file>
   local cfg=$1
   local name repo host asset_re keep pkg_name hide summary payload_dir filekey dl_url_orig fetch
@@ -203,7 +267,7 @@ process_package() { # process_package <toml-file>
     [ -z "$new_ver" ] && [ -n "$rel_tag" ] && new_ver=$(version_from "$rel_tag")
   fi
   if [ "$source_type" != "url" ] && [ -z "$url" ]; then
-    echo "-- $name: no upstream .deb asset matches '$asset_re', skipping"
+    echo "-- $name: no upstream asset matches '$asset_re', skipping"
     return 0
   fi
   cur_ver=$(current_version "$filekey")
@@ -234,9 +298,17 @@ process_package() { # process_package <toml-file>
     rm -rf "$tmpdir"
     return 0
   fi
-  # some hosts (e.g. Codeberg) intermittently serve error pages with HTTP 200 —
-  # skip the package instead of letting dpkg-deb abort the whole run
-  if ! dpkg-deb -I "$deb" >/dev/null 2>&1; then
+
+  # source=tarball: extract binary and build a .deb with dpkg-deb
+  if [ "$source_type" = "tarball" ]; then
+    echo "-- $name: building .deb from tarball"
+    build_from_tarball "$deb" "$filekey" "$new_ver" # arch defaults to amd64
+    # overwrite the raw download placeholder with the built deb path
+    deb="$DEB_DIR/${filekey}_${new_ver}_amd64.deb"
+    rm -rf "$tmpdir"
+  fi
+
+  if [ "$source_type" != "tarball" ] && ! dpkg-deb -I "$deb" >/dev/null 2>&1; then
     echo "!! $name: download is not a valid .deb (upstream error page?), skipping" >&2
     rm -rf "$tmpdir"
     return 0
@@ -250,29 +322,37 @@ process_package() { # process_package <toml-file>
       new_ver=$ctrl_ver
     fi
   else
-  # Verify against the upstream .sha256 when the release ships one
-  local sha_url="${url}.sha256"
-  if $fetch -f -o "$tmpdir/checksum.sha256" "$sha_url" 2>/dev/null; then
-    if ! grep -q "$(sha256sum "$deb" | awk '{print $1}')" "$tmpdir/checksum.sha256"; then
-      echo "!! $name: sha256 mismatch against $sha_url, skipping" >&2
-      rm -rf "$tmpdir"
-      return 0
+    # Verify against the upstream .sha256 when the release ships one
+    # (only for native deb assets; built-from-tarball debs have no matching checksum)
+    if [ "$source_type" != "tarball" ]; then
+      local sha_url="${url}.sha256"
+      if $fetch -f -o "$tmpdir/checksum.sha256" "$sha_url" 2>/dev/null; then
+        if ! grep -q "$(sha256sum "$deb" | awk '{print $1}')" "$tmpdir/checksum.sha256"; then
+          echo "!! $name: sha256 mismatch against $sha_url, skipping" >&2
+          rm -rf "$tmpdir"
+          return 0
+        fi
+        echo "-- $name: sha256 verified"
+      else
+        echo "-- $name: no upstream checksum file, skipping verification"
+      fi
+    else
+      echo "-- $name: tarball source, skipping sha256 verification (checksum is for raw asset)"
     fi
-    echo "-- $name: sha256 verified"
-  else
-    echo "-- $name: no upstream checksum file, skipping verification"
   fi
-  fi
-  if [ "$(stat -c%s "$deb")" -gt "$REPACK_SIZE_THRESHOLD" ]; then
+  if [ "$source_type" != "tarball" ] && [ "$(stat -c%s "$deb")" -gt "$REPACK_SIZE_THRESHOLD" ]; then
     echo "-- $name: >25MB, repacking as install-stub"
     repack_stub "$deb" "$repo" "${pkg_name:-$name}" "$asset_re" "$pkg_name" "$payload_dir" "$hide" "$summary" "$dl_url_orig"
   fi
   # normalize the filename so version tracking works even for unversioned
-  # upstream asset names (name_version_arch.deb)
-  local arch
-  arch=$(dpkg-deb -f "$deb" Architecture)
-  mv "$deb" "$DEB_DIR/${filekey}_${new_ver}_${arch}.deb"
-  rm -rf "$tmpdir"
+  # upstream asset names (name_version_arch.deb) — skip for tarball builds
+  # since build_from_tarball already placed the deb at the final path
+  if [ "$source_type" != "tarball" ]; then
+    local arch
+    arch=$(dpkg-deb -f "$deb" Architecture)
+    mv "$deb" "$DEB_DIR/${filekey}_${new_ver}_${arch}.deb"
+    rm -rf "$tmpdir"
+  fi
   UPDATED+=("$filekey to $new_ver")
 
   if [ -n "$keep" ] && [ "$keep" -gt 0 ] 2>/dev/null; then

@@ -1,0 +1,5 @@
+repo = 'ROCm/rocm-cli'
+asset = 'rocm-cli-v[0-9.]*-linux-amd64\.tar\.gz$'
+name = 'rocm-cli'
+source = 'tarball'
+keep_versions = 3

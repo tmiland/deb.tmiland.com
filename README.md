@@ -69,6 +69,7 @@ The software below can be installed, updated and removed using this repository:
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/jgm/pandoc) | `pandoc` | <i>general markup converter</i> |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/tmiland/pixelflasher-deb) | `pixelflasher` | <i>Android firmware flashing GUI for Pixel devices (repackaged from upstream [badabing2005/PixelFlasher](https://github.com/badabing2005/PixelFlasher) standalone build)</i> |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/ProtonMail/proton-bridge) | `protonmail-bridge` | <i>Proton Mail Bridge is a desktop application that runs in the background, encrypting and decrypting messages as they enter and leave your computer.</i> |
+| [<img src="./img/github.png" align="top" width="20" />](https://github.com/ROCm/rocm-cli) | `rocm-cli` | <i>AMD ROCm command-line interface for GPU management and diagnostics.</i> |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/rustdesk/rustdesk) | `rustdesk` | <i>A remote control software.</i> |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/tmiland/screencloud-deb) | `screencloud` | <i>Easy to use screenshot sharing tool (repackaged from upstream [olav-st/screencloud](https://github.com/olav-st/screencloud) AppImage)</i> |
 | [<img src="./img/github.png" align="top" width="20" />](https://github.com/bryanroscoe/shield_optimizer) | `shield-optimizer` | <i>Debloat and tune Android TV devices via ADB.</i> |
