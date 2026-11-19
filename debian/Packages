@@ -141,26 +141,6 @@ Description: cat(1) clone with wings.
   A cat(1) clone with syntax highlighting and Git integration.
 
 Package: bitwarden
-Version: 2026.10.2
-Architecture: amd64
-Maintainer: Bitwarden Inc. <hello@bitwarden.com>
-Installed-Size: 668560
-Depends: libnotify4, libxtst6, libnss3, libxss1
-Recommends: libappindicator3-1
-Filename: ./bitwarden_2026.10.2_amd64.deb
-Size: 1868
-MD5sum: b72a72d53e6fa6816a6e7a2a232665fd
-SHA1: 01f2982311301fa4e394b303ccdb645510ae67f5
-SHA256: 580b9e2ec51c1682dedab7de3654acd1312275f5dd1cb2b604487c90e0dab9b2
-Section: default
-Priority: optional
-Homepage: https://bitwarden.com
-Description: A secure and free password manager for all of your devices.
-  A secure and free password manager for all of your devices.
-License: GPL-3.0
-Vendor: Bitwarden Inc. <hello@bitwarden.com>
-
-Package: bitwarden
 Version: 2026.10.3
 Architecture: amd64
 Maintainer: Bitwarden Inc. <hello@bitwarden.com>
@@ -192,6 +172,26 @@ Size: 2152
 MD5sum: 8575cb242dee1400b2277a1146566c2f
 SHA1: aab5d23050f1d1e79290b27265438cdb45165649
 SHA256: 856e8ebafad6ef550e917f2568393c767151cca303da5363e1179aeb5274bde9
+Section: default
+Priority: optional
+Homepage: https://bitwarden.com
+Description: A secure and free password manager for all of your devices.
+  A secure and free password manager for all of your devices.
+License: GPL-3.0
+Vendor: Bitwarden Inc. <hello@bitwarden.com>
+
+Package: bitwarden
+Version: 2026.11.0
+Architecture: amd64
+Maintainer: Bitwarden Inc. <hello@bitwarden.com>
+Installed-Size: 443352
+Depends: libnotify4, libxtst6, libnss3, libxss1
+Recommends: libappindicator3-1
+Filename: ./bitwarden_2026.11.0_amd64.deb
+Size: 2492
+MD5sum: a345b7f03f9cdac1936012285452626d
+SHA1: 4bd2b1dff0358e3da8f0bcf0f1c8920b22a09019
+SHA256: f4e296cb552980c57e1b1bc07c233286e3e96cc4d33f5cacee5d5397fd0c88d2
 Section: default
 Priority: optional
 Homepage: https://bitwarden.com
@@ -261,25 +261,6 @@ License: unknown
 Vendor: Anoop M D <anoop.md1421@gmail.com>
 
 Package: discord
-Version: 1.0.167
-Architecture: amd64
-Maintainer: Discord Maintainer Team <noreply@discord.com>
-Installed-Size: 4696
-Depends: libc6, libasound2, libatk1.0-0, libatk-bridge2.0-0, libatspi2.0-0, libatomic1, libcairo2, libdbus-1-3, libexpat1, libgbm1, libglib2.0-0, libgtk-3-0, libnotify4, libnspr4, libnss3, libpango-1.0-0, libstdc++6, libudev1, libx11-6, libxcb1, libxcomposite1, libxdamage1, libxext6, libxfixes3, libxkbcommon0, libxrandr2
-Recommends: libunity9, libva2, libpipewire-0.3-0
-Filename: ./discord_1.0.167_amd64.deb
-Size: 2387226
-MD5sum: b7e0c0e0d5545d1b72b2b26a00520827
-SHA1: 305281b04ff5f9b4530ca296ab9ee6305a635b97
-SHA256: 540cdc7204e7a069513b7f5f5a74fbae79133bdbd8e1bc50c3916132efb23e21
-Section: net
-Priority: optional
-Homepage: https://discord.com
-Description: Chat for Communities and Friends
- Discord is the easiest way to communicate over voice, video, and text. Chat,
- hang out, and stay close with your friends and communities.
-
-Package: discord
 Version: 1.0.168
 Architecture: amd64
 Maintainer: Discord Maintainer Team <noreply@discord.com>
@@ -310,6 +291,25 @@ Size: 4450706
 MD5sum: 77ea3c3061a23b9ce37f8d0211b50d25
 SHA1: 2756cd386ad7b4b5d91116dc0edd351f86c9b3f5
 SHA256: 64d39ef66390149c09ec7d20759a2e4aa0b93efc071d073e3e72155eb86639df
+Section: net
+Priority: optional
+Homepage: https://discord.com
+Description: Chat for Communities and Friends
+ Discord is the easiest way to communicate over voice, video, and text. Chat,
+ hang out, and stay close with your friends and communities.
+
+Package: discord
+Version: 1.0.170
+Architecture: amd64
+Maintainer: Discord Maintainer Team <noreply@discord.com>
+Installed-Size: 9516
+Depends: libc6, libasound2, libatk1.0-0, libatk-bridge2.0-0, libatspi2.0-0, libatomic1, libcairo2, libdbus-1-3, libexpat1, libgbm1, libglib2.0-0, libgtk-3-0, libnotify4, libnspr4, libnss3, libpango-1.0-0, libstdc++6, libudev1, libx11-6, libxcb1, libxcomposite1, libxdamage1, libxext6, libxfixes3, libxkbcommon0, libxrandr2
+Recommends: libunity9, libva2, libpipewire-0.3-0, libxkbcommon-x11-0
+Filename: ./discord_1.0.170_amd64.deb
+Size: 4422144
+MD5sum: b16b2703a82ec142bfd0c85a8ad41d85
+SHA1: cc67e642213d56830723fc14cc245fafdcb3a9cc
+SHA256: b57679faa9e3cac1daa7eeea55e9c26b697ce769b5123f88a662ce58184b4807
 Section: net
 Priority: optional
 Homepage: https://discord.com
@@ -698,26 +698,6 @@ License: MIT
 Vendor: ZEIT, Inc. <team@zeit.co>
 
 Package: joplin
-Version: 3.7.18
-Architecture: amd64
-Maintainer: Joplin Team <no-reply@joplinapp.org>
-Installed-Size: 625501
-Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
-Recommends: libappindicator3-1
-Filename: ./joplin_3.7.18_amd64.deb
-Size: 1848
-MD5sum: a912fe5546af2e28dff469d44df02c3c
-SHA1: 1919c6883d0d71199c2e757d3ec7c02884d14661
-SHA256: abeadffb457cd42ac238674af77d8856879feb43b92ff44f142b9212dcf38261
-Section: default
-Priority: optional
-Homepage: https://github.com/laurent22/joplin#readme
-Description:
-  Joplin for Desktop
-License: AGPL-3.0-or-later
-Vendor: Joplin Team <no-reply@joplinapp.org>
-
-Package: joplin
 Version: 3.7.21
 Architecture: amd64
 Maintainer: Joplin Team <no-reply@joplinapp.org>
@@ -749,6 +729,26 @@ Size: 2234
 MD5sum: 3a94ef5f9a82f96eef5210087d5f485d
 SHA1: 04f0e2ca1fdd5037d610f3c0da7b83b236f9ab41
 SHA256: cd140f60b0756c6a5cb51bfa27b73f410688d2d701de9a6999f6502471a28e46
+Section: default
+Priority: optional
+Homepage: https://github.com/laurent22/joplin#readme
+Description:
+  Joplin for Desktop
+License: AGPL-3.0-or-later
+Vendor: Joplin Team <no-reply@joplinapp.org>
+
+Package: joplin
+Version: 3.7.24
+Architecture: amd64
+Maintainer: Joplin Team <no-reply@joplinapp.org>
+Installed-Size: 636714
+Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
+Recommends: libappindicator3-1
+Filename: ./joplin_3.7.24_amd64.deb
+Size: 2516
+MD5sum: 070f5a57f6a98b14d25d7843cc451100
+SHA1: 0aa100a3df97f46eef6d718afa8b6c5247e25100
+SHA256: 373afa25dfa018d62fc45a9f1776fd9f1734171d79afab92aa011d7c30e127ba
 Section: default
 Priority: optional
 Homepage: https://github.com/laurent22/joplin#readme
@@ -1458,17 +1458,17 @@ License: unknown
 Vendor: Yunnan Liandi Technology Co., Ltd. <845765@qq.com>
 
 Package: siyuan
-Version: 3.8.8~alpha.1
+Version: 3.8.11
 Architecture: amd64
 Maintainer: Yunnan Liandi Technology Co., Ltd. <845765@qq.com>
-Installed-Size: 731334
+Installed-Size: 771443
 Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
 Recommends: libappindicator3-1
-Filename: ./siyuan_3.8.8_amd64.deb
-Size: 2248
-MD5sum: 59963fa214cbf15fc0af4526f1808ce3
-SHA1: e0003eb560374ba4a3b8b45730050abd9d78bfe2
-SHA256: 6fa6367559af54527de2ce6e9ffa2247bdd231a91232ac145e272424fbab3ac2
+Filename: ./siyuan_3.8.11_amd64.deb
+Size: 2536
+MD5sum: ae258e39cb5b8b7b911e972cb481d01f
+SHA1: e7877a3917d90d9c1b2a168240d4e40b0aef3388
+SHA256: e8487533e56be3e7c699ae70223590152259ce13ecc8320c5195614a3460ccbb
 Section: default
 Priority: optional
 Homepage: https://b3log.org/siyuan
@@ -1520,7 +1520,7 @@ Architecture: all
 Maintainer: Johannes Pohl <snapweb@badaix.de>
 Installed-Size: 1209
 Depends: debconf (>= 0.5) | debconf-2.0
-Filename: ./snapweb_0.9.3_all.deb
+Filename: ./snapweb_0.9.3-1_all.deb
 Size: 488024
 MD5sum: 36c288229346c71973aeda6ce82b4aed
 SHA1: 95cd2e5ea77274eb9fca8ed4c3d73c882c6120c5
@@ -1537,7 +1537,7 @@ Architecture: all
 Maintainer: Johannes Pohl <snapweb@badaix.de>
 Installed-Size: 1209
 Depends: debconf (>= 0.5) | debconf-2.0
-Filename: ./snapweb_0.9.3-1_all.deb
+Filename: ./snapweb_0.9.3_all.deb
 Size: 488024
 MD5sum: 36c288229346c71973aeda6ce82b4aed
 SHA1: 95cd2e5ea77274eb9fca8ed4c3d73c882c6120c5
