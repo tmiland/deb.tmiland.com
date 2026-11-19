@@ -150,6 +150,4 @@ One package is special:
 
 ## License
 
-[![MIT License Image](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/MIT_logo.svg/220px-MIT_logo.svg.png)](https://github.com/tmiland/deb.tmiland.com/blob/master/LICENSE)
-
 [MIT License](https://github.com/tmiland/deb.tmiland.com/blob/master/LICENSE)
