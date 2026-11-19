@@ -1506,7 +1506,7 @@ Architecture: all
 Maintainer: Johannes Pohl <snapweb@badaix.de>
 Installed-Size: 1209
 Depends: debconf (>= 0.5) | debconf-2.0
-Filename: ./snapweb_0.9.3-1_all.deb
+Filename: ./snapweb_0.9.3_all.deb
 Size: 488024
 MD5sum: 36c288229346c71973aeda6ce82b4aed
 SHA1: 95cd2e5ea77274eb9fca8ed4c3d73c882c6120c5
@@ -1523,7 +1523,7 @@ Architecture: all
 Maintainer: Johannes Pohl <snapweb@badaix.de>
 Installed-Size: 1209
 Depends: debconf (>= 0.5) | debconf-2.0
-Filename: ./snapweb_0.9.3_all.deb
+Filename: ./snapweb_0.9.3-1_all.deb
 Size: 488024
 MD5sum: 36c288229346c71973aeda6ce82b4aed
 SHA1: 95cd2e5ea77274eb9fca8ed4c3d73c882c6120c5
@@ -1633,21 +1633,6 @@ Description: modern, lightweight SSH connection manager
  for Linux and macOS, with an integrated terminal and SFTP file manager.
 
 Package: stirling-pdf
-Version: 3.2.1
-Architecture: amd64
-Maintainer: Stirling-PDF Contributors
-Installed-Size: 315533
-Depends: libwebkit2gtk-4.1-0, libgtk-3-0
-Filename: ./stirling-pdf_3.2.1_amd64.deb
-Size: 1626
-MD5sum: b174d0715ebd3bca054c84d67f2d89ea
-SHA1: 3e0fa91f68ca910fb730a00d60fa35e554f486f1
-SHA256: 548514046ed7cba51983d65ffa2f8e9ecd67eb2356c6044904a0ae13ca25165a
-Priority: optional
-Description: Stirling-PDF Desktop Application
- (none)
-
-Package: stirling-pdf
 Version: 3.2.2
 Architecture: amd64
 Maintainer: Stirling-PDF Contributors
@@ -1673,6 +1658,21 @@ Size: 1922
 MD5sum: 6cc07e8c897996df55109d525b14a8ad
 SHA1: 42fe7f635612be846bec42591988bc1739e2e3b6
 SHA256: 82d7be60e44fa0b8f8531c85230580cc2c9bb961528662b30fe3d30c6826c5bd
+Priority: optional
+Description: Stirling-PDF Desktop Application
+ (none)
+
+Package: stirling-pdf
+Version: 3.4.0
+Architecture: amd64
+Maintainer: Stirling-PDF Contributors
+Installed-Size: 279749
+Depends: libwebkit2gtk-4.1-0, libgtk-3-0
+Filename: ./stirling-pdf_3.4.0_amd64.deb
+Size: 1922
+MD5sum: e91f6924f2b28ca837d9096c5af65725
+SHA1: 00b697244255a1fca76dbba953db59f3aa283a30
+SHA256: 92a48502a406f8f45b5b3f7c301b165195797b9dda4d2003a13fa7ad444a5c3e
 Priority: optional
 Description: Stirling-PDF Desktop Application
  (none)
