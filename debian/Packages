@@ -579,25 +579,6 @@ Description: GitHub Desktop fork with advanced functionality and improvements.
  GitHub Desktop fork with advanced functionality and improvements.
 
 Package: goose
-Version: 1.59.1
-Architecture: amd64
-Maintainer: AAIF (Agentic AI Foundation)
-Installed-Size: 534226
-Depends: libgtk-3-0, libnotify4, libnss3, xdg-utils, libatspi2.0-0, libdrm2, libgbm1, libxcb-dri3-0, kde-cli-tools | kde-runtime | trash-cli | libglib2.0-bin | gvfs-bin
-Recommends: pulseaudio | libasound2
-Suggests: gir1.2-gnomekeyring-1.0, libgnome-keyring0, lsb-release
-Filename: ./goose_1.59.1_amd64.deb
-Size: 2052
-MD5sum: fca04e94e13ef7b09a1c50783fe7f91a
-SHA1: eaa39dd77b109334445fd3ff797ad19657f633d8
-SHA256: b670383222f7891fd9ec5df4305be7c8178a23a7bd23ee4ef018210e6d5371b1
-Section: utils
-Priority: optional
-Homepage: https://goose-docs.ai/
-Description: Goose App
- Goose App
-
-Package: goose
 Version: 1.59.2
 Architecture: amd64
 Maintainer: AAIF (Agentic AI Foundation)
@@ -629,6 +610,25 @@ Size: 2056
 MD5sum: 6902d085b87237f2d966464a70cf8325
 SHA1: 7ae03ac801adbe321b7078f84c36cba7b07c1caf
 SHA256: 3b3dc7f9c293883ece16d603559401f35c958b3afbec72c0fe0a3c24776fc922
+Section: utils
+Priority: optional
+Homepage: https://goose-docs.ai/
+Description: Goose App
+ Goose App
+
+Package: goose
+Version: 1.60.2
+Architecture: amd64
+Maintainer: AAIF (Agentic AI Foundation)
+Installed-Size: 499137
+Depends: libgtk-3-0, libnotify4, libnss3, xdg-utils, libatspi2.0-0, libdrm2, libgbm1, libxcb-dri3-0, kde-cli-tools | kde-runtime | trash-cli | libglib2.0-bin | gvfs-bin
+Recommends: pulseaudio | libasound2
+Suggests: gir1.2-gnomekeyring-1.0, libgnome-keyring0, lsb-release
+Filename: ./goose_1.60.2_amd64.deb
+Size: 2056
+MD5sum: d580a8bbde0fcc7d5300a1f069468930
+SHA1: 7f73d7fc56f77ccfaa8e6986a4e6ada6e53a3dc5
+SHA256: 9dab78ab75fd4dc51a91391e1ae1088c5fc14b077dfbfb854f0bf2277c844bec
 Section: utils
 Priority: optional
 Homepage: https://goose-docs.ai/
@@ -1782,7 +1782,7 @@ Package: teamspeak3-client
 Version: 3.6.2
 Architecture: amd64
 Maintainer: Tommy Miland (tmiland) <kontakt@tmiland.com>
-Filename: ./teamspeak3-client_amd64-3.6.2.deb
+Filename: ./teamspeak3-client_3.6.2_amd64.deb
 Size: 1388
 MD5sum: 6e073efd2f65017122f10bdd81529b00
 SHA1: c157ed36b11276a554d0abae8b1d69110cba1c31
@@ -1806,7 +1806,7 @@ Package: teamspeak3-client
 Version: 3.6.2
 Architecture: amd64
 Maintainer: Tommy Miland (tmiland) <kontakt@tmiland.com>
-Filename: ./teamspeak3-client_3.6.2_amd64.deb
+Filename: ./teamspeak3-client_amd64-3.6.2.deb
 Size: 1388
 MD5sum: 6e073efd2f65017122f10bdd81529b00
 SHA1: c157ed36b11276a554d0abae8b1d69110cba1c31
