@@ -1478,17 +1478,17 @@ License: unknown
 Vendor: Yunnan Liandi Technology Co., Ltd. <845765@qq.com>
 
 Package: siyuan
-Version: 3.8.9~alpha.1
+Version: 3.8.12
 Architecture: amd64
 Maintainer: Yunnan Liandi Technology Co., Ltd. <845765@qq.com>
-Installed-Size: 754794
+Installed-Size: 778490
 Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
 Recommends: libappindicator3-1
-Filename: ./siyuan_3.8.9_amd64.deb
-Size: 2250
-MD5sum: 65ffa56feec1953af72fc95a27bb3465
-SHA1: d2de157e1a460e4929437e3a762bbdecc090fe37
-SHA256: 3b0ef70879d74deedf39d992a9dbf97b6c2de21f690f020390e56de5c01656d6
+Filename: ./siyuan_3.8.12_amd64.deb
+Size: 2534
+MD5sum: 49c1cbab229116eaa6eb231a7a3fa8fb
+SHA1: 06fc1741baa81ae399d1982b77a2e384dab6db81
+SHA256: 430fc2f09ba134608f24c47fc3d919c0cddb1aa24703f967f5b0158fc744c5d8
 Section: default
 Priority: optional
 Homepage: https://b3log.org/siyuan
