@@ -201,26 +201,6 @@ License: GPL-3.0
 Vendor: Bitwarden Inc. <hello@bitwarden.com>
 
 Package: bruno
-Version: 4.2.0
-Architecture: amd64
-Maintainer: Anoop M D <anoop.md1421@gmail.com>
-Installed-Size: 539550
-Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0, libasound2
-Recommends: libappindicator3-1
-Filename: ./bruno_4.2.0_amd64.deb
-Size: 1848
-MD5sum: 359fef82890347e5e051aa7b5d1de550
-SHA1: be2ab66fede8ae516557be47e0d59bc34c037cab
-SHA256: db52e222b6fad18d11cf12703c71d83fa5a1a17246c7ee7ed5326cf7c5e6160d
-Section: default
-Priority: optional
-Homepage: https://www.usebruno.com
-Description:
-  Opensource API Client for Exploring and Testing APIs
-License: unknown
-Vendor: Anoop M D <anoop.md1421@gmail.com>
-
-Package: bruno
 Version: 4.2.1
 Architecture: amd64
 Maintainer: Anoop M D <anoop.md1421@gmail.com>
@@ -252,6 +232,26 @@ Size: 1846
 MD5sum: e75f0706633deb2fba52acdf08a0cc11
 SHA1: 60b17dd2b986d147c54c9970b3090c788d0b1a90
 SHA256: 0c8a8d7182d2b29f80a79f2e3fef108526f3a16a766eb547446d5afcda838b7f
+Section: default
+Priority: optional
+Homepage: https://www.usebruno.com
+Description:
+  Opensource API Client for Exploring and Testing APIs
+License: unknown
+Vendor: Anoop M D <anoop.md1421@gmail.com>
+
+Package: bruno
+Version: 4.4.0
+Architecture: amd64
+Maintainer: Anoop M D <anoop.md1421@gmail.com>
+Installed-Size: 564833
+Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0, libasound2 | libasound2t64
+Recommends: libappindicator3-1
+Filename: ./bruno_4.4.0_amd64.deb
+Size: 2542
+MD5sum: 0ed564fb11cd2f9a6de0af63ed60f605
+SHA1: d21003aa1630205f9dee4a5c1d8e6b3165fa1bfc
+SHA256: 2868297d00cc922426f40d021f2175f9b55f5957c9337a28dbebf25783cdd07f
 Section: default
 Priority: optional
 Homepage: https://www.usebruno.com
