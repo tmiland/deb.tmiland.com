@@ -261,25 +261,6 @@ License: unknown
 Vendor: Anoop M D <anoop.md1421@gmail.com>
 
 Package: discord
-Version: 1.0.168
-Architecture: amd64
-Maintainer: Discord Maintainer Team <noreply@discord.com>
-Installed-Size: 4696
-Depends: libc6, libasound2, libatk1.0-0, libatk-bridge2.0-0, libatspi2.0-0, libatomic1, libcairo2, libdbus-1-3, libexpat1, libgbm1, libglib2.0-0, libgtk-3-0, libnotify4, libnspr4, libnss3, libpango-1.0-0, libstdc++6, libudev1, libx11-6, libxcb1, libxcomposite1, libxdamage1, libxext6, libxfixes3, libxkbcommon0, libxrandr2
-Recommends: libunity9, libva2, libpipewire-0.3-0
-Filename: ./discord_1.0.168_amd64.deb
-Size: 2387236
-MD5sum: 13eeeffed3ba06c724b4c4be3b69af3d
-SHA1: 1656d77637b4f341fcc614998569be9940bc465d
-SHA256: 93d43ad090825b9edcacfb3841506ea51e7040c60d93a9e377d0caca547bea28
-Section: net
-Priority: optional
-Homepage: https://discord.com
-Description: Chat for Communities and Friends
- Discord is the easiest way to communicate over voice, video, and text. Chat,
- hang out, and stay close with your friends and communities.
-
-Package: discord
 Version: 1.0.169
 Architecture: amd64
 Maintainer: Discord Maintainer Team <noreply@discord.com>
@@ -310,6 +291,25 @@ Size: 4422144
 MD5sum: b16b2703a82ec142bfd0c85a8ad41d85
 SHA1: cc67e642213d56830723fc14cc245fafdcb3a9cc
 SHA256: b57679faa9e3cac1daa7eeea55e9c26b697ce769b5123f88a662ce58184b4807
+Section: net
+Priority: optional
+Homepage: https://discord.com
+Description: Chat for Communities and Friends
+ Discord is the easiest way to communicate over voice, video, and text. Chat,
+ hang out, and stay close with your friends and communities.
+
+Package: discord
+Version: 1.0.171
+Architecture: amd64
+Maintainer: Discord Maintainer Team <noreply@discord.com>
+Installed-Size: 9916
+Depends: libc6, libasound2, libatk1.0-0, libatk-bridge2.0-0, libatspi2.0-0, libatomic1, libcairo2, libdbus-1-3, libexpat1, libgbm1, libglib2.0-0, libgtk-3-0, libnotify4, libnspr4, libnss3, libpango-1.0-0, libstdc++6, libudev1, libx11-6, libxcb1, libxcomposite1, libxdamage1, libxext6, libxfixes3, libxkbcommon0, libxrandr2
+Recommends: libunity9, libva2, libpipewire-0.3-0, libxkbcommon-x11-0
+Filename: ./discord_1.0.171_amd64.deb
+Size: 4621994
+MD5sum: 6ac14c6145039f5c3bc16e3a8453e585
+SHA1: e78dc2159a0606fb9ad91680e85e56ce30a7a15b
+SHA256: d9a091f1b3afbdf18ee341b52b75fbb62db21f1e18a6a87ad68da54fd6ec4a10
 Section: net
 Priority: optional
 Homepage: https://discord.com
