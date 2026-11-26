@@ -579,25 +579,6 @@ Description: GitHub Desktop fork with advanced functionality and improvements.
  GitHub Desktop fork with advanced functionality and improvements.
 
 Package: goose
-Version: 1.60.1
-Architecture: amd64
-Maintainer: AAIF (Agentic AI Foundation)
-Installed-Size: 499109
-Depends: libgtk-3-0, libnotify4, libnss3, xdg-utils, libatspi2.0-0, libdrm2, libgbm1, libxcb-dri3-0, kde-cli-tools | kde-runtime | trash-cli | libglib2.0-bin | gvfs-bin
-Recommends: pulseaudio | libasound2
-Suggests: gir1.2-gnomekeyring-1.0, libgnome-keyring0, lsb-release
-Filename: ./goose_1.60.1_amd64.deb
-Size: 2056
-MD5sum: 6902d085b87237f2d966464a70cf8325
-SHA1: 7ae03ac801adbe321b7078f84c36cba7b07c1caf
-SHA256: 3b3dc7f9c293883ece16d603559401f35c958b3afbec72c0fe0a3c24776fc922
-Section: utils
-Priority: optional
-Homepage: https://goose-docs.ai/
-Description: Goose App
- Goose App
-
-Package: goose
 Version: 1.60.2
 Architecture: amd64
 Maintainer: AAIF (Agentic AI Foundation)
@@ -629,6 +610,25 @@ Size: 2054
 MD5sum: a5ab4af366a39c3085805b84d39c8041
 SHA1: ed8bf54ebfa2d602935c6c6c8f691d28b2b61d87
 SHA256: 8ec26676da3af958cf97d7c37ebfc1242987e2aeebfb01a82f8e01d7db2b52b3
+Section: utils
+Priority: optional
+Homepage: https://goose-docs.ai/
+Description: Goose App
+ Goose App
+
+Package: goose
+Version: 1.61.1
+Architecture: amd64
+Maintainer: AAIF (Agentic AI Foundation)
+Installed-Size: 500331
+Depends: libgtk-3-0, libnotify4, libnss3, xdg-utils, libatspi2.0-0, libdrm2, libgbm1, libxcb-dri3-0, libsecret-1-0, kde-cli-tools | kde-runtime | trash-cli | libglib2.0-bin | gvfs
+Recommends: libasound2t64 | libasound2 | pulseaudio
+Suggests: gnome-keyring, lsb-release
+Filename: ./goose_1.61.1_amd64.deb
+Size: 2056
+MD5sum: 36a3638fbf9e2b8a26af6be45a039738
+SHA1: 68004d8aff83725288b1abc22750d17f56bba9fa
+SHA256: 0b3d07059e16af5ac88eff564fa6a523a2b619bd9cac05810c1a25c12c2e90b9
 Section: utils
 Priority: optional
 Homepage: https://goose-docs.ai/
@@ -1035,25 +1035,6 @@ Homepage: https://nextcloud.com/desktop/
 Description: Nextcloud desktop synchronization client
 
 Package: opencode
-Version: 2.2.4
-Architecture: amd64
-Maintainer: OpenCode <hello@opencode.ai>
-Installed-Size: 766119
-Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
-Recommends: libappindicator3-1
-Filename: ./opencode_2.2.4_amd64.deb
-Size: 2210
-MD5sum: 7b9f611cc3e81d22edfb82dcf93f622f
-SHA1: 3c57c8e4b6a63a13aa053648fe3feda75350fa46
-SHA256: 81a38386b271814df2296937bd6e64329bc8c297e6be15244c05be167c849c83
-Section: default
-Priority: optional
-Homepage: https://opencode.ai
-Description: The open source coding agent.
-License: MIT
-Vendor: OpenCode <hello@opencode.ai>
-
-Package: opencode
 Version: 2.2.5
 Architecture: amd64
 Maintainer: OpenCode <hello@opencode.ai>
@@ -1084,6 +1065,25 @@ Size: 2498
 MD5sum: 806914aa842b02708f52850892363c31
 SHA1: e113c3aa042c2811ad5c90c19389e94cbdf2ff66
 SHA256: c961c95317d465637a7566139c702ca2ee735f3fe09f50b06ec0eeb7824cbae3
+Section: default
+Priority: optional
+Homepage: https://opencode.ai
+Description: The open source coding agent.
+License: MIT
+Vendor: OpenCode <hello@opencode.ai>
+
+Package: opencode
+Version: 2.4.2
+Architecture: amd64
+Maintainer: OpenCode <hello@opencode.ai>
+Installed-Size: 807266
+Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
+Recommends: libappindicator3-1
+Filename: ./opencode_2.4.2_amd64.deb
+Size: 2494
+MD5sum: 9a4294b98284b7ebf15793ec2bb19c19
+SHA1: 7f915819e182bcc6408f1da06751bc61f77b73d5
+SHA256: fa25667b6591a8807fa22e82018443d71e930483ced97ac8d40f0b7b3cd5e4a1
 Section: default
 Priority: optional
 Homepage: https://opencode.ai
