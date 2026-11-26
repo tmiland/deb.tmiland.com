@@ -522,25 +522,6 @@ Homepage: https://github.com/junegunn/fzf
 Description: Command-line fuzzy finder
 
 Package: github-desktop
-Version: 3.6.10.0
-Architecture: amd64
-Maintainer: Pol Rivero <admin@desktop-plus.org>
-Installed-Size: 614141
-Depends: libgtk-3-0, libnotify4, libnss3, xdg-utils, libatspi2.0-0, libdrm2, libgbm1, libxcb-dri3-0, kde-cli-tools | kde-runtime | trash-cli | libglib2.0-bin | gvfs-bin, libcurl3 | libcurl4, libsecret-1-0, gnome-keyring
-Recommends: pulseaudio | libasound2
-Suggests: gir1.2-gnomekeyring-1.0, libgnome-keyring0, lsb-release
-Filename: ./github-desktop_3.6.10.0_amd64.deb
-Size: 2458
-MD5sum: 051860fc3230a85bf735b0def3ac2289
-SHA1: 8412469fb9d9bac262590ace1f928a63c7bccbfb
-SHA256: 4cf43e22966cd7209a6ee6197c1547acc17b9615c55e2ed0630fd20af273324f
-Section: GNOME;GTK;Development
-Priority: extra
-Homepage: https://desktop-plus.org
-Description: GitHub Desktop fork with advanced functionality and improvements.
- GitHub Desktop fork with advanced functionality and improvements.
-
-Package: github-desktop
 Version: 3.6.11.0
 Architecture: amd64
 Maintainer: Pol Rivero <admin@desktop-plus.org>
@@ -572,6 +553,25 @@ Size: 2760
 MD5sum: 3e735709d490b0cfe5cbfeb520b4d920
 SHA1: 245b50287e46238203d570143f6caf0abb641905
 SHA256: 7922c9c1f7ae0f3b96eac6943a9f1c8cd45579c651dab7a4082d72c45f488b12
+Section: GNOME;GTK;Development
+Priority: extra
+Homepage: https://desktop-plus.org
+Description: GitHub Desktop fork with advanced functionality and improvements.
+ GitHub Desktop fork with advanced functionality and improvements.
+
+Package: github-desktop
+Version: 3.7.1.0
+Architecture: amd64
+Maintainer: Pol Rivero <admin@desktop-plus.org>
+Installed-Size: 642187
+Depends: libgtk-3-0, libnotify4, libnss3, xdg-utils, libatspi2.0-0, libdrm2, libgbm1, libxcb-dri3-0, kde-cli-tools | kde-runtime | trash-cli | libglib2.0-bin | gvfs-bin, libcurl3 | libcurl4, libsecret-1-0, gnome-keyring
+Recommends: pulseaudio | libasound2
+Suggests: gir1.2-gnomekeyring-1.0, libgnome-keyring0, lsb-release
+Filename: ./github-desktop_3.7.1.0_amd64.deb
+Size: 2756
+MD5sum: 63d9bd7c8a2f7daa097341b94b97f1ee
+SHA1: 7d2c330e26de042d223a29420dc11311442ff69c
+SHA256: 0af6a305ad4301f6dff5f85d0a4b6b5de0ae3080cf453a32d7d7a3962f3fd8a2
 Section: GNOME;GTK;Development
 Priority: extra
 Homepage: https://desktop-plus.org
