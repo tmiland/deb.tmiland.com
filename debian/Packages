@@ -1216,30 +1216,6 @@ Description: general markup converter
   external programs such as pdflatex or wkhtmltopdf).
 
 Package: pixelflasher
-Version: 10.3.0.0
-Architecture: amd64
-Maintainer: Tommy Miland <tmiland@tmiland.com>
-Installed-Size: 164704
-Depends: libc6 (>= 2.35), libgcc-s1, libstdc++6, zlib1g, libglib2.0-0,
- libgtk-3-0, libgdk-pixbuf-2.0-0, libpango-1.0-0, libcairo2, libfontconfig1,
- libfreetype6, libdbus-1-3, libsecret-1-0, libnotify4, libx11-6, libx11-xcb1,
- libxcb1, libxcb-cursor0, libxcb-icccm4, libxcb-image0, libxcb-keysyms1,
- libxcb-randr0, libxcb-render0, libxcb-render-util0, libxcb-shape0,
- libxcb-xinerama0, libxcb-xkb1, libxkbcommon0, libxkbcommon-x11-0, libgl1,
- libegl1, libsm6, libice6, libxi6, libxtst6, libdrm2, libgbm1,
- libwayland-client0, libexpat1, libuuid1, libbz2-1.0, liblzma5
-Recommends: android-sdk-platform-tools
-Filename: ./pixelflasher_10.3.0.0_amd64.deb
-Size: 2336
-MD5sum: 93193e7562d8eaad133085267f7f0f19
-SHA1: 246b79200bb78c1b2b5ff809d71bb02b7a39a083
-SHA256: c27645b660f2217f890276c5b8ab595679cd00e5afc4aafd7901a9105ab69ddd
-Section: utils
-Priority: optional
-Homepage: https://github.com/badabing2005/PixelFlasher
-Description: Android firmware flashing GUI for Pixel devices
-
-Package: pixelflasher
 Version: 10.4.0.0
 Architecture: amd64
 Maintainer: Tommy Miland <tmiland@tmiland.com>
@@ -1282,6 +1258,30 @@ Size: 2336
 MD5sum: 98d5382de313c204085ddc15857a4150
 SHA1: 7b62fe960c6fff05029d09b57292eaa2108c0132
 SHA256: 050e064453470beb9c3dac850beb40fe985b8c1616b2e18c4ba678c3708dec0d
+Section: utils
+Priority: optional
+Homepage: https://github.com/badabing2005/PixelFlasher
+Description: Android firmware flashing GUI for Pixel devices
+
+Package: pixelflasher
+Version: 10.5.1.0
+Architecture: amd64
+Maintainer: Tommy Miland <tmiland@tmiland.com>
+Installed-Size: 164832
+Depends: libc6 (>= 2.35), libgcc-s1, libstdc++6, zlib1g, libglib2.0-0,
+ libgtk-3-0, libgdk-pixbuf-2.0-0, libpango-1.0-0, libcairo2, libfontconfig1,
+ libfreetype6, libdbus-1-3, libsecret-1-0, libnotify4, libx11-6, libx11-xcb1,
+ libxcb1, libxcb-cursor0, libxcb-icccm4, libxcb-image0, libxcb-keysyms1,
+ libxcb-randr0, libxcb-render0, libxcb-render-util0, libxcb-shape0,
+ libxcb-xinerama0, libxcb-xkb1, libxkbcommon0, libxkbcommon-x11-0, libgl1,
+ libegl1, libsm6, libice6, libxi6, libxtst6, libdrm2, libgbm1,
+ libwayland-client0, libexpat1, libuuid1, libbz2-1.0, liblzma5
+Recommends: android-sdk-platform-tools
+Filename: ./pixelflasher_10.5.1.0_amd64.deb
+Size: 2332
+MD5sum: 0af8e0b7450645f46c61b4a82e8a1db0
+SHA1: f538dc95d42bf7715571ede5e002d4420d50d012
+SHA256: 89cb2734bfc11aaf3a45e314b5762be80113e6b379211cfbae75f834cfd4ec37
 Section: utils
 Priority: optional
 Homepage: https://github.com/badabing2005/PixelFlasher
