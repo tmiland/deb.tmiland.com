@@ -140,6 +140,23 @@ Homepage: https://github.com/sharkdp/bat
 Description: cat(1) clone with wings.
   A cat(1) clone with syntax highlighting and Git integration.
 
+Package: bat
+Version: 0.27.0
+Architecture: amd64
+Maintainer: David Peter <mail@david-peter.de>
+Conflicts: bat-musl
+Provides: bat
+Filename: ./bat_0.27.0_amd64.deb
+Size: 3323424
+MD5sum: 26ce2c8fe497a49a276acffcb55bf609
+SHA1: fa047375768545c3353ebd48c9bc761e53a68c79
+SHA256: cbcdec9f7a1fa051a2ff931a6db3219cc714717eb0b316368baecda34df824ab
+Section: utils
+Priority: optional
+Homepage: https://github.com/sharkdp/bat
+Description: cat(1) clone with wings.
+  A cat(1) clone with syntax highlighting and Git integration.
+
 Package: bitwarden
 Version: 2026.10.3
 Architecture: amd64
